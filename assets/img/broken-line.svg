@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+    <title>Broken line icon</title>
+    <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="10,30 25,20 35,40 50,30 60,50 70,40"/>
+    </g>
+</svg>

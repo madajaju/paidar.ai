@@ -1,0 +1,923 @@
+/* ================================
+   PAIDAR DESIGN SYSTEM – CSS CORE
+   File: paidar.css
+   Purpose: One CSS you can reuse across paidar.ai, EDT/EDTW, docs, landing pages
+   ================================= */
+
+/* 1) COLOR TOKENS (root variables) */
+:root {
+    /* Brand */
+    --brand-blue: #123456; /* Paidar Systems anchor */
+    --brand-gold: #f5b800; /* Paidar Productions accent */
+    --brand-ink: #0f172a; /* Dark text */
+    --brand-muted: #64748b; /* Muted text */
+    --brand-wash: #f8fafc; /* Light wash bg */
+    --brand-line: #e5e7eb; /* Subtle borders */
+    --brand-white: #ffffff;
+    --brand-silver: #C0C7D4; /* Universal hex border */
+
+    /* Pillars (PRIMARY) */
+    --pillar-ai: #7E57C2; /* Artificial Intelligence */
+    --pillar-cyber: #DC143C; /* Cybersecurity */
+    --pillar-edge: #06B6D4; /* Edge Computing */
+    --pillar-modern: #2563EB; /* Modern Computing */
+    --pillar-data: #EAB308; /* Data Management */
+    --pillar-comm: #D946EF; /* Advanced Communications */
+
+    /* Dimensions (SECONDARY) */
+    --dim-people: #22C55E;
+    --dim-process: #F97316;
+    --dim-policy: #475569;
+    --dim-tech: #3B82F6;
+
+    /* Shadow + Radius + Spacing */
+    --shadow-1: 0 10px 24px rgba(2, 6, 23, .08), 0 2px 8px rgba(2, 6, 23, .06);
+    --radius-1: 14px;
+    --radius-2: 18px;
+    --space-1: 8px;
+    --space-2: 12px;
+    --space-3: 16px;
+    --space-4: 20px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 40px;
+    --space-8: 56px;
+}
+
+/* 2) RESETS + TYPE */
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    color: var(--brand-ink);
+    background: #fff;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+/* 3) LAYOUT UTILITIES */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-3);
+    font-size: 1.3rem;
+}
+
+.container-dark {
+    max-width: 1200px;
+    background: var(--brand-blue);
+    color: #fff;
+    margin: 0 auto;
+    padding: 0 var(--space-3)
+}
+
+/* …existing code… */
+
+/* Layout for image + text side by side */
+.container-right {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-3);
+    display: flex;
+    align-items: flex-start; /* top-align image + text */
+    gap: var(--space-5); /* space between columns */
+    flex-wrap: wrap; /* on small screens, stack */
+    font-size: 1.3rem;
+}
+
+.container-right > img.img-fluid {
+    flex-shrink: 0; /* keep at defined size */
+    width: 400px; /* adjust as needed */
+    height: auto;
+}
+
+.container-right > div {
+    flex: 1 1 0; /* take remaining space */
+}
+
+/* …existing code… */
+.grid-2 {
+    display: grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap: var(--space-6)
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: var(--space-5)
+}
+
+.flex {
+    display: flex;
+    gap: var(--space-3)
+}
+
+.center {
+    align-items: center;
+    justify-content: center
+}
+
+.stack > * + * {
+    margin-top: var(--space-3)
+}
+
+.section {
+    padding-block: var(--space-8)
+}
+
+/* 4) COMPONENT BASICS */
+.card {
+    background: #fff;
+    border: 1px solid var(--brand-line);
+    border-radius: var(--radius-1);
+    padding: var(--space-5);
+    box-shadow: var(--shadow-1);
+}
+
+.card-dark {
+    --card-gradient-start: var(--brand-blue);
+    --card-gradient-end: var(--brand-muted);
+
+    background: linear-gradient(
+            135deg,
+            var(--card-gradient-start) 0%,
+            var(--card-gradient-end) 100%
+    );
+    color: #fff;
+    border-color: transparent;
+}
+
+.card-dark .badge,
+.card-dark a,
+.card-dark p {
+    color: #fff; /* ensure inner text & links stay light */
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none
+}
+
+.btn-primary {
+    background: var(--brand-blue);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.05)
+}
+
+.btn-gold {
+    background: var(--brand-gold);
+    color: #111;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--brand-blue);
+    color: var(--brand-blue);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: .85rem;
+    border: 1px solid var(--brand-line)
+}
+
+/* 5) THEMES (apply to blocks, cards, banners, etc.) */
+.theme-ai {
+    --theme-bg: var(--pillar-ai);
+}
+
+.theme-cyber {
+    --theme-bg: var(--pillar-cyber);
+}
+
+.theme-edge {
+    --theme-bg: var(--pillar-edge);
+}
+
+.theme-modern {
+    --theme-bg: var(--pillar-modern);
+}
+
+.theme-data {
+    --theme-bg: var(--pillar-data);
+}
+
+.theme-comm {
+    --theme-bg: var(--pillar-comm);
+}
+
+.dim-people {
+    --theme-accent: var(--dim-people);
+}
+
+.dim-process {
+    --theme-accent: var(--dim-process);
+}
+
+.dim-policy {
+    --theme-accent: var(--dim-policy);
+}
+
+.dim-tech {
+    --theme-accent: var(--dim-tech);
+}
+
+/* Use: <div class="banner theme-ai dim-policy"> ... */
+.banner {
+    color: #fff;
+    border-radius: var(--radius-2);
+    background: linear-gradient(135deg, var(--theme-bg, var(--brand-blue)) 0%, rgba(0, 0, 0, .0) 60%),
+    linear-gradient(0deg, var(--theme-bg, var(--brand-blue)) 0%, var(--theme-bg, var(--brand-blue)) 100%);
+    padding: var(--space-6);
+}
+
+.banner .badge {
+    border-color: rgba(255, 255, 255, .35);
+    color: #fff
+}
+
+/* 6) HERO */
+
+.hero {
+    position: relative; /* added */
+    padding-block: var(--space-8);
+    background: radial-gradient(1200px 600px at 10% -10%, #e0f2fe 0%, rgba(224, 242, 254, 0) 60%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* inject the hero artwork as a full-cover background */
+/* …existing code… */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* ↓ pull the image & fallback color from custom-properties */
+    background-color: var(--hero-bg-color, #eee);
+    background-image: var(--hero-image, none);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* hide the existing inline figure */
+.hero-art {
+    display: none;
+}
+
+/* 7) TOKENS AS UTILITY CLASSES (for quick use in HTML) */
+.bg-wash {
+    background: var(--brand-wash)
+}
+
+.text-muted {
+    color: var(--brand-muted)
+}
+
+.border {
+    border: 1px solid var(--brand-line)
+}
+
+.round {
+    border-radius: var(--radius-1)
+}
+
+.shadow {
+    box-shadow: var(--shadow-1)
+}
+
+/* 8) RESPONSIVE */
+@media (max-width: 980px) {
+    .grid-2, .grid-3 {
+        grid-template-columns:1fr
+    }
+}
+
+/* ================================
+   HEADER & NAV
+   ================================= */
+
+/* Utility fixes used by header */
+.between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.nav-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: var(--space-4);
+    align-items: center;
+}
+
+/* Skip link (a11y) */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    left: 12px;
+    top: 12px;
+    width: auto;
+    height: auto;
+    background: #000;
+    color: #fff;
+    padding: 8px 12px;
+    z-index: 9999;
+    border-radius: 8px;
+}
+
+/* Header shell */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: rgba(255, 255, 255, .9);
+    backdrop-filter: saturate(1.2) blur(8px);
+    border-bottom: 1px solid var(--brand-line);
+    padding-block: 10px;
+}
+
+.site-header .brand {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 800;
+}
+
+.site-header .brand img {
+    display: block;
+}
+
+/* Desktop nav */
+.primary-nav .nav-list {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.primary-nav .nav-list > li > a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.primary-nav .nav-list > li > a:hover {
+    background: var(--brand-gold);
+    color: var(--brand-blue);
+}
+
+.primary-nav .nav-list a:focus-visible {
+    outline: 3px solid var(--brand-blue);
+    outline-offset: 2px;
+}
+
+.primary-nav .nav-list a[aria-current="page"] {
+    color: var(--brand-blue);
+    font-weight: 700;
+}
+
+/* Dropdowns */
+.primary-nav .has-sub {
+    position: relative;
+}
+
+.primary-nav .has-sub:hover > .sub,
+.primary-nav .has-sub:focus-within > .sub {
+    display: block;
+}
+
+.primary-nav .has-sub > .sub {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    min-width: 240px;
+    background: #fff;
+    border: 1px solid var(--brand-line);
+    border-radius: var(--radius-1);
+    box-shadow: var(--shadow-1);
+    padding: 6px;
+    display: none;
+}
+
+.primary-nav .has-sub:hover > .sub,
+.primary-nav .has-sub:focus-within > .sub {
+    display: block;
+}
+
+.primary-nav .sub li a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.primary-nav .sub li a:hover {
+    background: var(--brand-wash);
+}
+
+/* Right-side items (search + CTA) */
+.nav-ctas {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.nav-ctas .icon {
+    display: inline-flex;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.nav-ctas .icon:hover {
+    background: var(--brand-wash);
+}
+
+/* Mobile */
+.nav-toggle {
+    display: none;
+    border: 1px solid var(--brand-line);
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.nav-toggle:focus-visible {
+    outline: 3px solid var(--brand-blue);
+    outline-offset: 2px;
+}
+
+/* Mobile drawer (off-canvas) */
+.mobile-drawer {
+    position: fixed;
+    inset: 60px 0 0 0; /* under header */
+    background: #fff;
+    border-top: 1px solid var(--brand-line);
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .18s ease, opacity .18s ease;
+    padding: var(--space-4);
+}
+
+.mobile-drawer[data-open="true"] {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-drawer .nav-list {
+    display: grid;
+    gap: 6px;
+}
+
+.mobile-drawer .nav-list a {
+    display: block;
+    padding: 12px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.mobile-drawer .nav-list a:hover {
+    background: var(--brand-wash);
+}
+
+.mobile-drawer .sub {
+    padding-left: 12px;
+}
+
+.mobile-drawer .sub a {
+    font-weight: 600;
+}
+
+/* Responsive switch */
+@media (max-width: 980px) {
+    .primary-nav {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+    }
+}
+
+/* ============= SECTION TINTS (use pillar colors) ============= */
+/* Drop .tint + a theme class on any .section to get a soft, on-brand bg */
+.section.tint {
+    position: relative;
+    isolation: isolate;
+}
+
+.section.tint::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(900px 420px at 12% 8%,
+    color-mix(in srgb, var(--theme-bg, var(--brand-blue)) 18%, transparent) 0%,
+    transparent 65%),
+    linear-gradient(0deg,
+            color-mix(in srgb, var(--theme-bg, var(--brand-blue)) 6%, #ffffff) 0%,
+            #ffffff 80%);
+}
+
+.section.tint .card {
+    border-color: color-mix(in srgb, var(--theme-bg, var(--brand-blue)) 30%, var(--brand-line));
+}
+
+/* ============= GRADIENT HEADINGS & EYEBROWS ============= */
+.eyebrow {
+    font-size: .8rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--brand-muted);
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.h1-grad {
+    background: linear-gradient(90deg, var(--theme-bg, var(--brand-blue)) 0%, #123456 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ============= FEATURE LISTS (colored bullets) ============= */
+.feature-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.feature-list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 6px 0;
+}
+
+.feature-list li::before {
+    content: "";
+    flex: 0 0 14px;
+    width: 14px;
+    height: 14px;
+    margin-top: 5px; /* adjust to vertically center */
+    background: var(--theme-bg, var(--brand-blue));
+    /* six-pointed star */
+    clip-path: polygon(
+            50% 0%, /* top point */ 61% 35%, /* upper right */ 98% 35%, /* rightmost */ 68% 57%, /* lower right */ 79% 91%, /* bottom right */ 50% 70%, /* bottom center */ 21% 91%, /* bottom left */ 32% 57%, /* lower left */ 2% 35%, /* leftmost */ 39% 35% /* upper left */
+    );
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* soft halo */
+}
+
+/* ============= CARD ACCENT BARS (per pillar) ============= */
+.card[class*="accent-"] {
+    position: relative;
+    overflow: clip;
+}
+
+.card[class*="accent-"]::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 16px;
+    height: 4px;
+    border-radius: 999px;
+}
+
+.card.accent-ai::before {
+    background: var(--pillar-ai);
+}
+
+.card.accent-cyber::before {
+    background: var(--pillar-cyber);
+}
+
+.card.accent-edge::before {
+    background: var(--pillar-edge);
+}
+
+.card.accent-modern::before {
+    background: var(--pillar-modern);
+}
+
+.card.accent-data::before {
+    background: var(--pillar-data);
+}
+
+.card.accent-comm::before {
+    background: var(--pillar-comm);
+}
+
+/* ============= SECTION “ART” OVERLAYS (optional images) ============= */
+/* Add a soft illustration to the right side of a section */
+.section.art {
+    position: relative;
+    overflow: hidden;
+}
+
+.section.art::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 min(58%, 680px);
+    background-image: var(--section-image, none);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    opacity: .14;
+    mix-blend-mode: multiply;
+    z-index: -1;
+}
+
+/* ============= KPI BAND (quick visual break) ============= */
+.kpi-band {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: var(--space-5);
+    background: #fff;
+    border: 1px solid var(--brand-line);
+    border-radius: var(--radius-2);
+    padding: var(--space-6);
+}
+
+.kpi {
+    text-align: center;
+}
+
+.kpi strong {
+    display: block;
+    font-size: 2rem;
+}
+
+/* Small helpers */
+.mt-6 {
+    margin-top: var(--space-6);
+}
+
+
+/* Sector card layout + icon sizing */
+ul.grid-3, ul.grid-2 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.grid-3 > ul,
+.grid-3 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* target the wrapper inside your li */
+.card.sector > div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "icon title"
+    "paragraphs paragraphs";
+    gap: var(--space-3);
+    align-items: start;
+}
+
+/* place the img and h2 into the top row */
+.card.sector .sector-icon {
+    grid-area: icon;
+    width: 128px; /* tweak as needed */
+    height: auto;
+}
+
+.card.sector h2 {
+    grid-area: title;
+    margin: 0;
+    align-self: center;
+}
+
+/* span both columns in the second row */
+.card.sector p {
+    grid-area: paragraphs;
+    margin-top: var(--space-2);
+}
+
+.card-solution {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.solution-icon {
+    flex-shrink: 0;
+    width: 96px; /* tweak as needed */
+    height: auto;
+}
+
+.card.solution {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3); /* space between title and body */
+}
+
+/* second row: icon + subtitle side by side */
+.solution-body {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.solution-icon {
+    flex-shrink: 0;
+    width: 128px; /* adjust as needed */
+    height: auto;
+}
+
+.solution-subtitle {
+    /* inherits text color, font-size, etc. */
+}
+
+.solution-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* tightened spacing between h2 and p */
+}
+
+/* Alternatively, zero out the h2 margin instead of using gap */
+.solution-content h2 {
+    margin: 0;
+    margin-bottom: 0px;
+}
+
+.solution-content p {
+    margin: 0;
+}
+
+.site-footer {
+    background: var(--brand-ink);
+    color: #fff;
+    padding: var(--space-6) 0;
+}
+
+/* 3-column grid: socials | brand | links */
+.footer-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--space-4);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-3);
+}
+
+/* Social icons */
+.footer-socials {
+    display: flex;
+    gap: var(--space-3);
+}
+
+.footer-socials .icon {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    transition: transform .2s, fill .2s;
+}
+
+.footer-socials a:hover .icon {
+    transform: scale(1.1);
+    fill: var(--brand-gold);
+}
+
+/* Center brand area */
+.footer-brand {
+    text-align: center;
+}
+
+.footer-logo {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto var(--space-2);
+}
+
+.footer-brand small {
+    display: block;
+    color: var(--brand-muted);
+}
+
+/* Right-hand utility links */
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: var(--space-4);
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile: stack into single column */
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        row-gap: var(--space-4);
+    }
+
+    .footer-socials,
+    .footer-nav ul {
+        justify-content: center;
+    }
+}
+
+.social-icon {
+    max-width: 32px;
+}
+
+.primary-nav .has-sub > .sub {
+    display: none; /* … */
+}
+
+.primary-nav .has-sub:hover > .sub,
+.primary-nav .has-sub:focus-within > .sub {
+    display: block;
+}
+.course-grid {
+    list-style: none;
+}
+.card.course {
+    display: flex;
+    align-items: center;    /* vertical centering */
+    gap: 1rem;              /* space between image and content */
+}
+
+.card.course img {
+    flex-shrink: 0;         /* prevent image from shrinking */
+    width: 200px;           /* or whatever fixed size you prefer */
+    height: auto;
+}
+
+.card-content {
+    flex: 1;                /* content takes remaining space */
+}

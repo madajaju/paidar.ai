@@ -1,0 +1,564 @@
+/* Shared layout + base elements */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.0rem;
+    margin: 0;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+     font-size: 1.2rem;
+ }
+
+/* Header */
+.site-header {
+    background-color: var(--primary-color);
+    padding: 0rem 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows flexibility for mobile */
+}
+
+.site-header h1 {
+    font-size: 2.0rem; /* Adjust for smaller screens if needed */
+    margin: 0;
+}
+
+.site-header nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 1rem;
+}
+
+.site-header nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.site-header nav ul li a:hover {
+    background-color: var(--accent-color);
+}
+
+.site-header nav a.active {
+    color: var(--accent-color); /* Gold color for the active menu item */
+}
+
+/* Align logo on the left and menu on the right */
+.site-header .container {
+    display: flex;
+    justify-content: space-between; /* Push logo to left, menu to right */
+    align-items: center;           /* Vertically center the logo and menu */
+}
+
+.site-header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove bullet points */
+    display: flex;    /* Arrange menu items horizontally */
+    gap: 1rem;        /* Add spacing between menu items */
+}
+
+/* Navigation hover effect and rounded background */
+.site-header nav a {
+    text-decoration: none;
+    color: white; /* Default color for navigation links */
+    font-weight: bold;
+    padding: 0.5rem 1rem; /* Add padding for a button-like appearance */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.site-header nav a:hover {
+    background-color: var(--accent-color); /* Change background to accent color */
+    color: var(--secondary-color); /* Optional: Change text color for contrast */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Video Background Styling */
+.hero {
+    position: relative;
+    height: auto; /* Set section height */
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-background video {
+    width: 100%;
+    height: 30%;
+    object-fit: cover; /* Keeps the aspect ratio and covers the section */
+}
+section {
+    padding: 2rem;
+}
+/* Overlay Content */
+/* Adjusting Header Section Content Alignment */
+.header {
+    max-width: 800px; /* Optional: Limit the width of the content */
+    position: relative;
+    z-index: 1;
+    text-align: left; /* Align content to the left */
+    color: white; /* Ensure readability */
+    margin: 0;
+    padding: 4em 2em 4em 5em; /* Space around content */
+}
+
+.video-widget {
+    background-color: var(--primary-color);
+    height: 30vh;
+}
+/* Ensure full width and control layout */
+.hero .header {
+    max-width: 800px; /* Optional: Limit the width of the content */
+    margin: 0; /* Remove default horizontal centering */
+}
+
+.header-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--accent-color); /* Accent color for the title */
+}
+
+.header-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-btn {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: background-color 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: white;
+    color: var(--accent-color);
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.dark {
+    background-color: var(--primary-color);
+    color: white;
+}
+.light {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.card {
+    flex: 1 1 30%;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Footer general styles */
+.site-footer {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.9rem;
+}
+
+.footer-top {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.top-bar {
+    background-color: #1a1a1a;
+    padding: 0.5rem 0;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+}
+
+.top-bar a:hover {
+    text-decoration: underline;
+}
+/* Footer top section */
+.footer-top .footer-sections {
+    display: flex; /* Enable flex layout */
+    justify-content: space-between; /* Distribute sections evenly */
+    align-items: flex-start; /* Align all sections to the top */
+    gap: 2rem; /* Add spacing between sections */
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #002244; /* Darker shade for the bottom footer */
+    font-size: 0.85rem;
+    color: #cccccc;
+}
+
+/* Footer bottom styling */
+.full-width-footer {
+    background-color: black; /* Black background */
+    color: white; /* White text for contrast */
+    text-align: center; /* Center the text */
+    padding: 0.15em 0; /* Padding for spacing */
+    font-size: 0.85rem; /* Slightly smaller font size */
+    width: 100%; /* Ensure it spans the full width of the page */
+    margin: 0; /* Reset margin for correct alignment */
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0; /* Remove margin around the paragraph */
+}
+
+/* Footer container - Updated Layout */
+.site-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically align sections */
+    flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+    gap: 2rem; /* Space between sections */
+}
+
+/* Center align social media section within the footer */
+.social-media-center {
+    text-align: center;
+    flex: 1 1 33%; /* Center section takes equal width for middle alignment */
+}
+
+/* Footer sections styling */
+.footer-section {
+    flex: 1 1 30%; /* Adjust width; sections take up 30% each */
+    min-width: 200px; /* Ensure a minimum width for smaller screens */
+    text-align: center; /* Align text within sections (optional as needed) */
+}
+
+.footer-section {
+    flex: 1 1 30%; /* Adjust columns equally */
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--accent-color);
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Footer navigation and social media links styling */
+.footer-section ul {
+    margin: 1rem 0 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+/* Ensure logo and social icons are visually aligned */
+.footer-logo {
+    margin-bottom: 1rem; /* Add spacing below the logo */
+}
+
+.footer-logo img {
+    max-width: 300px; /* Responsive size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Social media icons adjustments */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 1rem; /* Space between icons */
+    margin-top: 0.5rem;
+}
+
+/* Individual social media icons */
+.social-icons a {
+    display: inline-block;
+    width: 24px; /* Sets the width of each icon */
+    height: 24px; /* Sets the height of each icon */
+}
+
+.social-icons svg {
+    width: 100%; /* Ensures SVG scales within its container */
+    height: 100%; /* Ensures SVG fills the set dimensions */
+    fill: white; /* Default fill color for icons */
+    transition: transform 0.3s ease, fill 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icons svg:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    fill: var(--accent-color); /* Changes color to accent on hover */
+}
+/* Logo Styling */
+.site-logo {
+    max-width: 180px; /* Adjust size accordingly */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it's treated as a block element */
+}
+/* Main Content */
+.site-main {
+    padding: 0rem;
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller devices (max-width: 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
+    .site-header {
+        text-align: center;
+    }
+
+    .site-header .container {
+        flex-direction: column;
+        gap: 1rem; /* Add spacing between elements */
+    }
+
+    .site-header nav ul {
+        flex-direction: column; /* Stack navigation */
+        gap: 0.5rem;
+    }
+
+    .site-main {
+        padding: 1rem;
+    }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Adjust for smaller screens */
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+
+    .site-header nav ul li a {
+        font-size: 0.9rem; /* Smaller font for mobile links */
+        padding: 0.4rem 0.8rem;
+    }
+
+    .site-main {
+        padding: 1rem 0.5rem; /* Smaller padding for tighter layouts */
+    }
+
+    .site-footer {
+        font-size: 0.8rem; /* Adjust font size for smaller devices */
+    }
+}
+.header-title {
+    color: var(--accent-color); /* Use the accent color from the root variables */
+    font-size: 3rem; /* Make the font size 3 times larger */
+    font-weight: bold; /* Add emphasis as bold */
+    text-align: left; /* Left justify the title */
+    margin: 0; /* Remove any default margin */
+    line-height: 1.2; /* Adjust the line height for better spacing */
+}
+
+/* Header Styles */
+.header-title {
+    font-size: 2.5rem; /* Default size for larger screens */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.header-subtitle {
+    font-size: 1.2rem; /* Default size for larger screens */
+    margin-bottom: 2rem;
+    line-height: 1.5; /* Better readability on all screens */
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem; /* Button text size */
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #555;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .header-title {
+        font-size: 2rem; /* Smaller text for tablets or smaller devices */
+    }
+
+    .header-subtitle {
+        font-size: 1rem; /* Adjust subtitle for better fit */
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem; /* Slightly reduce button text size */
+        padding: 0.6rem 1.2rem; /* Adjust padding for smaller buttons */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-title {
+        font-size: 1.5rem; /* Even smaller text for mobile screens */
+    }
+
+    .header-subtitle {
+        font-size: 0.9rem; /* Adjust subtitle for mobile readability */
+        line-height: 1.4; /* Slightly tighter line height */
+    }
+
+    .btn-primary {
+        font-size: 0.8rem; /* Smallest button text for mobile */
+        padding: 0.5rem 1rem; /* Compact padding for smaller buttons */
+    }
+}
+/* Black Gradient Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.2)); /* Gradient from 50% to 100% black */
+    pointer-events: none;
+    z-index: 1; /* Place between the video and the content */
+}

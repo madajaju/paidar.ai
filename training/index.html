@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Training · Paidar Systems LLC</title>
+    <meta name="description" content="Courses and workshops from Paidar Systems: Cloud Computing, Scalable Microservices, AI Readiness, GDXA Enterprise Architecture, and Executive keynotes." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://paidar.ai/training/" />
+    <meta name="keywords" content="AI training, cloud computing course, microservices course, enterprise architecture, GDXA, AI readiness" />
+    <meta name="author" content="Paidar Systems LLC" />
+    <meta name="theme-color" content="#123456" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Training · Paidar Systems LLC" />
+    <meta property="og:description" content="Vendor-neutral courses and workshops for Cloud, AI Readiness, and Enterprise Architecture (GDXA)." />
+    <meta property="og:url" content="https://paidar.ai/training/" />
+    <meta property="og:image" content="https://paidar.ai/assets/img/og-hero.jpg" />
+    <meta property="og:site_name" content="Paidar Systems" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Training · Paidar Systems LLC" />
+    <meta name="twitter:description" content="Learn Cloud, Microservices, AI Readiness, and GDXA from Paidar Systems." />
+    <meta name="twitter:image" content="https://paidar.ai/assets/img/og-hero.jpg" />
+
+    <!-- Assets -->
+    <link rel="icon" href="/assets/img/favicon.svg" />
+    <link rel="stylesheet" href="../assets/css/paidar.css" />
+
+    <!-- JSON-LD (Organization + Course catalog) -->
+    <script type="application/ld+json">
+        {
+            "@context":"https://schema.org",
+            "@graph":[
+                {
+                    "@type":["Organization","ProfessionalService"],
+                    "name":"Paidar Systems LLC",
+                    "url":"https://paidar.ai/",
+                    "logo":"https://paidar.ai/assets/img/logo.svg",
+                    "sameAs":["https://github.com/paidar","https://www.drdarrenspeaks.com"],
+                    "description":"Training, consulting, and solutioning to help organizations become AI-Augmented."
+                },
+                {
+                    "@type":"ItemList",
+                    "name":"Paidar Systems Training Catalog",
+                    "itemListElement":[
+                        {"@type":"Course","name":"Gen AI driven Cloud Computing","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
+                        {"@type":"Course","name":"Gen AI enabled Scalable Microservice Architectures","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
+                        {"@type":"Course","name":"AI Readiness: From Awareness to Augmentation","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
+                        {"@type":"Course","name":"Becoming AI-Augmented: Tools and Mindset (Workshop)","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
+                        {"@type":"Course","name":"Enterprise Architecture for Digital Transformation (GDXA)","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
+                        {"@type":"Course","name":"Digital Transformation Masterclass (Keynote Library)","provider":{"@type":"Organization","name":"Paidar Systems LLC"}}
+                    ]
+                }
+            ]
+        }
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+    <div class="container flex between center">
+        <a class="brand" href="/"><img src="../assets/img/paidar.svg" alt="Paidar Systems logo" width="64" /> <span>Paidar Systems</span></a>
+        <nav class="primary-nav" aria-label="Primary">
+            <ul class="nav-list nav-reset">
+                <li class="has-sub">
+                    <a href="/sectors/" aria-haspopup="true" aria-expanded="false">Sectors</a>
+                    <ul class="sub" role="menu">
+                        <li role="none"><a role="menuitem" href="/sectors/higher-education.html">Higher Education</a></li>
+                        <li role="none"><a role="menuitem" href="/sectors/government.html">Government</a></li>
+                        <li role="none"><a role="menuitem" href="/sectors/enterprise.html">Enterprise</a></li>  <li role="none"><a role="menuitem" href="/sectors/healthcare.html">Healthcare</a></li>
+                    </ul>
+                </li>
+                <li><a class="is-active" href="/training/">Training</a></li>
+                <li><a href="/consulting/">Consulting</a></li>
+                <li><a href="/software/">Software</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a class="btn btn-primary" href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+    <!-- HERO -->
+    <section class="hero" style="--hero-image:url('../assets/img/training-hero.jpg'); --hero-bg-color:#0e223b">
+        <div class="container grid-2">
+            <div>
+                <h1>Training & Courses</h1>
+                <p class="lead">Self-paced and instructor-led programs in Cloud, AI Readiness, and Enterprise Architecture—built to make teams <em>AI-Augmented</em>.</p>
+                <ul class="feature-list">
+                    <li>University-grade lectures, practical labs, and executive modules</li>
+                    <li>Vendor-neutral patterns with governance, security, and ROI</li>
+                    <li>Scales from free videos to certified professional pathways</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILTER (optional future use; harmless now) -->
+    <section class="section">
+        <div class="container">
+            <form class="filters" aria-label="Filter courses">
+                <div class="grid-3">
+                    <label>Category
+                        <select id="f-category">
+                            <option value="all">All</option>
+                            <option value="cloud">Cloud & App Architecture</option>
+                            <option value="ai">AI & Digital Transformation</option>
+                            <option value="ea">Enterprise & Government Architecture</option>
+                            <option value="exec">Executive Education</option>
+                        </select>
+                    </label>
+                    <label>Level
+                        <select id="f-level">
+                            <option value="all">All</option>
+                            <option value="intro">Intro</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </label>
+                    <label>Format
+                        <select id="f-format">
+                            <option value="all">All</option>
+                            <option value="on-demand">On-Demand</option>
+                            <option value="instructor">Instructor-Led</option>
+                            <option value="workshop">Workshop</option>
+                        </select>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- COURSE GRID -->
+    <section class="section">
+        <div class="container">
+            <h2>Course Catalog</h2>
+            <ul class="card-grid course-grid">
+                <!-- Cloud & App Architecture -->
+                <li class="card course" data-category="cloud" data-level="intermediate" data-format="on-demand">
+                    <img src="../assets/img/training/cloud-computing.svg" alt="Cloud Computing Fundamentals" />
+                    <div class="card-content">
+                        <h3>AI Enabled Cloud Computing </h3>
+                        <p>Recorded lectures covering service models, containers, Kubernetes, and cloud security. Expandable with labs and quizzes.</p>
+                        <div class="tags"><span class="tag">Cloud</span><span class="tag">On-Demand</span></div>
+                        <p><a class="btn" href="/training/cloud-computing.html">View Course</a></p>
+                    </div>
+                </li>
+
+                <li class="card course" data-category="cloud" data-level="advanced" data-format="on-demand">
+                    <img src="../assets/img/training/micro-service.svg" alt="Scalable Microservice Architectures" />
+                    <div class="card-content">
+                        <h3>AI Driven Scalable Microservice Architectures</h3>
+                        <p>Service decomposition, gateways, service mesh, observability, and resilient CI/CD for large systems.</p>
+                        <div class="tags"><span class="tag">Cloud</span><span class="tag">On-Demand</span></div>
+                        <p><a class="btn" href="/training/microservices.html">View Course</a></p>
+                    </div>
+                </li>
+
+                <!-- AI & Digital Transformation -->
+                <li class="card course" data-category="ai" data-level="intro" data-format="on-demand">
+                    <img src="../assets/img/training/ai-readiness.svg" alt="AI Readiness Course" />
+                    <div class="card-content">
+                        <h3>AI Readiness: From Awareness to Augmentation</h3>
+                        <p>Use the AI Readiness Survey to baseline, then follow a guided path to an AI-Augmented operating model.</p>
+                        <div class="tags"><span class="tag">AI</span><span class="tag">On-Demand</span></div>
+                        <p><a class="btn btn-disabled" aria-disabled="true" href="#" title="Coming soon">Coming Soon</a></p>
+                    </div>
+                </li>
+
+                <li class="card course" data-category="ai" data-level="intermediate" data-format="workshop">
+                    <img src="../assets/img/training/ai-master.svg" alt="AI Augmented Workshop" />
+                    <div class="card-content">
+                        <h3>Becoming AI-Augmented: Tools & Mindset (Workshop)</h3>
+                        <p>Practical patterns for safe GenAI adoption: governance, prompt patterns, evaluation, and change enablement.</p>
+                        <div class="tags"><span class="tag">AI</span><span class="tag">Workshop</span></div>
+                        <p><a class="btn btn-disabled" aria-disabled="true" href="#" title="Coming soon">Coming Soon</a></p>
+                    </div>
+                </li>
+
+                <!-- Enterprise Architecture -->
+                <li class="card course" data-category="ea" data-level="intermediate" data-format="instructor">
+                    <img src="../assets/img/training/gdxa.svg" alt="GDXA Enterprise Architecture" />
+                    <div class="card-content">
+                        <h3>Enterprise Architecture for Digital Transformation (GDXA)</h3>
+                        <p>GDXA/GEAR-aligned techniques for value streams, capability maps, and investment roadmaps.</p>
+                        <div class="tags"><span class="tag">Enterprise Architecture</span><span class="tag">Instructor-Led</span></div>
+                        <p><a class="btn btn-disabled" aria-disabled="true" href="#" title="In development">In Development</a></p>
+                    </div>
+                </li>
+
+                <!-- Executive Education -->
+                <li class="card course" data-category="exec" data-level="intro" data-format="on-demand">
+                    <img src="../assets/img/training/dx-master.svg" alt="Digital Transformation Masterclass" />
+                    <div class="card-content">
+                        <h3>Digital Transformation Masterclass (Keynote Library)</h3>
+                        <p>Curated executive keynotes on AI, Zero Trust, Edge, and leading change.</p>
+                        <div class="tags"><span class="tag">Executive</span><span class="tag">On-Demand</span></div>
+                        <p><a class="btn" href="https://drdarrenspeaks.com/speaking" target="_blank" rel="noopener">Watch Now</a></p>
+                    </div>
+                </li>
+                <li class="card course" data-category="ai" data-level="intro" data-format="workshop">
+                    <img src="../assets/img/training/generative-ai-workshop.svg" alt="Hands-On Generative AI Workshop" />
+                    <div class="card-content">
+                        <h3>Hands-On Generative AI: Boosting Creativity & Productivity</h3>
+                        <p>In this interactive multi-hour workshop you’ll build tangible AI assets, master prompt engineering, and explore advanced techniques like RAG, fine-tuning, constrained prompting, and scorecarding.</p>
+                        <div class="tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Workshop</span>
+                        </div>
+                        <p><a class="btn" href="/training/generative-ai-workshop.html">Ask About Pricing & Cohorts</a></p>
+                    </div>
+                </li>
+                <li class="card course" data-category="ai" data-level="intro" data-format="workshop">
+                    <img src="../assets/img/training/ai-policy-adoption.svg" alt="Generative AI Policy & Adoption Workshop" />
+                    <div class="card-content">
+                        <h3>Strategic Integration of Generative AI: Hands-On Policy & Technology Adoption</h3>
+                        <p>In this immersive two-hour workshop, you’ll build a resilient GenAI policy and technology adoption strategy through role-playing and collaborative exercises—while mastering prompt engineering, RAG, fine-tuning, constrained prompting, and scorecarding.</p>
+                        <div class="tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Workshop</span>
+                        </div>
+                        <p><a class="btn" href="/training/ai-policy-adoption.html">Ask About Pricing & Cohorts</a></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- HOW ACCESS WORKS -->
+    <section class="section tint theme-modern">
+        <div class="container">
+            <h2>Access & Enrollment</h2>
+            <div class="grid-3">
+                <article class="card">
+                    <h3>On-Demand</h3>
+                    <p>Self-paced video modules paired with downloadable lecture notes and an AI-powered RAG tutor to answer questions in real time. Accessible via private YouTube channels or gated on Paidar.ai.</p>
+                </article>
+                <article class="card">
+                    <h3>Instructor-Led</h3>
+                    <p>Cohorts and workshops for teams. Includes tailored Q&A, hands-on labs, and reusable artifacts crafted for your organization.</p>
+                </article>
+                <article class="card">
+                    <h3>Certificates</h3>
+                    <p>Earn digital badges in AI Readiness and Architecture to showcase your skills and boost your professional credibility.</p>
+                </article>
+            </div>
+            <p class="mt-2"><a class="arrow" href="/contact/">Ask about pricing & cohorts</a></p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+        <div class="container center">
+            <h2>Not sure where to start?</h2>
+            <p>Tell us your goals and constraints—we’ll recommend the best path and format for your team.</p>
+            <p><a class="btn btn-primary" href="/contact/">Start a conversation</a></p>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-socials" aria-label="Follow us">
+            <a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener">
+                <img class="social-icon" src="../assets/img/youtube.svg" alt="">
+            </a>
+            <a href="https://www.linkedin.com/company/embracingdigital" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <img class="social-icon" src="../assets/img/linkedin.svg" alt="">
+            </a>
+            <a href="https://embracingdigital.org" aria-label="Podcast" target="_blank" rel="noopener">
+                <img class="social-icon" src="../assets/img/edt.svg" alt="">
+            </a>
+        </div>
+
+        <div class="footer-brand">
+            <img src="../assets/img/paidar.svg" alt="Paidar Systems logo" class="footer-logo" />
+            <small>&copy; <span id="y"></span> Paidar Systems LLC</small>
+        </div>
+
+        <nav aria-label="Footer" class="footer-nav">
+            <ul>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/accessibility.html">Accessibility</a></li>
+                <li><a href="/sitemap.xml">Sitemap</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Lightweight client-side filtering (optional; no URL state yet)
+    (function(){
+        const grid = document.querySelector('.course-grid');
+        if (!grid) return;
+        const selects = ['f-category','f-level','f-format'].map(id=>document.getElementById(id));
+        const apply = () => {
+            const [c,l,f] = selects.map(s=>s ? s.value : 'all');
+            grid.querySelectorAll('.course').forEach(card=>{
+                const ok =
+                    (c==='all'||card.dataset.category===c) &&
+                    (l==='all'||card.dataset.level===l) &&
+                    (f==='all'||card.dataset.format===f);
+                card.style.display = ok ? '' : 'none';
+            });
+        };
+        selects.forEach(s=>s && s.addEventListener('change', apply));
+    }());
+</script>
+</body>
+</html>

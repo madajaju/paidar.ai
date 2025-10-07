@@ -1,0 +1,79 @@
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 500 500"
+        width="500"
+        height="500"
+>
+    <defs>
+        <linearGradient id="darkBlueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#00008b; stop-opacity:1;" /> <!-- Dark blue -->
+            <stop offset="100%" style="stop-color:#1e90ff; stop-opacity:1;" /> <!-- Lighter blue -->
+        </linearGradient>
+        <!-- Gold Gradient -->
+        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFD700; stop-opacity:1;" /> <!-- Bright gold -->
+            <stop offset="50%" style="stop-color:#FFC700; stop-opacity:1;" /> <!-- Mid gold -->
+            <stop offset="100%" style="stop-color:#B8860B; stop-opacity:1;" /> <!-- Dark gold -->
+        </linearGradient>
+        <linearGradient id="goldGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#C9B037; stop-opacity:1;" /> <!-- Soft gold -->
+            <stop offset="50%" style="stop-color:#D6AE01; stop-opacity:1;" /> <!-- Slightly deeper gold -->
+            <stop offset="100%" style="stop-color:#BFA225; stop-opacity:1;" /> <!-- Muted gold -->
+        </linearGradient>
+        <linearGradient id="goldGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#C9B037; stop-opacity:1;" /> <!-- Soft gold -->
+            <stop offset="50%" style="stop-color:#D6AE01; stop-opacity:1;" /> <!-- Slightly deeper gold -->
+            <stop offset="100%" style="stop-color:#BFA225; stop-opacity:1;" /> <!-- Muted gold -->
+        </linearGradient>
+    </defs>
+    <style>
+        .st1 {
+        fill: url(#darkBlueGradient);
+        }
+        .st0 {
+        fill: url(#darkBlueGradient);
+
+        }
+        .st2 {
+        fill: none;
+        stroke: #f00;
+        stoke-width: 25px;
+
+        }
+    </style>
+
+    <!-- Outside Circle -->
+    <g transform="translate(40,-40)">
+    <path d="M 210, 500
+        V 250
+        H 170
+        V 500
+        Z" class="st1"/>
+    <path d="M 90, 500
+        V 150
+        H 250
+        A 85,80
+        0 0,1
+        250,340
+        V 300
+        A 60, 60
+        0 1,0
+        250, 180
+        H 130
+        V 500
+        Z" class="st0"/>
+
+    <path d="M 10, 80
+        H 250
+        A 100,100
+        0 0,1
+        250, 420
+        V 380
+        A 100, 100
+        0 1,0
+        250, 120
+        H 50
+        " class="st1"/>
+    </g>
+</svg>

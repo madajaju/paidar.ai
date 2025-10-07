@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 750 750">
+    <defs>
+        <!-- GOLD gradients -->
+        <linearGradient id="grad1" gradientTransform="rotate(90)">
+            <stop offset="5%"  stop-color="#DDB666" />
+            <stop offset="95%" stop-color="#B3763B" />
+        </linearGradient>
+        <linearGradient id="grad2" gradientTransform="rotate(90)">
+            <stop offset="5%"  stop-color="#B3763B" />
+            <stop offset="95%" stop-color="#DDB666" />
+        </linearGradient>
+
+        <linearGradient id="grad3" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%"  stop-color="#0543eb"/>  <!-- darker top -->
+            <stop offset="100%" stop-color="#7a9fff"/>  <!-- lighter bottom -->
+        </linearGradient>
+        <style>
+            .cls-1 {
+            stroke: #003456;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 5px;
+            }
+            .cls-font{
+            font-family: Arial, Helvetica, "Liberation Sans", "Nimbus Sans", "Noto Sans", "DejaVu Sans", sans-serif;
+            font-weight:700; font-size:275px; fill:#ffffff; letter-spacing:-0.01em;
+            }
+            <!-- … existing gradients … -->
+
+            <!-- New gradient for the inner hex -->
+
+            .cls-1, .cls-2, .cls-3 { fill: #fff; }
+            .cls-3 { fill-rule: evenodd; }
+
+            /* Inner hex (Paidar blue) */
+            .cls-4 { fill: url(#grad3); }
+
+            /* --- SILVER ring shades --- */
+            .silver-light { fill: #F1D282; }   /* bright face */
+            .silver-dark  { fill: #Af703a; }   /* shadow face */
+            .silver-g1    { fill: url(#grad1); } /* grad light->dark */
+            .silver-g2    { fill: url(#grad2); } /* grad dark->light */
+        </style>
+    </defs>
+
+    <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+    <g transform="translate(50,0)">
+        <g id="Layer_1">
+            <!-- Outer ring (now SILVER) -->
+            <polygon class="silver-light" points="0 175 315 0 630 175 317 370" />
+            <polygon class="silver-g1"    points="0 175 0 525 317 370" />
+            <polygon class="silver-g1"    points="630 175 630 525 317 370" />
+            <polygon class="silver-dark"  points="0 525 315 700 630 525 317 370" />
+            <polygon class="silver-dark"  points="35.5 195.5 317 39.5 598 195.5 317 370" />
+            <polygon class="silver-g2"    points="35.5 195.5 35.5 508 317 370" />
+            <polygon class="silver-g2"    points="598 195.5 598 508 317 370" />
+            <polygon class="silver-light" points="35.5 508 317 664.5 598 508 317 370" />
+
+            <!-- Inner hex (Paidar blue center) -->
+            <polygon class="cls-4" points="320 105 545 230 545 480 320 605 95 480 95 230 320 105"/>
+
+            <!-- Letters -->
+
+            <text x="130" y="450" class="cls-font">Ms</text>
+        </g>
+    </g>
+</svg>
