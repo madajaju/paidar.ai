@@ -127,6 +127,9 @@ a:hover {
     grid-template-columns:repeat(3, 1fr);
     gap: var(--space-5)
 }
+.grid-3 > * {
+    list-style: none;
+}
 
 .flex {
     display: flex;
@@ -269,37 +272,54 @@ a:hover {
     color: #fff
 }
 
+/* ... existing code ... */
+
 /* 6) HERO */
-
 .hero {
-    position: relative; /* added */
+    position: relative; /* still useful if you have children positioned against it */
     padding-block: var(--space-8);
-    background: radial-gradient(1200px 600px at 10% -10%, #e0f2fe 0%, rgba(224, 242, 254, 0) 60%),
+    /* layer the hero image first (if provided), then your radial + linear gradients */
+    background-image:
+    var(--hero-image, none),
+    radial-gradient(1200px 600px at 10% -10%, #e0f2fe 0%, rgba(224,242,254,0) 60%),
     linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-}
 
-/* inject the hero artwork as a full-cover background */
-/* …existing code… */
-.hero::before {
+    /* apply no-repeat only to the image layer, allow gradients to fill */
+    background-repeat: no-repeat, repeat, repeat, repeat;
+
+    /* center the image; gradients don’t need explicit positioning */
+    background-position: center, center, center, center;
+
+    /* cover the image; gradients auto-size */
+    background-size: cover, auto, auto, auto;
+}
+.hero::after {
     content: "";
     position: absolute;
     inset: 0;
-
-    /* ↓ pull the image & fallback color from custom-properties */
-    background-color: var(--hero-bg-color, #eee);
-    background-image: var(--hero-image, none);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    z-index: -1;
+    background: linear-gradient(
+            to right,
+            rgba(52, 86, 120, 0.1) 0%,
+            rgba(52, 86, 120, 0.8) 20%,
+            rgba(52, 86, 120, 0.6) 75%,
+            rgba(52, 86, 120, 0.0) 100%
+    );
     pointer-events: none;
+    z-index: 1; /* above the background, below the text */
 }
 
-/* hide the existing inline figure */
-.hero-art {
-    display: none;
+/* ensure your hero’s children sit above the overlay */
+.hero > * {
+    position: relative;
+    z-index: 2;
+    max-width: 60%;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 1.0);
 }
+.hero {
+    padding-inline: var(--space-3);
+}
+
 
 /* 7) TOKENS AS UTILITY CLASSES (for quick use in HTML) */
 .bg-wash {
@@ -440,10 +460,12 @@ a:hover {
 .primary-nav .has-sub:focus-within > .sub {
     display: block;
 }
-
+.primary-nav ul {
+    list-style: none;
+}
 .primary-nav .has-sub > .sub {
     position: absolute;
-    top: calc(100% + 10px);
+    top: 100%;
     left: 0;
     min-width: 240px;
     background: #fff;
@@ -464,10 +486,12 @@ a:hover {
     padding: 10px 12px;
     border-radius: 8px;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .primary-nav .sub li a:hover {
-    background: var(--brand-wash);
+    background: var(--brand-gold);
+    color: var(--brand-blue);
 }
 
 /* Right-side items (search + CTA) */
@@ -701,223 +725,56 @@ a:hover {
     text-align: center;
 }
 
-.kpi strong {
-    display: block;
-    font-size: 2rem;
-}
-
-/* Small helpers */
-.mt-6 {
-    margin-top: var(--space-6);
-}
-
-
-/* Sector card layout + icon sizing */
-ul.grid-3, ul.grid-2 {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.grid-3 > ul,
-.grid-3 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* target the wrapper inside your li */
-.card.sector > div {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-    "icon title"
-    "paragraphs paragraphs";
-    gap: var(--space-3);
-    align-items: start;
-}
-
-/* place the img and h2 into the top row */
-.card.sector .sector-icon {
-    grid-area: icon;
-    width: 128px; /* tweak as needed */
-    height: auto;
-}
-
-.card.sector h2 {
-    grid-area: title;
-    margin: 0;
-    align-self: center;
-}
-
-/* span both columns in the second row */
-.card.sector p {
-    grid-area: paragraphs;
-    margin-top: var(--space-2);
-}
-
-.card-solution {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-}
-
-.solution-icon {
-    flex-shrink: 0;
-    width: 96px; /* tweak as needed */
-    height: auto;
-}
-
-.card.solution {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-3); /* space between title and body */
-}
-
-/* second row: icon + subtitle side by side */
-.solution-body {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-}
-
-.solution-icon {
-    flex-shrink: 0;
-    width: 128px; /* adjust as needed */
-    height: auto;
-}
-
-.solution-subtitle {
-    /* inherits text color, font-size, etc. */
-}
-
-.solution-content {
-    display: flex;
-    flex-direction: column;
-    gap: 4px; /* tightened spacing between h2 and p */
-}
-
-/* Alternatively, zero out the h2 margin instead of using gap */
-.solution-content h2 {
-    margin: 0;
-    margin-bottom: 0px;
-}
-
-.solution-content p {
-    margin: 0;
-}
-
 .site-footer {
     background: var(--brand-ink);
     color: #fff;
-    padding: var(--space-6) 0;
+    padding: var(--space-8) 0;
 }
-
-/* 3-column grid: socials | brand | links */
+.site-footer .footer-grid a,
+.site-footer .footer-grid small {
+    color: #fff;
+}
+.footer-socials img {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+}
+.footer-brand img {
+    width: 120px;
+    height: 120px;
+}
 .footer-grid {
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: var(--space-4);
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-3);
-}
-
-/* Social icons */
-.footer-socials {
-    display: flex;
-    gap: var(--space-3);
-}
-
-.footer-socials .icon {
-    width: 24px;
-    height: 24px;
-    fill: #fff;
-    transition: transform .2s, fill .2s;
-}
-
-.footer-socials a:hover .icon {
-    transform: scale(1.1);
-    fill: var(--brand-gold);
-}
-
-/* Center brand area */
-.footer-brand {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-5);
+    justify-items: center;
     text-align: center;
 }
-
-.footer-logo {
-    width: 80px;
-    height: auto;
-    display: block;
-    margin: 0 auto var(--space-2);
-}
-
-.footer-brand small {
-    display: block;
-    color: var(--brand-muted);
-}
-
-/* Right-hand utility links */
-.footer-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.footer-brand {
     display: flex;
-    gap: var(--space-4);
+    flex-direction: column;
+    align-items: center;
+    justify-self: center; /* center in grid */
+    text-align: center;   /* center inline text */
+    gap: var(--space-2);
 }
 
-.footer-nav a {
-    color: #fff;
-    text-decoration: none;
+/* Inside the course grid, each card lays out its image and content side-by-side */
+.course-grid > li.card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-5);
+    align-items: start;
 }
 
-.footer-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Mobile: stack into single column */
-@media (max-width: 600px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-        row-gap: var(--space-4);
-    }
-
-    .footer-socials,
-    .footer-nav ul {
-        justify-content: center;
-    }
-}
-
-.social-icon {
-    max-width: 32px;
-}
-
-.primary-nav .has-sub > .sub {
-    display: none; /* … */
-}
-
-.primary-nav .has-sub:hover > .sub,
-.primary-nav .has-sub:focus-within > .sub {
-    display: block;
-}
-.course-grid {
-    list-style: none;
-}
-.card.course {
-    display: flex;
-    align-items: center;    /* vertical centering */
-    gap: 1rem;              /* space between image and content */
-}
-
-.card.course img {
-    flex-shrink: 0;         /* prevent image from shrinking */
-    width: 200px;           /* or whatever fixed size you prefer */
+/* Constrain the thumbnail */
+.course-grid > li.card > img {
+    width: 200px; /* adjust as needed */
     height: auto;
+    object-fit: cover;
 }
 
-.card-content {
-    flex: 1;                /* content takes remaining space */
+/* The .card-content will automatically sit in the second column */
+.course-grid > li.card > .card-content {
+    /* you can add padding here if you want extra breathing room */
 }
