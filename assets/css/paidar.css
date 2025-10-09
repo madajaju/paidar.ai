@@ -778,3 +778,13 @@ a:hover {
 .course-grid > li.card > .card-content {
     /* you can add padding here if you want extra breathing room */
 }
+
+.accordion {
+    list-style: none;
+}
+.accordion.item button {
+    margin-bottom: 0px;
+}
+.accordion.panel {
+    padding-left: 2em;
+}
