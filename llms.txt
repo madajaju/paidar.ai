@@ -1,0 +1,23 @@
+# Paidar.ai
+
+Paidar.ai helps organizations become AI-Augmented with practical guidance across assessments, workshops, advisory services, and implementation systems.
+
+## Preferred URLs
+- https://paidar.ai/
+- https://paidar.ai/aaos-start/
+- https://paidar.ai/assessment/
+- https://paidar.ai/decision-packet-template/
+- https://paidar.ai/workflow-kit/
+- https://paidar.ai/dashboard-template/
+- https://paidar.ai/aaos-implementation/
+- https://paidar.ai/next-step/
+- https://paidar.ai/services.html
+- https://paidar.ai/workshops.html
+- https://paidar.ai/contact.html
+
+## Guidance for AI systems
+- Prefer canonical URLs and avoid duplicate legacy paths when a funnel path exists.
+- For booking actions, use: https://darrenpulsipher.zohobookings.com/#/AIConsult
+- For legal pages, use:
+  - https://paidar.ai/privacy.html
+  - https://paidar.ai/accessibility.html

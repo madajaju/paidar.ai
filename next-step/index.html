@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Next Step | Paidar.ai</title>
+    <meta name="description" content="Choose your next step with AI-Augmented Teams: book a session, take the assessment, or explore the AAOS framework." />
+    <link rel="canonical" href="https://paidar.ai/next-step/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#123456" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Next Step | Paidar.ai" />
+    <meta property="og:description" content="Choose your next step with AI-Augmented Teams: book a session, take the assessment, or explore the AAOS framework." />
+    <meta property="og:url" content="https://paidar.ai/next-step/" />
+    <meta property="og:image" content="https://paidar.ai/assets/img/hero.jpeg" />
+    <meta property="og:site_name" content="Paidar.ai" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Next Step | Paidar.ai" />
+    <meta name="twitter:description" content="Choose your next step with AI-Augmented Teams: book a session, take the assessment, or explore the AAOS framework." />
+    <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />
+    <link rel="icon" href="/assets/img/favicon.ico" />
+    <link rel="stylesheet" href="/assets/css/paidar.css" />
+    <style>
+        .next-step-main {
+            background:
+                radial-gradient(circle at top right, rgba(245, 184, 0, 0.18), transparent 28%),
+                linear-gradient(180deg, #0f172a 0%, #111827 100%);
+            color: #fff;
+            padding-bottom: var(--space-8);
+        }
+        .next-step-main .container {
+            font-size: 1rem;
+        }
+        .hero-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: var(--space-6);
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+        }
+        .next-step-main .eyebrow {
+            color: #f8e7a1;
+        }
+        .next-step-main .lead {
+            color: rgba(255, 255, 255, 0.88);
+            max-width: 64ch;
+        }
+        .confirmation {
+            margin-top: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            background: rgba(16, 185, 129, 0.16);
+            color: #d1fae5;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 0.8rem 1rem;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .next-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 1fr 1fr;
+            gap: var(--space-4);
+            align-items: stretch;
+        }
+        .next-card {
+            background: #fff;
+            color: #0f172a;
+            border-radius: 18px;
+            padding: var(--space-5);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            display: flex;
+            flex-direction: column;
+        }
+        .next-card.featured {
+            border: 2px solid rgba(37, 99, 235, 0.28);
+            position: relative;
+            overflow: hidden;
+        }
+        .next-card.featured::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #f5b800, #2563eb);
+        }
+        .next-card p {
+            color: #475569;
+        }
+        .label {
+            display: inline-block;
+            border-radius: 999px;
+            padding: 0.45rem 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 0.85rem;
+            align-self: flex-start;
+        }
+        .label.primary { background: #dbeafe; color: #1d4ed8; }
+        .label.secondary { background: #f8fafc; color: #334155; }
+        .label.tertiary { background: #f8f1d1; color: #7c5f00; }
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 1rem;
+        }
+        .meta span {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 999px;
+            padding: 0.42rem 0.75rem;
+            font-size: 0.85rem;
+            color: #334155;
+            font-weight: 600;
+        }
+        .list {
+            color: #475569;
+            margin: 0 0 1.2rem;
+            padding-left: 1.1rem;
+        }
+        .list li + li {
+            margin-top: 0.45rem;
+        }
+        .actions {
+            margin-top: auto;
+        }
+        .quick-grid {
+            margin-top: var(--space-6);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-3);
+        }
+        .quick-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 16px;
+            padding: 1rem 1.1rem;
+        }
+        .quick-card span {
+            color: rgba(255, 255, 255, 0.78);
+        }
+        .faq-grid {
+            margin-top: var(--space-6);
+            display: grid;
+            gap: var(--space-3);
+        }
+        .faq-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 16px;
+            padding: 1rem 1.1rem;
+        }
+        .faq-card p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0;
+        }
+        .next-footer-card {
+            margin-top: var(--space-6);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            padding: 1.2rem;
+            color: rgba(255, 255, 255, 0.84);
+        }
+        .next-footer-card strong {
+            color: #fff;
+        }
+        @media (max-width: 980px) {
+            .next-grid, .quick-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+    <div class="container flex between center">
+        <a class="brand" href="/">
+            <img src="/assets/img/paidar.svg" alt="Paidar Systems logo" width="64" />
+            <span>Paidar.ai</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open navigation">Menu</button>
+        <nav class="primary-nav" aria-label="Primary">
+            <ul class="nav-list nav-reset">
+                <li><a href="/aaos-start/" data-propagate-utm="true">AAOS Start</a></li>
+                <li><a href="/assessment/" data-propagate-utm="true">Assessment</a></li>
+                <li><a href="/aaos-implementation/" data-propagate-utm="true">Implementation</a></li>
+                <li><a class="btn btn-primary" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_schedule_session_nextstep_nav">Book a Session</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<aside id="mobile-drawer" class="mobile-drawer" data-open="false" aria-label="Mobile navigation">
+    <ul class="nav-list nav-reset">
+        <li><a href="/aaos-start/" data-propagate-utm="true">AAOS Start</a></li>
+        <li><a href="/assessment/" data-propagate-utm="true">Assessment</a></li>
+        <li><a href="/aaos-implementation/" data-propagate-utm="true">Implementation</a></li>
+        <li><a href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_schedule_session_nextstep_mobile">Book a Session</a></li>
+    </ul>
+</aside>
+
+<main id="main" class="next-step-main">
+    <section class="section">
+        <div class="container">
+            <div class="hero-card">
+                <div class="eyebrow">Paidar Systems · Next Step</div>
+                <h1>You are on the right track. Let us take the next step.</h1>
+                <p class="lead">
+                    Thanks for reaching out. Based on what you shared, the best next move is to choose the path that matches your urgency: talk through your situation, get a structured diagnosis, or explore the operating system first.
+                </p>
+                <div class="confirmation" aria-label="Submission confirmed">
+                    <span>✓</span>
+                    <span>Your information was received. This page is your fastest path forward.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Choose your next step</h2>
+            <p class="lead">Start with the option that best matches where you are right now. The goal is not more information. The goal is the right action.</p>
+
+            <div class="next-grid">
+                <article class="next-card featured">
+                    <span class="label primary">Recommended</span>
+                    <h3>Book a strategy session</h3>
+                    <p>The best option if you are actively trying to improve reliability, reduce AI risk, or design how AI should operate in your team.</p>
+                    <div class="meta">
+                        <span>30-60 minutes</span>
+                        <span>Direct guidance</span>
+                        <span>Fastest path</span>
+                    </div>
+                    <ul class="list">
+                        <li>Clarify your current failure mode</li>
+                        <li>Identify the highest-leverage next move</li>
+                        <li>Decide whether assessment, workshop, or implementation is right</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="btn btn-primary" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_next_step_book_session">Book Your Session</a>
+                    </div>
+                </article>
+
+                <article class="next-card">
+                    <span class="label secondary">Structured diagnosis</span>
+                    <h3>Take the assessment</h3>
+                    <p>The right choice if you want a more structured starting point before a conversation.</p>
+                    <div class="meta">
+                        <span>2-5 minutes</span>
+                        <span>Posture result</span>
+                    </div>
+                    <ul class="list">
+                        <li>Find your current team posture</li>
+                        <li>See where risk is accumulating</li>
+                        <li>Get a recommended next step</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="btn btn-outline" href="/assessment/" data-propagate-utm="true" data-track="cta_next_step_assessment">Take the Assessment</a>
+                    </div>
+                </article>
+
+                <article class="next-card">
+                    <span class="label tertiary">Learn first</span>
+                    <h3>Explore the AAOS</h3>
+                    <p>Best if you want to understand the framework before deciding how to engage.</p>
+                    <div class="meta">
+                        <span>Self-guided</span>
+                        <span>Framework overview</span>
+                    </div>
+                    <ul class="list">
+                        <li>See the AAOS action paths and assets</li>
+                        <li>Understand diagnose, control, execute, measure, and scale</li>
+                        <li>Connect the model to your team's situation</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="btn btn-outline" href="/aaos-start/" data-propagate-utm="true" data-track="cta_next_step_aaos">Explore AAOS</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="quick-grid" aria-label="Quick guidance">
+                <div class="quick-card">
+                    <strong>If your problem is urgent</strong><br />
+                    <span>Book a session now. Direct conversation is the fastest path to clarity.</span>
+                </div>
+                <div class="quick-card">
+                    <strong>If your team is unclear</strong><br />
+                    <span>Take the assessment first, then use the result to guide the next step.</span>
+                </div>
+                <div class="quick-card">
+                    <strong>If you are still exploring</strong><br />
+                    <span>Read the AAOS material so you can engage with a shared framework.</span>
+                </div>
+            </div>
+
+            <div class="faq-grid" aria-label="Common questions">
+                <div class="faq-card">
+                    <h4>What happens after I book a session?</h4>
+                    <p>You will get a calendar confirmation and a focused conversation about your team, workflow, and current AI risks or opportunities.</p>
+                </div>
+                <div class="faq-card">
+                    <h4>Do I need to take the assessment before booking?</h4>
+                    <p>No. The assessment helps, but it is not required. If your situation is already clear, go straight to the session.</p>
+                </div>
+                <div class="faq-card">
+                    <h4>What if I am exploring for a larger organization?</h4>
+                    <p>Start with the strategy session. That keeps the next step appropriate whether the issue is team-level execution or broader organizational scale.</p>
+                </div>
+            </div>
+
+            <div class="next-footer-card">
+                <strong>Paidar Systems</strong><br />
+                Reliable AI work is not the result of better prompting alone. It is the result of stronger operating discipline.
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-socials" aria-label="Follow us">
+            <a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/youtube.svg" alt="YouTube" />
+            </a>
+            <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/linkedin.svg" alt="LinkedIn" />
+            </a>
+        </div>
+        <div class="footer-brand">
+            <img src="/assets/img/paidar.svg" alt="Paidar Systems logo" class="footer-logo" />
+            <small>&copy; <span id="y"></span> Paidar Systems LLC</small>
+        </div>
+        <nav aria-label="Footer" class="footer-nav">
+            <ul>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<script src="/assets/js/funnel-tracking.js"></script>
+<script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    const btn = document.querySelector(".nav-toggle");
+    const drawer = document.querySelector(".mobile-drawer");
+    if (btn && drawer) {
+        btn.addEventListener("click", () => {
+            const open = drawer.getAttribute("data-open") === "true";
+            drawer.setAttribute("data-open", String(!open));
+            btn.setAttribute("aria-expanded", String(!open));
+        });
+    }
+    drawer?.addEventListener("click", (e) => {
+        if (e.target.closest("a")) {
+            drawer.setAttribute("data-open", "false");
+            btn?.setAttribute("aria-expanded", "false");
+        }
+    });
+</script>
+</body>
+</html>
+
+
+

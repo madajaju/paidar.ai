@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
 Sitemap: https://paidar.ai/sitemap.xml
+# AI crawler guidance
+LLM: https://paidar.ai/llms.txt

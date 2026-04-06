@@ -1,9 +1,28 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>AI Readiness Self-Assessment — Quadrant + Petal Glyphs</title>
+    <title>AI Readiness Self-Assessment | Paidar.ai</title>
+    <meta name="description" content="Interactive AI readiness self-assessment to benchmark individual and team capability." />
+    <link rel="canonical" href="https://paidar.ai/survey.html" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#123456" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AI Readiness Self-Assessment | Paidar.ai" />
+    <meta property="og:description" content="Interactive AI readiness self-assessment to benchmark individual and team capability." />
+    <meta property="og:url" content="https://paidar.ai/survey.html" />
+    <meta property="og:image" content="https://paidar.ai/assets/img/hero.jpeg" />
+    <meta property="og:site_name" content="Paidar.ai" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI Readiness Self-Assessment | Paidar.ai" />
+    <meta name="twitter:description" content="Interactive AI readiness self-assessment to benchmark individual and team capability." />
+    <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />
+    <link rel="icon" href="/assets/img/favicon.ico" />
+    <link rel="stylesheet" href="./assets/css/paidar.css" />
     <style>
         :root {
             --bg: #ffffff;
@@ -428,6 +447,30 @@
     </style>
 </head>
 <body>
+<a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+<header class="site-header" style="position:sticky;top:0;z-index:20;background:#ffffff;border-bottom:1px solid #d1d5db;">
+    <div style="max-width:1200px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
+        <a href="/" style="font-weight:800;color:#123456;text-decoration:none;">Paidar.ai</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open navigation">Menu</button>
+        <nav class="primary-nav" aria-label="Primary" style="display:flex;gap:14px;flex-wrap:wrap;">
+            <a href="/" style="color:#123456;font-weight:600;text-decoration:none;">Home</a>
+            <a href="/aaos-start/" style="color:#123456;font-weight:600;text-decoration:none;">AAOS Start</a>
+            <a href="/assessment/" style="color:#123456;font-weight:600;text-decoration:none;">Assessment</a>
+            <a href="/services.html" style="color:#123456;font-weight:600;text-decoration:none;">Services</a>
+            <a href="/contact.html" style="color:#123456;font-weight:600;text-decoration:none;">Contact</a>
+        </nav>
+    </div>
+</header>
+<aside id="mobile-drawer" class="mobile-drawer" data-open="false" aria-label="Mobile navigation">
+    <ul class="nav-list nav-reset">
+        <li><a href="/">Home</a></li>
+        <li><a href="/aaos-start/">AAOS Start</a></li>
+        <li><a href="/assessment/">Assessment</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+    </ul>
+</aside>
+<main id="main">
 <div id="survey-container"></div>
 <div class="container" style="display:none">
 
@@ -572,6 +615,7 @@
     </div>
 
 </div>
+</main>
 <footer class="site-footer">
     <span>
     &copy; 2025 Paidar Systems LLC. <a href="http://www.paidar.ai" target="_blank">www.paidar.ai</a>
@@ -1740,7 +1784,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Survey Analysis</title>
+<title>AI Readiness Self-Assessment | Paidar.ai</title>
+<meta name="description" content="Interactive AI readiness self-assessment to benchmark individual and team capability." />
+<link rel="canonical" href="https://paidar.ai/survey.html" />
+<meta name="robots" content="index, follow" />
 <style>
   :root{
     --ink:#111827; --muted:#6b7280; --line:#d1d5db;
@@ -1965,5 +2012,26 @@
     }
 
 </script>
+<script>
+    const navBtn = document.querySelector(".nav-toggle");
+    const navDrawer = document.querySelector(".mobile-drawer");
+    if (navBtn && navDrawer) {
+        navBtn.addEventListener("click", () => {
+            const open = navDrawer.getAttribute("data-open") === "true";
+            navDrawer.setAttribute("data-open", String(!open));
+            navBtn.setAttribute("aria-expanded", String(!open));
+        });
+        navDrawer.addEventListener("click", (e) => {
+            if (e.target.closest("a")) {
+                navDrawer.setAttribute("data-open", "false");
+                navBtn.setAttribute("aria-expanded", "false");
+            }
+        });
+    }
+</script>
 </body>
 </html>
+
+
+
+

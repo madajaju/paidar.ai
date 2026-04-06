@@ -198,11 +198,11 @@ a:hover {
 
 .btn-gold {
     background: var(--brand-gold);
-    color: #111;
+    color: #fff;
 }
 
 .btn-outline {
-    background: transparent;
+    background: white;
     border: 1px solid var(--brand-blue);
     color: var(--brand-blue);
 }

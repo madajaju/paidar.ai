@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assessment | Paidar.ai</title>
+    <meta name="description" content="Complete a rapid AAOS assessment and receive your posture, risk level, and recommended next step." />
+    <link rel="canonical" href="https://paidar.ai/assessment/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#123456" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Assessment | Paidar.ai" />
+    <meta property="og:description" content="Complete a rapid AAOS assessment and receive your posture, risk level, and recommended next step." />
+    <meta property="og:url" content="https://paidar.ai/assessment/" />
+    <meta property="og:image" content="https://paidar.ai/assets/img/hero.jpeg" />
+    <meta property="og:site_name" content="Paidar.ai" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Assessment | Paidar.ai" />
+    <meta name="twitter:description" content="Complete a rapid AAOS assessment and receive your posture, risk level, and recommended next step." />
+    <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />
+    <link rel="icon" href="/assets/img/favicon.ico" />
+    <link rel="stylesheet" href="/assets/css/paidar.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+    <div class="container flex between center">
+        <a class="brand" href="/">
+            <img src="/assets/img/paidar.svg" alt="Paidar Systems logo" width="64" />
+            <span>Paidar.ai</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open navigation">Menu</button>
+        <nav class="primary-nav" aria-label="Primary">
+            <ul class="nav-list nav-reset">
+                <li><a href="/aaos-start/" data-propagate-utm="true">AAOS Start</a></li>
+                <li><a href="/decision-packet-template/" data-propagate-utm="true">Decision Packet</a></li>
+                <li><a href="/aaos-implementation/" data-propagate-utm="true">Implementation</a></li>
+                <li><a class="btn btn-primary" href="#assessment-form" id="start-assessment" data-track="assessment_start">Take the Assessment</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<aside id="mobile-drawer" class="mobile-drawer" data-open="false" aria-label="Mobile navigation">
+    <ul class="nav-list nav-reset">
+        <li><a href="/aaos-start/" data-propagate-utm="true">AAOS Start</a></li>
+        <li><a href="#assessment-form" data-track="assessment_start">Take the Assessment</a></li>
+        <li><a href="/decision-packet-template/" data-propagate-utm="true">Decision Packet</a></li>
+        <li><a href="/aaos-implementation/" data-propagate-utm="true">Book a Session</a></li>
+    </ul>
+</aside>
+
+<main id="main">
+    <section class="hero" style="--hero-image:url('/assets/img/about-hero.jpeg'); --hero-bg-color:#0e223b;">
+        <div class="container">
+            <h1>AAOS Rapid Assessment</h1>
+            <p class="lead">Answer six questions in under three minutes and get your posture, risk level, and immediate next step.</p>
+            <p>
+                <a class="btn btn-gold" href="#assessment-form" data-track="assessment_start_hero">Start Assessment</a>
+                <a class="btn btn-outline" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_assessment">Book a Session</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="section tint theme-data">
+        <div class="container grid-2">
+            <article class="card accent-modern">
+                <h2 id="assessment-form">Take the Assessment</h2>
+                <p>Email is required so we can send your results and follow-up assets.</p>
+                <form id="aaos-assessment-form" class="stack" aria-label="AAOS assessment form">
+                    <p>
+                        <label for="email">Work Email</label><br />
+                        <input id="email" name="email" type="email" required />
+                    </p>
+
+                    <input type="hidden" name="utm_source" data-utm-field="true" />
+                    <input type="hidden" name="utm_medium" data-utm-field="true" />
+                    <input type="hidden" name="utm_campaign" data-utm-field="true" />
+                    <input type="hidden" name="utm_content" data-utm-field="true" />
+                    <input type="hidden" name="qr" data-utm-field="true" />
+                    <input type="hidden" name="book" data-utm-field="true" />
+
+                    <fieldset class="stack">
+                        <legend>1. Strategy clarity</legend>
+                        <label><input type="radio" name="q1" value="0" required /> No shared strategy</label>
+                        <label><input type="radio" name="q1" value="1" /> Early intent but no roadmap</label>
+                        <label><input type="radio" name="q1" value="2" /> Roadmap defined for one function</label>
+                        <label><input type="radio" name="q1" value="3" /> Enterprise strategy with owners and milestones</label>
+                    </fieldset>
+
+                    <fieldset class="stack">
+                        <legend>2. Workflow integration</legend>
+                        <label><input type="radio" name="q2" value="0" required /> No production workflow integration</label>
+                        <label><input type="radio" name="q2" value="1" /> Ad hoc experiments only</label>
+                        <label><input type="radio" name="q2" value="2" /> Repeatable use in selected teams</label>
+                        <label><input type="radio" name="q2" value="3" /> Standardized use across key workflows</label>
+                    </fieldset>
+
+                    <fieldset class="stack">
+                        <legend>3. Data readiness</legend>
+                        <label><input type="radio" name="q3" value="0" required /> Data is fragmented and unmanaged</label>
+                        <label><input type="radio" name="q3" value="1" /> Core data exists but quality is inconsistent</label>
+                        <label><input type="radio" name="q3" value="2" /> Data quality controls in place</label>
+                        <label><input type="radio" name="q3" value="3" /> Trusted data products support decisions</label>
+                    </fieldset>
+
+                    <fieldset class="stack">
+                        <legend>4. Governance and risk controls</legend>
+                        <label><input type="radio" name="q4" value="0" required /> No policy guardrails</label>
+                        <label><input type="radio" name="q4" value="1" /> Draft policies with limited adoption</label>
+                        <label><input type="radio" name="q4" value="2" /> Policies and review workflows active</label>
+                        <label><input type="radio" name="q4" value="3" /> Controls are operational and audited</label>
+                    </fieldset>
+
+                    <fieldset class="stack">
+                        <legend>5. Team enablement</legend>
+                        <label><input type="radio" name="q5" value="0" required /> No formal enablement</label>
+                        <label><input type="radio" name="q5" value="1" /> Small pilot group only</label>
+                        <label><input type="radio" name="q5" value="2" /> Role-based training underway</label>
+                        <label><input type="radio" name="q5" value="3" /> Scaled enablement with clear accountability</label>
+                    </fieldset>
+
+                    <fieldset class="stack">
+                        <legend>6. Measurement and iteration</legend>
+                        <label><input type="radio" name="q6" value="0" required /> No KPI tracking</label>
+                        <label><input type="radio" name="q6" value="1" /> Basic reporting, no feedback loops</label>
+                        <label><input type="radio" name="q6" value="2" /> KPI tracking with periodic review</label>
+                        <label><input type="radio" name="q6" value="3" /> Continuous measurement and optimization</label>
+                    </fieldset>
+
+                    <p>
+                        <button class="btn btn-primary" type="submit" data-track="assessment_submit">Get My Result</button>
+                    </p>
+                </form>
+            </article>
+
+            <article class="card accent-ai" id="assessment-result" hidden>
+                <h2>Your Result</h2>
+                <p><strong>Posture:</strong> <span id="result-posture"></span></p>
+                <p><strong>Risk Level:</strong> <span id="result-risk"></span></p>
+                <p><strong>Next Step:</strong> <span id="result-next-step"></span></p>
+                <p>
+                    <a class="btn btn-gold" href="/decision-packet-template/" data-propagate-utm="true" data-track="cta_download_packet_from_result">Download the Decision Packet</a>
+                    <a class="btn btn-outline" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_from_result">Book a Session</a>
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="banner theme-modern">
+                <h2>Next Action After Assessment</h2>
+                <p>Use the decision packet template to move from assessment insight into an executive decision path.</p>
+                <p>
+                    <a class="btn btn-gold" href="/decision-packet-template/" data-propagate-utm="true" data-track="cta_next_download_packet">Download the Template</a>
+                    <a class="btn btn-outline" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_next_book_session">Book a Session</a>
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-socials" aria-label="Follow us">
+            <a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/youtube.svg" alt="YouTube" />
+            </a>
+            <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/linkedin.svg" alt="LinkedIn" />
+            </a>
+        </div>
+        <div class="footer-brand">
+            <img src="/assets/img/paidar.svg" alt="Paidar Systems logo" class="footer-logo" />
+            <small>&copy; <span id="y"></span> Paidar Systems LLC</small>
+        </div>
+        <nav aria-label="Footer" class="footer-nav">
+            <ul>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<script src="/assets/js/funnel-tracking.js"></script>
+<script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    const btn = document.querySelector(".nav-toggle");
+    const drawer = document.querySelector(".mobile-drawer");
+    if (btn && drawer) {
+        btn.addEventListener("click", () => {
+            const open = drawer.getAttribute("data-open") === "true";
+            drawer.setAttribute("data-open", String(!open));
+            btn.setAttribute("aria-expanded", String(!open));
+        });
+    }
+    drawer?.addEventListener("click", (e) => {
+        if (e.target.closest("a")) {
+            drawer.setAttribute("data-open", "false");
+            btn?.setAttribute("aria-expanded", "false");
+        }
+    });
+
+    const assessmentForm = document.getElementById("aaos-assessment-form");
+    const resultCard = document.getElementById("assessment-result");
+    const postureField = document.getElementById("result-posture");
+    const riskField = document.getElementById("result-risk");
+    const nextStepField = document.getElementById("result-next-step");
+
+    function resolvePosture(score) {
+        if (score <= 5) return "Reactive";
+        if (score <= 10) return "Emerging";
+        if (score <= 14) return "Operational";
+        return "Strategic";
+    }
+
+    function resolveRisk(score, governanceScore) {
+        if (governanceScore === 0 || score <= 6) return "High";
+        if (governanceScore <= 1 || score <= 12) return "Medium";
+        return "Low";
+    }
+
+    function resolveNextStep(posture, risk) {
+        if (risk === "High") {
+            return "Start with governance guardrails, then run a focused workflow pilot with executive oversight.";
+        }
+        if (posture === "Emerging") {
+            return "Download the workflow kit and launch a 30-day pilot with weekly KPI reviews.";
+        }
+        if (posture === "Operational") {
+            return "Adopt the dashboard template and formalize your 60-day scaling roadmap.";
+        }
+        return "Book an implementation session to scale across business units with governance continuity.";
+    }
+
+    assessmentForm?.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(assessmentForm);
+        const numericAnswers = ["q1", "q2", "q3", "q4", "q5", "q6"].map(function (key) {
+            return Number(formData.get(key) || 0);
+        });
+        const total = numericAnswers.reduce((sum, value) => sum + value, 0);
+        const governanceScore = Number(formData.get("q4") || 0);
+
+        const posture = resolvePosture(total);
+        const risk = resolveRisk(total, governanceScore);
+        const nextStep = resolveNextStep(posture, risk);
+
+        postureField.textContent = posture;
+        riskField.textContent = risk;
+        nextStepField.textContent = nextStep;
+        resultCard.hidden = false;
+
+        window.paidarTrack?.push("assessment_completed", {
+            total_score: total,
+            posture: posture,
+            risk_level: risk,
+            email_domain: String(formData.get("email") || "").split("@")[1] || ""
+        });
+
+        resultCard.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+</script>
+</body>
+</html>
+
+
+
