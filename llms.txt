@@ -1,4 +1,4 @@
-# Paidar.ai
+﻿# Paidar.ai
 
 Paidar.ai helps organizations become AI-Augmented with practical guidance across assessments, workshops, advisory services, and implementation systems.
 
@@ -6,7 +6,7 @@ Paidar.ai helps organizations become AI-Augmented with practical guidance across
 - https://paidar.ai/
 - https://paidar.ai/aaos-start/
 - https://paidar.ai/assessment/
-- https://paidar.ai/decision-packet-template/
+- https://paidar.ai/integrity-packet-template/
 - https://paidar.ai/workflow-kit/
 - https://paidar.ai/dashboard-template/
 - https://paidar.ai/aaos-implementation/
@@ -21,3 +21,4 @@ Paidar.ai helps organizations become AI-Augmented with practical guidance across
 - For legal pages, use:
   - https://paidar.ai/privacy.html
   - https://paidar.ai/accessibility.html
+

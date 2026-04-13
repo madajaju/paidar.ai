@@ -12,7 +12,7 @@
   <url><loc>https://paidar.ai/contact.html</loc></url>
   <url><loc>https://paidar.ai/aaos-start/</loc></url>
   <url><loc>https://paidar.ai/assessment/</loc></url>
-  <url><loc>https://paidar.ai/decision-packet-template/</loc></url>
+  <url><loc>https://paidar.ai/integrity-packet-template/</loc></url>
   <url><loc>https://paidar.ai/workflow-kit/</loc></url>
   <url><loc>https://paidar.ai/dashboard-template/</loc></url>
   <url><loc>https://paidar.ai/aaos-implementation/</loc></url>
@@ -34,3 +34,4 @@
   <url><loc>https://paidar.ai/training/cloud-computing.html</loc></url>
   <url><loc>https://paidar.ai/training/microservices.html</loc></url>
 </urlset>
+

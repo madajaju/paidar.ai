@@ -1,10 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dashboard Template | Paidar.ai</title>
-    <meta name="description" content="Composite Confidence and Augmentation Density dashboard template for AAOS measurement." />
+    <meta name="description" content="AAOS Measure dashboard template with six reliability indicators: Composite Confidence, Validation Quality, Throughput and Cycle Time, Decision Quality, Ownership and Accountability, and Augmentation Density." />
     <link rel="canonical" href="https://paidar.ai/dashboard-template/" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#123456" />
@@ -12,7 +12,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Dashboard Template | Paidar.ai" />
-    <meta property="og:description" content="Composite Confidence and Augmentation Density dashboard template for AAOS measurement." />
+    <meta property="og:description" content="AAOS Measure dashboard template with six reliability indicators: Composite Confidence, Validation Quality, Throughput and Cycle Time, Decision Quality, Ownership and Accountability, and Augmentation Density." />
     <meta property="og:url" content="https://paidar.ai/dashboard-template/" />
     <meta property="og:image" content="https://paidar.ai/assets/img/hero.jpeg" />
     <meta property="og:site_name" content="Paidar.ai" />
@@ -20,10 +20,15 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Dashboard Template | Paidar.ai" />
-    <meta name="twitter:description" content="Composite Confidence and Augmentation Density dashboard template for AAOS measurement." />
+    <meta name="twitter:description" content="AAOS Measure dashboard template with six reliability indicators: Composite Confidence, Validation Quality, Throughput and Cycle Time, Decision Quality, Ownership and Accountability, and Augmentation Density." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />
     <link rel="icon" href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="/assets/css/paidar.css" />
+    <style>
+        .measure-block + .measure-block {
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -56,8 +61,9 @@
     <section class="hero" style="--hero-image:url('/assets/img/innovation.png'); --hero-bg-color:#0e223b;">
         <div class="container">
             <h1>Dashboard Template</h1>
-            <p class="lead">Measure implementation with two practical indicators: Composite Confidence and Augmentation Density.</p>
+            <p class="lead">Measure implementation with six reliability indicators from the AAOS Measure stage dashboard.</p>
             <p>
+                <a class="btn btn-primary" href="/dashboard-template/AAOS-Dashboard-Template.xlsx" download data-track="cta_download_dashboard_xlsx_hero">Download Dashboard (.xlsx)</a>
                 <a class="btn btn-gold" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_schedule_session_dashboard_hero">Schedule a Session</a>
                 <a class="btn btn-outline" href="/assessment/" data-propagate-utm="true" data-track="cta_retake_assessment_dashboard">Retake Assessment</a>
             </p>
@@ -67,29 +73,65 @@
     <section class="section tint theme-ai">
         <div class="container">
             <span class="eyebrow">Measurement Layer</span>
-            <h2>Template Structure</h2>
-            <div class="grid-2">
-                <article class="card accent-modern">
-                    <h3>Composite Confidence Dashboard</h3>
+            <h2>Measure Overview Dashboard</h2>
+
+            <article class="card accent-modern measure-block">
+                <h3>Composite Confidence</h3>
+                <p><strong>Snapshot:</strong> 87% (+4% vs last week)</p>
+                <ul class="feature-list">
+                    <li>Combined reliability signal across validation, throughput, decision, and ownership quality</li>
+                    <li>Use as the top-line control signal for weekly operating reviews</li>
+                </ul>
+            </article>
+
+            <div class="grid-2 measure-block">
+                <article class="card accent-ai">
+                    <h3>Validation Quality</h3>
                     <ul class="feature-list">
-                        <li>Confidence score by workflow stage</li>
-                        <li>Human override rate</li>
-                        <li>Policy compliance pass/fail trend</li>
-                        <li>Decision latency by function</li>
+                        <li>Pass Rate: 92%</li>
+                        <li>Evidence Strength: High</li>
+                        <li>Rework Rate: 8%</li>
                     </ul>
-                    <p><strong>Formula sample:</strong> Confidence = (Quality x 0.4) + (Policy Fit x 0.3) + (User Trust x 0.3)</p>
                 </article>
-                <article class="card accent-data">
-                    <h3>Augmentation Density Sample</h3>
+                <article class="card accent-edge">
+                    <h3>Throughput and Cycle Time</h3>
                     <ul class="feature-list">
-                        <li>Percent of workflows with AI-assisted tasks</li>
-                        <li>Coverage by team and business unit</li>
-                        <li>Manual to assisted handoff ratio</li>
-                        <li>Stage-level adoption trend by month</li>
+                        <li>Avg Cycle Time: 2.4 days</li>
+                        <li>Volume: 48 packets/week</li>
+                        <li>Bottleneck: Validation stage</li>
                     </ul>
-                    <p><strong>Formula sample:</strong> Augmentation Density = AI-Assisted Tasks / Total Eligible Tasks</p>
                 </article>
             </div>
+
+            <div class="grid-2 measure-block">
+                <article class="card accent-comm">
+                    <h3>Decision Quality</h3>
+                    <ul class="feature-list">
+                        <li>Accuracy: 89%</li>
+                        <li>Reversal Rate: 6%</li>
+                        <li>Confidence: Medium-High</li>
+                    </ul>
+                </article>
+                <article class="card accent-data">
+                    <h3>Ownership and Accountability</h3>
+                    <ul class="feature-list">
+                        <li>Named Owners: 100%</li>
+                        <li>Approval Clarity: Strong</li>
+                        <li>Escalations: 3 this week</li>
+                    </ul>
+                </article>
+            </div>
+
+            <article class="card accent-cyber measure-block">
+                <h3>Augmentation Density</h3>
+                <ul class="feature-list">
+                    <li>AI Contribution: 62%</li>
+                    <li>Stable across last 3 weeks</li>
+                    <li>No drift detected</li>
+                </ul>
+                <p><a class="arrow" href="https://embracingdigital.org/en/aaos/measure.html?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink" target="_blank" rel="noopener">Read Measure stage guidance on Embracing Digital</a></p>
+                <p><a class="arrow" href="https://embracingdigital.org/en/aaos/models/operating-dashboard/?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink" target="_blank" rel="noopener">See Operating Dashboard model details</a></p>
+            </article>
         </div>
     </section>
 
@@ -97,18 +139,21 @@
         <div class="container">
             <div class="kpi-band">
                 <div class="kpi">
-                    <h3>Target Confidence</h3>
-                    <p><strong>0.78+</strong></p>
+                    <h3>Top-Line Signal</h3>
+                    <p><strong>Composite Confidence</strong></p>
                 </div>
                 <div class="kpi">
-                    <h3>Target Density</h3>
-                    <p><strong>35%+</strong></p>
+                    <h3>Primary Flow Signal</h3>
+                    <p><strong>Throughput + Cycle Time</strong></p>
                 </div>
                 <div class="kpi">
-                    <h3>Review Cadence</h3>
-                    <p><strong>Weekly</strong></p>
+                    <h3>Scale Safety Signal</h3>
+                    <p><strong>Ownership + Validation</strong></p>
                 </div>
             </div>
+            <p style="margin-top:1rem;">
+                <a class="btn btn-primary" href="/dashboard-template/AAOS-Dashboard-Template.xlsx" download data-track="cta_download_dashboard_xlsx_mid">Download Full Dashboard Workbook (.xlsx)</a>
+            </p>
         </div>
     </section>
 
@@ -119,7 +164,7 @@
                 <p>Use your assessment score, workflow kit, and dashboard baseline in a guided execution session.</p>
                 <p>
                     <a class="btn btn-gold" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_schedule_session_dashboard_primary">Schedule a Session</a>
-                    <a class="btn btn-outline" href="/decision-packet-template/" data-propagate-utm="true" data-track="cta_download_template_dashboard_secondary">Download the Template</a>
+                    <a class="btn btn-outline" href="/integrity-packet-template/" data-propagate-utm="true" data-track="cta_download_template_dashboard_secondary">Download the Template</a>
                 </p>
             </div>
         </div>
@@ -171,6 +216,9 @@
 </script>
 </body>
 </html>
+
+
+
 
 
 

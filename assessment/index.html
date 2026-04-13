@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -8,7 +8,7 @@
     <link rel="canonical" href="https://paidar.ai/assessment/" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#123456" />
-    
+
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Assessment | Paidar.ai" />
@@ -24,6 +24,101 @@
     <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />
     <link rel="icon" href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="/assets/css/paidar.css" />
+    <style>
+        .assessment-stage-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            background: #e8eef6;
+            border: 1px solid #c9d6e7;
+            border-radius: 14px;
+            padding: 1rem;
+        }
+
+        .assessment-flow {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-6);
+        }
+
+        .assessment-stage-panel {
+            border: 1px solid #9fb5d0;
+            border-radius: 12px;
+            padding: 1rem;
+            background: #f6f9fd;
+        }
+
+        .assessment-stage-panel h3 {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: 0.01em;
+            color: #0f2d4d;
+        }
+
+        .assessment-question {
+            margin: 0 0 0.75rem 0;
+            border: 0;
+            padding: 0;
+            min-inline-size: 0;
+        }
+
+        .assessment-question legend {
+            font-weight: 700;
+            margin-bottom: 0.45rem;
+            color: #172a3d;
+        }
+
+        .assessment-option {
+            display: block;
+            margin: 0.25rem 0;
+        }
+
+        @media (max-width: 960px) {
+            .assessment-stage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .result-stage-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.75rem;
+            margin: 0.75rem 0 1rem;
+        }
+
+        .result-stage-card {
+            border: 1px solid var(--brand-line);
+            border-radius: 10px;
+            padding: 0.6rem 0.75rem;
+            background: #fff;
+        }
+
+        .result-stage-card h3 {
+            margin: 0 0 0.25rem;
+            font-size: 0.95rem;
+            color: var(--brand-blue);
+        }
+
+        .result-stage-meta {
+            font-size: 0.9rem;
+            color: var(--brand-muted);
+        }
+
+        .result-stage-status {
+            font-weight: 700;
+        }
+
+        .result-stage-status.fragile { color: #b91c1c; }
+        .result-stage-status.developing { color: #a16207; }
+        .result-stage-status.reliable { color: #166534; }
+
+        @media (max-width: 960px) {
+            .result-stage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -38,9 +133,9 @@
         <nav class="primary-nav" aria-label="Primary">
             <ul class="nav-list nav-reset">
                 <li><a href="/aaos-start/" data-propagate-utm="true">AAOS Start</a></li>
-                <li><a href="/decision-packet-template/" data-propagate-utm="true">Decision Packet</a></li>
+                <li><a href="/integrity-packet-template/" data-propagate-utm="true">Integrity Packet</a></li>
                 <li><a href="/aaos-implementation/" data-propagate-utm="true">Implementation</a></li>
-                <li><a class="btn btn-primary" href="#assessment-form" id="start-assessment" data-track="assessment_start">Take the Assessment</a></li>
+                <li><a class="btn btn-primary" href="#assessment-form" id="start-assessment" data-track="assessment_start">Take the Team Assessment</a></li>
             </ul>
         </nav>
     </div>
@@ -49,8 +144,8 @@
 <aside id="mobile-drawer" class="mobile-drawer" data-open="false" aria-label="Mobile navigation">
     <ul class="nav-list nav-reset">
         <li><a href="/aaos-start/" data-propagate-utm="true">AAOS Start</a></li>
-        <li><a href="#assessment-form" data-track="assessment_start">Take the Assessment</a></li>
-        <li><a href="/decision-packet-template/" data-propagate-utm="true">Decision Packet</a></li>
+        <li><a href="#assessment-form" data-track="assessment_start">Take the Team Assessment</a></li>
+        <li><a href="/integrity-packet-template/" data-propagate-utm="true">Integrity Packet</a></li>
         <li><a href="/aaos-implementation/" data-propagate-utm="true">Book a Session</a></li>
     </ul>
 </aside>
@@ -58,8 +153,8 @@
 <main id="main">
     <section class="hero" style="--hero-image:url('/assets/img/about-hero.jpeg'); --hero-bg-color:#0e223b;">
         <div class="container">
-            <h1>AAOS Rapid Assessment</h1>
-            <p class="lead">Answer six questions in under three minutes and get your posture, risk level, and immediate next step.</p>
+            <h1>AAOS Team Reliability Assessment</h1>
+            <p class="lead">Answer 18 questions in under 7 minutes and get your score, risk level, and stage bottleneck.</p>
             <p>
                 <a class="btn btn-gold" href="#assessment-form" data-track="assessment_start_hero">Start Assessment</a>
                 <a class="btn btn-outline" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_assessment">Book a Session</a>
@@ -68,10 +163,10 @@
     </section>
 
     <section class="section tint theme-data">
-        <div class="container grid-2">
+        <div class="container assessment-flow">
             <article class="card accent-modern">
-                <h2 id="assessment-form">Take the Assessment</h2>
-                <p>Email is required so we can send your results and follow-up assets.</p>
+                <h2 id="assessment-form">Take the Team Assessment</h2>
+                <p>Email is required so we can send your score, recommendations, and workshop next steps.</p>
                 <form id="aaos-assessment-form" class="stack" aria-label="AAOS assessment form">
                     <p>
                         <label for="email">Work Email</label><br />
@@ -85,53 +180,9 @@
                     <input type="hidden" name="qr" data-utm-field="true" />
                     <input type="hidden" name="book" data-utm-field="true" />
 
-                    <fieldset class="stack">
-                        <legend>1. Strategy clarity</legend>
-                        <label><input type="radio" name="q1" value="0" required /> No shared strategy</label>
-                        <label><input type="radio" name="q1" value="1" /> Early intent but no roadmap</label>
-                        <label><input type="radio" name="q1" value="2" /> Roadmap defined for one function</label>
-                        <label><input type="radio" name="q1" value="3" /> Enterprise strategy with owners and milestones</label>
-                    </fieldset>
+                    <div id="assessment-questions" class="assessment-stage-grid" aria-live="polite"></div>
 
-                    <fieldset class="stack">
-                        <legend>2. Workflow integration</legend>
-                        <label><input type="radio" name="q2" value="0" required /> No production workflow integration</label>
-                        <label><input type="radio" name="q2" value="1" /> Ad hoc experiments only</label>
-                        <label><input type="radio" name="q2" value="2" /> Repeatable use in selected teams</label>
-                        <label><input type="radio" name="q2" value="3" /> Standardized use across key workflows</label>
-                    </fieldset>
-
-                    <fieldset class="stack">
-                        <legend>3. Data readiness</legend>
-                        <label><input type="radio" name="q3" value="0" required /> Data is fragmented and unmanaged</label>
-                        <label><input type="radio" name="q3" value="1" /> Core data exists but quality is inconsistent</label>
-                        <label><input type="radio" name="q3" value="2" /> Data quality controls in place</label>
-                        <label><input type="radio" name="q3" value="3" /> Trusted data products support decisions</label>
-                    </fieldset>
-
-                    <fieldset class="stack">
-                        <legend>4. Governance and risk controls</legend>
-                        <label><input type="radio" name="q4" value="0" required /> No policy guardrails</label>
-                        <label><input type="radio" name="q4" value="1" /> Draft policies with limited adoption</label>
-                        <label><input type="radio" name="q4" value="2" /> Policies and review workflows active</label>
-                        <label><input type="radio" name="q4" value="3" /> Controls are operational and audited</label>
-                    </fieldset>
-
-                    <fieldset class="stack">
-                        <legend>5. Team enablement</legend>
-                        <label><input type="radio" name="q5" value="0" required /> No formal enablement</label>
-                        <label><input type="radio" name="q5" value="1" /> Small pilot group only</label>
-                        <label><input type="radio" name="q5" value="2" /> Role-based training underway</label>
-                        <label><input type="radio" name="q5" value="3" /> Scaled enablement with clear accountability</label>
-                    </fieldset>
-
-                    <fieldset class="stack">
-                        <legend>6. Measurement and iteration</legend>
-                        <label><input type="radio" name="q6" value="0" required /> No KPI tracking</label>
-                        <label><input type="radio" name="q6" value="1" /> Basic reporting, no feedback loops</label>
-                        <label><input type="radio" name="q6" value="2" /> KPI tracking with periodic review</label>
-                        <label><input type="radio" name="q6" value="3" /> Continuous measurement and optimization</label>
-                    </fieldset>
+                    <p id="submit-status" hidden></p>
 
                     <p>
                         <button class="btn btn-primary" type="submit" data-track="assessment_submit">Get My Result</button>
@@ -141,11 +192,18 @@
 
             <article class="card accent-ai" id="assessment-result" hidden>
                 <h2>Your Result</h2>
+                <p><strong>Total Score:</strong> <span id="result-score"></span> / 90</p>
                 <p><strong>Posture:</strong> <span id="result-posture"></span></p>
                 <p><strong>Risk Level:</strong> <span id="result-risk"></span></p>
+                <p><strong>Primary Bottleneck:</strong> <span id="result-bottleneck"></span></p>
+                <p><strong>Strongest Stage:</strong> <span id="result-strongest"></span></p>
+                <p><strong>Priority Stages:</strong> <span id="result-priority"></span></p>
+                <div id="result-stage-profile" class="result-stage-grid" aria-live="polite"></div>
+                <p><strong>Stage Actions:</strong></p>
+                <ul id="result-stage-actions"></ul>
                 <p><strong>Next Step:</strong> <span id="result-next-step"></span></p>
                 <p>
-                    <a class="btn btn-gold" href="/decision-packet-template/" data-propagate-utm="true" data-track="cta_download_packet_from_result">Download the Decision Packet</a>
+                    <a class="btn btn-gold" href="/integrity-packet-template/" data-propagate-utm="true" data-track="cta_download_packet_from_result">Download the Integrity Packet</a>
                     <a class="btn btn-outline" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_from_result">Book a Session</a>
                 </p>
             </article>
@@ -156,9 +214,9 @@
         <div class="container">
             <div class="banner theme-modern">
                 <h2>Next Action After Assessment</h2>
-                <p>Use the decision packet template to move from assessment insight into an executive decision path.</p>
+                <p>Use the integrity packet template to move from insight to execution and reduce reliability risk.</p>
                 <p>
-                    <a class="btn btn-gold" href="/decision-packet-template/" data-propagate-utm="true" data-track="cta_next_download_packet">Download the Template</a>
+                    <a class="btn btn-gold" href="/integrity-packet-template/" data-propagate-utm="true" data-track="cta_next_download_packet">Download the Template</a>
                     <a class="btn btn-outline" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_next_book_session">Book a Session</a>
                 </p>
             </div>
@@ -209,62 +267,273 @@
         }
     });
 
-    const assessmentForm = document.getElementById("aaos-assessment-form");
-    const resultCard = document.getElementById("assessment-result");
-    const postureField = document.getElementById("result-posture");
-    const riskField = document.getElementById("result-risk");
-    const nextStepField = document.getElementById("result-next-step");
+    const CRM_ENDPOINT = window.PAIDAR_ASSESSMENT_ENDPOINT || "/api/assessment-lead";
+
+    const QUESTION_OPTIONS = [
+        { value: 1, label: "Never" },
+        { value: 2, label: "Rarely" },
+        { value: 3, label: "Sometimes" },
+        { value: 4, label: "Usually" },
+        { value: 5, label: "Consistently" }
+    ];
+
+    const QUESTIONS = [
+        { id: "q1", stage: "Diagnose", text: "We can clearly classify our current AI workflow posture." },
+        { id: "q2", stage: "Diagnose", text: "We distinguish high-consequence workflows from low-consequence workflows." },
+        { id: "q3", stage: "Diagnose", text: "We can separate capability gaps from control gaps with evidence." },
+
+        { id: "q4", stage: "Activate", text: "We can identify our weakest capability pillar (AI, SME, Core, Meta)." },
+        { id: "q5", stage: "Activate", text: "We strengthen the weakest pillar first instead of training everything equally." },
+        { id: "q6", stage: "Activate", text: "Capability improvements are validated in real workflow conditions." },
+
+        { id: "q7", stage: "Controls", text: "Assumptions are explicitly documented before consequential work moves." },
+        { id: "q8", stage: "Controls", text: "Validation depth is matched to consequence level." },
+        { id: "q9", stage: "Controls", text: "Prepared By, Validated By, and Approved By ownership is explicit." },
+
+        { id: "q10", stage: "Execute", text: "We use an Integrity Packet for consequential handoffs." },
+        { id: "q11", stage: "Execute", text: "Receivers can act without reconstructing author intent." },
+        { id: "q12", stage: "Execute", text: "Material unresolved risk is recorded with owner and escalation route." },
+
+        { id: "q13", stage: "Measure", text: "We track validation pass rate by workflow." },
+        { id: "q14", stage: "Measure", text: "We track correction load and use it to drive process changes." },
+        { id: "q15", stage: "Measure", text: "We track approval clarity and escalation timeliness in recurring cycles." },
+
+        { id: "q16", stage: "Scale", text: "Scale decisions are based on reliability evidence, not enthusiasm." },
+        { id: "q17", stage: "Scale", text: "Quality holds when our strongest contributor is unavailable." },
+        { id: "q18", stage: "Scale", text: "We can expand, hold, or pause with explicit evidence-based criteria." }
+    ];
+
+    const STAGE_ORDER = ["Diagnose", "Activate", "Controls", "Execute", "Measure", "Scale"];
+    const STAGE_ACTIONS = {
+        Diagnose: "Tighten workflow classification and evidence-based gap diagnosis.",
+        Activate: "Focus enablement on the weakest pillar and validate in live workflow.",
+        Controls: "Strengthen assumption visibility, consequence-matched validation, and role clarity.",
+        Execute: "Standardize Integrity Packet handoffs to reduce rework and ambiguity.",
+        Measure: "Operationalize trust metrics and review correction patterns weekly.",
+        Scale: "Gate expansion decisions on reliability evidence, not adoption volume."
+    };
+
+    function renderQuestions() {
+        const container = document.getElementById("assessment-questions");
+        if (!container) return;
+
+        STAGE_ORDER.forEach((stage) => {
+            const stagePanel = document.createElement("section");
+            stagePanel.className = "assessment-stage-panel";
+
+            const heading = document.createElement("h3");
+            heading.textContent = stage;
+            stagePanel.appendChild(heading);
+
+            const stageQuestions = QUESTIONS.filter((q) => q.stage === stage);
+            stageQuestions.forEach((q) => {
+                const fieldset = document.createElement("fieldset");
+                fieldset.className = "assessment-question";
+
+                const legend = document.createElement("legend");
+                legend.textContent = q.text;
+                fieldset.appendChild(legend);
+
+                QUESTION_OPTIONS.forEach((opt) => {
+                    const label = document.createElement("label");
+                    label.className = "assessment-option";
+                    const input = document.createElement("input");
+                    input.type = "radio";
+                    input.name = q.id;
+                    input.value = String(opt.value);
+                    input.required = opt.value === 1;
+                    label.appendChild(input);
+                    label.append(` ${opt.label}`);
+                    fieldset.appendChild(label);
+                });
+
+                stagePanel.appendChild(fieldset);
+            });
+
+            container.appendChild(stagePanel);
+        });
+    }
 
     function resolvePosture(score) {
-        if (score <= 5) return "Reactive";
-        if (score <= 10) return "Emerging";
-        if (score <= 14) return "Operational";
+        if (score < 36) return "Reactive";
+        if (score < 54) return "Emerging";
+        if (score < 72) return "Operational";
         return "Strategic";
     }
 
-    function resolveRisk(score, governanceScore) {
-        if (governanceScore === 0 || score <= 6) return "High";
-        if (governanceScore <= 1 || score <= 12) return "Medium";
+    function resolveRisk(score, controlsAvg, executeAvg) {
+        if (controlsAvg < 3 || executeAvg < 3 || score < 54) return "High";
+        if (score < 72) return "Medium";
         return "Low";
     }
 
-    function resolveNextStep(posture, risk) {
+    function resolveNextStep(bottleneck, risk, priorityStages) {
+        const secondary = priorityStages.find((stage) => stage !== bottleneck);
         if (risk === "High") {
-            return "Start with governance guardrails, then run a focused workflow pilot with executive oversight.";
+            return `Stabilize ${bottleneck} first, then address ${secondary || "the next lowest stage"}. Run a focused 30-day reliability sprint before scale decisions.`;
         }
-        if (posture === "Emerging") {
-            return "Download the workflow kit and launch a 30-day pilot with weekly KPI reviews.";
-        }
-        if (posture === "Operational") {
-            return "Adopt the dashboard template and formalize your 60-day scaling roadmap.";
-        }
-        return "Book an implementation session to scale across business units with governance continuity.";
+        return `Prioritize ${bottleneck}${secondary ? ` and ${secondary}` : ""} as your next upgrades and run an AAOS workshop to sequence implementation.`;
     }
 
-    assessmentForm?.addEventListener("submit", function (event) {
+    function toStageScores(answerMap) {
+        const stageScores = {};
+        STAGE_ORDER.forEach((stage) => {
+            const ids = QUESTIONS.filter((q) => q.stage === stage).map((q) => q.id);
+            const values = ids.map((id) => Number(answerMap[id] || 0));
+            const sum = values.reduce((a, b) => a + b, 0);
+            const avg = values.length ? sum / values.length : 0;
+            stageScores[stage] = { sum, avg };
+        });
+        return stageScores;
+    }
+
+    function findBottleneck(stageScores) {
+        return STAGE_ORDER.reduce((lowest, stage) => {
+            if (!lowest) return stage;
+            return stageScores[stage].avg < stageScores[lowest].avg ? stage : lowest;
+        }, null);
+    }
+
+    function findStrongest(stageScores) {
+        return STAGE_ORDER.reduce((highest, stage) => {
+            if (!highest) return stage;
+            return stageScores[stage].avg > stageScores[highest].avg ? stage : highest;
+        }, null);
+    }
+
+    function findPriorityStages(stageScores, count) {
+        return [...STAGE_ORDER]
+            .sort((a, b) => stageScores[a].avg - stageScores[b].avg)
+            .slice(0, count);
+    }
+
+    function stageStatusClass(avg) {
+        if (avg < 2.5) return { label: "Fragile", className: "fragile" };
+        if (avg < 3.5) return { label: "Developing", className: "developing" };
+        return { label: "Reliable", className: "reliable" };
+    }
+
+    function renderStageProfile(stageScores) {
+        const profile = document.getElementById("result-stage-profile");
+        if (!profile) return;
+        profile.innerHTML = "";
+
+        STAGE_ORDER.forEach((stage) => {
+            const { sum, avg } = stageScores[stage];
+            const status = stageStatusClass(avg);
+            const card = document.createElement("article");
+            card.className = "result-stage-card";
+            card.innerHTML = `
+                <h3>${stage}</h3>
+                <div class="result-stage-meta">Score: ${sum} / 15 (avg ${avg.toFixed(1)} / 5)</div>
+                <div class="result-stage-status ${status.className}">${status.label}</div>
+            `;
+            profile.appendChild(card);
+        });
+    }
+
+    async function submitToCRM(payload) {
+        const response = await fetch(CRM_ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+            keepalive: true
+        });
+
+        if (!response.ok) {
+            throw new Error(`CRM submit failed (${response.status})`);
+        }
+    }
+
+    renderQuestions();
+
+    const assessmentForm = document.getElementById("aaos-assessment-form");
+    const resultCard = document.getElementById("assessment-result");
+    const scoreField = document.getElementById("result-score");
+    const postureField = document.getElementById("result-posture");
+    const riskField = document.getElementById("result-risk");
+    const bottleneckField = document.getElementById("result-bottleneck");
+    const strongestField = document.getElementById("result-strongest");
+    const priorityField = document.getElementById("result-priority");
+    const stageActionsList = document.getElementById("result-stage-actions");
+    const nextStepField = document.getElementById("result-next-step");
+    const submitStatus = document.getElementById("submit-status");
+
+    assessmentForm?.addEventListener("submit", async function (event) {
         event.preventDefault();
 
         const formData = new FormData(assessmentForm);
-        const numericAnswers = ["q1", "q2", "q3", "q4", "q5", "q6"].map(function (key) {
-            return Number(formData.get(key) || 0);
+        const answers = {};
+        QUESTIONS.forEach((q) => {
+            answers[q.id] = Number(formData.get(q.id) || 0);
         });
-        const total = numericAnswers.reduce((sum, value) => sum + value, 0);
-        const governanceScore = Number(formData.get("q4") || 0);
 
+        const total = Object.values(answers).reduce((sum, value) => sum + value, 0);
+        const stageScores = toStageScores(answers);
+        const bottleneck = findBottleneck(stageScores);
+        const strongest = findStrongest(stageScores);
+        const priorityStages = findPriorityStages(stageScores, 2);
         const posture = resolvePosture(total);
-        const risk = resolveRisk(total, governanceScore);
-        const nextStep = resolveNextStep(posture, risk);
+        const risk = resolveRisk(total, stageScores.Controls.avg, stageScores.Execute.avg);
+        const nextStep = resolveNextStep(bottleneck, risk, priorityStages);
 
+        scoreField.textContent = String(total);
         postureField.textContent = posture;
         riskField.textContent = risk;
+        bottleneckField.textContent = bottleneck;
+        strongestField.textContent = strongest;
+        priorityField.textContent = priorityStages.join(", ");
+        renderStageProfile(stageScores);
+        stageActionsList.innerHTML = priorityStages
+            .map((stage) => `<li><strong>${stage}:</strong> ${STAGE_ACTIONS[stage]}</li>`)
+            .join("");
         nextStepField.textContent = nextStep;
         resultCard.hidden = false;
 
+        const payload = {
+            email: String(formData.get("email") || "").trim(),
+            total_score: total,
+            posture,
+            risk_level: risk,
+            bottleneck_stage: bottleneck,
+            strongest_stage: strongest,
+            priority_stages: priorityStages,
+            stage_scores: stageScores,
+            answers,
+            utm: {
+                source: formData.get("utm_source") || "",
+                medium: formData.get("utm_medium") || "",
+                campaign: formData.get("utm_campaign") || "",
+                content: formData.get("utm_content") || "",
+                qr: formData.get("qr") || "",
+                book: formData.get("book") || ""
+            },
+            page: "/assessment/",
+            submitted_at: new Date().toISOString()
+        };
+
+        submitStatus.hidden = false;
+        submitStatus.textContent = "Saving your score...";
+
+        try {
+            await submitToCRM(payload);
+            submitStatus.textContent = "Your score was saved. Check your email for follow-up resources.";
+        } catch (error) {
+            submitStatus.textContent = "Your result is ready below. CRM sync is temporarily unavailable; we will retry in the background.";
+            window.paidarTrack?.push("assessment_submit_failed", {
+                error: String(error?.message || error),
+                total_score: total,
+                posture,
+                risk_level: risk
+            });
+        }
+
         window.paidarTrack?.push("assessment_completed", {
             total_score: total,
-            posture: posture,
+            posture,
             risk_level: risk,
-            email_domain: String(formData.get("email") || "").split("@")[1] || ""
+            bottleneck_stage: bottleneck,
+            email_domain: payload.email.split("@")[1] || ""
         });
 
         resultCard.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -272,6 +541,3 @@
 </script>
 </body>
 </html>
-
-
-
