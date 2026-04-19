@@ -538,15 +538,19 @@ Page: ${window.location.pathname}`;
 
         try {
             assessmentForm.dataset.submitting = 'true';
-            
+            console.log("Action:", assessmentForm.action);
+            console.log("Payload:", payload);
+
             // Modern fetch submission to our Cloudflare Function as JSON
             const response = await fetch(assessmentForm.action, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload)
             });
-            
+
+            console.log("Submission:", response.status);
             if (response.ok) {
+                console.log("Submission successful:", response.status);
                 assessmentForm.hidden = true;
                 resultSection.hidden = false;
                 resultSection.scrollIntoView({ behavior: 'smooth' });
