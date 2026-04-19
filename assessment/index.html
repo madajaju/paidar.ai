@@ -217,10 +217,10 @@
                 <div id="result-stage-profile" class="result-stage-grid" aria-live="polite"></div>
                 <p><strong>Stage Actions:</strong></p>
                 <ul id="result-stage-actions"></ul>
-                <p><strong>Next Step:</strong> <span id="result-next-step"></span></p>
+                <p><strong>Recommended Next Step:</strong> <span id="result-next-step"></span></p>
                 <p>
-                    <a class="btn btn-gold" href="/integrity-packet-template/" data-propagate-utm="true" data-track="cta_download_packet_from_result">Download the Integrity Packet</a>
-                    <a class="btn btn-outline" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_from_result">Book a Session</a>
+                    <a class="btn btn-gold" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_from_result">Book an Advisory Session</a>
+                    <a class="btn btn-outline" href="/integrity-packet-template/" data-propagate-utm="true" data-track="cta_download_packet_from_result">Download Integrity Packet</a>
                 </p>
             </article>
         </div>
@@ -230,10 +230,10 @@
         <div class="container">
             <div class="banner theme-modern">
                 <h2>Next Action After Assessment</h2>
-                <p>Use the integrity packet template to move from insight to execution and reduce reliability risk.</p>
+                <p>Move from insight to execution. Book a strategy session to review your bottleneck and reduce reliability risk.</p>
                 <p>
-                    <a class="btn btn-gold" href="/integrity-packet-template/" data-propagate-utm="true" data-track="cta_next_download_packet">Download the Template</a>
-                    <a class="btn btn-outline" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_next_book_session">Book a Session</a>
+                    <a class="btn btn-gold" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_next_book_session">Book a Strategy Session</a>
+                    <a class="btn btn-outline" href="/integrity-packet-template/" data-propagate-utm="true" data-track="cta_next_download_packet">Download the Template</a>
                 </p>
             </div>
         </div>
@@ -386,9 +386,9 @@
     function resolveNextStep(bottleneck, risk, priorityStages) {
         const secondary = priorityStages.find((stage) => stage !== bottleneck);
         if (risk === "High") {
-            return `Stabilize ${bottleneck} first, then address ${secondary || "the next lowest stage"}. Run a focused 30-day reliability sprint before scale decisions.`;
+            return `Stabilize ${bottleneck} first, then address ${secondary || "the next lowest stage"}. We recommend booking a focused advisory session to build your 30-day reliability roadmap.`;
         }
-        return `Prioritize ${bottleneck}${secondary ? ` and ${secondary}` : ""} as your next upgrades and run an AAOS workshop to sequence implementation.`;
+        return `Prioritize ${bottleneck}${secondary ? ` and ${secondary}` : ""} as your next upgrades. Schedule a consultation to review your results and sequence your implementation plan.`;
     }
 
     function toStageScores(answerMap) {
