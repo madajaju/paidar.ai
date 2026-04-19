@@ -1,115 +1,243 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Services | Paidar.ai</title>
-    <meta name="description" content="Advisory and implementation services from Paidar.ai for AI readiness, governance, and execution." />
+    <meta name="description" content="Strategic AI advisory, governance, and implementation services designed to turn AI experimentation into reliable business outcomes." />
     <link rel="canonical" href="https://paidar.ai/services.html" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#123456" />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Services | Paidar.ai" />
-    <meta property="og:description" content="Advisory and implementation services from Paidar.ai for AI readiness, governance, and execution." />
+    <meta property="og:description" content="Strategic AI advisory, governance, and implementation services designed to turn AI experimentation into reliable business outcomes." />
     <meta property="og:url" content="https://paidar.ai/services.html" />
     <meta property="og:image" content="https://paidar.ai/assets/img/hero.jpeg" />
     <meta property="og:site_name" content="Paidar.ai" />
-
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Services | Paidar.ai" />
-    <meta name="twitter:description" content="Advisory and implementation services from Paidar.ai for AI readiness, governance, and execution." />
+    <meta name="twitter:description" content="Strategic AI advisory, governance, and implementation services designed to turn AI experimentation into reliable business outcomes." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />    <link rel="icon" href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="./assets/css/paidar.css" />
+    <!-- JSON-LD: Organization, Website, Services, ItemList, FAQ -->
+    <script type="application/ld+json">
+        {
+            "@context":"https://schema.org",
+            "@graph":[
+                {
+                    "@type":["Organization","ProfessionalService"],
+                    "name":"Paidar.ai",
+                    "legalName":"Paidar Systems LLC",
+                    "url":"https://paidar.ai/",
+                    "logo":"https://paidar.ai/assets/img/logo.svg",
+                    "sameAs":[
+                        "https://github.com/paidar",
+                        "https://www.drdarrenspeaks.com"
+                    ],
+                    "description":"Training, consulting, and advisory services to help organizations turn AI experimentation into reliable execution."
+                },
+                {
+                    "@type":"WebSite",
+                    "name":"Paidar.ai",
+                    "url":"https://paidar.ai/",
+                    "potentialAction":{
+                        "@type":"SearchAction",
+                        "target":"https://paidar.ai/search?q={query}",
+                        "query-input":"required name=query"
+                    }
+                },
+                {
+                    "@type":"Service",
+                    "name":"AI Advisory & Strategy",
+                    "serviceType":"Executive AI Readiness",
+                    "provider":{"@type":"Organization","name":"Paidar Systems LLC"},
+                    "areaServed":"Worldwide",
+                    "audience":{"@type":"Audience","audienceType":["Higher Education","Government","Enterprise"]}
+                },
+                {
+                    "@type":"Service",
+                    "name":"AI Governance & Risk",
+                    "serviceType":"Policy & Risk Frameworks",
+                    "provider":{"@type":"Organization","name":"Paidar Systems LLC"},
+                    "areaServed":"Worldwide",
+                    "audience":{"@type":"Audience","audienceType":["Higher Education","Government","Enterprise"]}
+                },
+                {
+                    "@type":"Service",
+                    "name":"AI Implementation",
+                    "serviceType":"AAOS Framework Adoption",
+                    "provider":{"@type":"Organization","name":"Paidar Systems LLC"},
+                    "areaServed":"Worldwide",
+                    "audience":{"@type":"Audience","audienceType":["Higher Education","Government","Enterprise"]}
+                }
+            ]
+        }
+    </script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
     <div class="container flex between center">
-        <a class="brand" href="/"><img src="/assets/img/paidar.svg" alt="Paidar Systems logo" width="64" /><span>Paidar.ai</span></a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open navigation">Menu</button>
-        <nav class="primary-nav" aria-label="Primary">
+        <a class="brand" href="/">
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" />
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
             <ul class="nav-list nav-reset">
                 <li><a href="/">Home</a></li>
-                <li><a href="/assessments.html">Assessments</a></li>
-                <li><a href="/workshops/">Workshops</a></li>
+                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
                 <li><a href="/solutions.html">Solutions</a></li>
-                <li><a href="/services.html">Services</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
                 <li><a href="/about.html">About</a></li>
                 <li><a href="/insights.html">Insights</a></li>
                 <li class="has-sub">
-                    <a href="/sectors/" aria-haspopup="true" aria-expanded="false">Resources</a>
+                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
                     <ul class="sub" role="menu">
                         <li role="none"><a role="menuitem" href="/training/">Training</a></li>
                         <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
-                        <li role="none"><a role="menuitem" href="/books/">Books</a></li>
+                        <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
                         <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
                     </ul>
                 </li>
-                <li><a class="btn btn-primary" href="/contact.html">Contact</a></li>
+                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
-<aside id="mobile-drawer" class="mobile-drawer" data-open="false" aria-label="Mobile navigation">
-    <ul class="nav-list nav-reset">
-        <li><a href="/">Home</a></li>
-        <li><a href="/assessments.html">Assessments</a></li>
-        <li><a href="/workshops/">Workshops</a></li>
-        <li><a href="/solutions.html">Solutions</a></li>
-        <li><a href="/services.html">Services</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/insights.html">Insights</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li><a href="/sectors/">Sectors</a></li>
-        <li><a href="/training/">Training</a></li>
-        <li><a href="/software.html">Software</a></li>
-        <li><a href="/books/">Books</a></li>
-    </ul>
-</aside>
+
 <main id="main">
     <section class="hero" style="--hero-image:url('./assets/img/consulting-hero.jpeg'); --hero-bg-color:#0e223b;">
-        <div class="container"><h1>Services That Turn AI Strategy Into Execution</h1><p class="lead">Advisory, governance, and implementation support aligned to measurable business outcomes.</p></div>
+        <div class="container">
+            <h1>Turn AI Experimentation Into Reliable Execution</h1>
+            <p class="lead">Bridging the gap between strategic vision and operational reality through structured advisory, governance, and implementation support.</p>
+            <div class="flex wrap" style="gap: var(--space-4); margin-top: var(--space-6);">
+                <a class="btn btn-primary" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_strategy_session">Book a Strategy Session</a>
+                <a class="btn btn-gold" href="/assessments.html" data-track="cta_start_assessment">Start an Assessment</a>
+                <a class="btn btn-outline" href="/workshops/" data-track="cta_explore_workshops">Explore Workshops</a>
+            </div>
+        </div>
     </section>
+
     <section class="section">
         <div class="container">
-            <div class="grid-3">
-                <article class="card accent-modern">
-                    <h2>Advisory</h2>
-                    <p>Executive guidance for prioritization, roadmaps, and stakeholder alignment to ensure AI strategy delivers measurable value.</p>
-                    <p><a class="btn btn-outline" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener">Book Advisory Session</a></p>
-                </article>
-                <article class="card accent-cyber">
-                    <h2>Governance</h2>
-                    <p>Policy, risk, and controls designed for responsible AI adoption, balancing rapid innovation with organizational safety.</p>
-                    <p><a class="btn btn-outline" href="/contact.html">Request Governance Audit</a></p>
-                </article>
-                <article class="card accent-edge">
-                    <h2>Implementation</h2>
-                    <p>Architecture and delivery support to move from pilots into repeatable operations using the AAOS framework.</p>
-                    <p><a class="btn btn-outline" href="/contact.html">Discuss Implementation</a></p>
-                </article>
+            <span class="eyebrow">The Challenge</span>
+            <h2>Why AI Transformation Stalls</h2>
+            <p class="lead">Most organizations are stuck in a cycle of disconnected pilots. We solve the structural problems that prevent AI from becoming a reliable core capability.</p>
+            <div class="grid-2" style="margin-top: var(--space-8);">
+                <div class="card">
+                    <h3>AI Experimentation Without Execution</h3>
+                    <p>Moving beyond technical proof-of-concepts to sustainable, scalable business value requires more than just code—it requires an operating model.</p>
+                </div>
+                <div class="card">
+                    <h3>Governance Gaps</h3>
+                    <p>Balancing rapid innovation with organizational safety and compliance. We help build the controls that enable speed without sacrificing trust.</p>
+                </div>
+                <div class="card">
+                    <h3>Strategy-Delivery Disconnect</h3>
+                    <p>Ensuring that high-level AI investments directly serve measurable business objectives and front-line operational needs.</p>
+                </div>
+                <div class="card">
+                    <h3>Uneven Capability</h3>
+                    <p>Transforming an organization requires elevating performance across leaders, teams, and functions simultaneously, not in isolation.</p>
+                </div>
             </div>
         </div>
     </section>
+
     <section class="section tint theme-modern">
         <div class="container">
-            <div class="banner theme-modern">
-                <h2>Ready to Move Beyond Experimentation?</h2>
-                <p>Whether you need to benchmark your team's readiness or architect a full-scale AI operating model, we provide the expertise to ensure execution.</p>
-                <p>
-                    <a class="btn btn-gold" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_services">Book a Strategy Session</a>
-                    <a class="btn btn-outline" href="/assessments.html">Start an Assessment</a>
-                </p>
+            <span class="eyebrow">Service Architecture</span>
+            <h2>Three Pillars of AI-Augmented Success</h2>
+            <div class="grid-3" style="margin-top: var(--space-8);">
+                <article class="card accent-modern">
+                    <h3>Advisory</h3>
+                    <p><strong>What it includes:</strong> Roadmap alignment, investment prioritization, and stakeholder synchronization.</p>
+                    <p><strong>When to use:</strong> When your AI strategy is unclear, disconnected from operations, or failing to gain momentum.</p>
+                    <p><strong>Outcomes:</strong> Decision-ready clarity and a prioritized, executable path to business value.</p>
+                </article>
+                <article class="card accent-cyber">
+                    <h3>Governance</h3>
+                    <p><strong>What it includes:</strong> Policy frameworks, risk controls, ethical AI guidelines, and compliance auditing.</p>
+                    <p><strong>When to use:</strong> When expanding AI usage across the enterprise without a formal framework for risk and accountability.</p>
+                    <p><strong>Outcomes:</strong> Responsible adoption with minimized risk and maximized organizational trust.</p>
+                </article>
+                <article class="card accent-edge">
+                    <h3>Implementation</h3>
+                    <p><strong>What it includes:</strong> AAOS framework adoption, architecture guidance, and operational change management.</p>
+                    <p><strong>When to use:</strong> When transitioning from experimental pilots into repeatable, core business operations.</p>
+                    <p><strong>Outcomes:</strong> Scalable, repeatable AI-augmented workflows and full operational adoption.</p>
+                </article>
             </div>
         </div>
     </section>
+
+    <section class="section">
+        <div class="container">
+            <span class="eyebrow">Measurable Value</span>
+            <h2>Consulting Outcomes</h2>
+            <div class="grid-2" style="margin-top: var(--space-6);">
+                <ul class="feature-list">
+                    <li><strong>Roadmap Alignment:</strong> We connect your AI investments directly to your most critical business goals.</li>
+                    <li><strong>Governance & Controls:</strong> Build the guardrails that enable speed and innovation without sacrificing safety.</li>
+                    <li><strong>Executive Decision Support:</strong> Provide leaders with the data-backed insights needed to lead organizational change.</li>
+                </ul>
+                <ul class="feature-list">
+                    <li><strong>Implementation Guidance:</strong> Hands-on support through the complexities of shifting from "legacy" to AI-augmented.</li>
+                    <li><strong>Operational Adoption:</strong> Ensuring your teams actually use and benefit from the new capabilities we build together.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section tint theme-data">
+        <div class="container">
+            <h2>Credibility Grounded in Operations</h2>
+            <p class="lead" style="max-width: 800px;">Paidar.ai brings deep experience across enterprise operations, higher education transformation, and public sector modernization. Our approach is built for accountable execution: clear governance, measurable milestones, and practical adoption paths that work in complex, regulated environments.</p>
+        </div>
+    </section>
+
+    <cta-block data-type="services_closing"></cta-block>
 </main>
-<footer class="site-footer"><div class="footer-grid"><div class="footer-socials" aria-label="Follow us"><a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener"><img class="social-icon" src="./assets/img/youtube.svg" alt="YouTube" /></a><a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener"><img class="social-icon" src="./assets/img/linkedin.svg" alt="LinkedIn" /></a><a href="https://embracingdigital.org/?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink" aria-label="Podcast" target="_blank" rel="noopener"><img class="social-icon" src="./assets/img/edt.svg" alt="Embracing Digital" /></a></div><div class="footer-brand"><img src="./assets/img/paidar.svg" alt="Paidar Systems logo" class="footer-logo" /><small>&copy; <span id="y"></span> Paidar Systems LLC</small></div><nav aria-label="Footer" class="footer-nav"><ul><li><a href="/about.html">About</a></li><li><a href="/services.html">Services</a></li><li><a href="/insights.html">Insights</a></li><li><a href="/contact.html">Contact</a></li></ul></nav></div></footer>
-<script>document.getElementById("y").textContent=new Date().getFullYear();const btn=document.querySelector(".nav-toggle");const drawer=document.querySelector(".mobile-drawer");if(btn&&drawer){btn.addEventListener("click",()=>{const open=drawer.getAttribute("data-open")==="true";drawer.setAttribute("data-open",String(!open));btn.setAttribute("aria-expanded",String(!open));});}</script>
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-socials" aria-label="Follow us">
+            <a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/youtube.svg" alt="YouTube" />
+            </a>
+            <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://embracingdigital.org/?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink" aria-label="Podcast" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/edt.svg" alt="Embracing Digital" />
+            </a>
+        </div>
+        <div class="footer-brand">
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" class="footer-logo" />
+            <div class="brand-name">Paidar.ai</div>
+            <small>&copy; <span id="y"></span> Paidar Systems LLC</small>
+        </div>
+        <nav aria-label="Footer" class="footer-nav">
+            <ul class="nav-reset">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+                <li><a href="/insights.html">Insights</a></li>
+                <li><a href="/contact.html" data-track="cta_contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+<script src="/assets/js/funnel-tracking.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
 
 
 

@@ -1,25 +1,25 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Solutions Pathways | Paidar.ai</title>
-    <meta name="description" content="Find the right AI pathway for individuals, teams, executives, education, and public sector organizations." />
+    <title>Solutions | Paidar.ai</title>
+    <meta name="description" content="Find the right AI adoption pathway for your role and organization, from individual practitioners to enterprise leaders." />
     <link rel="canonical" href="https://paidar.ai/solutions.html" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#123456" />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Solutions Pathways | Paidar.ai" />
-    <meta property="og:description" content="Find the right AI pathway for individuals, teams, executives, education, and public sector organizations." />
+    <meta property="og:title" content="Solutions | Paidar.ai" />
+    <meta property="og:description" content="Find the right AI adoption pathway for your role and organization, from individual practitioners to enterprise leaders." />
     <meta property="og:url" content="https://paidar.ai/solutions.html" />
     <meta property="og:image" content="https://paidar.ai/assets/img/hero.jpeg" />
     <meta property="og:site_name" content="Paidar.ai" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Solutions Pathways | Paidar.ai" />
-    <meta name="twitter:description" content="Find the right AI pathway for individuals, teams, executives, education, and public sector organizations." />
+    <meta name="twitter:title" content="Solutions | Paidar.ai" />
+    <meta name="twitter:description" content="Find the right AI adoption pathway for your role and organization, from individual practitioners to enterprise leaders." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />    <link rel="icon" href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="./assets/css/paidar.css" />
 </head>
@@ -29,50 +29,34 @@
 <header class="site-header">
     <div class="container flex between center">
         <a class="brand" href="/">
-            <img src="/assets/img/paidar.svg" alt="Paidar Systems logo" width="64" />
-            <span>Paidar.ai</span>
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" />
         </a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open navigation">Menu</button>
-        <nav class="primary-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
             <ul class="nav-list nav-reset">
                 <li><a href="/">Home</a></li>
-                <li><a href="/assessments.html">Assessments</a></li>
-                <li><a href="/workshops/">Workshops</a></li>
+                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
                 <li><a href="/solutions.html">Solutions</a></li>
-                <li><a href="/services.html">Services</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
                 <li><a href="/about.html">About</a></li>
                 <li><a href="/insights.html">Insights</a></li>
                 <li class="has-sub">
-                    <a href="/sectors/" aria-haspopup="true" aria-expanded="false">Resources</a>
+                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
                     <ul class="sub" role="menu">
                         <li role="none"><a role="menuitem" href="/training/">Training</a></li>
                         <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
-                        <li role="none"><a role="menuitem" href="/books/">Books</a></li>
+                        <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
                         <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
                     </ul>
                 </li>
-                <li><a class="btn btn-primary" href="/contact.html">Contact</a></li>
+                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<aside id="mobile-drawer" class="mobile-drawer" data-open="false" aria-label="Mobile navigation">
-    <ul class="nav-list nav-reset">
-        <li><a href="/">Home</a></li>
-        <li><a href="/assessments.html">Assessments</a></li>
-        <li><a href="/workshops/">Workshops</a></li>
-        <li><a href="/solutions.html">Solutions</a></li>
-        <li><a href="/services.html">Services</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/insights.html">Insights</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li><a href="/sectors/">Sectors</a></li>
-        <li><a href="/training/">Training</a></li>
-        <li><a href="/software.html">Software</a></li>
-        <li><a href="/books/">Books</a></li>
-    </ul>
-</aside><main id="main">
+<main id="main">
     <section class="hero" style="--hero-image:url('./assets/img/sectors-hero.jpeg'); --hero-bg-color:#0e223b;">
         <div class="container">
             <h1>Choose the Right AI Pathway for Your Context</h1>
@@ -100,8 +84,8 @@
                         <li>Role-relevant workshops and applied practice</li>
                         <li>Next-step guidance into team or leadership tracks</li>
                     </ul>
-                    <p><a class="btn btn-primary" href="/assessments.html">Start Assessment</a> <a class="btn btn-outline" href="/workshops/">View Workshops</a></p>
-                    <p class="text-muted">Legacy links: <a href="/training/">Training</a></p>
+                    <p><a class="btn btn-primary" href="/assessments.html" data-track="cta_start_assessment">Start Assessment</a> <a class="btn btn-outline" href="/workshops/" data-track="cta_explore_workshops">View Workshops</a></p>
+                    <p class="text-muted">Related Resources: <a href="/training/">Training</a></p>
                 </article>
             </div>
         </div>
@@ -127,8 +111,8 @@
                         <li>Workshop-led implementation of repeatable operating habits</li>
                         <li>Advisory support for execution cadence and governance</li>
                     </ul>
-                    <p><a class="btn btn-primary" href="/assessments.html">Assess Team Readiness</a> <a class="btn btn-outline" href="/services.html">Explore Services</a></p>
-                    <p class="text-muted">Legacy links: <a href="/consulting.html">Consulting</a> | <a href="/software.html">Software</a></p>
+                    <p><a class="btn btn-primary" href="/assessments.html" data-track="cta_start_assessment">Assess Team Readiness</a> <a class="btn btn-outline" href="/services.html" data-track="cta_book_strategy_session">Explore Services</a></p>
+                    <p class="text-muted">Related Resources: <a href="/services.html" data-track="cta_book_strategy_session">Advisory</a> | <a href="/software.html">Software</a></p>
                 </article>
             </div>
         </div>
@@ -154,8 +138,8 @@
                         <li>Leadership workshops and briefing sessions</li>
                         <li>Advisory roadmaps for phased implementation</li>
                     </ul>
-                    <p><a class="btn btn-primary" href="/assessments.html">Start Executive Assessment</a> <a class="btn btn-outline" href="/workshops/">Request Briefing</a></p>
-                    <p class="text-muted">Legacy links: <a href="/consulting.html">Consulting</a> | <a href="/software.html">Software</a></p>
+                    <p><a class="btn btn-primary" href="/assessments.html" data-track="cta_start_assessment">Start Executive Assessment</a> <a class="btn btn-outline" href="/workshops/" data-track="cta_explore_workshops">Request Briefing</a></p>
+                    <p class="text-muted">Related Resources: <a href="/services.html" data-track="cta_book_strategy_session">Advisory</a> | <a href="/software.html">Software</a></p>
                 </article>
             </div>
         </div>
@@ -181,8 +165,8 @@
                         <li>AI-augmented education workshops and briefings</li>
                         <li>Advisory support for governance and rollout planning</li>
                     </ul>
-                    <p><a class="btn btn-primary" href="/assessments.html">Assess Institutional Readiness</a> <a class="btn btn-outline" href="/workshops/">Explore Education Workshops</a></p>
-                    <p class="text-muted">Legacy links: <a href="/sectors/higher-education.html">Higher Education Sector</a> | <a href="/training/">Training</a></p>
+                    <p><a class="btn btn-primary" href="/assessments.html" data-track="cta_start_assessment">Assess Institutional Readiness</a> <a class="btn btn-outline" href="/workshops/" data-track="cta_explore_workshops">Explore Education Workshops</a></p>
+                    <p class="text-muted">Related Resources: <a href="/sectors/higher-education.html">Higher Education Sector</a> | <a href="/training/">Training</a></p>
                 </article>
             </div>
         </div>
@@ -208,8 +192,8 @@
                         <li>Workshops for leaders and delivery teams</li>
                         <li>Advisory pathways aligned to policy, procurement, and execution</li>
                     </ul>
-                    <p><a class="btn btn-primary" href="/assessments.html">Start Public Sector Assessment</a> <a class="btn btn-outline" href="/services.html">See Advisory Options</a></p>
-                    <p class="text-muted">Legacy links: <a href="/sectors/government.html">Government Sector</a> | <a href="/consulting.html">Consulting</a></p>
+                    <p><a class="btn btn-primary" href="/assessments.html" data-track="cta_start_assessment">Start Public Sector Assessment</a> <a class="btn btn-outline" href="/services.html" data-track="cta_book_strategy_session">See Advisory Options</a></p>
+                    <p class="text-muted">Related Resources: <a href="/sectors/government.html">Government Sector</a> | <a href="/services.html" data-track="cta_book_strategy_session">Advisory</a></p>
                 </article>
             </div>
         </div>
@@ -222,7 +206,7 @@
                 <p>Start with an assessment or book a strategy session to review your context and sequence your next execution milestone.</p>
                 <p>
                     <a class="btn btn-gold" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_solutions">Book a Strategy Session</a>
-                    <a class="btn btn-outline" href="/assessments.html">Start an Assessment</a>
+                    <a class="btn btn-outline" href="/assessments.html" data-track="cta_start_assessment">Start an Assessment</a>
                 </p>
             </div>
         </div>
@@ -243,40 +227,28 @@
             </a>
         </div>
         <div class="footer-brand">
-            <img src="./assets/img/paidar.svg" alt="Paidar Systems logo" class="footer-logo" />
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" class="footer-logo" />
+            <div class="brand-name">Paidar.ai</div>
             <small>&copy; <span id="y"></span> Paidar Systems LLC</small>
         </div>
         <nav aria-label="Footer" class="footer-nav">
             <ul>
                 <li><a href="/about.html">About</a></li>
-                <li><a href="/services.html">Services</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
                 <li><a href="/insights.html">Insights</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/contact.html" data-track="cta_contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </footer>
 
-<script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    const btn = document.querySelector(".nav-toggle");
-    const drawer = document.querySelector(".mobile-drawer");
-    if (btn && drawer) {
-        btn.addEventListener("click", () => {
-            const open = drawer.getAttribute("data-open") === "true";
-            drawer.setAttribute("data-open", String(!open));
-            btn.setAttribute("aria-expanded", String(!open));
-        });
-    }
-    drawer?.addEventListener("click", (e) => {
-        if (e.target.closest("a")) {
-            drawer.setAttribute("data-open", "false");
-            btn?.setAttribute("aria-expanded", "false");
-        }
-    });
-</script>
+<script src="/assets/js/funnel-tracking.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
+
+
+
 
 
 

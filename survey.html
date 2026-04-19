@@ -1,25 +1,25 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>AI Readiness Self-Assessment | Paidar.ai</title>
-    <meta name="description" content="Interactive AI readiness self-assessment to benchmark individual and team capability." />
+    <title>Individual Assessment | Paidar.ai</title>
+    <meta name="description" content="Interactive AI readiness self-assessment to benchmark individual capability and identify next steps." />
     <link rel="canonical" href="https://paidar.ai/survey.html" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#123456" />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="AI Readiness Self-Assessment | Paidar.ai" />
-    <meta property="og:description" content="Interactive AI readiness self-assessment to benchmark individual and team capability." />
+    <meta property="og:title" content="Individual Assessment | Paidar.ai" />
+    <meta property="og:description" content="Interactive AI readiness self-assessment to benchmark individual capability and identify next steps." />
     <meta property="og:url" content="https://paidar.ai/survey.html" />
     <meta property="og:image" content="https://paidar.ai/assets/img/hero.jpeg" />
     <meta property="og:site_name" content="Paidar.ai" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AI Readiness Self-Assessment | Paidar.ai" />
-    <meta name="twitter:description" content="Interactive AI readiness self-assessment to benchmark individual and team capability." />
+    <meta name="twitter:title" content="Individual Assessment | Paidar.ai" />
+    <meta name="twitter:description" content="Interactive AI readiness self-assessment to benchmark individual capability and identify next steps." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />
     <link rel="icon" href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="./assets/css/paidar.css" />
@@ -448,30 +448,69 @@
 </head>
 <body>
 <a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
-<header class="site-header" style="position:sticky;top:0;z-index:20;background:#ffffff;border-bottom:1px solid #d1d5db;">
-    <div style="max-width:1200px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
-        <a href="/" style="font-weight:800;color:#123456;text-decoration:none;">Paidar.ai</a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open navigation">Menu</button>
-        <nav class="primary-nav" aria-label="Primary" style="display:flex;gap:14px;flex-wrap:wrap;">
-            <a href="/" style="color:#123456;font-weight:600;text-decoration:none;">Home</a>
-            <a href="/aaos-start/" style="color:#123456;font-weight:600;text-decoration:none;">AAOS Start</a>
-            <a href="/assessment/" style="color:#123456;font-weight:600;text-decoration:none;">Assessment</a>
-            <a href="/services.html" style="color:#123456;font-weight:600;text-decoration:none;">Services</a>
-            <a href="/contact.html" style="color:#123456;font-weight:600;text-decoration:none;">Contact</a>
+<header class="site-header">
+    <div class="container flex between center">
+        <a class="brand" href="/">
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" />
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+            <ul class="nav-list nav-reset">
+                <li><a href="/">Home</a></li>
+                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
+                <li><a href="/solutions.html">Solutions</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/insights.html">Insights</a></li>
+                <li class="has-sub">
+                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
+                    <ul class="sub" role="menu">
+                        <li role="none"><a role="menuitem" href="/training/">Training</a></li>
+                        <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
+                        <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
+                        <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
+                    </ul>
+                </li>
+                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
+            </ul>
         </nav>
     </div>
 </header>
-<aside id="mobile-drawer" class="mobile-drawer" data-open="false" aria-label="Mobile navigation">
-    <ul class="nav-list nav-reset">
-        <li><a href="/">Home</a></li>
-        <li><a href="/aaos-start/">AAOS Start</a></li>
-        <li><a href="/assessment/">Assessment</a></li>
-        <li><a href="/services.html">Services</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-    </ul>
-</aside>
 <main id="main">
 <div id="survey-container"></div>
+<div id="lead-capture-container" style="display:none">
+    <div class="container" style="max-width: 600px; padding: 40px 24px;">
+        <article class="card">
+            <h2>See Your AI Readiness Report</h2>
+            <p>Enter your details below to receive your results and a personalized PDF report.</p>
+            <form id="lead-capture-form" style="display: flex; flex-direction: column; gap: 16px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div>
+                        <label for="first_name" style="font-size: 14px; font-weight: 600;">First Name</label>
+                        <input id="first_name" name="First_Name" type="text" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
+                    </div>
+                    <div>
+                        <label for="last_name" style="font-size: 14px; font-weight: 600;">Last Name</label>
+                        <input id="last_name" name="Last_Name" type="text" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
+                    </div>
+                </div>
+                <div>
+                    <label for="email" style="font-size: 14px; font-weight: 600;">Work Email</label>
+                    <input id="email" name="Email" type="email" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
+                </div>
+                <div>
+                    <label for="company" style="font-size: 14px; font-weight: 600;">Organization</label>
+                    <input id="company" name="Company" type="text" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
+                </div>
+                <input type="hidden" name="Lead_Source" value="Individual Assessment" />
+                <input type="hidden" name="Lead_Status" value="New" />
+                <p id="lead-status" style="font-size: 14px; margin: 0;" hidden></p>
+                <button class="btn btn-primary" type="submit" style="width: 100%; padding: 12px; background: #1e3a8a; color: white; border: 0; border-radius: 8px; font-weight: 700; cursor: pointer;">View Results</button>
+            </form>
+        </article>
+    </div>
+</div>
 <div class="container" style="display:none">
 
     <!-- Toolbar -->
@@ -541,51 +580,51 @@
             <div id="subskills" style="display:none; margin-bottom:12px" class="controls">
                 <!-- AI subskills -->
                 <div class="card">
-                    <div class="row"><span>AI • Prompting</span><span id="val-ai_prompting">50</span></div>
+                    <div class="row"><span>AI  —  Prompting</span><span id="val-ai_prompting">50</span></div>
                     <input class="subskill" id="ai_prompting" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>AI • Evaluation</span><span id="val-ai_evaluation">50</span></div>
+                    <div class="row"><span>AI  —  Evaluation</span><span id="val-ai_evaluation">50</span></div>
                     <input class="subskill" id="ai_evaluation" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>AI • Integration</span><span id="val-ai_integration">50</span></div>
+                    <div class="row"><span>AI  —  Integration</span><span id="val-ai_integration">50</span></div>
                     <input class="subskill" id="ai_integration" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>AI • Tool Selection</span><span id="val-ai_tool_selection">50</span></div>
+                    <div class="row"><span>AI  —  Tool Selection</span><span id="val-ai_tool_selection">50</span></div>
                     <input class="subskill" id="ai_tool_selection" type="range" min="0" max="100" value="50"/>
                 </div>
 
                 <!-- Core subskills -->
                 <div class="card">
-                    <div class="row"><span>Core • Critical Thinking</span><span
+                    <div class="row"><span>Core  —  Critical Thinking</span><span
                             id="val-core_critical_thinking">50</span></div>
                     <input class="subskill" id="core_critical_thinking" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Core • Digital Literacy</span><span id="val-core_digital_literacy">50</span>
+                    <div class="row"><span>Core  —  Digital Literacy</span><span id="val-core_digital_literacy">50</span>
                     </div>
                     <input class="subskill" id="core_digital_literacy" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Core • Collaboration</span><span id="val-core_collaboration">50</span></div>
+                    <div class="row"><span>Core  —  Collaboration</span><span id="val-core_collaboration">50</span></div>
                     <input class="subskill" id="core_collaboration" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Core • Adaptability</span><span id="val-core_adaptability">50</span></div>
+                    <div class="row"><span>Core  —  Adaptability</span><span id="val-core_adaptability">50</span></div>
                     <input class="subskill" id="core_adaptability" type="range" min="0" max="100" value="50"/>
                 </div>
 
                 <!-- SME subskills -->
                 <div class="card">
-                    <div class="row"><span>SME • Foundation</span><span id="val-sme_foundation">50</span></div>
+                    <div class="row"><span>SME  —  Foundation</span><span id="val-sme_foundation">50</span></div>
                     <input class="subskill" id="sme_foundation" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>SME • Methods</span><span id="val-sme_methods">50</span></div>
+                    <div class="row"><span>SME  —  Methods</span><span id="val-sme_methods">50</span></div>
                     <input class="subskill" id="sme_methods" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>SME • Standards</span><span id="val-sme_standards">50</span></div>
+                    <div class="row"><span>SME  —  Standards</span><span id="val-sme_standards">50</span></div>
                     <input class="subskill" id="sme_standards" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>SME • Updating</span><span id="val-sme_updating">50</span></div>
+                    <div class="row"><span>SME  —  Updating</span><span id="val-sme_updating">50</span></div>
                     <input class="subskill" id="sme_updating" type="range" min="0" max="100" value="50"/>
                 </div>
 
                 <!-- Meta subskills -->
                 <div class="card">
-                    <div class="row"><span>Meta • Creativity</span><span id="val-meta_creativity">50</span></div>
+                    <div class="row"><span>Meta  —  Creativity</span><span id="val-meta_creativity">50</span></div>
                     <input class="subskill" id="meta_creativity" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Meta • Ethics</span><span id="val-meta_ethics">50</span></div>
+                    <div class="row"><span>Meta  —  Ethics</span><span id="val-meta_ethics">50</span></div>
                     <input class="subskill" id="meta_ethics" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Meta • Resilience</span><span id="val-meta_resilience">50</span></div>
+                    <div class="row"><span>Meta  —  Resilience</span><span id="val-meta_resilience">50</span></div>
                     <input class="subskill" id="meta_resilience" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Meta • Leadership</span><span id="val-meta_leadership">50</span></div>
+                    <div class="row"><span>Meta  —  Leadership</span><span id="val-meta_leadership">50</span></div>
                     <input class="subskill" id="meta_leadership" type="range" min="0" max="100" value="50"/>
                 </div>
             </div>
@@ -614,12 +653,57 @@
         </div>
     </div>
 
+    <div class="card" style="margin-top: 24px;">
+        <h3>Your Next Best Move</h3>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 16px;">
+            <div class="card" style="padding: 16px; display: flex; flex-direction: column;">
+                <h4>Authority</h4>
+                <p style="font-size: 14px; color: var(--muted); flex-grow: 1;">Build your foundation with the AAOS framework.</p>
+                <a class="btn" href="/books/" style="display: block; text-align: center; margin-top: 12px; background: #1e3a8a; color: white; font-weight: 700;" data-track="cta_view_books">Explore Books</a>
+            </div>
+            <div class="card" style="padding: 16px; display: flex; flex-direction: column;">
+                <h4>Enablement</h4>
+                <p style="font-size: 14px; color: var(--muted); flex-grow: 1;">Accelerate adoption through role-based training.</p>
+                <a class="btn" href="/training/" style="display: block; text-align: center; margin-top: 12px; background: #1e3a8a; color: white; font-weight: 700;">View Training</a>
+            </div>
+            <div class="card" style="padding: 16px; display: flex; flex-direction: column;">
+                <h4>Alignment</h4>
+                <p style="font-size: 14px; color: var(--muted); flex-grow: 1;">Solve specific problems in an outcome-oriented session.</p>
+                <a class="btn" href="/workshops/" style="display: block; text-align: center; margin-top: 12px; background: #1e3a8a; color: white; font-weight: 700;" data-track="cta_explore_workshops">Book Workshop</a>
+            </div>
+        </div>
+    </div>
 </div>
 </main>
 <footer class="site-footer">
-    <span>
-    &copy; 2025 Paidar Systems LLC. <a href="http://www.paidar.ai" target="_blank">www.paidar.ai</a>
-    </span>
+    <div class="footer-grid">
+        <div class="footer-socials" aria-label="Follow us">
+            <a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/youtube.svg" alt="YouTube" />
+            </a>
+            <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://embracingdigital.org/?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink" aria-label="Podcast" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/edt.svg" alt="Embracing Digital" />
+            </a>
+        </div>
+
+        <div class="footer-brand">
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" class="footer-logo" />
+            <div class="brand-name">Paidar.ai</div>
+            <small>&copy; <span id="y"></span> Paidar Systems LLC</small>
+        </div>
+
+        <nav aria-label="Footer" class="footer-nav">
+            <ul class="nav-reset">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+                <li><a href="/insights.html">Insights</a></li>
+                <li><a href="/contact.html" data-track="cta_contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </footer>
 
 <script>
@@ -1256,10 +1340,10 @@
                 surveyResults[input.title][input.name] = input.value;
             });
 
-            // Map Likert scale (1–5) to range (0–100)
-            // Map Likert scores (1–5) to 0–100 for subskills and normalize pillar scores
+            // Map Likert scale (1 — 5) to range (0 — 100)
+            // Map Likert scores (1 — 5) to 0 — 100 for subskills and normalize pillar scores
             const pillarScores = {}; // Object to store aggregated pillar scores
-            const scaleToScore = value => ((value - 1) / 4) * 100; // Map Likert scale (1–5) to 0–100
+            const scaleToScore = value => ((value - 1) / 4) * 100; // Map Likert scale (1 — 5) to 0 — 100
 
             // Iterate through pillars and calculate normalized scores
             for (let pid in surveyResults) {
@@ -1291,9 +1375,10 @@
             // Re-render visualization
             render();
 
-            // Transition: hide survey, show visualization
+            // Transition: hide survey, show lead capture
             surveyContainer.style.display = 'none';
-            document.querySelector('.container').style.display = 'block';
+            document.getElementById('lead-capture-container').style.display = 'block';
+            window.scrollTo(0, 0);
         }
     });
 
@@ -1496,7 +1581,7 @@
             "'": "&#39;"
         }[m]));
         document.getElementById('feedback-list').innerHTML =
-            top.map(item => `<li><b>${item.pillar.toUpperCase()} • ${pretty(item.subskill)}</b> — score ${item.val}. ${esc(item.advice)}</li>`).join('');
+            top.map(item => `<li><b>${item.pillar.toUpperCase()}  —  ${pretty(item.subskill)}</b>  —  score ${item.val}. ${esc(item.advice)}</li>`).join('');
     }
 
     /* ======= Quadrant Drawing (SVG) with Petal Glyphs ======= */
@@ -1609,10 +1694,10 @@
 
         // Compute intensity based on the area of the ellipse (Core * Meta)
         const area = core * meta; // Maximum area = 100 * 100 = 10000
-        const intensity = Math.min(area / 10000, 1); // Scale to 0–1
+        const intensity = Math.min(area / 10000, 1); // Scale to 0 — 1
 
-        // Dynamic hue from red (0°) to green (120° based on intensity)
-        const hue = 0 + (intensity * 120); // 0 (red) → 120 (green)
+        // Dynamic hue from red (0 — ) to green (120 —  based on intensity)
+        const hue = 0 + (intensity * 120); // 0 (red) ? 120 (green)
         const saturation = 80; // Fixed vibrant saturation
         const lightness = 50 - (intensity * 10); // Slightly darker green for higher intensity
 
@@ -1660,6 +1745,39 @@
             Object.keys(p).forEach(k => sliders[k].value = p[k]);
             render();
         });
+    });
+
+    document.getElementById('lead-capture-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const status = document.getElementById('lead-status');
+        const btn = form.querySelector('button');
+        const CRM_ENDPOINT = "https://flow.zoho.com/862720724/flow/webhook/incoming?zapikey=1001.30023bb48dcfea64582b9844756e0ea4.815953345f36fdab6aac353eded305ea";
+
+        status.hidden = false;
+        status.textContent = 'Submitting...';
+        btn.disabled = true;
+
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+        payload.Description = `Individual AI Readiness Scores: AI=${sliders.ai.value}, SME=${sliders.sme.value}, Core=${sliders.core.value}, Meta=${sliders.meta.value}`;
+        payload.submitted_at = new Date().toISOString();
+        payload.page = window.location.pathname;
+
+        try {
+            await fetch(CRM_ENDPOINT, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: JSON.stringify(payload)
+            });
+            document.getElementById('lead-capture-container').style.display = 'none';
+            document.querySelector('.container').style.display = 'block';
+            window.scrollTo(0, 0);
+        } catch (err) {
+            console.error(err);
+            status.textContent = 'Something went wrong. Please try again.';
+            btn.disabled = false;
+        }
     });
 
     function toggleAdvanced() {
@@ -1939,7 +2057,7 @@
   </section>
 </div>
 <footer class="site-footer">
-    <p>&copy; 2025 Paidar Systems LLC. <a href="http://www.paidar.ai" target="_blank">www.paidar.ai</a></p>
+    <p>Paidar.ai <br> &copy; 2025 Paidar Systems LLC</p>
 </footer>
 </body>
 </html>`;
@@ -2012,25 +2130,13 @@
     }
 
 </script>
-<script>
-    const navBtn = document.querySelector(".nav-toggle");
-    const navDrawer = document.querySelector(".mobile-drawer");
-    if (navBtn && navDrawer) {
-        navBtn.addEventListener("click", () => {
-            const open = navDrawer.getAttribute("data-open") === "true";
-            navDrawer.setAttribute("data-open", String(!open));
-            navBtn.setAttribute("aria-expanded", String(!open));
-        });
-        navDrawer.addEventListener("click", (e) => {
-            if (e.target.closest("a")) {
-                navDrawer.setAttribute("data-open", "false");
-                navBtn.setAttribute("aria-expanded", "false");
-            }
-        });
-    }
-</script>
+<script src="/assets/js/funnel-tracking.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
+
+
+
 
 
 

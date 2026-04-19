@@ -1,18 +1,18 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AAOS Start | Paidar.ai</title>
-    <meta name="description" content="Entry point from book QR codes. Choose your next action: assessment, AAOS overview, or implementation support." />
+    <meta name="description" content="Getting started with the AAOS framework after reading the book. Choose your path to implementation." />
     <link rel="canonical" href="https://paidar.ai/aaos-start/" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#123456" />
-    
+
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="AAOS Start | Paidar.ai" />
-    <meta property="og:description" content="Entry point from book QR codes. Choose your next action: assessment, AAOS overview, or implementation support." />
+    <meta property="og:description" content="Getting started with the AAOS framework after reading the book. Choose your path to implementation." />
     <meta property="og:url" content="https://paidar.ai/aaos-start/" />
     <meta property="og:image" content="https://paidar.ai/assets/img/hero.jpeg" />
     <meta property="og:site_name" content="Paidar.ai" />
@@ -20,7 +20,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="AAOS Start | Paidar.ai" />
-    <meta name="twitter:description" content="Entry point from book QR codes. Choose your next action: assessment, AAOS overview, or implementation support." />
+    <meta name="twitter:description" content="Getting started with the AAOS framework after reading the book. Choose your path to implementation." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />
     <link rel="icon" href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="/assets/css/paidar.css" />
@@ -31,30 +31,34 @@
 <header class="site-header">
     <div class="container flex between center">
         <a class="brand" href="/">
-            <img src="/assets/img/paidar.svg" alt="Paidar Systems logo" width="64" />
-            <span>Paidar.ai</span>
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" />
         </a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open navigation">Menu</button>
-        <nav class="primary-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
             <ul class="nav-list nav-reset">
                 <li><a href="/">Home</a></li>
-                <li><a href="/assessments.html">Assessments</a></li>
-                <li><a href="/services.html">Services</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a class="btn btn-primary" href="/assessment/" data-propagate-utm="true" data-track="cta_take_assessment_nav">Take the Assessment</a></li>
+                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
+                <li><a href="/solutions.html">Solutions</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/insights.html">Insights</a></li>
+                <li class="has-sub">
+                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
+                    <ul class="sub" role="menu">
+                        <li role="none"><a role="menuitem" href="/training/">Training</a></li>
+                        <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
+                        <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
+                        <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
+                    </ul>
+                </li>
+                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<aside id="mobile-drawer" class="mobile-drawer" data-open="false" aria-label="Mobile navigation">
-    <ul class="nav-list nav-reset">
-        <li><a href="/">Home</a></li>
-        <li><a href="/assessment/" data-propagate-utm="true">Take the Assessment</a></li>
-        <li><a href="/aaos-implementation/" data-propagate-utm="true">Implement with Us</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-    </ul>
-</aside>
+
 
 <main id="main">
     <section class="hero" style="--hero-image:url('/assets/img/hero.jpeg'); --hero-bg-color:#0e223b;">
@@ -62,7 +66,7 @@
             <h1>You read the book, now what?</h1>
             <p class="lead">Pick one action and move forward today. Every path gives you a concrete next step and tracked outcome.</p>
             <p>
-                <a class="btn btn-gold" href="/assessment/" data-propagate-utm="true" data-track="cta_take_assessment_hero">Take the Assessment</a>
+                <a class="btn btn-primary" href="/assessments.html" data-propagate-utm="true" data-track="cta_take_assessment_hero">Take an Assessment</a>
                 <a class="btn btn-outline" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_hero">Book a Session</a>
             </p>
         </div>
@@ -76,7 +80,7 @@
                 <article class="card accent-data">
                     <h3>1. Take Assessment</h3>
                     <p>Get a rapid read on your current posture, risk level, and best next move.</p>
-                    <p><a class="btn btn-primary" href="/assessment/" data-propagate-utm="true" data-track="cta_take_assessment_card">Start Assessment</a></p>
+                    <p><a class="btn btn-primary" href="/assessments.html" data-propagate-utm="true" data-track="cta_take_assessment_card">Start Assessment</a></p>
                 </article>
                 <article class="card accent-edge">
                     <h3>2. Explore AAOS</h3>
@@ -101,7 +105,7 @@
                 <h2>Primary Next Step: Take the Assessment</h2>
                 <p>Most teams start with the assessment to align decisions, sequence execution, and reduce avoidable risk.</p>
                 <p>
-                    <a class="btn btn-gold" href="/assessment/" data-propagate-utm="true" data-track="cta_take_assessment_primary">Take the Assessment</a>
+                    <a class="btn btn-gold" href="/assessments.html" data-propagate-utm="true" data-track="cta_take_assessment_primary">Start an Assessment</a>
                     <a class="btn btn-outline" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_secondary">Book a Session</a>
                 </p>
             </div>
@@ -118,42 +122,36 @@
             <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener">
                 <img class="social-icon" src="/assets/img/linkedin.svg" alt="LinkedIn" />
             </a>
+            <a href="https://embracingdigital.org/?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink" aria-label="Podcast" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/edt.svg" alt="Embracing Digital" />
+            </a>
         </div>
+
         <div class="footer-brand">
-            <img src="/assets/img/paidar.svg" alt="Paidar Systems logo" class="footer-logo" />
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" class="footer-logo" />
+            <div class="brand-name">Paidar.ai</div>
             <small>&copy; <span id="y"></span> Paidar Systems LLC</small>
         </div>
+
         <nav aria-label="Footer" class="footer-nav">
             <ul>
                 <li><a href="/about.html">About</a></li>
-                <li><a href="/services.html">Services</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+                <li><a href="/insights.html">Insights</a></li>
+                <li><a href="/contact.html" data-track="cta_contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </footer>
 
 <script src="/assets/js/funnel-tracking.js"></script>
-<script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    const btn = document.querySelector(".nav-toggle");
-    const drawer = document.querySelector(".mobile-drawer");
-    if (btn && drawer) {
-        btn.addEventListener("click", () => {
-            const open = drawer.getAttribute("data-open") === "true";
-            drawer.setAttribute("data-open", String(!open));
-            btn.setAttribute("aria-expanded", String(!open));
-        });
-    }
-    drawer?.addEventListener("click", (e) => {
-        if (e.target.closest("a")) {
-            drawer.setAttribute("data-open", "false");
-            btn?.setAttribute("aria-expanded", "false");
-        }
-    });
-</script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
 
 
 

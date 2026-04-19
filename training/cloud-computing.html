@@ -1,11 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Cloud Computing for AI Teams | Paidar.ai</title>
-    <meta name="description" content="Hands-on cloud computing course for AI-enabled systems, covering architecture, operations, and governance." />
+    <title>Cloud Computing Training | Paidar.ai</title>
+    <meta name="description" content="Hands-on cloud computing course for AI teams, covering architecture, operations, and governance." />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://paidar.ai/training/cloud-computing.html" />
     <meta name="keywords" content="AI training, cloud computing course, microservices course, enterprise architecture, GDXA, AI readiness" />
@@ -14,16 +14,16 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Cloud Computing for AI Teams | Paidar.ai" />
-    <meta property="og:description" content="Hands-on cloud computing course for AI-enabled systems." />
+    <meta property="og:title" content="Cloud Computing Training | Paidar.ai" />
+    <meta property="og:description" content="Hands-on cloud computing course for AI teams, covering architecture, operations, and governance." />
     <meta property="og:url" content="https://paidar.ai/training/cloud-computing.html" />
     <meta property="og:image" content="https://paidar.ai/assets/img/og-hero.jpg" />
     <meta property="og:site_name" content="Paidar.ai" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Cloud Computing for AI Teams | Paidar.ai" />
-    <meta name="twitter:description" content="Hands-on cloud computing course for AI-enabled systems." />
+    <meta name="twitter:title" content="Cloud Computing Training | Paidar.ai" />
+    <meta name="twitter:description" content="Hands-on cloud computing course for AI teams, covering architecture, operations, and governance." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/og-hero.jpg" />
 
     <!-- Assets -->
@@ -65,66 +65,48 @@
 <header class="site-header">
     <div class="container flex between center">
         <a class="brand" href="/">
-            <img src="/assets/img/paidar.svg" alt="Paidar Systems logo" width="64" />
-            <span>Paidar.ai</span>
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" />
         </a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open navigation">Menu</button>
-        <nav class="primary-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
             <ul class="nav-list nav-reset">
                 <li><a href="/">Home</a></li>
-                <li><a href="/assessments.html">Assessments</a></li>
-                <li><a href="/workshops/">Workshops</a></li>
+                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
                 <li><a href="/solutions.html">Solutions</a></li>
-                <li><a href="/services.html">Services</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
                 <li><a href="/about.html">About</a></li>
                 <li><a href="/insights.html">Insights</a></li>
                 <li class="has-sub">
-                    <a href="/sectors/" aria-haspopup="true" aria-expanded="false">Legacy</a>
+                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
                     <ul class="sub" role="menu">
-                        
-                        <li role="none"><a role="menuitem" href="/consulting.html">Consulting</a></li>
                         <li role="none"><a role="menuitem" href="/training/">Training</a></li>
                         <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
-                        <li role="none"><a role="menuitem" href="/books/">Books</a></li>
+                        <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
+                        <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
                     </ul>
                 </li>
-                <li><a class="btn btn-primary" href="/contact.html">Contact</a></li>
+                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<aside id="mobile-drawer" class="mobile-drawer" data-open="false" aria-label="Mobile navigation">
-    <ul class="nav-list nav-reset">
-        <li><a href="/">Home</a></li>
-        <li><a href="/assessments.html">Assessments</a></li>
-        <li><a href="/workshops/">Workshops</a></li>
-        <li><a href="/solutions.html">Solutions</a></li>
-        <li><a href="/services.html">Services</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/insights.html">Insights</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li><a href="/sectors/">Sectors</a></li>
-        <li><a href="/consulting.html">Consulting</a></li>
-        <li><a href="/training/">Training</a></li>
-        <li><a href="/software.html">Software</a></li>
-        <li><a href="/books/">Books</a></li>
-    </ul>
-</aside><main id="main">
+<main id="main">
   <!-- Hero -->
-  <section class="hero" style="--hero-image:url('../img/training/cloud-course-hero.jpeg'); --hero-bg-color:#0e223b">
+  <section class="hero" style="--hero-image:url('/assets/img/training/cloud-course-hero.jpeg'); --hero-bg-color:#0e223b">
             <div class="container grid-2">
                 <div>
       <h1>AI-Augmented Cloud Computing for Technologists</h1>
       <p class="lead" id="overview">
-        Design, deploy, and operate AI-ready cloud systems. Ten applied modules, GitHub labs, and portfolio-grade outcomes—no tests, just real work.
+        Design, deploy, and operate AI-ready cloud systems. Ten applied modules, GitHub labs, and portfolio-grade outcomes — no tests, just real work.
       </p>
       <ul class="hero-stats" role="list">
         <li><strong>10</strong> modules</li>
         <li><strong>20+</strong> labs & templates</li>
       </ul>
       <p><a class="btn btn-primary btn-lg" href="#enroll">Enroll now</a></p>
-      <small class="trust-hint">Vendor-neutral · Architect-led · Practical</small>
+      <small class="trust-hint">Vendor-neutral  —  Architect-led  —  Practical</small>
     </div>
     </div>
   </section>
@@ -133,7 +115,7 @@
   <section class="section">
     <div class="container two-col">
       <div>
-        <h2 class="h3">Who It’s For</h2>
+        <h2 class="h3">Who It's For</h2>
         <p>Solution architects, DevOps and platform engineers, SREs, and data/ML practitioners who want a practical, end-to-end view of cloud systems with AI workloads.</p>
       </div>
       <div>
@@ -154,14 +136,14 @@
         <h2 class="h3" id="modules-title">10-Module Learning Path</h2>
         <div class="section-actions">
           <a class="link" data-accordion="expand-all" aria-controls="modules-accordion">Expand all</a>
-          <span aria-hidden="true">·</span>
+          <span aria-hidden="true"> — </span>
           <a class="link" data-accordion="collapse-all" aria-controls="modules-accordion">Collapse all</a>
         </div>
       </div>
 
       <ol class="accordion" id="modules-accordion">
         <li class="accordion-item">
-          <p><a class="accordion-trigger" aria-expanded="false" aria-controls="m1" id="m1-label">1 — <strong>Cloud Foundations & Models</strong> <span class="meta">IAM · VPC · Guardrails</span>
+          <p><a class="accordion-trigger" aria-expanded="false" aria-controls="m1" id="m1-label">1  —  <strong>Cloud Foundations & Models</strong> <span class="meta">IAM  —  VPC  —  Guardrails</span>
           </a></p>
           <div id="m1" class="accordion-panel" role="region" aria-labelledby="m1-label" hidden>
             <p>Deliverable: Build a secure, tagged VPC and baseline policy.</p>
@@ -170,7 +152,7 @@
 
         <li class="accordion-item">
           <p><a class="accordion-trigger" aria-expanded="false" aria-controls="m2" id="m2-label">
-            2 — <strong>APIs, SDKs & Automation</strong> <span class="meta">REST · CLI · IaC</span>
+            2  —  <strong>APIs, SDKs & Automation</strong> <span class="meta">REST  —  CLI  —  IaC</span>
           </a></p>
           <div id="m2" class="accordion-panel" role="region" aria-labelledby="m2-label" hidden>
             <p>Deliverable: Provision and report resources via CLI/SDK and IaC.</p>
@@ -179,7 +161,7 @@
 
         <li class="accordion-item">
           <p><a class="accordion-trigger" aria-expanded="false" aria-controls="m3" id="m3-label">
-            3 — <strong>Virtualization & Containers</strong> <span class="meta">Images · Registries</span>
+            3  —  <strong>Virtualization & Containers</strong> <span class="meta">Images  —  Registries</span>
           </a></p>
           <div id="m3" class="accordion-panel" role="region" aria-labelledby="m3-label" hidden>
             <p>Deliverable: Containerize an app and publish to a registry.</p>
@@ -187,7 +169,7 @@
         </li>
 
         <li class="accordion-item">
-          <p><a class="accordion-trigger" aria-expanded="false" aria-controls="m4" id="m4-label">4 — <strong>Kubernetes & Service Deployment</strong> <span class="meta">Helm · Ingress · Policies</span>
+          <p><a class="accordion-trigger" aria-expanded="false" aria-controls="m4" id="m4-label">4  —  <strong>Kubernetes & Service Deployment</strong> <span class="meta">Helm  —  Ingress  —  Policies</span>
           </a></p>
           <div id="m4" class="accordion-panel" role="region" aria-labelledby="m4-label" hidden>
             <p>Deliverable: Deploy a microservice stack with Helm, ingress, and network policies.</p>
@@ -195,7 +177,7 @@
         </li>
 
         <li class="accordion-item">
-          <p><a class="accordion-trigger" aria-expanded="false" aria-controls="m5" id="m5-label">5 — <strong>Scaling, Resilience & Chaos</strong> <span class="meta">HPA · Jobs · Faults</span>
+          <p><a class="accordion-trigger" aria-expanded="false" aria-controls="m5" id="m5-label">5  —  <strong>Scaling, Resilience & Chaos</strong> <span class="meta">HPA  —  Jobs  —  Faults</span>
           </a></p>
           <div id="m5" class="accordion-panel" role="region" aria-labelledby="m5-label" hidden>
             <p>Deliverable: Implement autoscaling and run a chaos experiment with health probes.</p>
@@ -204,7 +186,7 @@
 
         <li class="accordion-item">
           <a class="accordion-trigger" aria-expanded="false" aria-controls="m6" id="m6-label">
-            6 — <strong>Serverless & Edge</strong> <span class="meta">Functions · Triggers · IoT Edge</span>
+            6  —  <strong>Serverless & Edge</strong> <span class="meta">Functions  —  Triggers  —  IoT Edge</span>
           </a>
           <div id="m6" class="accordion-panel" role="region" aria-labelledby="m6-label" hidden>
             <p>Deliverable: Build and test a serverless workflow; deploy an edge function.</p>
@@ -213,7 +195,7 @@
 
         <li class="accordion-item">
           <p><a class="accordion-trigger" aria-expanded="false" aria-controls="m7" id="m7-label">
-            7 — <strong>Data Pipelines & Storage</strong> <span class="meta">Object · SQL/NoSQL · ETL</span>
+            7  —  <strong>Data Pipelines & Storage</strong> <span class="meta">Object  —  SQL/NoSQL  —  ETL</span>
           </a></p>
           <div id="m7" class="accordion-panel" role="region" aria-labelledby="m7-label" hidden>
             <p>Deliverable: IaC-driven ETL pipeline across object store and database.</p>
@@ -221,7 +203,7 @@
         </li>
 
         <li class="accordion-item">
-          <p><a class="accordion-trigger" aria-expanded="false" aria-controls="m8" id="m8-label">8 — <strong>AI Workloads in the Cloud</strong> <span class="meta">Training · Inference</span>
+          <p><a class="accordion-trigger" aria-expanded="false" aria-controls="m8" id="m8-label">8  —  <strong>AI Workloads in the Cloud</strong> <span class="meta">Training  —  Inference</span>
           </a></p>
           <div id="m8" class="accordion-panel" role="region" aria-labelledby="m8-label" hidden>
             <p>Deliverable: Launch an end-to-end ML workflow with managed services.</p>
@@ -230,7 +212,7 @@
 
         <li class="accordion-item">
           <p><a class="accordion-trigger" aria-expanded="false" aria-controls="m9" id="m9-label">
-            9 — <strong>Observability & FinOps</strong> <span class="meta">Monitoring · Logging · Cost</span>
+            9  —  <strong>Observability & FinOps</strong> <span class="meta">Monitoring  —  Logging  —  Cost</span>
           </a></p>
           <div id="m9" class="accordion-panel" role="region" aria-labelledby="m9-label" hidden>
             <p>Deliverable: Build dashboards and cost reports; define alerting SLOs.</p>
@@ -239,10 +221,10 @@
 
         <li class="accordion-item">
           <p><a class="accordion-trigger" aria-expanded="false" aria-controls="m10" id="m10-label">
-            10 — <strong>The Cloud Challenge</strong> <span class="meta">Integrate & Present</span>
+            10  —  <strong>The Cloud Challenge</strong> <span class="meta">Integrate & Present</span>
           </a></p>
           <div id="m10" class="accordion-panel" role="region" aria-labelledby="m10-label" hidden>
-            <p>Deliverable: Live demo + architecture brief integrating Modules 1–9.</p>
+            <p>Deliverable: Live demo + architecture brief integrating Modules 1 — 9.</p>
           </div>
         </li>
       </ol>
@@ -256,7 +238,7 @@
   <!-- Outcomes / Deliverables -->
   <section class="section" id="deliverables">
     <div class="container">
-      <h2 class="h3">What You’ll Build</h2>
+      <h2 class="h3">What You — ll Build</h2>
       <div class="grid-3">
         <article class="card">
           <h3>Reference Architectures</h3>
@@ -280,9 +262,9 @@
       <h2 class="h3">Generative AI Integration</h2>
       <p>Use ChatGPT, Claude, or Gemini to scaffold code, generate diagrams, draft runbooks, and troubleshoot. Always validate outputs, document prompts, and include them with your artifacts.</p>
       <ul>
-        <li>Learning — have AI explain concepts and compare trade-offs</li>
-        <li>Creating — generate starter code, IaC, and diagrams</li>
-        <li>Presenting — outline demos and architecture briefs</li>
+        <li>Learning  —  have AI explain concepts and compare trade-offs</li>
+        <li>Creating  —  generate starter code, IaC, and diagrams</li>
+        <li>Presenting  —  outline demos and architecture briefs</li>
       </ul>
     </div>
   </section>
@@ -294,7 +276,7 @@
       <div>
         <h2 class="h3">Materials & Support</h2>
         <ul class="bullet-check">
-          <li>On-demand video demos (2–3 per module)</li>
+          <li>On-demand video demos (2 — 3 per module)</li>
           <li>GitHub repo with lab templates</li>
           <li>Architecture, security & cost checklists</li>
           <li>Community Slack channel</li>
@@ -310,7 +292,7 @@
       <h2 class="h3" id="faq-title">FAQ</h2>
       <details>
         <summary>How long does it take?</summary>
-        <p>Most learners finish in 6–10 weeks at 3–5 hours per week. It’s fully self-paced or can run as a team cohort.</p>
+        <p>Most learners finish in 6 — 10 weeks at 3 — 5 hours per week. It's fully self-paced or can run as a team cohort.</p>
       </details>
       <details>
         <summary>Which cloud providers are used?</summary>
@@ -322,64 +304,51 @@
       </details>
       <details>
         <summary>Is there a certificate?</summary>
-        <p>Yes, you’ll earn a digital credential for completing required modules and the Cloud Challenge.</p>
+        <p>Yes, you — ll earn a digital credential for completing required modules and the Cloud Challenge.</p>
       </details>
     </div>
   </section>
 
-  <!-- Enrollment CTA -->
-  <section class="section cta" id="enroll">
-    <div class="container grid-2 center">
-      <div>
-        <h2 class="h3">Ready to get started?</h2>
-        <p>Instant access, 24/7—no tests, just real progress. Team cohorts and pricing available.</p>
-      </div>
-      <div>
-        <a class="btn btn-primary" href="/contact.html">Ask about Pricing & Cohorts</a>
-      </div>
-    </div>
-  </section>
+  <cta-block data-type="workshop"></cta-block>
 </main>
 
 <footer class="site-footer">
-  <div class="footer-grid">
-    <div class="footer-socials" aria-label="Follow us">
-      <a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener">
-        <img class="social-icon" src="/assets/img/youtube.svg" alt="" loading="lazy">
-      </a>
-      <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener">
-        <img class="social-icon" src="/assets/img/linkedin.svg" alt="" loading="lazy">
-      </a>
-      <a href="https://embracingdigital.org/?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink" aria-label="Podcast" target="_blank" rel="noopener">
-        <img class="social-icon" src="/assets/img/edt.svg" alt="" loading="lazy">
-      </a>
+    <div class="footer-grid">
+        <div class="footer-socials" aria-label="Follow us">
+            <a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/youtube.svg" alt="YouTube" />
+            </a>
+            <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://embracingdigital.org/?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink" aria-label="Podcast" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/edt.svg" alt="Embracing Digital" />
+            </a>
+        </div>
+        <div class="footer-brand">
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" class="footer-logo" />
+            <div class="brand-name">Paidar.ai</div>
+            <small>&copy; <span id="y"></span> Paidar Systems LLC</small>
+        </div>
+        <nav aria-label="Footer" class="footer-nav">
+            <ul class="nav-reset">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+                <li><a href="/insights.html">Insights</a></li>
+                <li><a href="/contact.html" data-track="cta_contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-
-    <div class="footer-brand">
-      <img src="/assets/img/paidar.svg" alt="Paidar Systems logo" class="footer-logo" loading="lazy"/>
-      <small>&copy; <span id="y"></span> Paidar Systems LLC</small>
-    </div>
-
-    <nav aria-label="Footer" class="footer-nav">
-      <ul>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/privacy.html">Privacy</a></li>
-        <li><a href="/accessibility.html">Accessibility</a></li>
-        <li><a href="/sitemap.xml">Sitemap</a></li>
-      </ul>
-    </nav>
-  </div>
 </footer>
 
 <!-- Sticky mobile enroll -->
 <div class="sticky-enroll" role="region" aria-label="Quick enroll">
-  <a class="btn btn-primary" href="/contact.html">Ask about Pricing & Cohorts</a>
+  <a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Ask about Pricing & Cohorts</a>
 </div>
 
+<script src="/assets/js/funnel-tracking.js"></script>
+<script src="/assets/js/main.js"></script>
 <script>
-  // Year
-  document.getElementById('y').textContent = new Date().getFullYear();
-
   // Accordion behavior
   const triggers = document.querySelectorAll('.accordion-trigger');
   triggers.forEach(btn => btn.addEventListener('click', () => {
@@ -434,27 +403,16 @@
   }
 }
 </script>
-<script>
-    (() => {
-        const btn = document.querySelector(".nav-toggle");
-        const drawer = document.querySelector(".mobile-drawer");
-        if (btn && drawer) {
-            btn.addEventListener("click", () => {
-                const open = drawer.getAttribute("data-open") === "true";
-                drawer.setAttribute("data-open", String(!open));
-                btn.setAttribute("aria-expanded", String(!open));
-            });
-            drawer.addEventListener("click", (e) => {
-                if (e.target.closest("a")) {
-                    drawer.setAttribute("data-open", "false");
-                    btn.setAttribute("aria-expanded", "false");
-                }
-            });
-        }
-    })();
-</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
 
 
 

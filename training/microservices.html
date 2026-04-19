@@ -1,11 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Scalable Microservices Workshop | Paidar.ai</title>
-    <meta name="description" content="On-demand workshop for designing and operating scalable microservices with practical architecture patterns." />
+    <title>Microservices Training | Paidar.ai</title>
+    <meta name="description" content="Practical workshop for designing and operating scalable microservices with modern architecture patterns." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://paidar.ai/training/microservices.html" />
     <meta name="keywords" content="microservices, on-demand training, self-paced, resilient services, DevOps, reactive streams" />
@@ -14,16 +14,16 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Scalable Microservices Workshop | Paidar.ai" />
-    <meta property="og:description" content="On-demand workshop for designing and operating scalable microservices." />
+    <meta property="og:title" content="Microservices Training | Paidar.ai" />
+    <meta property="og:description" content="Practical workshop for designing and operating scalable microservices with modern architecture patterns." />
     <meta property="og:url" content="https://paidar.ai/training/microservices.html" />
     <meta property="og:image" content="https://paidar.ai/assets/img/microservice-hero.jpeg" />
     <meta property="og:site_name" content="Paidar.ai" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Scalable Microservices Workshop | Paidar.ai" />
-    <meta name="twitter:description" content="On-demand workshop for designing and operating scalable microservices." />
+    <meta name="twitter:title" content="Microservices Training | Paidar.ai" />
+    <meta name="twitter:description" content="Practical workshop for designing and operating scalable microservices with modern architecture patterns." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/microservice-hero.jpeg" />
 
     <!-- Assets & Styles -->
@@ -41,64 +41,46 @@
 <header class="site-header">
     <div class="container flex between center">
         <a class="brand" href="/">
-            <img src="/assets/img/paidar.svg" alt="Paidar Systems logo" width="64" />
-            <span>Paidar.ai</span>
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" />
         </a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open navigation">Menu</button>
-        <nav class="primary-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
             <ul class="nav-list nav-reset">
                 <li><a href="/">Home</a></li>
-                <li><a href="/assessments.html">Assessments</a></li>
-                <li><a href="/workshops/">Workshops</a></li>
+                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
                 <li><a href="/solutions.html">Solutions</a></li>
-                <li><a href="/services.html">Services</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
                 <li><a href="/about.html">About</a></li>
                 <li><a href="/insights.html">Insights</a></li>
                 <li class="has-sub">
-                    <a href="/sectors/" aria-haspopup="true" aria-expanded="false">Legacy</a>
+                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
                     <ul class="sub" role="menu">
-                        
-                        <li role="none"><a role="menuitem" href="/consulting.html">Consulting</a></li>
                         <li role="none"><a role="menuitem" href="/training/">Training</a></li>
                         <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
-                        <li role="none"><a role="menuitem" href="/books/">Books</a></li>
+                        <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
+                        <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
                     </ul>
                 </li>
-                <li><a class="btn btn-primary" href="/contact.html">Contact</a></li>
+                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<aside id="mobile-drawer" class="mobile-drawer" data-open="false" aria-label="Mobile navigation">
-    <ul class="nav-list nav-reset">
-        <li><a href="/">Home</a></li>
-        <li><a href="/assessments.html">Assessments</a></li>
-        <li><a href="/workshops/">Workshops</a></li>
-        <li><a href="/solutions.html">Solutions</a></li>
-        <li><a href="/services.html">Services</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/insights.html">Insights</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li><a href="/sectors/">Sectors</a></li>
-        <li><a href="/consulting.html">Consulting</a></li>
-        <li><a href="/training/">Training</a></li>
-        <li><a href="/software.html">Software</a></li>
-        <li><a href="/books/">Books</a></li>
-    </ul>
-</aside><main id="main">
+<main id="main">
     <!-- Hero -->
-    <section class="hero" style="--hero-image:url('../img/training/microservice-hero.jpeg'); --hero-bg-color:#0e223b">
+    <section class="hero" style="--hero-image:url('/assets/img/training/microservice-hero.jpeg'); --hero-bg-color:#0e223b">
         <div class="container grid-2">
             <div>
                 <h1>Scalable Microservices On-Demand Workshop</h1>
-                <p class="lead">Self-paced, hands-on program to master resilient microservice architectures—14 practical modules, no exams.</p>
+                <p class="lead">Self-paced, hands-on program to master resilient microservice architectures — 14 practical modules, no exams.</p>
                 <ul class="hero-stats" role="list">
                     <li><strong>14</strong> modules</li>
                     <li><strong>14</strong> cumulative assignments</li>
                 </ul>
                 <p><a class="btn btn-primary btn-lg" href="#enroll">Enroll Now</a></p>
-                <small class="trust-hint">Language-agnostic · Architect-led · Practical</small>
+                <small class="trust-hint">Language-agnostic  —  Architect-led  —  Practical</small>
             </div>
         </div>
     </section>
@@ -130,14 +112,14 @@
                 <h2 class="h3" id="modules-title">14-Module Learning Path</h2>
                 <div class="section-actions">
                     <a class="link" data-accordion="expand-all" href="#modules">Expand all</a>
-                    <span aria-hidden="true">·</span>
+                    <span aria-hidden="true"> — </span>
                     <a class="link" data-accordion="collapse-all" href="#modules">Collapse all</a>
                 </div>
             </div>
             <ol class="accordion" id="modules-accordion">
                 <li class="accordion-item">
                     <a class="accordion-trigger" aria-expanded="false" aria-controls="mod1" id="mod1-label">
-                        1 — <strong>Intro & Service Mindset</strong> <span class="meta">Decomposition</span>
+                        1  —  <strong>Intro & Service Mindset</strong> <span class="meta">Decomposition</span>
                     </a>
                     <div id="mod1" class="accordion-panel" role="region" aria-labelledby="mod1-label" hidden>
                         <p>Assignment: Plan a service decomposition for an existing monolith.</p>
@@ -145,7 +127,7 @@
                 </li>
                 <li class="accordion-item">
                     <a class="accordion-trigger" aria-expanded="false" aria-controls="mod2" id="mod2-label">
-                        2 — <strong>HTTP & API Design</strong> <span class="meta">REST · gRPC · Contracts</span>
+                        2  —  <strong>HTTP & API Design</strong> <span class="meta">REST  —  gRPC  —  Contracts</span>
                     </a>
                     <div id="mod2" class="accordion-panel" role="region" aria-labelledby="mod2-label" hidden>
                         <p>Assignment: Define and implement API contracts for two services.</p>
@@ -153,7 +135,7 @@
                 </li>
                 <li class="accordion-item">
                     <a class="accordion-trigger" aria-expanded="false" aria-controls="mod3" id="mod3-label">
-                        3 — <strong>Security Fundamentals</strong> <span class="meta">Auth · OAuth · JWT</span>
+                        3  —  <strong>Security Fundamentals</strong> <span class="meta">Auth  —  OAuth  —  JWT</span>
                     </a>
                     <div id="mod3" class="accordion-panel" role="region" aria-labelledby="mod3-label" hidden>
                         <p>Assignment: Implement authentication and authorization middleware.</p>
@@ -161,7 +143,7 @@
                 </li>
                 <li class="accordion-item">
                     <a class="accordion-trigger" aria-expanded="false" aria-controls="mod4" id="mod4-label">
-                        4 — <strong>Service Decomposition</strong> <span class="meta">Bounded Contexts</span>
+                        4  —  <strong>Service Decomposition</strong> <span class="meta">Bounded Contexts</span>
                     </a>
                     <div id="mod4" class="accordion-panel" role="region" aria-labelledby="mod4-label" hidden>
                         <p>Assignment: Slice a monolith into three candidate microservices.</p>
@@ -169,7 +151,7 @@
                 </li>
                 <li class="accordion-item">
                     <a class="accordion-trigger" aria-expanded="false" aria-controls="mod5" id="mod5-label">
-                        5 — <strong>Deployment Strategies</strong> <span class="meta">Containers · Descriptors</span>
+                        5  —  <strong>Deployment Strategies</strong> <span class="meta">Containers  —  Descriptors</span>
                     </a>
                     <div id="mod5" class="accordion-panel" role="region" aria-labelledby="mod5-label" hidden>
                         <p>Assignment: Containerize services and write deployment manifests.</p>
@@ -177,7 +159,7 @@
                 </li>
                 <li class="accordion-item">
                     <a class="accordion-trigger" aria-expanded="false" aria-controls="mod6" id="mod6-label">
-                        6 — <strong>Scaling & Load Balancing</strong> <span class="meta">HPA · LB</span>
+                        6  —  <strong>Scaling & Load Balancing</strong> <span class="meta">HPA  —  LB</span>
                     </a>
                     <div id="mod6" class="accordion-panel" role="region" aria-labelledby="mod6-label" hidden>
                         <p>Assignment: Configure autoscaling and load balancing rules.</p>
@@ -185,7 +167,7 @@
                 </li>
                 <li class="accordion-item">
                     <a class="accordion-trigger" aria-expanded="false" aria-controls="mod7" id="mod7-label">
-                        7 — <strong>Fault Tolerance Patterns</strong> <span class="meta">Retry · Circuit Breaker</span>
+                        7  —  <strong>Fault Tolerance Patterns</strong> <span class="meta">Retry  —  Circuit Breaker</span>
                     </a>
                     <div id="mod7" class="accordion-panel" role="region" aria-labelledby="mod7-label" hidden>
                         <p>Assignment: Add retry logic and circuit breakers to service calls.</p>
@@ -193,7 +175,7 @@
                 </li>
                 <li class="accordion-item">
                     <a class="accordion-trigger" aria-expanded="false" aria-controls="mod8" id="mod8-label">
-                        8 — <strong>Reactive Streams</strong> <span class="meta">Backpressure · Rx</span>
+                        8  —  <strong>Reactive Streams</strong> <span class="meta">Backpressure  —  Rx</span>
                     </a>
                     <div id="mod8" class="accordion-panel" role="region" aria-labelledby="mod8-label" hidden>
                         <p>Assignment: Implement a reactive pipeline using a streams library.</p>
@@ -201,7 +183,7 @@
                 </li>
                 <li class="accordion-item">
                     <a class="accordion-trigger" aria-expanded="false" aria-controls="mod9" id="mod9-label">
-                        9 — <strong>Event-Driven Architecture</strong> <span class="meta">Pub/Sub · Kafka</span>
+                        9  —  <strong>Event-Driven Architecture</strong> <span class="meta">Pub/Sub  —  Kafka</span>
                     </a>
                     <div id="mod9" class="accordion-panel" role="region" aria-labelledby="mod9-label" hidden>
                         <p>Assignment: Build an event broadcaster and subscriber service.</p>
@@ -209,7 +191,7 @@
                 </li>
                 <li class="accordion-item">
                     <a class="accordion-trigger" aria-expanded="false" aria-controls="mod10" id="mod10-label">
-                        10 — <strong>Data Persistence Patterns</strong> <span class="meta">Saga · Outbox</span>
+                        10  —  <strong>Data Persistence Patterns</strong> <span class="meta">Saga  —  Outbox</span>
                     </a>
                     <div id="mod10" class="accordion-panel" role="region" aria-labelledby="mod10-label" hidden>
                         <p>Assignment: Apply saga or outbox patterns for data consistency.</p>
@@ -217,7 +199,7 @@
                 </li>
                 <li class="accordion-item">
                     <a class="accordion-trigger" aria-expanded="false" aria-controls="mod11" id="mod11-label">
-                        11 — <strong>Service Mesh & Observability</strong> <span class="meta">Metrics · Logs</span>
+                        11  —  <strong>Service Mesh & Observability</strong> <span class="meta">Metrics  —  Logs</span>
                     </a>
                     <div id="mod11" class="accordion-panel" role="region" aria-labelledby="mod11-label" hidden>
                         <p>Assignment: Integrate a service mesh and collect telemetry.</p>
@@ -225,7 +207,7 @@
                 </li>
                 <li class="accordion-item">
                     <a class="accordion-trigger" aria-expanded="false" aria-controls="mod12" id="mod12-label">
-                        12 — <strong>CI/CD Pipelines</strong> <span class="meta">GitOps · Workflows</span>
+                        12  —  <strong>CI/CD Pipelines</strong> <span class="meta">GitOps  —  Workflows</span>
                     </a>
                     <div id="mod12" class="accordion-panel" role="region" aria-labelledby="mod12-label" hidden>
                         <p>Assignment: Automate build, test, and deploy workflows.</p>
@@ -233,7 +215,7 @@
                 </li>
                 <li class="accordion-item">
                     <a class="accordion-trigger" aria-expanded="false" aria-controls="mod13" id="mod13-label">
-                        13 — <strong>Advanced Patterns</strong> <span class="meta">Sidecars · Serverless</span>
+                        13  —  <strong>Advanced Patterns</strong> <span class="meta">Sidecars  —  Serverless</span>
                     </a>
                     <div id="mod13" class="accordion-panel" role="region" aria-labelledby="mod13-label" hidden>
                         <p>Assignment: Prototype a sidecar or serverless auxiliary function.</p>
@@ -241,7 +223,7 @@
                 </li>
                 <li class="accordion-item">
                     <a class="accordion-trigger" aria-expanded="false" aria-controls="mod14" id="mod14-label">
-                        14 — <strong>Case Study Integration</strong> <span class="meta">Capstone</span>
+                        14  —  <strong>Case Study Integration</strong> <span class="meta">Capstone</span>
                     </a>
                     <div id="mod14" class="accordion-panel" role="region" aria-labelledby="mod14-label" hidden>
                         <p>Assignment: Deploy and demonstrate your end-to-end microservices system.</p>
@@ -259,7 +241,7 @@
         <div class="container narrow">
             <h2 class="h3">What's Included</h2>
             <ul class="bullet-check">
-                <li>Video demos & lectures (2–3 per module)</li>
+                <li>Video demos & lectures (2 — 3 per module)</li>
                 <li>GitHub repo with lab templates</li>
                 <li>Reference guides & checklists</li>
                 <li>Monthly office hours</li>
@@ -273,7 +255,7 @@
             <h2 class="h3" id="faq-title">FAQ</h2>
             <details>
                 <summary>How long to complete?</summary>
-                <p>Typically 6–10 weeks at 3–5 hours/week (self-paced).</p>
+                <p>Typically 6 — 10 weeks at 3 — 5 hours/week (self-paced).</p>
             </details>
             <details>
                 <summary>Which languages are supported?</summary>
@@ -281,7 +263,7 @@
             </details>
             <details>
                 <summary>Is there a certificate?</summary>
-                <p>Yes—a digital credential upon completing all assignments.</p>
+                <p>Yes — a digital credential upon completing all assignments.</p>
             </details>
             <details>
                 <summary>What support is available?</summary>
@@ -289,43 +271,33 @@
         </div>
     </section>
 
-    <!-- Enrollment CTA -->
-    <section id="enroll" class="section cta">
-        <div class="container grid-2 center">
-            <div>
-                <h2 class="h3">Ready to get started?</h2>
-                <p>Instant access, 24/7—no exams, just real progress. Team packages available.</p>
-            </div>
-            <div>
-                <a class="btn btn-primary" href="/contact.html">Inquire & Enroll</a>
-            </div>
-        </div>
-    </section>
+    <cta-block data-type="workshop"></cta-block>
 </main>
 
 <footer class="site-footer">
     <div class="footer-grid">
         <div class="footer-socials" aria-label="Follow us">
             <a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener">
-                <img class="social-icon" src="/assets/img/youtube.svg" alt="" loading="lazy"/>
+                <img class="social-icon" src="/assets/img/youtube.svg" alt="YouTube" />
             </a>
             <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener">
-                <img class="social-icon" src="/assets/img/linkedin.svg" alt="" loading="lazy"/>
+                <img class="social-icon" src="/assets/img/linkedin.svg" alt="LinkedIn" />
             </a>
             <a href="https://embracingdigital.org/?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink" aria-label="Podcast" target="_blank" rel="noopener">
-                <img class="social-icon" src="/assets/img/edt.svg" alt="" loading="lazy"/>
+                <img class="social-icon" src="/assets/img/edt.svg" alt="Embracing Digital" />
             </a>
         </div>
         <div class="footer-brand">
-            <img src="/assets/img/paidar.svg" alt="Paidar Systems logo" class="footer-logo" loading="lazy"/>
-            <small>&copy; <span id="year"></span> Paidar Systems LLC</small>
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" class="footer-logo" />
+            <div class="brand-name">Paidar.ai</div>
+            <small>&copy; <span id="y"></span> Paidar Systems LLC</small>
         </div>
         <nav aria-label="Footer" class="footer-nav">
-            <ul>
+            <ul class="nav-reset">
                 <li><a href="/about.html">About</a></li>
-                <li><a href="/privacy.html">Privacy</a></li>
-                <li><a href="/accessibility.html">Accessibility</a></li>
-                <li><a href="/sitemap.xml">Sitemap</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+                <li><a href="/insights.html">Insights</a></li>
+                <li><a href="/contact.html" data-track="cta_contact">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -333,13 +305,12 @@
 
 <!-- Sticky mobile enroll -->
 <div class="sticky-enroll" role="region" aria-label="Quick enroll">
-    <a class="btn btn-primary" href="/contact.html">Inquire & Enroll</a>
+    <a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Inquire & Enroll</a>
 </div>
 
+<script src="/assets/js/funnel-tracking.js"></script>
+<script src="/assets/js/main.js"></script>
 <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
     // Accordion
     document.querySelectorAll('.accordion-trigger').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -363,27 +334,14 @@
         });
     });
 </script>
-<script>
-    (() => {
-        const btn = document.querySelector(".nav-toggle");
-        const drawer = document.querySelector(".mobile-drawer");
-        if (btn && drawer) {
-            btn.addEventListener("click", () => {
-                const open = drawer.getAttribute("data-open") === "true";
-                drawer.setAttribute("data-open", String(!open));
-                btn.setAttribute("aria-expanded", String(!open));
-            });
-            drawer.addEventListener("click", (e) => {
-                if (e.target.closest("a")) {
-                    drawer.setAttribute("data-open", "false");
-                    btn.setAttribute("aria-expanded", "false");
-                }
-            });
-        }
-    })();
-</script>
 </body>
 </html>
+
+
+
+
+
+
 
 
 

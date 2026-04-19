@@ -1,11 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Software | Paidar.ai</title>
-    <meta name="description" content="Open, vendor-neutral software from Paidar.ai: Ailtire, Guthan, Sruth, Tuig, Treoir, and Runaire." />
+    <meta name="description" content="Open-source software tools from Paidar.ai designed to support AAOS implementation and AI-augmented operations." />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://paidar.ai/software.html" />
     <meta name="keywords" content="Ailtire, Guthan, Sruth, Tuig, Paidar Systems software, open source AI tools, system architecture, podcast automation, data streaming, data transformation" />
@@ -15,7 +15,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Software | Paidar.ai" />
-    <meta property="og:description" content="Explore the Paidar.ai software suite built for practical AI execution." />
+    <meta property="og:description" content="Open-source software tools from Paidar.ai designed to support AAOS implementation and AI-augmented operations." />
     <meta property="og:url" content="https://paidar.ai/software.html" />
     <meta property="og:image" content="https://paidar.ai/assets/img/og-hero.jpg" />
     <meta property="og:site_name" content="Paidar.ai" />
@@ -23,7 +23,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Software | Paidar.ai" />
-    <meta name="twitter:description" content="Explore the Paidar.ai software suite built for practical AI execution." />
+    <meta name="twitter:description" content="Open-source software tools from Paidar.ai designed to support AAOS implementation and AI-augmented operations." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/og-hero.jpg" />
 
     <!-- Assets -->
@@ -51,54 +51,36 @@
 <header class="site-header">
     <div class="container flex between center">
         <a class="brand" href="/">
-            <img src="/assets/img/paidar.svg" alt="Paidar Systems logo" width="64" />
-            <span>Paidar.ai</span>
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" />
         </a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open navigation">Menu</button>
-        <nav class="primary-nav" aria-label="Primary">
+                        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
             <ul class="nav-list nav-reset">
                 <li><a href="/">Home</a></li>
-                <li><a href="/assessments.html">Assessments</a></li>
-                <li><a href="/workshops/">Workshops</a></li>
+                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
                 <li><a href="/solutions.html">Solutions</a></li>
-                <li><a href="/services.html">Services</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
                 <li><a href="/about.html">About</a></li>
                 <li><a href="/insights.html">Insights</a></li>
                 <li class="has-sub">
-                    <a href="/sectors/" aria-haspopup="true" aria-expanded="false">Legacy</a>
+                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
                     <ul class="sub" role="menu">
-                        
-                        <li role="none"><a role="menuitem" href="/consulting.html">Consulting</a></li>
                         <li role="none"><a role="menuitem" href="/training/">Training</a></li>
                         <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
-                        <li role="none"><a role="menuitem" href="/books/">Books</a></li>
+                        <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
+                        <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
                     </ul>
                 </li>
-                <li><a class="btn btn-primary" href="/contact.html">Contact</a></li>
+                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<aside id="mobile-drawer" class="mobile-drawer" data-open="false" aria-label="Mobile navigation">
-    <ul class="nav-list nav-reset">
-        <li><a href="/">Home</a></li>
-        <li><a href="/assessments.html">Assessments</a></li>
-        <li><a href="/workshops/">Workshops</a></li>
-        <li><a href="/solutions.html">Solutions</a></li>
-        <li><a href="/services.html">Services</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/insights.html">Insights</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li><a href="/sectors/">Sectors</a></li>
-        <li><a href="/consulting.html">Consulting</a></li>
-        <li><a href="/training/">Training</a></li>
-        <li><a href="/software.html">Software</a></li>
-        <li><a href="/books/">Books</a></li>
-    </ul>
-</aside><main id="main">
+<main id="main">
     <!-- Hero -->
-    <section class="hero" style="--hero-image:url('../img/software-hero.jpeg'); --hero-bg-color:#0e223b">
+    <section class="hero" style="--hero-image:url('/assets/img/software-hero.jpeg'); --hero-bg-color:#0e223b">
         <div class="container">
             <h1>Software that Makes You AI-Augmented</h1>
             <p class="lead">Open, vendor-neutral tools that respect your constraints and accelerate outcomes across People, Process, Policy, and Technology.</p>
@@ -108,7 +90,7 @@
     <!-- Intro Copy -->
     <section class="section">
         <div class="container narrow">
-            <p>Our software is designed to be deployed in secure, mission-critical environments: Higher Education, Government, and Enterprise. Everything is <strong>open</strong> to reduce lock-in, and <strong>modular</strong> so you can adopt what you need—cloud, on-prem, or edge.</p>
+            <p>Our software is designed to be deployed in secure, mission-critical environments: Higher Education, Government, and Enterprise. Everything is <strong>open</strong> to reduce lock-in, and <strong>modular</strong> so you can adopt what you need — cloud, on-prem, or edge.</p>
         </div>
     </section>
 
@@ -118,10 +100,10 @@
             <img src="./assets/img/ailtire.svg" alt="Ailtire screenshot" class="img-fluid" />
             <div>
                 <h2 class="h3">Ailtire</h2>
-                <p class="muted">System Architecture · Developer Tooling</p>
-                <p>Transform complex systems into streamlined architectures. Ailtire blends Generative AI with modular design tools to simplify and accelerate architecture work—so teams build smarter, more adaptable solutions.</p>
+                <p class="muted">System Architecture  —  Developer Tooling</p>
+                <p>Transform complex systems into streamlined architectures. Ailtire blends Generative AI with modular design tools to simplify and accelerate architecture work — so teams build smarter, more adaptable solutions.</p>
                 <ul class="bullet-check">
-                    <li>Model → map → generate architecture assets</li>
+                    <li>Model ? map ? generate architecture assets</li>
                     <li>Works across multi-cloud, on-prem, and edge</li>
                     <li>Built for governance, reuse, and scale</li>
                 </ul>
@@ -137,7 +119,7 @@
             <div>
                 <h2 class="h3">Guthan</h2>
                 <p class="muted">Multilingual Podcast Management</p>
-                <p>Automate podcast production end-to-end: script generation, voice cloning, translation, transcription, summarization, and workflow orchestration—so you can reach global audiences efficiently.</p>
+                <p>Automate podcast production end-to-end: script generation, voice cloning, translation, transcription, summarization, and workflow orchestration — so you can reach global audiences efficiently.</p>
                 <ul class="bullet-check">
                     <li>Multi-language dubbing and localization</li>
                     <li>Integrated transcription & summarization</li>
@@ -173,7 +155,7 @@
             <div>
                 <h2 class="h3">Tuig</h2>
                 <p class="muted">AI Data Transformation with SME-in-the-Loop</p>
-                <p>Transform messy, heterogeneous data using Generative AI guided by subject-matter experts. Capture tribal knowledge, enforce consistency, and align to domain-specific rules—at scale.</p>
+                <p>Transform messy, heterogeneous data using Generative AI guided by subject-matter experts. Capture tribal knowledge, enforce consistency, and align to domain-specific rules — at scale.</p>
                 <ul class="bullet-check">
                     <li>Human-guided mapping & validation</li>
                     <li>Reusable rules, schemas, and prompts</li>
@@ -189,7 +171,7 @@
             <div>
                 <h2 class="h3">Treoir</h2>
                 <p class="muted">AI Enabled Enterprise Architecture</p>
-                <p>Treoir is an AI-powered enterprise architecture tool that helps architects map current environments to the GDXA—a descriptive architecture standard. Using plain-language interaction, teams can capture and align Strategic, Organizational, Process, Digital, and Physical elements without wrestling with meta-models or tooling complexity.</p>
+                <p>Treoir is an AI-powered enterprise architecture tool that helps architects map current environments to the GDXA — a descriptive architecture standard. Using plain-language interaction, teams can capture and align Strategic, Organizational, Process, Digital, and Physical elements without wrestling with meta-models or tooling complexity.</p>
                 <ul class="bullet-check">
                     <li>Natural-language mapping to GDXA layers</li>
                     <li>SME-in-the-loop guidance and validation</li>
@@ -205,7 +187,7 @@
             <div>
                 <h2 class="h3">Runaire</h2>
                 <p class="muted">AI Personal Assistant</p>
-                <p>Runaire is a personal assistant connected to your tools—email, calendar, project planning, and CRMs. It uses Generative AI to dynamically create workflows, activities, and tasks that interact with tools via MCP services. Runaire learns from individuals and organizations to autonomously move work forward under clear guardrails.</p>
+                <p>Runaire is a personal assistant connected to your tools — email, calendar, project planning, and CRMs. It uses Generative AI to dynamically create workflows, activities, and tasks that interact with tools via MCP services. Runaire learns from individuals and organizations to autonomously move work forward under clear guardrails.</p>
                 <ul class="bullet-check">
                     <li>Tool integrations: email, calendar, projects, CRM</li>
                     <li>Dynamic workflows & task creation via MCP</li>
@@ -215,75 +197,54 @@
             </div>
         </div>
     </section>
-    <!-- CTA -->
-    <section class="section cta">
-        <div class="container grid-2 center">
-            <div>
-                <h2 class="h3">Want help selecting or deploying?</h2>
-                <p>We can tailor a secure, compliant deployment for your environment and train your team to operate it.</p>
-            </div>
-            <div>
-                <a class="btn btn-primary" href="/contact.html">Talk to Us</a>
-            </div>
-        </div>
-    </section>
+    <cta-block data-type="assessment"></cta-block>
 </main>
 
 <footer class="site-footer">
     <div class="footer-grid">
-        <div class="footer-socials" aria-label="Follow us">
+                        <div class="footer-socials" aria-label="Follow us">
             <a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener">
-                <img class="social-icon" src="./assets/img/youtube.svg" alt="YouTube">
+                <img class="social-icon" src="/assets/img/youtube.svg" alt="YouTube" />
             </a>
             <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener">
-                <img class="social-icon" src="./assets/img/linkedin.svg" alt="LinkedIn">
+                <img class="social-icon" src="/assets/img/linkedin.svg" alt="LinkedIn" />
             </a>
             <a href="https://embracingdigital.org/?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink" aria-label="Podcast" target="_blank" rel="noopener">
-                <img class="social-icon" src="./assets/img/edt.svg" alt="Embracing Digital">
+                <img class="social-icon" src="/assets/img/edt.svg" alt="Embracing Digital" />
             </a>
         </div>
-
         <div class="footer-brand">
-            <img src="./assets/img/paidar.svg" alt="Paidar Systems logo" class="footer-logo" />
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" class="footer-logo" />
+            <div class="brand-name">Paidar.ai</div>
             <small>&copy; <span id="y"></span> Paidar Systems LLC</small>
         </div>
-
         <nav aria-label="Footer" class="footer-nav">
-            <ul>
+            <ul class="nav-reset">
                 <li><a href="/about.html">About</a></li>
-                <li><a href="/privacy.html">Privacy</a></li>
-                <li><a href="/accessibility.html">Accessibility</a></li>
-                <li><a href="/sitemap.xml">Sitemap</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+                <li><a href="/insights.html">Insights</a></li>
+                <li><a href="/contact.html" data-track="cta_contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </footer>
 
-<script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-</script>
 
-<script>
-    (() => {
-        const btn = document.querySelector(".nav-toggle");
-        const drawer = document.querySelector(".mobile-drawer");
-        if (btn && drawer) {
-            btn.addEventListener("click", () => {
-                const open = drawer.getAttribute("data-open") === "true";
-                drawer.setAttribute("data-open", String(!open));
-                btn.setAttribute("aria-expanded", String(!open));
-            });
-            drawer.addEventListener("click", (e) => {
-                if (e.target.closest("a")) {
-                    drawer.setAttribute("data-open", "false");
-                    btn.setAttribute("aria-expanded", "false");
-                }
-            });
-        }
-    })();
-</script>
+
+
+
+<script src="/assets/js/funnel-tracking.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
 
 
 

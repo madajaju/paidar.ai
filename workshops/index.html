@@ -1,17 +1,17 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Workshops | Paidar.ai</title>
-    <meta name="description" content="Productized AI workshops and executive sessions that turn strategy into practical execution for individuals, teams, and leaders." />
-    <link rel="canonical" href="https://paidar.ai/workshops" />
+    <meta name="description" content="Productized AI workshops and executive sessions that bridge the gap between AI theory and practical execution." />
+    <link rel="canonical" href="https://paidar.ai/workshops/" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#123456" />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Workshops | Paidar.ai" />
-    <meta property="og:description" content="Productized AI workshops and executive sessions that turn strategy into practical execution for individuals, teams, and leaders." />
+    <meta property="og:description" content="Productized AI workshops and executive sessions that bridge the gap between AI theory and practical execution." />
     <meta property="og:url" content="https://paidar.ai/workshops" />
     <meta property="og:image" content="https://paidar.ai/assets/img/hero.jpeg" />
     <meta property="og:site_name" content="Paidar.ai" />
@@ -19,7 +19,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Workshops | Paidar.ai" />
-    <meta name="twitter:description" content="Productized AI workshops and executive sessions that turn strategy into practical execution for individuals, teams, and leaders." />
+    <meta name="twitter:description" content="Productized AI workshops and executive sessions that bridge the gap between AI theory and practical execution." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />    <link rel="icon" href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="../assets/css/paidar.css" />
 </head>
@@ -29,50 +29,34 @@
 <header class="site-header">
     <div class="container flex between center">
         <a class="brand" href="/">
-            <img src="/assets/img/paidar.svg" alt="Paidar Systems logo" width="64" />
-            <span>Paidar.ai</span>
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" />
         </a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open navigation">Menu</button>
-        <nav class="primary-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
             <ul class="nav-list nav-reset">
                 <li><a href="/">Home</a></li>
-                <li><a href="/assessments.html">Assessments</a></li>
-                <li><a href="/workshops/">Workshops</a></li>
+                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
                 <li><a href="/solutions.html">Solutions</a></li>
-                <li><a href="/services.html">Services</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
                 <li><a href="/about.html">About</a></li>
                 <li><a href="/insights.html">Insights</a></li>
                 <li class="has-sub">
-                    <a href="/sectors/" aria-haspopup="true" aria-expanded="false">Resources</a>
+                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
                     <ul class="sub" role="menu">
                         <li role="none"><a role="menuitem" href="/training/">Training</a></li>
                         <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
-                        <li role="none"><a role="menuitem" href="/books/">Books</a></li>
+                        <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
                         <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
                     </ul>
                 </li>
-                <li><a class="btn btn-primary" href="/contact.html">Contact</a></li>
+                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<aside id="mobile-drawer" class="mobile-drawer" data-open="false" aria-label="Mobile navigation">
-    <ul class="nav-list nav-reset">
-        <li><a href="/">Home</a></li>
-        <li><a href="/assessments.html">Assessments</a></li>
-        <li><a href="/workshops/">Workshops</a></li>
-        <li><a href="/solutions.html">Solutions</a></li>
-        <li><a href="/services.html">Services</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/insights.html">Insights</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li><a href="/sectors/">Sectors</a></li>
-        <li><a href="/training/">Training</a></li>
-        <li><a href="/software.html">Software</a></li>
-        <li><a href="/books/">Books</a></li>
-    </ul>
-</aside><main id="main">
+<main id="main">
     <section class="hero" style="--hero-image:url('../assets/img/training-hero.jpeg'); --hero-bg-color:#0e223b;">
         <div class="container">
             <h1>Workshops and Executive Sessions That Turn AI Intent Into Action</h1>
@@ -82,118 +66,222 @@
 
     <section class="section">
         <div class="container">
-            <span class="eyebrow">Offerings</span>
-            <h2>Productized Workshop Portfolio</h2>
-            <div class="grid-3">
-                <article class="card accent-ai">
-                    <h3>Becoming AI-Augmented</h3>
-                    <p><strong>Audience:</strong> Cross-functional organizations beginning structured AI adoption.</p>
-                    <p><strong>Challenge addressed:</strong> Early AI initiatives lack clarity, ownership, and measurable priorities.</p>
-                    <p><strong>Outcomes:</strong> Shared baseline, priority use cases, and initial adoption guardrails.</p>
-                    <p><strong>Format:</strong> Facilitated strategy workshop (virtual or onsite).</p>
-                    <p><strong>Duration:</strong> Half-day or full-day.</p>
-                    <p><a class="btn btn-outline" href="/contact.html">Request This Workshop</a></p>
-                </article>
+            <span class="eyebrow">The Path to Reliable Execution</span>
+            <h2>Bridging the Gap Between Strategy and Scale</h2>
+            <p class="lead" style="max-width: 800px;">AI transformation is not a single event. It is a progression from understanding readiness to building capability and eventually scaling excellence. Our workshops are the critical middle step in this journey.</p>
 
-                <article class="card accent-edge">
-                    <h3>AI-Augmented Teams</h3>
-                    <p><strong>Audience:</strong> Delivery, operations, and functional teams implementing AI in workflows.</p>
-                    <p><strong>Challenge addressed:</strong> Team-level inconsistency in tooling, process, and accountability.</p>
-                    <p><strong>Outcomes:</strong> Standardized team workflows, role clarity, and execution cadence.</p>
-                    <p><strong>Format:</strong> Hands-on team enablement session.</p>
-                    <p><strong>Duration:</strong> 1 day.</p>
-                    <p><a class="btn btn-outline" href="/contact.html">Request This Workshop</a></p>
-                </article>
-
-                <article class="card accent-modern">
-                    <h3>AI-Augmented Leadership</h3>
-                    <p><strong>Audience:</strong> Senior leaders and transformation sponsors.</p>
-                    <p><strong>Challenge addressed:</strong> Strategic decisions are delayed by risk uncertainty and unclear operating models.</p>
-                    <p><strong>Outcomes:</strong> Decision framework, governance priorities, and executive alignment.</p>
-                    <p><strong>Format:</strong> Executive facilitation session.</p>
-                    <p><strong>Duration:</strong> 2-4 hours.</p>
-                    <p><a class="btn btn-outline" href="/contact.html">Request This Session</a></p>
-                </article>
-
-                <article class="card accent-data">
-                    <h3>AI-Augmented Education</h3>
-                    <p><strong>Audience:</strong> Academic leaders, faculty teams, and education administrators.</p>
-                    <p><strong>Challenge addressed:</strong> Institutions need practical AI adoption while preserving policy, quality, and trust.</p>
-                    <p><strong>Outcomes:</strong> Institution-aligned AI enablement roadmap and classroom/workflow use guidance.</p>
-                    <p><strong>Format:</strong> Education-focused workshop or cohort session.</p>
-                    <p><strong>Duration:</strong> Half-day or full-day.</p>
-                    <p><a class="btn btn-outline" href="/contact.html">Request This Workshop</a></p>
-                </article>
-
-                <article class="card accent-comm">
-                    <h3>Executive Briefings / Keynotes</h3>
-                    <p><strong>Audience:</strong> Boards, executive councils, leadership retreats, and conference audiences.</p>
-                    <p><strong>Challenge addressed:</strong> Leaders need clear guidance through market noise and vendor hype.</p>
-                    <p><strong>Outcomes:</strong> Executive clarity, strategic framing, and practical action agenda.</p>
-                    <p><strong>Format:</strong> Briefing, keynote, or moderated executive session.</p>
-                    <p><strong>Duration:</strong> 45-90 minutes.</p>
-                    <p><a class="btn btn-outline" href="/contact.html">Request Briefing or Keynote</a></p>
-                </article>
+            <div class="grid-3" style="margin-top: var(--space-6);">
+                <div class="stack">
+                    <div class="badge">Step 1</div>
+                    <h3>Assessment</h3>
+                    <p>Identify your current capability baseline, governance gaps, and high-value use cases.</p>
+                    <p><a class="arrow" href="/assessments.html" data-track="cta_start_assessment">Start here</a></p>
+                </div>
+                <div class="stack">
+                    <div class="badge" style="background: var(--brand-gold); color: #fff; border-color: var(--brand-gold);">Step 2</div>
+                    <h3>Workshop</h3>
+                    <p>Convert assessment findings into team habits, executive alignment, and tactical roadmaps.</p>
+                    <p><strong>You are here</strong></p>
+                </div>
+                <div class="stack">
+                    <div class="badge">Step 3</div>
+                    <h3>Consulting</h3>
+                    <p>Embed long-term governance and execution support to scale AI across the entire enterprise.</p>
+                    <p><a class="arrow" href="/services.html" data-track="cta_book_strategy_session">Explore advisory</a></p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="section tint theme-modern">
         <div class="container">
-            <span class="eyebrow">Assessment to Enablement</span>
-            <h2>How Workshops Fit After an Assessment</h2>
-            <div class="grid-3">
+            <span class="eyebrow">Portfolio</span>
+            <h2>Productized Workshop Offers</h2>
+            <p class="lead">Outcome-oriented sessions designed for specific organizational needs.</p>
+
+            <div class="stack" style="gap: var(--space-6); margin-top: var(--space-6);">
+
+                <!-- Workshop 1: Executive Briefing -->
                 <article class="card">
-                    <h3>From Findings to Focus</h3>
-                    <p>Assessment results define where capability and governance gaps are highest.</p>
+                    <div class="grid-2">
+                        <div class="stack">
+                            <div class="badge">For Leaders</div>
+                            <h3>Executive Briefing: Strategic AI Alignment</h3>
+                            <p>Strategic paralysis is common when navigating AI noise. This session provides boards and executive teams with the clarity needed to frame risk, prioritize investment, and align on a shared strategic language.</p>
+
+                            <ul class="feature-list">
+                                <li><strong>Audience:</strong> Senior Executives, Boards, and Transformation Sponsors</li>
+                                <li><strong>Format:</strong> High-impact facilitation (Onsite or Virtual)</li>
+                                <li><strong>Duration:</strong> 2 to 4 hours</li>
+                            </ul>
+
+                            <div class="flex wrap" style="margin-top: var(--space-4);">
+                                <a class="btn btn-primary" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_strategy_session">Talk to Darren</a>
+                                <a class="btn btn-outline" href="/contact.html" data-track="cta_explore_workshops">Request Pricing</a>
+                            </div>
+                        </div>
+                        <div class="card-dark" style="padding: var(--space-5); border-radius: var(--radius-1);">
+                            <h4>Outcomes & Deliverables</h4>
+                            <ul class="feature-list">
+                                <li><strong>Outcome:</strong> Shared strategic framework and prioritized AI roadmap.</li>
+                                <li><strong>Outcome:</strong> Executive alignment on governance and risk framing.</li>
+                                <li><strong>Deliverable:</strong> Strategic AI Priority Map.</li>
+                                <li><strong>Deliverable:</strong> Executive Governance Checklist.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Workshop 2: Team Enablement -->
+                <article class="card">
+                    <div class="grid-2">
+                        <div class="stack">
+                            <div class="badge">For Teams</div>
+                            <h3>Team Enablement: AI-Augmented Workflows</h3>
+                            <p>Moving from "Shadow AI" to standardized excellence requires hands-on training. This immersive session accelerates team adoption by integrating AI directly into existing delivery and operations workflows.</p>
+
+                            <ul class="feature-list">
+                                <li><strong>Audience:</strong> Operations, Delivery, and Functional Business Teams</li>
+                                <li><strong>Format:</strong> Hands-on immersive workshop (Typically Onsite)</li>
+                                <li><strong>Duration:</strong> 1 Full Day</li>
+                            </ul>
+
+                            <div class="flex wrap" style="margin-top: var(--space-4);">
+                                <a class="btn btn-primary" href="/contact.html" data-track="cta_explore_workshops">Book This Workshop</a>
+                                <a class="btn btn-outline" href="/assessments.html" data-track="cta_start_assessment">Start with an Assessment</a>
+                            </div>
+                        </div>
+                        <div class="card-dark" style="padding: var(--space-5); border-radius: var(--radius-1);">
+                            <h4>Outcomes & Deliverables</h4>
+                            <ul class="feature-list">
+                                <li><strong>Outcome:</strong> Standardized, secure AI-augmented team workflows.</li>
+                                <li><strong>Outcome:</strong> Established team-level guardrails and accountability.</li>
+                                <li><strong>Deliverable:</strong> Team Workflow Playbook.</li>
+                                <li><strong>Deliverable:</strong> Role-Based Tooling & Prompt Matrix.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Workshop 3: Applied Transformation -->
+                <article class="card">
+                    <div class="grid-2">
+                        <div class="stack">
+                            <div class="badge">For the Organization</div>
+                            <h3>Applied Transformation: Implementing the AAOS</h3>
+                            <p>Scaling AI is an organizational design challenge. This deep-dive session focuses on implementing the AI-Augmented Operating System (AAOS) to turn successful pilots into enterprise-wide capability.</p>
+
+                            <ul class="feature-list">
+                                <li><strong>Audience:</strong> Transformation Task Forces and IT Leadership</li>
+                                <li><strong>Format:</strong> Multi-modular or 2-day deep-dive</li>
+                                <li><strong>Duration:</strong> 2 Days</li>
+                            </ul>
+
+                            <div class="flex wrap" style="margin-top: var(--space-4);">
+                                <a class="btn btn-primary" href="/contact.html" data-track="cta_explore_workshops">Book This Workshop</a>
+                                <a class="btn btn-outline" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_strategy_session">Talk to Darren</a>
+                            </div>
+                        </div>
+                        <div class="card-dark" style="padding: var(--space-5); border-radius: var(--radius-1);">
+                            <h4>Outcomes & Deliverables</h4>
+                            <ul class="feature-list">
+                                <li><strong>Outcome:</strong> Validated AAOS implementation roadmap.</li>
+                                <li><strong>Outcome:</strong> Alignment on scalable governance and pilot transition.</li>
+                                <li><strong>Deliverable:</strong> Capability Gap Analysis.</li>
+                                <li><strong>Deliverable:</strong> AAOS Implementation Roadmap.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Workshop Comparison</h2>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; margin-top: var(--space-5);">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--brand-line); text-align: left;">
+                            <th style="padding: var(--space-3);">Feature</th>
+                            <th style="padding: var(--space-3);">Executive Briefing</th>
+                            <th style="padding: var(--space-3);">Team Enablement</th>
+                            <th style="padding: var(--space-3);">Applied Transformation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--brand-line);">
+                            <td style="padding: var(--space-3); font-weight: 700;">Primary Goal</td>
+                            <td style="padding: var(--space-3);">Strategic Alignment</td>
+                            <td style="padding: var(--space-3);">Tactical Adoption</td>
+                            <td style="padding: var(--space-3);">Organizational Scaling</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--brand-line);">
+                            <td style="padding: var(--space-3); font-weight: 700;">Ideal For</td>
+                            <td style="padding: var(--space-3);">Boards, C-Suite</td>
+                            <td style="padding: var(--space-3);">Functional Teams</td>
+                            <td style="padding: var(--space-3);">Transformation Leads</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--brand-line);">
+                            <td style="padding: var(--space-3); font-weight: 700;">Duration</td>
+                            <td style="padding: var(--space-3);">2-4 Hours</td>
+                            <td style="padding: var(--space-3);">1 Day</td>
+                            <td style="padding: var(--space-3);">2 Days</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--brand-line);">
+                            <td style="padding: var(--space-3); font-weight: 700;">Typical Setting</td>
+                            <td style="padding: var(--space-3);">Retreat / Boardroom</td>
+                            <td style="padding: var(--space-3);">Team Offsite</td>
+                            <td style="padding: var(--space-3);">Workshop Facility</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="section tint theme-data">
+        <div class="container">
+            <span class="eyebrow">Sector Specialized</span>
+            <h2>Industry-Specific Sessions</h2>
+            <p>We also offer tailored workshops for sectors with unique regulatory or operational requirements.</p>
+            <div class="grid-2" style="margin-top: var(--space-5);">
+                <article class="card">
+                    <h3>AI-Augmented Education</h3>
+                    <p>Designed for academic leaders and faculty. Focuses on institutional AI enablement roadmaps and classroom workflow guidance while preserving academic integrity.</p>
+                    <p><a class="arrow" href="/sectors/higher-education.html">Learn more about Education focus</a></p>
                 </article>
                 <article class="card">
-                    <h3>From Focus to Action</h3>
-                    <p>Workshops convert findings into operating habits, team practices, and leadership decisions.</p>
-                </article>
-                <article class="card">
-                    <h3>From Action to Scale</h3>
-                    <p>Organizations progress into advisory support only when they need broader implementation depth.</p>
+                    <h3>Public Sector AI Strategy</h3>
+                    <p>Focused on government and public services. Addresses mission-aligned AI adoption, ethics in public service, and secure execution frameworks.</p>
+                    <p><a class="arrow" href="/sectors/government.html">Learn more about Public Sector</a></p>
                 </article>
             </div>
-            <p>
-                <a class="btn btn-primary" href="/assessments.html">Start with an Assessment</a>
-                <a class="btn btn-gold" href="/services.html">Explore Advisory Services</a>
-            </p>
         </div>
     </section>
 
     <section class="section">
         <div class="container grid-2">
             <article class="card">
-                <h2>Legacy Training Content</h2>
+                <h2>Training Resources</h2>
                 <p>Need deeper technical or curriculum-oriented tracks? Existing training pages remain available.</p>
                 <ul class="feature-list">
                     <li><a href="/training/">Training Overview</a></li>
                     <li><a href="/training/cloud-computing.html">Cloud Computing Program</a></li>
-                    <li><a href="/training/microservices.html">Microservices Program</a></li>
+                    <li><a href="/training/microservices.html" data-track="cta_book_strategy_session">Microservices Program</a></li>
                 </ul>
             </article>
             <article class="card">
-                <h2>Also See Legacy Consulting</h2>
-                <p>For larger transformation and architecture engagements, visit the consulting pages.</p>
-                <p><a class="arrow" href="/consulting.html">View Consulting</a></p>
+                <h2>Additional Resources</h2>
+                <p>For larger transformation and architecture engagements, visit our advisory pages.</p>
+                <p><a class="arrow" href="/services.html" data-track="cta_book_strategy_session">View Advisory Services</a></p>
             </article>
         </div>
     </section>
 
-    <section class="section">
-        <div class="container">
-            <div class="banner theme-edge">
-                <h2>Ready to Move Beyond Intent?</h2>
-                <p>Start with a baseline assessment or book a strategy session to review your bottleneck and sequence implementation.</p>
-                <p>
-                    <a class="btn btn-gold" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_workshops">Book a Strategy Session</a>
-                    <a class="btn btn-outline" href="/assessments.html">Start an Assessment</a>
-                </p>
-            </div>
-        </div>
-    </section>
+    <cta-block data-type="consulting"></cta-block>
 </main>
 
 <footer class="site-footer">
@@ -211,42 +299,29 @@
         </div>
 
         <div class="footer-brand">
-            <img src="../assets/img/paidar.svg" alt="Paidar Systems logo" class="footer-logo" />
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" class="footer-logo" />
+            <div class="brand-name">Paidar.ai</div>
             <small>&copy; <span id="y"></span> Paidar Systems LLC</small>
         </div>
 
         <nav aria-label="Footer" class="footer-nav">
             <ul>
                 <li><a href="/about.html">About</a></li>
-                <li><a href="/services.html">Services</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
                 <li><a href="/insights.html">Insights</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/contact.html" data-track="cta_contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </footer>
 
-<script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-
-    const btn = document.querySelector(".nav-toggle");
-    const drawer = document.querySelector(".mobile-drawer");
-    if (btn && drawer) {
-        btn.addEventListener("click", () => {
-            const open = drawer.getAttribute("data-open") === "true";
-            drawer.setAttribute("data-open", String(!open));
-            btn.setAttribute("aria-expanded", String(!open));
-        });
-    }
-    drawer?.addEventListener("click", (e) => {
-        if (e.target.closest("a")) {
-            drawer.setAttribute("data-open", "false");
-            btn?.setAttribute("aria-expanded", "false");
-        }
-    });
-</script>
+<script src="/assets/js/funnel-tracking.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
+
+
+
 
 
 
