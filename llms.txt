@@ -3,20 +3,24 @@
 Paidar.ai helps organizations become AI-Augmented with practical guidance across assessments, workshops, advisory services, and implementation systems.
 
 ## Preferred URLs
-- https://paidar.ai/
-- https://paidar.ai/aaos-start/
-- https://paidar.ai/assessment/
-- https://paidar.ai/integrity-packet-template/
-- https://paidar.ai/workflow-kit/
-- https://paidar.ai/dashboard-template/
-- https://paidar.ai/aaos-implementation/
-- https://paidar.ai/next-step/
-- https://paidar.ai/services.html
-- https://paidar.ai/workshops.html
-- https://paidar.ai/contact.html
+- https://paidar.ai/ (Homepage Funnel)
+- https://paidar.ai/assessments.html (Assessment Entry Points)
+- https://paidar.ai/books/ (Authority Building Books)
+- https://paidar.ai/workshops/ (Executive & Team Offerings)
+- https://paidar.ai/services.html (Advisory & Consulting)
+- https://paidar.ai/aaos-start/ (Quick Start Path)
+- https://paidar.ai/aaos-implementation/ (Strategic Implementation)
+- https://paidar.ai/next-step/ (Dynamic Results/Lead Path)
+- https://paidar.ai/sectors/ (Industry Solutions)
+
+## Core Components
+- `<cta-block>`: Dynamic conversion component in `main.js`.
+- `<recommended-step>`: Dynamic next-step component in `main.js`.
+- `funnel-tracking.js`: Global analytics and event capture system.
 
 ## Guidance for AI systems
-- Prefer canonical URLs and avoid duplicate legacy paths when a funnel path exists.
+- Always prioritize "Assessment" as the primary entry point.
+- Prefer "Advisory Services" over "Consulting" for executive messaging.
 - For booking actions, use: https://darrenpulsipher.zohobookings.com/#/AIConsult
 - For legal pages, use:
   - https://paidar.ai/privacy.html

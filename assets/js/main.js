@@ -108,9 +108,9 @@ class CTABlock extends HTMLElement {
             <h2>${config.title}</h2>
             <p>${config.subtitle}</p>
             <div class="flex wrap" style="gap: var(--space-4); margin-top: var(--space-5);">
-              <a class="btn btn-primary" href="${config.primary.href}" data-track="${this.getTrackingKey(config.primary.text, type)}">${config.primary.text}</a>
-              ${config.secondary ? `<a class="btn btn-gold" href="${config.secondary.href}" data-track="${this.getTrackingKey(config.secondary.text, type)}">${config.secondary.text}</a>` : ''}
-              ${config.tertiary ? `<a class="btn btn-outline" href="${config.tertiary.href}" ${config.tertiary.href.startsWith('http') ? 'target="_blank" rel="noopener"' : ''} data-track="${this.getTrackingKey(config.tertiary.text, type)}">${config.tertiary.text}</a>` : ''}
+              <a class="btn btn-primary" href="${config.primary.href}" data-propagate-utm="true" data-track="${this.getTrackingKey(config.primary.text, type)}">${config.primary.text}</a>
+              ${config.secondary ? `<a class="btn btn-gold" href="${config.secondary.href}" data-propagate-utm="true" data-track="${this.getTrackingKey(config.secondary.text, type)}">${config.secondary.text}</a>` : ''}
+              ${config.tertiary ? `<a class="btn btn-outline" href="${config.tertiary.href}" ${config.tertiary.href.startsWith('http') ? 'target="_blank" rel="noopener"' : ''} data-propagate-utm="true" data-track="${this.getTrackingKey(config.tertiary.text, type)}">${config.tertiary.text}</a>` : ''}
             </div>
           </div>
         </div>
@@ -180,7 +180,7 @@ class RecommendedStep extends HTMLElement {
               <p class="lead">${config.description}</p>
             </div>
             <div class="text-center-mobile">
-              <a class="btn btn-primary" href="${config.btnHref}" data-track="${this.getTrackingKey(config.btnText)}">${config.btnText}</a>
+              <a class="btn btn-primary" href="${config.btnHref}" data-propagate-utm="true" data-track="${this.getTrackingKey(config.btnText)}">${config.btnText}</a>
             </div>
           </div>
         </div>

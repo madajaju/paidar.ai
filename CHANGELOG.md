@@ -1,5 +1,30 @@
 # Changelog
 
+## [2.0.2] - 2026-04-19
+
+### Changed
+- **Site-Wide Standardization Pass**: Performed a final audit and standardization of all secondary landing pages, technical templates, and utility pages.
+- **Enhanced Funnel Integration**: Replaced manual CTA banners with the dynamic `<cta-block>` component on 8+ additional pages including AAOS guides, executive briefs, and dashboard templates.
+- **UI Consistency**: Standardized footer navigation styles by applying the `nav-reset` class globally, ensuring consistent spacing and list styling across all 36+ files.
+- **Redundant Code Removal**: Eliminated legacy manual banners and redundant inline styles from deep-site pages to improve maintainability and performance.
+
+## [2.0.1] - 2026-04-19
+
+### Fixed
+- **Sectors Index Completion**: Added the missing Healthcare sector card to the sectors index page to ensure all core industry pathways are represented.
+- **Software Page Polish**: Corrected technical typos in project URLs (Treoir, Runaire) and expanded SEO keywords to include all active software projects.
+- **Metadata Indentation**: Fixed minor HTML formatting issues in the Contact page header for better code consistency.
+
+## [2.0.0] - 2026-04-18
+
+### Completed
+- **Strategic Overhaul Completion**: Successfully executed and verified all 11 strategic conversion and standardization prompts from the `todo.md` roadmap.
+- **Conversion Journey Realignment**: Transformed Paidar.ai from a collection of technical pages into a unified, high-conversion funnel centered on Assessments, Books, Workshops, and Advisory services.
+- **Dynamic Site Components**: Fully deployed and instrumented the `<cta-block>` and `<recommended-step>` custom elements site-wide, ensuring no "dead end" pages.
+- **Funnel Analytics**: Instrumented site-wide event tracking via `funnel-tracking.js`, providing visibility into high-value conversion paths (documented in `analytics-events.md`).
+- **QA & Asset Integrity**: Established a permanent `qa_audit.js` framework and verified 100% link and asset integrity across all 36+ production HTML files.
+- **Brand & IA Normalization**: Unified all user-facing branding to "Paidar.ai," standardized the primary navigation architecture, and optimized technical SEO (canonical tags, unique metadata, and sitemap).
+
 ## [Unreleased] - 2026-04-18
 
 ### Added

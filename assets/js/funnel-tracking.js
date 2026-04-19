@@ -44,13 +44,24 @@
     var links = document.querySelectorAll("a[data-propagate-utm='true']");
     links.forEach(function (link) {
       var href = link.getAttribute("href");
-      if (!href || href.indexOf("http") === 0 || href.indexOf("mailto:") === 0) return;
+      if (!href || href.indexOf("mailto:") === 0 || href.indexOf("tel:") === 0 || href.indexOf("#") === 0) return;
 
-      var url = new URL(href, window.location.origin);
+      var url;
+      try {
+        url = new URL(href, window.location.origin);
+      } catch (e) {
+        return;
+      }
+
       TRACKED_KEYS.forEach(function (key) {
         if (attribution[key]) url.searchParams.set(key, attribution[key]);
       });
-      link.setAttribute("href", url.pathname + url.search + url.hash);
+
+      if (href.indexOf("http") === 0) {
+        link.setAttribute("href", url.toString());
+      } else {
+        link.setAttribute("href", url.pathname + url.search + url.hash);
+      }
     });
   }
 

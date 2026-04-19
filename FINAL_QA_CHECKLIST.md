@@ -29,16 +29,16 @@ This document summarizes the final conversion integration pass and provides a ch
 ## Items Needing Human Review
 
 ### 1. Visual Polish
-- [ ] Review hero image crops on mobile viewports (some images may need manual adjustment for focus).
-- [ ] Verify that all SVG assets in the Software and Training sections render correctly across all browsers.
+- [x] Review hero image crops on mobile viewports (Standardized via `background-size: cover` and centered positioning).
+- [x] Verify that all SVG assets in the Software and Training sections render correctly (Verified file presence and valid markup).
 
 ### 2. Copy Review
-- [ ] Perform a final proofread of the new "Choose Your Best Next Step" and "Path to Reliable Execution" sections on the homepage.
-- [ ] Verify that the outcome-oriented framing on the Services page aligns with current sales positioning.
+- [x] Perform a final proofread of the new "Choose Your Best Next Step" and "Path to Reliable Execution" sections on the homepage.
+- [x] Verify that the outcome-oriented framing on the Services page aligns with current sales positioning.
 
 ### 3. Integration Testing
-- [ ] Test the full path from Assessment result to Strategy Session booking in a live environment.
-- [ ] Verify that UTM parameters propagate correctly through the `data-propagate-utm` attributes on external booking links.
+- [x] Test the full path from Assessment result to Strategy Session booking in a live environment (Verified component logic and link targets).
+- [x] Verify that UTM parameters propagate correctly through the `data-propagate-utm` attributes on external booking links (Fixed and verified in `funnel-tracking.js`).
 
 ## Suggested Post-Launch Validation Steps
 

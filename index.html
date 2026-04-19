@@ -67,7 +67,7 @@
                 <a class="btn btn-outline" href="/books/" data-track="cta_view_books">Read the Book</a>
             </div>
             <p style="margin-top: var(--space-4); font-size: 0.9rem;">
-                <a class="arrow" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_strategy_session">Book a Strategy Session</a>
+                <a class="arrow" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_strategy_session" data-propagate-utm="true">Book a Strategy Session</a>
             </p>
         </div>
     </section>
@@ -102,7 +102,7 @@
                     <h3>Take an Assessment</h3>
                     <p><strong>For:</strong> Leaders & Teams establishing a baseline.</p>
                     <p><strong>Outcome:</strong> A clear roadmap and identification of hidden workflow bottlenecks.</p>
-                    <p><a class="btn btn-primary" href="/assessments.html" data-track="cta_start_assessment">View Assessments</a></p>
+                    <p><a class="btn btn-primary" href="/assessments.html" data-track="cta_start_assessment">Start an Assessment</a></p>
                 </article>
                 <article class="card accent-modern">
                     <h3>Read the Book</h3>
@@ -114,13 +114,13 @@
                     <h3>Run a Workshop</h3>
                     <p><strong>For:</strong> Functional teams ready to implement.</p>
                     <p><strong>Outcome:</strong> Applied momentum and use-case alignment across the team.</p>
-                    <p><a class="btn btn-gold" href="/workshops/" data-track="cta_explore_workshops">See Workshops</a></p>
+                    <p><a class="btn btn-gold" href="/workshops/" data-track="cta_explore_workshops">Explore Workshops</a></p>
                 </article>
                 <article class="card accent-comm">
                     <h3>Engage Consulting</h3>
                     <p><strong>For:</strong> Organizations scaling AI operations.</p>
                     <p><strong>Outcome:</strong> Enterprise-grade governance, roadmaps, and execution support.</p>
-                    <p><a class="btn btn-primary" href="/services.html" data-track="cta_book_strategy_session">View Services</a></p>
+                    <p><a class="btn btn-primary" href="/services.html" data-track="cta_book_strategy_session">Book a Strategy Session</a></p>
                 </article>
             </div>
         </div>
@@ -157,7 +157,10 @@
                     <span class="eyebrow">Authority</span>
                     <h2>Authority Through Authorship</h2>
                     <p>Sustainable AI transformation requires a shared language and a proven framework. Our books provide the foundational blueprints for building AI-augmented organizations.</p>
-                    <p><a class="btn btn-primary" href="/books/" data-track="cta_view_books">Explore All Books</a></p>
+                    <div class="flex wrap" style="gap: var(--space-4); margin-top: var(--space-4);">
+                        <a class="btn btn-primary" href="/books/" data-track="cta_view_books">Explore All Books</a>
+                        <a class="btn btn-outline" href="/assessments.html" data-track="cta_start_assessment">Take an Assessment</a>
+                    </div>
                 </div>
                 <article class="card">
                     <div class="badge">Featured</div>
@@ -244,7 +247,7 @@
         </div>
 
         <nav aria-label="Footer" class="footer-nav">
-            <ul>
+            <ul class="nav-reset">
                 <li><a href="/about.html">About</a></li>
                 <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
                 <li><a href="/insights.html">Insights</a></li>
@@ -258,14 +261,3 @@
 <script src="/assets/js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
