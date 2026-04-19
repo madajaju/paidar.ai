@@ -1,5 +1,5 @@
 export async function onRequestGet(context) {
-    return new Response(JSON.stringify({ success: true, message: "Assessment submission endpoint is active." }), {
+    return new Response(JSON.stringify({ success: true, message: "Individual assessment submission endpoint is active." }), {
         status: 200,
         headers: { "Content-Type": "application/json" }
     });
@@ -7,8 +7,8 @@ export async function onRequestGet(context) {
 
 export async function onRequestPost(context) {
     const { request, env } = context;
-    const zapikey = env.ZOHO_ASSESSMENT_ZAPIKEY;
-    const CRM_ENDPOINT = `https://flow.zoho.com/862720724/flow/webhook/incoming?zapikey=${zapikey}&isdebug=false`;
+    const zapikey = env.ZOHO_INDIVIDUAL_ZAPIKEY;
+    const CRM_ENDPOINT = `https://flow.zoho.com/862720724/flow/webhook/incoming?zapikey=${zapikey}`;
 
     try {
         const payload = await request.json();
@@ -27,13 +27,13 @@ export async function onRequestPost(context) {
         } else {
             const errorText = await response.text();
             console.error("Zoho Flow Error:", errorText);
-            return new Response(JSON.stringify({ success: false, error: "CRM Submission Failed" }), {
+            return new Response(JSON.stringify({ success: false, error: "Submission Failed" }), {
                 status: 502,
                 headers: { "Content-Type": "application/json" }
             });
         }
     } catch (error) {
-        console.error("Worker Submission Error:", error);
+        console.error("Worker Individual Submission Error:", error);
         return new Response(JSON.stringify({ success: false, error: error.message }), {
             status: 500,
             headers: { "Content-Type": "application/json" }

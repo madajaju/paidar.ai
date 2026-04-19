@@ -1752,7 +1752,7 @@
         const form = e.target;
         const status = document.getElementById('lead-status');
         const btn = form.querySelector('button');
-        const CRM_ENDPOINT = "https://flow.zoho.com/862720724/flow/webhook/incoming?zapikey=1001.30023bb48dcfea64582b9844756e0ea4.815953345f36fdab6aac353eded305ea";
+        const CRM_ENDPOINT = "/assessment/individual";
 
         status.hidden = false;
         status.textContent = 'Submitting...';
@@ -1776,14 +1776,19 @@ Scores:
         payload.page = window.location.pathname;
 
         try {
-            await fetch(CRM_ENDPOINT, {
+            const response = await fetch(CRM_ENDPOINT, {
                 method: 'POST',
-                mode: 'no-cors',
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload)
             });
-            document.getElementById('lead-capture-container').style.display = 'none';
-            document.querySelector('.container').style.display = 'block';
-            window.scrollTo(0, 0);
+            
+            if (response.ok) {
+                document.getElementById('lead-capture-container').style.display = 'none';
+                document.querySelector('.container').style.display = 'block';
+                window.scrollTo(0, 0);
+            } else {
+                throw new Error("Failed to submit results.");
+            }
         } catch (err) {
             console.error(err);
             status.textContent = 'Something went wrong. Please try again.';

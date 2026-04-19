@@ -479,7 +479,54 @@ UTM Content: ${formData.get("utm_content") || ""}
 Submitted At: ${new Date().toISOString()}
 Page: ${window.location.pathname}`;
 
-        document.getElementById('Description').value = descriptionContent;
+        // Prepare JSON payload for Zoho Flow
+        const payload = {
+            // Primary Fields
+            First_Name: formData.get("First Name"),
+            Last_Name: formData.get("Last Name"),
+            Email: formData.get("Email"),
+            Company: formData.get("Company"),
+            Description: descriptionContent,
+            
+            // Assessment Metrics
+            Total_Score: totalScore,
+            Maturity_Level: posture,
+            Overall_Condition: condition,
+            Bottleneck: bottleneck,
+            Strongest_Area: strongest,
+            Next_Step: nextStep,
+            
+            // Raw Data
+            Scores: scores,
+            Answers: Object.fromEntries(
+                assessmentData.flatMap(s => s.questions.map(q => [q.id, formData.get(q.id)]))
+            ),
+            Questions: Object.fromEntries(
+                assessmentData.flatMap(s => s.questions.map(q => [q.id, q.text]))
+            ),
+            
+            // Attribution & UTMs
+            UTM: {
+                source: formData.get("utm_source") || "",
+                medium: formData.get("utm_medium") || "",
+                campaign: formData.get("utm_campaign") || "",
+                content: formData.get("utm_content") || "",
+                qr: formData.get("qr") || "",
+                book: formData.get("book") || ""
+            },
+            
+            // Legacy/Hidden Fields (Capturing Everything)
+            xnQsjsdp: formData.get("xnQsjsdp"),
+            xmIwtLD: formData.get("xmIwtLD"),
+            actionType: formData.get("actionType"),
+            returnURL: formData.get("returnURL"),
+            zc_gad: formData.get("zc_gad"),
+            honeypot: formData.get("aG9uZXlwb3Q"),
+            
+            // Metadata
+            submitted_at: new Date().toISOString(),
+            page: window.location.pathname
+        };
 
         if (window.paidarTrack) {
             window.paidarTrack.push("form_submit_assessment", {
@@ -490,26 +537,13 @@ Page: ${window.location.pathname}`;
         }
 
         try {
-            document.charset = "UTF-8";
             assessmentForm.dataset.submitting = 'true';
             
-            // Populate hidden description before submit
-            document.getElementById('Description').value = descriptionContent;
-
-            // Optional: Zoho smarturl logic from snippet
-            const urlparams = new URLSearchParams(window.location.search);
-            if (urlparams.has('service') && (urlparams.get('service') === 'smarturl')) {
-                const smarturlfield = document.createElement('input');
-                smarturlfield.setAttribute('type', 'hidden');
-                smarturlfield.setAttribute('value', urlparams.get('service'));
-                smarturlfield.setAttribute('name', 'service');
-                assessmentForm.appendChild(smarturlfield);
-            }
-
-            // Modern fetch submission to our Cloudflare Function
+            // Modern fetch submission to our Cloudflare Function as JSON
             const response = await fetch(assessmentForm.action, {
                 method: "POST",
-                body: new FormData(assessmentForm)
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
             });
             
             if (response.ok) {

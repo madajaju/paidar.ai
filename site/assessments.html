@@ -270,7 +270,7 @@
     // CRM Integration
     const assessmentForm = document.getElementById("paidar-assessment-inquiry-form");
     const formStatus = document.getElementById("form-status");
-    const CRM_ENDPOINT = "https://flow.zoho.com/862720724/flow/webhook/incoming?zapikey=1001.30023bb48dcfea64582b9844756e0ea4.815953345f36fdab6aac353eded305ea";
+    const CRM_ENDPOINT = "/assessment/inquiry";
 
     assessmentForm?.addEventListener("submit", async function(e) {
         e.preventDefault();
@@ -307,17 +307,20 @@
         try {
             const response = await fetch(CRM_ENDPOINT, {
                 method: "POST",
-                mode: "no-cors",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload)
             });
 
-            formStatus.textContent = "Thank you! We've received your inquiry and will be in touch shortly.";
-            formStatus.className = "text-success";
-            assessmentForm.reset();
+            if (response.ok) {
+                formStatus.textContent = "Thank you! We've received your inquiry and will be in touch shortly.";
+                formStatus.className = "text-success";
+                assessmentForm.reset();
+            } else {
+                throw new Error("Failed to submit inquiry.");
+            }
         } catch (error) {
             console.error("Submission error:", error);
-            formStatus.textContent = "There was an error sending your message. Please try again or email us directly.";
+            formStatus.textContent = "There was an error sending your request. Please try again or email us directly.";
             formStatus.className = "text-error";
             submitBtn.disabled = false;
         }

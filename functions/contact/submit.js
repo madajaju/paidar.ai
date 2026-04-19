@@ -6,8 +6,9 @@ export async function onRequestGet(context) {
 }
 
 export async function onRequestPost(context) {
-    const { request } = context;
-    const CRM_ENDPOINT = "https://flow.zoho.com/862720724/flow/webhook/incoming?zapikey=1001.30023bb48dcfea64582b9844756e0ea4.815953345f36fdab6aac353eded305ea";
+    const { request, env } = context;
+    const zapikey = env.ZOHO_CONTACT_ZAPIKEY;
+    const CRM_ENDPOINT = `https://flow.zoho.com/862720724/flow/webhook/incoming?zapikey=${zapikey}`;
 
     try {
         const payload = await request.json();
