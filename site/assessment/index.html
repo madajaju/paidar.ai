@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team Assessment | Paidar.ai</title>
+    <meta name="description" content="Benchmark your team's AI readiness and receive a practical roadmap for improvement." />
+    <link rel="canonical" href="https://paidar.ai/assessment/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#123456" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Team Assessment | Paidar.ai" />
+    <meta property="og:description" content="Benchmark your team's AI readiness and receive a practical roadmap for improvement." />
+    <meta property="og:url" content="https://paidar.ai/assessment/" />
+    <meta property="og:image" content="https://paidar.ai/assets/img/hero.jpeg" />
+    <meta property="og:site_name" content="Paidar.ai" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Team Assessment | Paidar.ai" />
+    <meta name="twitter:description" content="Benchmark your team's AI readiness and receive a practical roadmap for improvement." />
+    <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />
+    <link rel="icon" href="/assets/img/favicon.ico" />
+    <link rel="stylesheet" href="/assets/css/paidar.css" />
+    <style>
+        .assessment-stage-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            background: #e8eef6;
+            border: 1px solid #c9d6e7;
+            border-radius: 14px;
+            padding: 1rem;
+        }
+
+        .assessment-flow {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-6);
+        }
+
+        .assessment-stage-panel {
+            border: 1px solid #9fb5d0;
+            border-radius: 12px;
+            padding: 1rem;
+            background: #f6f9fd;
+        }
+
+        .assessment-stage-panel h3 {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: 0.01em;
+            color: #0f2d4d;
+        }
+
+        .assessment-question {
+            margin: 0 0 0.75rem 0;
+            border: 0;
+            padding: 0;
+            min-inline-size: 0;
+        }
+
+        .assessment-question legend {
+            font-weight: 500;
+            margin-bottom: 0.45rem;
+            color: #172a3d;
+        }
+
+        .assessment-option {
+            display: block;
+            margin: 0.25rem 0;
+        }
+
+        @media (max-width: 960px) {
+            .assessment-stage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .result-stage-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.75rem;
+            margin: 0.75rem 0 1rem;
+        }
+
+        .result-stage-card {
+            border: 1px solid var(--brand-line);
+            border-radius: 10px;
+            padding: 0.6rem 0.75rem;
+            background: #fff;
+        }
+
+        .result-stage-card h3 {
+            margin: 0 0 0.25rem;
+            font-size: 0.95rem;
+            color: var(--brand-blue);
+        }
+
+        .result-stage-meta {
+            font-size: 0.9rem;
+            color: var(--brand-muted);
+        }
+
+        .result-stage-status {
+            font-weight: 700;
+        }
+
+        .result-stage-status.fragile { color: #b91c1c; }
+        .result-stage-status.developing { color: #a16207; }
+        .result-stage-status.reliable { color: #166534; }
+
+        @media (max-width: 960px) {
+            .result-stage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+    <div class="container flex between center">
+        <a class="brand" href="/">
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" />
+        </a>
+                        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+            <ul class="nav-list nav-reset">
+                <li><a href="/">Home</a></li>
+                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
+                <li><a href="/solutions.html">Solutions</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/insights.html">Insights</a></li>
+                <li class="has-sub">
+                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
+                    <ul class="sub" role="menu">
+                        <li role="none"><a role="menuitem" href="/training/">Training</a></li>
+                        <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
+                        <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
+                        <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
+                    </ul>
+                </li>
+                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+<main id="main">
+    <section class="hero" style="--hero-image:url('/assets/img/about-hero.jpeg'); --hero-bg-color:#0e223b;">
+        <div class="container">
+            <h1>Team AI-Augmented Maturity Assessment</h1>
+            <p class="lead">Answer 16 questions in under 6 minutes to evaluate your team's operational stability and AI maturity.</p>
+            <p>
+                <a class="btn btn-gold" href="#assessment-form" data-track="assessment_start_hero">Start Assessment</a>
+                <a class="btn btn-outline" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_assessment" data-propagate-utm="true">Book a Session</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="section tint theme-data">
+        <div class="container assessment-flow">
+            <article class="card accent-modern">
+                <h2 id="assessment-form">Take the Team Assessment</h2>
+                <p>Email is required so we can send your score, recommendations, and workshop next steps.</p>
+                <div id='crmWebToEntityForm' class='crmWebToEntityForm'>
+                    <form id="webform6382022000009173064" name="WebToLeads6382022000009173064" class="stack" aria-label="AAOS assessment form" action='/assessment/submit' method='POST' accept-charset='UTF-8'>
+                        <input type='hidden' name='xnQsjsdp' value='ec90f4751d370a9b3cae1dfc8e10c6c80c3cd54bf00125ddc14186dd317f23b0'>
+                        <input type='hidden' name='zc_gad' id='zc_gad' value=''>
+                        <input type='hidden' name='xmIwtLD' value='0d62920037cc577d1ce3264eacf4b15e4d530104a1e795294847f105b5b45521aab56b5679e8fcad4e3a53b2c5e94ed8'>
+                        <input type='hidden' name='actionType' value='TGVhZHM='>
+                        <input type='hidden' name='returnURL' value='https://paidar.ai'>
+                        <input type='hidden' name='aG9uZXlwb3Q' value=''>
+                        <input type='hidden' name='Description' id='Description' value=''>
+
+                        <div class="grid-2">
+                            <p>
+                                <label for="First_Name">First Name</label><br />
+                                <input id="First_Name" name="First Name" type="text" maxlength="40" required />
+                            </p>
+                            <p>
+                                <label for="Last_Name">Last Name</label><br />
+                                <input id="Last_Name" name="Last Name" type="text" maxlength="80" required />
+                            </p>
+                        </div>
+                        <div class="grid-2">
+                            <p>
+                                <label for="Email">Work Email</label><br />
+                                <input id="Email" name="Email" type="email" ftype="email" maxlength="100" required />
+                            </p>
+                            <p>
+                                <label for="Company">Organization / Company</label><br />
+                                <input id="Company" name="Company" type="text" required />
+                            </p>
+                        </div>
+
+                        <input type="hidden" name="utm_source" data-utm-field="true" />
+                        <input type="hidden" name="utm_medium" data-utm-field="true" />
+                        <input type="hidden" name="utm_campaign" data-utm-field="true" />
+                        <input type="hidden" name="utm_content" data-utm-field="true" />
+                        <input type="hidden" name="qr" data-utm-field="true" />
+                        <input type="hidden" name="book" data-utm-field="true" />
+
+                        <div id="assessment-questions" class="assessment-stage-grid" aria-live="polite"></div>
+
+                        <p id="submit-status" hidden></p>
+
+                        <p>
+                            <button class="btn btn-primary" type="submit" data-track="assessment_submit">Get My Result</button>
+                        </p>
+                    </form>
+                </div>
+            </article>
+
+            <article class="card accent-ai" id="assessment-result" hidden>
+                <h2>Your Team Maturity Result</h2>
+                <p><strong>Total Score:</strong> <span id="result-score"></span> / 80</p>
+                <p><strong>Maturity Level:</strong> <span id="result-posture"></span></p>
+                <p><strong>Team Condition:</strong> <span id="result-risk"></span></p>
+                <p><strong>Immediate Priority:</strong> <span id="result-bottleneck"></span></p>
+                <p><strong>Strongest Domain:</strong> <span id="result-strongest"></span></p>
+                <div id="result-stage-profile" class="result-stage-grid" aria-live="polite"></div>
+                <p><strong>Focus Area Recommendation:</strong></p>
+                <p id="result-priority-text" style="padding: 1rem; background: #fffbe6; border-left: 4px solid #fadb14; border-radius: 4px;"></p>
+                <p style="font-style: italic; margin-top: 1.5rem; color: var(--brand-muted);">"Team maturity is not just the sum of individual skills; it is the reliability of the shared process."</p>
+                <p><strong>Recommended Next Step:</strong> <span id="result-next-step"></span></p>
+                <p>
+                    <a class="btn btn-gold" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_from_result" data-propagate-utm="true">Book an Advisory Session</a>
+                    <a class="btn btn-outline" href="/workshops/" data-track="cta_workshops_from_result">Explore Workshops</a>
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="banner theme-modern">
+                <h2>Next Action After Assessment</h2>
+                <p>Move from insight to execution. Book a strategy session to review your bottleneck and reduce reliability risk.</p>
+                <p>
+                    <a class="btn btn-gold" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_next_book_session" data-propagate-utm="true">Book a Strategy Session</a>
+                    <a class="btn btn-outline" href="/workshops/" data-track="cta_next_workshops">Explore Workshops</a>
+                </p>
+                <p style="margin-top: var(--space-4);">Resources: <a href="/integrity-packet-template/">Download the Integrity Packet Template</a></p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-grid">
+                        <div class="footer-socials" aria-label="Follow us">
+            <a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/youtube.svg" alt="YouTube" />
+            </a>
+            <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://embracingdigital.org/?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink" aria-label="Podcast" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/edt.svg" alt="Embracing Digital" />
+            </a>
+        </div>
+        <div class="footer-brand">
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" class="footer-logo" />
+            <div class="brand-name">Paidar.ai</div>
+            <small>&copy; <span id="y"></span> Paidar Systems LLC</small>
+        </div>
+        <nav aria-label="Footer" class="footer-nav">
+            <ul class="nav-reset">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+                <li><a href="/insights.html">Insights</a></li>
+                <li><a href="/contact.html" data-track="cta_contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<script src="/assets/js/funnel-tracking.js"></script>
+<script src="/assets/js/main.js"></script>
+<script>
+    const assessmentData = [
+        {
+            stage: "Capability and Ownership",
+            questions: [
+                { id: "c1", text: "Critical tasks are assigned to individuals with both the domain expertise and the AI skills required for the task." },
+                { id: "c2", text: "We know exactly where AI is being used in our high-stakes workflows." },
+                { id: "c3", text: "Team members can review and take over each other's AI-assisted work without losing quality or context." },
+                { id: "c4", text: "The team’s overall ability to use AI safely is improving with every project." }
+            ]
+        },
+        {
+            stage: "Validation and Quality Control",
+            questions: [
+                { id: "v1", text: "Important handoffs include a clear record of assumptions, data sources, and any logic used by the AI." },
+                { id: "v2", text: "The depth of our review process increases automatically when the potential cost of an error is higher." },
+                { id: "v3", text: "Every piece of AI-assisted work has a named owner responsible for verifying its accuracy before it moves forward." },
+                { id: "v4", text: "We catch logic errors or \"hallucinations\" during our internal review, before the work reaches the final user or client." }
+            ]
+        },
+        {
+            stage: "Workflow and Standards",
+            questions: [
+                { id: "w1", text: "Our team follows a consistent, multi-stage process (Draft -> Verify -> Approve) for all AI-assisted work." },
+                { id: "w2", text: "Information passed between team members includes everything the receiver needs to verify the work without starting over." },
+                { id: "w3", text: "We use shared templates, prompt libraries, or checklists to ensure quality is consistent across the team." },
+                { id: "w4", text: "Everyone knows when a task's complexity or risk exceeds their authority and needs to be escalated." }
+            ]
+        },
+        {
+            stage: "Feedback and Learning",
+            questions: [
+                { id: "f1", text: "We regularly review \"near misses\" to improve our processes, not just to fix the immediate error." },
+                { id: "f2", text: "We track how much rework is caused by AI errors and work to reduce it over time." },
+                { id: "f3", text: "Successful prompts, checklists, and validation rules are proactively shared across the team." },
+                { id: "f4", text: "Team members feel safe flagging AI uncertainty or potential errors early in the process." }
+            ]
+        }
+    ];
+
+    const questionsContainer = document.getElementById('assessment-questions');
+    const assessmentForm = document.getElementById('webform6382022000009173064');
+    const resultSection = document.getElementById('assessment-result');
+    const submitStatus = document.getElementById('submit-status');
+
+    // Render Questions
+    assessmentData.forEach(stage => {
+        const stagePanel = document.createElement('div');
+        stagePanel.className = 'assessment-stage-panel';
+        stagePanel.innerHTML = `<h3>${stage.stage}</h3>`;
+        
+        stage.questions.forEach(q => {
+            const fieldset = document.createElement('fieldset');
+            fieldset.className = 'assessment-question';
+            fieldset.innerHTML = `
+                <legend>${q.text}</legend>
+                <div class="flex gap-2" style="justify-content: space-between; margin-top: 0.5rem; font-size: 0.9rem; color: var(--brand-muted);">
+                    <span>Disagree</span>
+                    <div class="flex gap-2">
+                        ${[1, 2, 3, 4, 5].map(val => `
+                            <label class="assessment-option" style="display:inline-flex; align-items:center; gap:4px; margin:0;">
+                                <input type="radio" name="${q.id}" value="${val}" required style="margin:0;"> ${val}
+                            </label>
+                        `).join('')}
+                    </div>
+                    <span>Agree</span>
+                </div>
+                <hr>
+            `;
+            stagePanel.appendChild(fieldset);
+        });
+        
+        questionsContainer.appendChild(stagePanel);
+    });
+
+    assessmentForm.addEventListener('submit', function(e) {
+        if (assessmentForm.dataset.submitting === 'true') {
+            return;
+        }
+        e.preventDefault();
+        
+        const formData = new FormData(assessmentForm);
+        const scores = {};
+        let totalScore = 0;
+        
+        assessmentData.forEach(stage => {
+            let stageScore = 0;
+            stage.questions.forEach(q => {
+                const val = parseInt(formData.get(q.id));
+                stageScore += val;
+                totalScore += val;
+            });
+            scores[stage.stage] = stageScore;
+        });
+
+        const submitBtn = assessmentForm.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitStatus.hidden = false;
+        submitStatus.textContent = "Analyzing results...";
+
+        // Results Mapping
+        let posture = "Level 1: Reactive";
+        let condition = "AI use is experimental and fragmented. Quality depends on individuals. High risk of 'silent failure' in high-stakes tasks.";
+        
+        if (totalScore >= 66) { 
+            posture = "Level 4: Optimized"; 
+            condition = "The team is a 'Self-Correcting System.' Controls are proactive, and the team serves as a model for others."; 
+        }
+        else if (totalScore >= 51) { 
+            posture = "Level 3: Integrated"; 
+            condition = "A standard verification loop is the default behavior. Quality holds even when key team members are away."; 
+        }
+        else if (totalScore >= 36) { 
+            posture = "Level 2: Controlled"; 
+            condition = "Basic checks are in place. High-risk areas are identified. The team is starting to use shared checklists."; 
+        }
+
+        // Find bottleneck (lowest scoring stage)
+        let bottleneck = assessmentData[0].stage;
+        let minScore = 21; // Max possible is 20
+        let strongest = assessmentData[0].stage;
+        let maxScore = -1;
+        
+        const stageProfiles = Object.entries(scores).map(([name, score]) => {
+            if (score < minScore) { minScore = score; bottleneck = name; }
+            if (score > maxScore) { maxScore = score; strongest = name; }
+            
+            let status = "fragile";
+            if (score >= 16) status = "reliable";
+            else if (score >= 10) status = "developing";
+            
+            return { name, score, status };
+        });
+
+        // Update UI
+        document.getElementById('result-score').textContent = totalScore;
+        document.getElementById('result-posture').textContent = posture;
+        document.getElementById('result-risk').textContent = condition;
+        document.getElementById('result-bottleneck').textContent = bottleneck;
+        document.getElementById('result-strongest').textContent = strongest;
+        
+        const profileGrid = document.getElementById('result-stage-profile');
+        profileGrid.innerHTML = stageProfiles.map(s => `
+            <div class="result-stage-card">
+                <h3>${s.name}</h3>
+                <div class="result-stage-meta">
+                    Score: <strong>${s.score}/20</strong> | 
+                    Status: <span class="result-stage-status ${s.status}">${s.status.toUpperCase()}</span>
+                </div>
+            </div>
+        `).join('');
+
+        const recommendations = {
+            "Capability and Ownership": "<strong>Low Capability: Expert Alignment.</strong> Ensure high-stakes work is always grounded by a subject matter expert, regardless of who is using the AI tool.",
+            "Validation and Quality Control": "<strong>Low Validation: Evidence Habit.</strong> Require visible proof (sources, logic, data) for any claim made by an AI in a consequential document.",
+            "Workflow and Standards": "<strong>Low Workflow: Standardization.</strong> Pick one high-frequency task and document a three-stage (Draft/Check/Approve) workflow for it.",
+            "Feedback and Learning": "<strong>Low Learning: Review Rituals.</strong> Shift from 'who made the error' to 'how did our review process miss it.' Share the solution with the whole team."
+        };
+        
+        document.getElementById('result-priority-text').innerHTML = recommendations[bottleneck];
+
+        const nextStep = totalScore < 50 ? "Executive/Team Workshop" : "Custom Advisory Engagement";
+        document.getElementById('result-next-step').textContent = nextStep;
+
+        // CRM Submission
+        const descriptionContent = `Company: ${formData.get("Company")}
+[Team Maturity Assessment Results]
+Maturity Level: ${posture}
+Total Score: ${totalScore}/80
+
+Overall Condition:
+${condition}
+
+Domain Scores:
+- Capability and Ownership: ${scores["Capability and Ownership"]}/20
+- Validation and Quality Control: ${scores["Validation and Quality Control"]}/20
+- Workflow and Standards: ${scores["Workflow and Standards"]}/20
+- Feedback and Learning: ${scores["Feedback and Learning"]}/20
+
+Primary Bottleneck: ${bottleneck}
+Strongest Area: ${strongest}
+
+Immediate Priority:
+${recommendations[bottleneck].replace(/<\/?strong>/g, '')}
+
+UTM Source: ${formData.get("utm_source") || ""}
+UTM Medium: ${formData.get("utm_medium") || ""}
+UTM Campaign: ${formData.get("utm_campaign") || ""}
+UTM Content: ${formData.get("utm_content") || ""}
+Submitted At: ${new Date().toISOString()}
+Page: ${window.location.pathname}`;
+
+        document.getElementById('Description').value = descriptionContent;
+
+        if (window.paidarTrack) {
+            window.paidarTrack.push("form_submit_assessment", {
+                assessment_type: "Team Maturity",
+                score: totalScore,
+                posture: posture
+            });
+        }
+
+        try {
+            document.charset = "UTF-8";
+            assessmentForm.dataset.submitting = 'true';
+            
+            // Populate hidden description before submit
+            document.getElementById('Description').value = descriptionContent;
+
+            // Optional: Zoho smarturl logic from snippet
+            const urlparams = new URLSearchParams(window.location.search);
+            if (urlparams.has('service') && (urlparams.get('service') === 'smarturl')) {
+                const smarturlfield = document.createElement('input');
+                smarturlfield.setAttribute('type', 'hidden');
+                smarturlfield.setAttribute('value', urlparams.get('service'));
+                smarturlfield.setAttribute('name', 'service');
+                assessmentForm.appendChild(smarturlfield);
+            }
+
+            // Modern fetch submission to our Cloudflare Function
+            const response = await fetch(assessmentForm.action, {
+                method: "POST",
+                body: new FormData(assessmentForm)
+            });
+            
+            if (response.ok) {
+                assessmentForm.hidden = true;
+                resultSection.hidden = false;
+                resultSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                throw new Error("Failed to submit results to CRM.");
+            }
+        } catch (error) {
+            console.error("Submission error:", error);
+            submitStatus.textContent = "There was an error saving your results. Please try again.";
+            submitStatus.className = "text-error";
+            submitBtn.disabled = false;
+        }
+    });
+</script>
+    <script id = 'wf_anal' src = 'https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=854dde81b76dcc20f49ed66252819ee4ea474c5ccce4de3100200c081609c69401c6cd5c74f49997b508258175448683gid1a83d3544098af2f2b0d72c32b43a8178f0f4f4675c1b4bb507c0d6933f67f5egid1fed3747833d284d48299f2107c4208dadc6c772b161c52386bbc232d02feff0gid5d88a8d0f7d192df86fc8bfcbcc50b5b0782da55f3674598ff8be221bb25931c&tw=610f58a6550e27eef22f167c834097a919b372a29748402a47c3e843dc5c4d9a'>
+    </script>
+</body>
+</html>

@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact | Paidar.ai</title>
-    <meta name="description" content="Get in touch with Paidar.ai for assessments, workshops, advisory services, or executive briefings." />
+    <meta name="description" content="Get in touch with Paidar.ai for assessments, workshops, advisory services, or leadership sessions." />
     <link rel="canonical" href="https://paidar.ai/contact.html" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#123456" />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Contact | Paidar.ai" />
-    <meta property="og:description" content="Get in touch with Paidar.ai for assessments, workshops, advisory services, or executive briefings." />
+    <meta property="og:description" content="Get in touch with Paidar.ai for assessments, workshops, advisory services, or leadership sessions." />
     <meta property="og:url" content="https://paidar.ai/contact.html" />
     <meta property="og:image" content="https://paidar.ai/assets/img/hero.jpeg" />
     <meta property="og:site_name" content="Paidar.ai" />
@@ -19,10 +19,10 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Contact | Paidar.ai" />
-    <meta name="twitter:description" content="Get in touch with Paidar.ai for assessments, workshops, advisory services, or executive briefings." />
+    <meta name="twitter:description" content="Get in touch with Paidar.ai for assessments, workshops, advisory services, or leadership sessions." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />
     <link rel="icon" href="/assets/img/favicon.ico" />
-    <link rel="stylesheet" href="./assets/css/paidar.css" />
+    <link rel="stylesheet" href="assets/css/paidar.css" />
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -58,7 +58,7 @@
 </header>
 
 <main id="main">
-    <section class="hero" style="--hero-image:url('./assets/img/contact-hero.jpeg'); --hero-bg-color:#0e223b;">
+    <section class="hero" style="--hero-image:url('assets/img/contact-hero.jpeg'); --hero-bg-color:#0e223b;">
         <div class="container">
             <h1>Start the Right Conversation</h1>
             <p class="lead">Route your inquiry by engagement type and we will respond with the best next step for your timeline, scope, and stakeholders.</p>
@@ -86,9 +86,9 @@
                     <p><a class="arrow" href="/services.html" data-track="cta_book_strategy_session">Explore services</a></p>
                 </article>
                 <article class="card accent-data">
-                    <h3>Speaking / Executive Briefing Inquiry</h3>
-                    <p>For leadership briefings, keynotes, and executive sessions.</p>
-                    <p><a class="arrow" href="/workshops/" data-track="cta_explore_workshops">Review briefing options</a></p>
+                    <h3>Speaking / Executive Sessions Inquiry</h3>
+                    <p>For leadership working sessions, keynotes, and executive alignment programs.</p>
+                    <p><a class="arrow" href="/workshops/" data-track="cta_explore_workshops">Review workshop options</a></p>
                 </article>
                 <article class="card accent-cyber">
                     <h3>General Contact</h3>
@@ -201,10 +201,9 @@
 <script src="/assets/js/funnel-tracking.js"></script>
 <script src="/assets/js/main.js"></script>
 <script>
-    // CRM Integration
     const contactForm = document.getElementById("paidar-contact-form");
     const formStatus = document.getElementById("form-status");
-    const CRM_ENDPOINT = "https://flow.zoho.com/862720724/flow/webhook/incoming?zapikey=1001.30023bb48dcfea64582b9844756e0ea4.815953345f36fdab6aac353eded305ea";
+    const CRM_ENDPOINT = "/contact/submit";
 
     contactForm?.addEventListener("submit", async function(e) {
         e.preventDefault();
@@ -241,14 +240,17 @@
         try {
             const response = await fetch(CRM_ENDPOINT, {
                 method: "POST",
-                mode: "no-cors",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload)
             });
 
-            formStatus.textContent = "Thank you! We've received your inquiry and will be in touch shortly.";
-            formStatus.className = "text-success";
-            contactForm.reset();
+            if (response.ok) {
+                formStatus.textContent = "Thank you! We've received your inquiry and will be in touch shortly.";
+                formStatus.className = "text-success";
+                contactForm.reset();
+            } else {
+                throw new Error("Failed to submit inquiry.");
+            }
         } catch (error) {
             console.error("Submission error:", error);
             formStatus.textContent = "There was an error sending your message. Please try again or email us directly.";

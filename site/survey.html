@@ -22,7 +22,7 @@
     <meta name="twitter:description" content="Interactive AI readiness self-assessment to benchmark individual capability and identify next steps." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />
     <link rel="icon" href="/assets/img/favicon.ico" />
-    <link rel="stylesheet" href="./assets/css/paidar.css" />
+    <link rel="stylesheet" href="assets/css/paidar.css" />
     <style>
         :root {
             --bg: #ffffff;
@@ -1760,7 +1760,18 @@
 
         const formData = new FormData(form);
         const payload = Object.fromEntries(formData.entries());
-        payload.Description = `Individual AI Readiness Scores: AI=${sliders.ai.value}, SME=${sliders.sme.value}, Core=${sliders.core.value}, Meta=${sliders.meta.value}`;
+        payload.Description = `[Individual AI Readiness Assessment Results]
+Archetype: ${document.getElementById('characteristic-label').textContent}
+Scores:
+- AI Proficiency: ${sliders.ai.value}/100
+- Domain Expertise (SME): ${sliders.sme.value}/100
+- Core Operational Stability: ${sliders.core.value}/100
+- Meta-Process/Governance: ${sliders.meta.value}/100`;
+        payload.AI_Proficiency = sliders.ai.value;
+        payload.Domain_Expertise = sliders.sme.value;
+        payload.Core_Operational = sliders.core.value;
+        payload.Meta_Governance = sliders.meta.value;
+        payload.Archetype = document.getElementById('characteristic-label').textContent;
         payload.submitted_at = new Date().toISOString();
         payload.page = window.location.pathname;
 

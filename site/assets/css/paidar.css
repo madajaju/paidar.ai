@@ -361,6 +361,14 @@ a:hover {
     color: var(--brand-muted)
 }
 
+.text-success {
+    color: #16a34a;
+}
+
+.text-error {
+    color: #dc2626;
+}
+
 .border {
     border: 1px solid var(--brand-line)
 }

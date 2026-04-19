@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.3] - 2026-04-19
+
+### Changed
+- **Workshop Portfolio Realignment**: Rewrote the Workshops index to align with the latest executive, team, and individual capability tracks.
+- **Messaging Refinement**: Standardized terminology from "Executive Briefing" to "Executive Working Sessions" and "Leadership Sessions" to better reflect the new working-session model.
+- **Pricing Removal**: Removed specific "Investment" lines from the workshops page to encourage direct inquiry and custom scoping.
+- **Methodology Integration**: Added the "AAOS Delivery Model" (Diagnose, Activate Talent, Apply Controls, Execute, Measure, Scale) to the workshops page to provide a clear engagement framework.
+- **Funnel Consistency**: Updated homepage workshop cards and contact routing descriptions to match the updated productized offerings.
+
 ## [2.0.2] - 2026-04-19
 
 ### Changed
