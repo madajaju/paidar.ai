@@ -8,6 +8,6 @@
     "deploy": "wrangler pages deploy site"
   },
   "devDependencies": {
-    "wrangler": "^3.100.0"
+    "wrangler": "^3.114.17"
   }
 }
