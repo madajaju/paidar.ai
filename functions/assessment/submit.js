@@ -1,3 +1,10 @@
+export async function onRequestGet(context) {
+    return new Response(JSON.stringify({ success: true, message: "Assessment submission endpoint is active." }), {
+        status: 200,
+        headers: { "Content-Type": "application/json" }
+    });
+}
+
 export async function onRequestPost(context) {
     const { request } = context;
     
