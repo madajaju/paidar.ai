@@ -164,14 +164,43 @@
 
     const form = document.getElementById("integrity-packet-form");
     const panel = document.getElementById("download-panel");
+    const CRM_ENDPOINT = "https://flow.zoho.com/862720724/flow/webhook/incoming?zapikey=1001.30023bb48dcfea64582b9844756e0ea4.815953345f36fdab6aac353eded305ea&isdebug=true";
 
-    form?.addEventListener("submit", function (event) {
+    form?.addEventListener("submit", async function (event) {
         event.preventDefault();
+        const formData = new FormData(form);
+        const email = String(formData.get("email") || "").trim();
+
         panel.hidden = false;
         window.paidarTrack?.push("integrity_packet_capture", {
-            email_domain: String(new FormData(form).get("email") || "").split("@")[1] || ""
+            email_domain: email.split("@")[1] || ""
         });
         panel.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        // CRM Sync
+        const payload = {
+            Email: email,
+            Lead_Source: "Integrity Packet Download",
+            Lead_Status: "New",
+            utm_source: formData.get("utm_source") || "",
+            utm_medium: formData.get("utm_medium") || "",
+            utm_campaign: formData.get("utm_campaign") || "",
+            utm_content: formData.get("utm_content") || "",
+            qr: formData.get("qr") || "",
+            submitted_at: new Date().toISOString(),
+            page: window.location.pathname
+        };
+
+        try {
+            await fetch(CRM_ENDPOINT, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+        } catch (error) {
+            console.error("CRM Sync Error:", error);
+        }
     });
 </script>
 </body>

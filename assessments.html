@@ -189,21 +189,30 @@
             <article class="card">
                 <h2>Start an Assessment Inquiry</h2>
                 <p>Share your scope and timeline. We will recommend the best-fit assessment path.</p>
-                <form action="#" method="post" class="stack" aria-label="Assessment inquiry form">
-                    <!-- API/Zoho hook: replace action with assessment intake endpoint on paidar.ai -->
-                    <!-- API/Zoho hook: map fields to Zoho CRM Lead/Deal intake schema -->
-                    <!-- API/Zoho hook: include attribution metadata (source, campaign, page) -->
-                    <p>
-                        <label for="assessment-name">Name</label><br />
-                        <input id="assessment-name" name="name" type="text" required />
-                    </p>
-                    <p>
-                        <label for="assessment-email">Work Email</label><br />
-                        <input id="assessment-email" name="email" type="email" required />
-                    </p>
+                <form id="paidar-assessment-inquiry-form" class="stack" aria-label="Assessment inquiry form">
+                    <div class="grid-2">
+                        <p>
+                            <label for="assessment-first-name">First Name</label><br />
+                            <input id="assessment-first-name" name="First_Name" type="text" required />
+                        </p>
+                        <p>
+                            <label for="assessment-last-name">Last Name</label><br />
+                            <input id="assessment-last-name" name="Last_Name" type="text" required />
+                        </p>
+                    </div>
+                    <div class="grid-2">
+                        <p>
+                            <label for="assessment-email">Work Email</label><br />
+                            <input id="assessment-email" name="Email" type="email" required />
+                        </p>
+                        <p>
+                            <label for="assessment-company">Organization / Company</label><br />
+                            <input id="assessment-company" name="Company" type="text" required />
+                        </p>
+                    </div>
                     <p>
                         <label for="assessment-type">Assessment Type</label><br />
-                        <select id="assessment-type" name="assessment_type" required>
+                        <select id="assessment-type" name="Assessment_Type" required>
                             <option value="">Select one</option>
                             <option value="individual">Individual</option>
                             <option value="team">Team</option>
@@ -212,10 +221,19 @@
                     </p>
                     <p>
                         <label for="assessment-notes">Context</label><br />
-                        <textarea id="assessment-notes" name="notes" rows="4" placeholder="Goals, team size, timeline, and current AI initiatives."></textarea>
+                        <textarea id="assessment-notes" name="Description" rows="4" placeholder="Goals, team size, timeline, and current AI initiatives."></textarea>
                     </p>
+
+                    <input type="hidden" name="Lead_Source" value="Assessment Inquiry" />
+                    <input type="hidden" name="Lead_Status" value="New" />
+                    <input type="hidden" name="utm_source" data-utm-field="true" />
+                    <input type="hidden" name="utm_medium" data-utm-field="true" />
+                    <input type="hidden" name="utm_campaign" data-utm-field="true" />
+                    <input type="hidden" name="utm_content" data-utm-field="true" />
+
+                    <p id="form-status" hidden></p>
+
                     <p>
-                        <!-- API/Zoho hook: submit creates CRM record and triggers acknowledgment workflow -->
                         <button class="btn btn-primary" type="submit">Start an Assessment</button>
                     </p>
                 </form>
@@ -294,6 +312,56 @@
         if (e.target.closest("a")) {
             drawer.setAttribute("data-open", "false");
             btn?.setAttribute("aria-expanded", "false");
+        }
+    });
+
+    // CRM Integration
+    const assessmentForm = document.getElementById("paidar-assessment-inquiry-form");
+    const formStatus = document.getElementById("form-status");
+    const CRM_ENDPOINT = "https://flow.zoho.com/862720724/flow/webhook/incoming?zapikey=1001.30023bb48dcfea64582b9844756e0ea4.815953345f36fdab6aac353eded305ea&isdebug=true";
+
+    assessmentForm?.addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const formData = new FormData(assessmentForm);
+        const submitBtn = assessmentForm.querySelector('button[type="submit"]');
+
+        submitBtn.disabled = true;
+        formStatus.hidden = false;
+        formStatus.textContent = "Sending...";
+        formStatus.className = "text-muted";
+
+        const payload = {
+            First_Name: String(formData.get("First_Name") || "").trim(),
+            Last_Name: String(formData.get("Last_Name") || "").trim(),
+            Email: String(formData.get("Email") || "").trim(),
+            Company: String(formData.get("Company") || "").trim(),
+            Description: `[${formData.get("Assessment_Type")}] ${formData.get("Description")}`.trim(),
+            Lead_Source: "Assessment Inquiry",
+            Lead_Status: "New",
+            utm_source: formData.get("utm_source") || "",
+            utm_medium: formData.get("utm_medium") || "",
+            utm_campaign: formData.get("utm_campaign") || "",
+            utm_content: formData.get("utm_content") || "",
+            submitted_at: new Date().toISOString(),
+            page: window.location.pathname
+        };
+
+        try {
+            const response = await fetch(CRM_ENDPOINT, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+
+            formStatus.textContent = "Thank you! We've received your inquiry and will be in touch shortly.";
+            formStatus.className = "text-success";
+            assessmentForm.reset();
+        } catch (error) {
+            console.error("Submission error:", error);
+            formStatus.textContent = "There was an error sending your message. Please try again or email us directly.";
+            formStatus.className = "text-error";
+            submitBtn.disabled = false;
         }
     });
 </script>

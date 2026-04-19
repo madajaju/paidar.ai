@@ -168,10 +168,26 @@
                 <h2 id="assessment-form">Take the Team Assessment</h2>
                 <p>Email is required so we can send your score, recommendations, and workshop next steps.</p>
                 <form id="aaos-assessment-form" class="stack" aria-label="AAOS assessment form">
-                    <p>
-                        <label for="email">Work Email</label><br />
-                        <input id="email" name="email" type="email" required />
-                    </p>
+                    <div class="grid-2">
+                        <p>
+                            <label for="first_name">First Name</label><br />
+                            <input id="first_name" name="First_Name" type="text" required />
+                        </p>
+                        <p>
+                            <label for="last_name">Last Name</label><br />
+                            <input id="last_name" name="Last_Name" type="text" required />
+                        </p>
+                    </div>
+                    <div class="grid-2">
+                        <p>
+                            <label for="email">Work Email</label><br />
+                            <input id="email" name="Email" type="email" required />
+                        </p>
+                        <p>
+                            <label for="company">Organization / Company</label><br />
+                            <input id="company" name="Company" type="text" required />
+                        </p>
+                    </div>
 
                     <input type="hidden" name="utm_source" data-utm-field="true" />
                     <input type="hidden" name="utm_medium" data-utm-field="true" />
@@ -267,7 +283,7 @@
         }
     });
 
-    const CRM_ENDPOINT = window.PAIDAR_ASSESSMENT_ENDPOINT || "/api/assessment-lead";
+    const CRM_ENDPOINT = "https://flow.zoho.com/862720724/flow/webhook/incoming?zapikey=1001.30023bb48dcfea64582b9844756e0ea4.815953345f36fdab6aac353eded305ea&isdebug=true";
 
     const QUESTION_OPTIONS = [
         { value: 1, label: "Never" },
@@ -491,24 +507,20 @@
         resultCard.hidden = false;
 
         const payload = {
-            email: String(formData.get("email") || "").trim(),
-            total_score: total,
-            posture,
-            risk_level: risk,
-            bottleneck_stage: bottleneck,
-            strongest_stage: strongest,
-            priority_stages: priorityStages,
-            stage_scores: stageScores,
-            answers,
-            utm: {
-                source: formData.get("utm_source") || "",
-                medium: formData.get("utm_medium") || "",
-                campaign: formData.get("utm_campaign") || "",
-                content: formData.get("utm_content") || "",
-                qr: formData.get("qr") || "",
-                book: formData.get("book") || ""
-            },
-            page: "/assessment/",
+            First_Name: String(formData.get("First_Name") || "").trim(),
+            Last_Name: String(formData.get("Last_Name") || "").trim(),
+            Email: String(formData.get("Email") || "").trim(),
+            Company: String(formData.get("Company") || "").trim(),
+            Lead_Source: "Assessment",
+            Lead_Status: "New",
+            Posture: posture,
+            Assessment_Notes: `Total Score: ${total}/90. Risk: ${risk}. Bottleneck: ${bottleneck}. Strongest: ${strongest}. Priority: ${priorityStages.join(", ")}.`,
+            utm_source: formData.get("utm_source") || "",
+            utm_medium: formData.get("utm_medium") || "",
+            utm_campaign: formData.get("utm_campaign") || "",
+            utm_content: formData.get("utm_content") || "",
+            qr: formData.get("qr") || "",
+            book: formData.get("book") || "",
             submitted_at: new Date().toISOString()
         };
 
@@ -533,7 +545,7 @@
             posture,
             risk_level: risk,
             bottleneck_stage: bottleneck,
-            email_domain: payload.email.split("@")[1] || ""
+            email_domain: payload.Email.split("@")[1] || ""
         });
 
         resultCard.scrollIntoView({ behavior: "smooth", block: "start" });
