@@ -470,6 +470,7 @@
                         <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
                         <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
                         <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
+                        <li role="none"><a role="menuitem" href="/educators/">Educators</a></li>
                     </ul>
                 </li>
                 <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
@@ -505,8 +506,16 @@
                 </div>
                 <input type="hidden" name="Lead_Source" value="Individual Assessment" />
                 <input type="hidden" name="Lead_Status" value="New" />
+                <!-- Attribution & Tracking -->
+                <input type="hidden" name="utm_source" data-utm-field="true" />
+                <input type="hidden" name="utm_medium" data-utm-field="true" />
+                <input type="hidden" name="utm_campaign" data-utm-field="true" />
+                <input type="hidden" name="utm_content" data-utm-field="true" />
+                <input type="hidden" name="qr" data-utm-field="true" />
+                <input type="hidden" name="book" data-utm-field="true" />
+                
                 <p id="lead-status" style="font-size: 14px; margin: 0;" hidden></p>
-                <button class="btn btn-primary" type="submit" style="width: 100%; padding: 12px; background: #1e3a8a; color: white; border: 0; border-radius: 8px; font-weight: 700; cursor: pointer;">View Results</button>
+                <button class="btn btn-primary" type="button" id="submit-survey-btn" style="width: 100%; padding: 12px; background: #1e3a8a; color: white; border: 0; border-radius: 8px; font-weight: 700; cursor: pointer;">View Results</button>
             </form>
         </article>
     </div>
@@ -1747,18 +1756,25 @@
         });
     });
 
-    document.getElementById('lead-capture-form').addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const form = e.target;
+    const leadForm = document.getElementById('lead-capture-form');
+    const submitSurveyBtn = document.getElementById('submit-survey-btn');
+
+    submitSurveyBtn?.addEventListener('click', async (e) => {
+        // Validate form
+        if (!leadForm.checkValidity()) {
+            leadForm.reportValidity();
+            return;
+        }
+
         const status = document.getElementById('lead-status');
-        const btn = form.querySelector('button');
+        const btn = submitSurveyBtn;
         const CRM_ENDPOINT = "/assessment/individual";
 
         status.hidden = false;
         status.textContent = 'Submitting...';
         btn.disabled = true;
 
-        const formData = new FormData(form);
+        const formData = new FormData(leadForm);
         const payload = Object.fromEntries(formData.entries());
         payload.Description = `[Individual AI Readiness Assessment Results]
 Archetype: ${document.getElementById('characteristic-label').textContent}
@@ -1766,14 +1782,29 @@ Scores:
 - AI Proficiency: ${sliders.ai.value}/100
 - Domain Expertise (SME): ${sliders.sme.value}/100
 - Core Operational Stability: ${sliders.core.value}/100
-- Meta-Process/Governance: ${sliders.meta.value}/100`;
+- Meta-Process/Governance: ${sliders.meta.value}/100
+
+Detailed Sub-skills:
+${Object.keys(surveyResults).map(p => `- ${p.toUpperCase()}: ${JSON.stringify(surveyResults[p])}`).join('\n')}`;
+
         payload.AI_Proficiency = sliders.ai.value;
         payload.Domain_Expertise = sliders.sme.value;
         payload.Core_Operational = sliders.core.value;
         payload.Meta_Governance = sliders.meta.value;
         payload.Archetype = document.getElementById('characteristic-label').textContent;
+        payload.Results = surveyResults;
         payload.submitted_at = new Date().toISOString();
         payload.page = window.location.pathname;
+
+        // Add UTMs explicitly for clarity
+        payload.UTM = {
+            source: formData.get("utm_source") || "",
+            medium: formData.get("utm_medium") || "",
+            campaign: formData.get("utm_campaign") || "",
+            content: formData.get("utm_content") || "",
+            qr: formData.get("qr") || "",
+            book: formData.get("book") || ""
+        };
 
         try {
             const response = await fetch(CRM_ENDPOINT, {
@@ -1785,6 +1816,28 @@ Scores:
             if (response.ok) {
                 document.getElementById('lead-capture-container').style.display = 'none';
                 document.querySelector('.container').style.display = 'block';
+                
+                // Add success message
+                const successMsg = document.createElement('div');
+                successMsg.style.background = '#d1fae5';
+                successMsg.style.color = '#065f46';
+                successMsg.style.padding = '12px';
+                successMsg.style.borderRadius = '8px';
+                successMsg.style.marginBottom = '16px';
+                successMsg.style.fontWeight = '600';
+                successMsg.style.textAlign = 'center';
+                successMsg.id = 'temp-success-msg';
+                successMsg.textContent = '✓ Results submitted! We are emailing you a formatted report.';
+                
+                const container = document.querySelector('.container');
+                container.insertBefore(successMsg, container.firstChild);
+                
+                // Remove after 10 seconds
+                setTimeout(() => {
+                    const el = document.getElementById('temp-success-msg');
+                    if (el) el.remove();
+                }, 10000);
+
                 window.scrollTo(0, 0);
             } else {
                 throw new Error("Failed to submit results.");

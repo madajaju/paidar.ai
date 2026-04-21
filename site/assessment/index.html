@@ -145,6 +145,7 @@
                         <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
                         <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
                         <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
+                        <li role="none"><a role="menuitem" href="/educators/">Educators</a></li>
                     </ul>
                 </li>
                 <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
@@ -209,13 +210,15 @@
                         <input type="hidden" name="utm_content" data-utm-field="true" />
                         <input type="hidden" name="qr" data-utm-field="true" />
                         <input type="hidden" name="book" data-utm-field="true" />
+                        <input type="hidden" name="Lead_Source" value="Team Assessment" />
+                        <input type="hidden" name="Lead_Status" value="New" />
 
                         <div id="assessment-questions" class="assessment-stage-grid" aria-live="polite"></div>
 
                         <p id="submit-status" hidden></p>
 
                         <p>
-                            <button class="btn btn-primary" type="submit" data-track="assessment_submit">Get My Result</button>
+                            <button class="btn btn-primary" type="button" id="submit-assessment-btn" data-track="assessment_submit">Get My Result</button>
                         </p>
                     </form>
                 </div>
@@ -362,11 +365,18 @@
         questionsContainer.appendChild(stagePanel);
     });
 
-    assessmentForm.addEventListener('submit', function(e) {
+    const submitBtn = document.getElementById('submit-assessment-btn');
+
+    submitBtn.addEventListener('click', async function(e) {
         if (assessmentForm.dataset.submitting === 'true') {
             return;
         }
-        e.preventDefault();
+
+        // Validate form
+        if (!assessmentForm.checkValidity()) {
+            assessmentForm.reportValidity();
+            return;
+        }
         
         const formData = new FormData(assessmentForm);
         const scores = {};
@@ -382,7 +392,6 @@
             scores[stage.stage] = stageScore;
         });
 
-        const submitBtn = assessmentForm.querySelector('button[type="submit"]');
         submitBtn.disabled = true;
         submitStatus.hidden = false;
         submitStatus.textContent = "Analyzing results...";
@@ -472,12 +481,7 @@ Strongest Area: ${strongest}
 Immediate Priority:
 ${recommendations[bottleneck].replace(/<\/?strong>/g, '')}
 
-UTM Source: ${formData.get("utm_source") || ""}
-UTM Medium: ${formData.get("utm_medium") || ""}
-UTM Campaign: ${formData.get("utm_campaign") || ""}
-UTM Content: ${formData.get("utm_content") || ""}
-Submitted At: ${new Date().toISOString()}
-Page: ${window.location.pathname}`;
+Submitted At: ${new Date().toISOString()}`;
 
         // Prepare JSON payload for Zoho Flow
         const payload = {
@@ -487,6 +491,8 @@ Page: ${window.location.pathname}`;
             Email: formData.get("Email"),
             Company: formData.get("Company"),
             Description: descriptionContent,
+            Lead_Source: formData.get("Lead_Source") || "Team Assessment",
+            Lead_Status: formData.get("Lead_Status") || "New",
             
             // Assessment Metrics
             Total_Score: totalScore,
@@ -553,6 +559,27 @@ Page: ${window.location.pathname}`;
                 console.log("Submission successful:", response.status);
                 assessmentForm.hidden = true;
                 resultSection.hidden = false;
+
+                // Add success notification
+                const successMsg = document.createElement('div');
+                successMsg.style.background = '#d1fae5';
+                successMsg.style.color = '#065f46';
+                successMsg.style.padding = '1rem';
+                successMsg.style.borderRadius = '12px';
+                successMsg.style.marginBottom = '1.5rem';
+                successMsg.style.fontWeight = '700';
+                successMsg.style.textAlign = 'center';
+                successMsg.id = 'temp-success-msg';
+                successMsg.textContent = '✓ Results submitted! We are emailing you a formatted report.';
+                
+                resultSection.insertBefore(successMsg, resultSection.firstChild);
+                
+                // Remove after 10 seconds
+                setTimeout(() => {
+                    const el = document.getElementById('temp-success-msg');
+                    if (el) el.remove();
+                }, 10000);
+
                 resultSection.scrollIntoView({ behavior: 'smooth' });
             } else {
                 throw new Error("Failed to submit results to CRM.");

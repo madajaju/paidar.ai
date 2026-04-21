@@ -8,10 +8,30 @@ export async function onRequestGet(context) {
 export async function onRequestPost(context) {
     const { request, env } = context;
     const zapikey = env.ZOHO_INQUIRY_ZAPIKEY;
-    const CRM_ENDPOINT = `https://flow.zoho.com/862720724/flow/webhook/incoming?zapikey=${zapikey}`;
+
+    if (!zapikey) {
+        console.error("Critical Error: ZOHO_INQUIRY_ZAPIKEY is not defined in environment variables.");
+    }
+
+    const CRM_ENDPOINT = `https://flow.zoho.com/862720724/flow/webhook/incoming?zapikey=${zapikey || "MISSING"}`;
 
     try {
-        const payload = await request.json();
+        let payload;
+        const contentType = request.headers.get("content-type") || "";
+
+        if (contentType.includes("application/json")) {
+            payload = await request.json();
+        } else if (contentType.includes("application/x-www-form-urlencoded") || contentType.includes("multipart/form-data")) {
+            const formData = await request.formData();
+            payload = Object.fromEntries(formData.entries());
+        } else {
+            const text = await request.text();
+            try {
+                payload = JSON.parse(text);
+            } catch (e) {
+                payload = { rawBody: text };
+            }
+        }
         
         const response = await fetch(CRM_ENDPOINT, {
             method: "POST",
@@ -27,7 +47,7 @@ export async function onRequestPost(context) {
         } else {
             const errorText = await response.text();
             console.error("Zoho Flow Error:", errorText);
-            return new Response(JSON.stringify({ success: false, error: "Submission Failed" }), {
+            return new Response(JSON.stringify({ success: false, error: "Submission Failed", details: errorText }), {
                 status: 502,
                 headers: { "Content-Type": "application/json" }
             });
