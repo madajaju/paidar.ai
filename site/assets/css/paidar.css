@@ -111,7 +111,8 @@ a:hover {
     height: auto;
 }
 
-.container-right > div {
+.container-right > div,
+.container-right > article {
     flex: 1 1 0; /* take remaining space */
 }
 

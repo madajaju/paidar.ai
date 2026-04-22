@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1800"
+     height="2700"
+     viewBox="0 0 1800 2700"
+     version="1.1">
+    <title>Educating the  AI-Augmented</title>
+    <desc>
+        Full wrap SVG composition template for a 6x9 book cover.
+        Includes back cover, spine, and front cover groups, plus image placeholder groups
+        and text overlay groups for title, subtitle, author, back cover copy, and spine text.
+    </desc>
+
+    <defs>
+        <style>
+            .guide {
+            stroke: #64748b;
+            stroke-width: 2;
+            stroke-dasharray: 10 10;
+            opacity: 0.9;
+            }
+            .trim {
+            stroke: #0f172a;
+            stroke-width: 3;
+            fill: none;
+            }
+            .safe {
+            stroke: #94a3b8;
+            stroke-width: 2;
+            stroke-dasharray: 8 8;
+            fill: none;
+            }
+            .panel-label {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            fill: #0f172a;
+            opacity: 0.55;
+            }
+            .series {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 42px;
+            font-weight: 500;
+            letter-spacing: 6px;
+            fill: #D7DEE7;
+            }
+            .title {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 152px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            fill: #FFFFFF;
+            }
+                .subtitle {
+                font-family: 'Aptos', 'IBM Plex Sans', sans-serif;
+                font-size: 72px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                fill: #ffffff;
+                }
+                .subtitle-emphasis {
+                font-weight: 700;
+                }
+            .author {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 64px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            fill: #ffffff;
+            }
+            .back-hook {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 44px;
+            font-weight: 700;
+            line-height: 1.2;
+            fill: #FFFFFF;
+            }
+            .back-body {
+            font-family: "Source Serif Pro", IBM Plex Sans, serif;
+            font-size: 30px;
+            font-weight: 400;
+            fill: #F5F7FA;
+            }
+            .back-head {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            fill: #FFFFFF;
+            }
+            .spine-title {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 84px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            fill: #FFFFFF;
+            }
+            .spine-author {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 42px;
+            font-weight: 500;
+            fill: #E5E7EB;
+            }
+            .pp-mark {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            fill: #FFFFFF;
+            }
+            .placeholder {
+            fill: rgba(255,255,255,0.10);
+            stroke: rgba(255,255,255,0.35);
+            stroke-width: 3;
+            stroke-dasharray: 12 10;
+            }
+            .placeholder-text {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            fill: rgba(255,255,255,0.75);
+            letter-spacing: 1px;
+            }
+            .cls-1 {
+            stroke: #73280b;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 5px;
+            }
+            .cls-font {
+            font-family: Arial, Helvetica, "Liberation Sans", "Nimbus Sans", "Noto Sans", "DejaVu Sans", sans-serif;
+            font-weight: 300;
+            font-size: 250px;
+            fill: #ffffff;
+            letter-spacing: -0.05em;
+            }
+            .cls-1, .cls-2, .cls-3 {
+            fill: #fff;
+            }
+            .cls-3 {
+            fill-rule: evenodd;
+            }
+            .cls-4 { fill: url(#grad-navy); }
+            .gold-light {
+            fill: #00A86B;
+            }
+            .gold-medium {
+            }
+            .gold-medium2 {
+            fill: url(#grad2);
+            }
+            .gold-medium3 {
+            fill: #73280b;
+            }
+            .gold-dark {
+            fill: #73280b;
+            }
+        </style>
+
+        <linearGradient id="blueBg" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#73280b"/>
+            <stop offset="50%" stop-color="#8c330c"/>
+            <stop offset="100%" stop-color="#73280b"/>
+        </linearGradient>
+
+        <linearGradient id="backBg" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#73280b"/>
+            <stop offset="50%" stop-color="#8c330c"/>
+            <stop offset="100%" stop-color="#73280b"/>
+        </linearGradient>
+        <linearGradient id="spineBg" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#73280b"/>
+            <stop offset="50%" stop-color="#8c330c"/>
+            <stop offset="100%" stop-color="#73280b"/>
+        </linearGradient>
+
+        <linearGradient id="grad1" gradientTransform="rotate(90)">
+            <stop offset="5%" stop-color="#8c330c" />
+            <stop offset="95%" stop-color="#73280b" />
+        </linearGradient>
+        <linearGradient id="grad2" gradientTransform="rotate(90)">
+            <stop offset="5%" stop-color="#73280b" />
+            <stop offset="95%" stop-color="#8c330c" />
+        </linearGradient>
+
+        <linearGradient id="grad-navy" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#73280b"/>
+            <stop offset="100%" stop-color="#9e390d"/>
+        </linearGradient>
+    </defs>
+
+    <!-- FRONT COVER GROUP -->
+    <g id="front-cover" transform="translate(-2000, 0)">
+
+        <rect x="2041.5" y="37.5" width="1800.0" height="2700.0" class="trim"/>
+        <rect x="2041.5" y="37.5" width="1800.0" height="2700.0" fill="url(#backBg)"/>
+
+
+        <g id="front-graphic" transform="translate(2000,850)">
+            <g transform="translate(150, -400) scale(1.00, 1.00)">
+                <defs>
+                    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#9e390d"/>
+                        <stop offset="55%" stop-color="#8c330c"/>
+                        <stop offset="100%" stop-color="#73280b"/>
+                    </linearGradient>
+                    <radialGradient id="warmGlow" cx="50%" cy="45%" r="65%">
+                        <stop offset="0%" stop-color="#9e390d" stop-opacity="0.18"/>
+                        <stop offset="45%" stop-color="#8c330c" stop-opacity="0.05"/>
+                        <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+                    </radialGradient>
+                    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+                        <feGaussianBlur stdDeviation="10" result="b"/>
+                        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
+                    <filter id="pathGlow" x="-120%" y="-120%" width="340%" height="340%">
+                        <feGaussianBlur stdDeviation="18" result="b"/>
+                        <feColorMatrix in="b" type="matrix"
+                                       values="1 0 0 0 0
+                0 1 0 0 0.3
+                0 0 1 0 0
+                0 0 0 1 0"/>
+                        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
+                    <style>
+                        .title { font-family: Montserrat, Arial, sans-serif; font-weight: 800; letter-spacing: 1px; fill: #fffaf5; }
+                        .subtitle { font-family: Montserrat, Arial, sans-serif; font-weight: 600; letter-spacing: 6px; fill: #ffffff; }
+                        .author { font-family: Montserrat, Arial, sans-serif; font-weight: 500; letter-spacing: 8px; fill: #ffffff; }
+                        .mesh { fill: none; stroke: #bf6a26; stroke-width: 2.5; opacity: 0.44; }
+                        .stub { stroke: #f0a54a; stroke-width: 3; stroke-linecap: round; opacity: 0.85; fill: none; }
+                        .dot { fill: #f0a54a; opacity: 0.95; }
+                        .pathhex { fill: none; stroke: #fff8e7; stroke-width: 8; opacity: 1; filter: url(#pathGlow); }
+                        .pathfill { fill: #f4c14f; opacity: 0.72; filter: url(#pathGlow); }
+                    </style>
+                </defs>
+
+                <!-- subtle speckle -->
+                <g opacity="0.05" fill="#fff3e0">
+                    <circle cx="140" cy="220" r="1.1"/>
+                    <circle cx="310" cy="180" r="0.9"/>
+                    <circle cx="520" cy="260" r="1.2"/>
+                    <circle cx="720" cy="140" r="1.0"/>
+                    <circle cx="1040" cy="210" r="1.3"/>
+                    <circle cx="1290" cy="160" r="1.0"/>
+                    <circle cx="1480" cy="300" r="1.2"/>
+                    <circle cx="240" cy="760" r="1.1"/>
+                    <circle cx="1380" cy="980" r="1.0"/>
+                    <circle cx="220" cy="1420" r="1.2"/>
+                    <circle cx="1320" cy="1710" r="1.0"/>
+                    <circle cx="460" cy="2220" r="1.2"/>
+                    <circle cx="1160" cy="2360" r="1.1"/>
+                </g>
+
+                <!-- mesh -->
+                <g id="mesh">
+                    <polygon class="mesh" points="225.0,874.0 270.0,900.0 270.0,952.0 225.0,978.0 180.0,952.0 180.0,900.0"/>
+                    <polygon class="mesh" points="315.1,874.0 360.1,900.0 360.1,952.0 315.1,978.0 270.1,952.0 270.1,900.0"/>
+                    <polygon class="mesh" points="405.1,874.0 450.1,900.0 450.1,952.0 405.1,978.0 360.1,952.0 360.1,900.0"/>
+                    <polygon class="mesh" points="495.2,874.0 540.2,900.0 540.2,952.0 495.2,978.0 450.2,952.0 450.2,900.0"/>
+                    <polygon class="mesh" points="585.3,874.0 630.3,900.0 630.3,952.0 585.3,978.0 540.3,952.0 540.3,900.0"/>
+                    <polygon class="mesh" points="675.3,874.0 720.3,900.0 720.3,952.0 675.3,978.0 630.3,952.0 630.3,900.0"/>
+                    <polygon class="mesh" points="765.4,874.0 810.4,900.0 810.4,952.0 765.4,978.0 720.4,952.0 720.4,900.0"/>
+                    <polygon class="mesh" points="855.5,874.0 900.5,900.0 900.5,952.0 855.5,978.0 810.5,952.0 810.5,900.0"/>
+                    <polygon class="mesh" points="945.5,874.0 990.5,900.0 990.5,952.0 945.5,978.0 900.5,952.0 900.5,900.0"/>
+                    <polygon class="mesh" points="1035.6,874.0 1080.6,900.0 1080.6,952.0 1035.6,978.0 990.6,952.0 990.6,900.0"/>
+                    <polygon class="mesh" points="1125.7,874.0 1170.7,900.0 1170.7,952.0 1125.7,978.0 1080.7,952.0 1080.7,900.0"/>
+                    <polygon class="pathhex" points="1215.7,874.0 1260.7,900.0 1260.7,952.0 1215.7,978.0 1170.7,952.0 1170.7,900.0"/>
+                    <polygon class="pathfill" points="1215.7,874.0 1260.7,900.0 1260.7,952.0 1215.7,978.0 1170.7,952.0 1170.7,900.0"/>
+
+                    <polygon class="mesh" points="270.1,952.0 315.1,978.0 315.1,1030.0 270.1,1056.0 225.1,1030.0 225.1,978.0"/>
+                    <polygon class="mesh" points="360.1,952.0 405.1,978.0 405.1,1030.0 360.1,1056.0 315.1,1030.0 315.1,978.0"/>
+                    <polygon class="mesh" points="450.2,952.0 495.2,978.0 495.2,1030.0 450.2,1056.0 405.2,1030.0 405.2,978.0"/>
+                    <polygon class="mesh" points="540.3,952.0 585.3,978.0 585.3,1030.0 540.3,1056.0 495.3,1030.0 495.3,978.0"/>
+                    <polygon class="mesh" points="630.3,952.0 675.3,978.0 675.3,1030.0 630.3,1056.0 585.3,1030.0 585.3,978.0"/>
+                    <polygon class="mesh" points="720.4,952.0 765.4,978.0 765.4,1030.0 720.4,1056.0 675.4,1030.0 675.4,978.0"/>
+                    <polygon class="mesh" points="810.5,952.0 855.5,978.0 855.5,1030.0 810.5,1056.0 765.5,1030.0 765.5,978.0"/>
+                    <polygon class="mesh" points="900.5,952.0 945.5,978.0 945.5,1030.0 900.5,1056.0 855.5,1030.0 855.5,978.0"/>
+                    <polygon class="mesh" points="990.6,952.0 1035.6,978.0 1035.6,1030.0 990.6,1056.0 945.6,1030.0 945.6,978.0"/>
+                    <polygon class="mesh" points="1080.7,952.0 1125.7,978.0 1125.7,1030.0 1080.7,1056.0 1035.7,1030.0 1035.7,978.0"/>
+                    <polygon class="pathhex" points="1170.7,952.0 1215.7,978.0 1215.7,1030.0 1170.7,1056.0 1125.7,1030.0 1125.7,978.0"/>
+                    <polygon class="pathhex" points="1260.8,952.0 1305.8,978.0 1305.8,1030.0 1260.8,1056.0 1215.8,1030.0 1215.8,978.0"/>
+                    <polygon class="pathfill" points="1170.7,952.0 1215.7,978.0 1215.7,1030.0 1170.7,1056.0 1125.7,1030.0 1125.7,978.0"/>
+                    <polygon class="pathfill" points="1260.8,952.0 1305.8,978.0 1305.8,1030.0 1260.8,1056.0 1215.8,1030.0 1215.8,978.0"/>
+
+                    <polygon class="mesh" points="225.0,1030.0 270.0,1056.0 270.0,1108.0 225.0,1134.0 180.0,1108.0 180.0,1056.0"/>
+                    <polygon class="mesh" points="315.1,1030.0 360.1,1056.0 360.1,1108.0 315.1,1134.0 270.1,1108.0 270.1,1056.0"/>
+                    <polygon class="mesh" points="405.1,1030.0 450.1,1056.0 450.1,1108.0 405.1,1134.0 360.1,1108.0 360.1,1056.0"/>
+                    <polygon class="mesh" points="495.2,1030.0 540.2,1056.0 540.2,1108.0 495.2,1134.0 450.2,1108.0 450.2,1056.0"/>
+                    <polygon class="mesh" points="585.3,1030.0 630.3,1056.0 630.3,1108.0 585.3,1134.0 540.3,1108.0 540.3,1056.0"/>
+                    <polygon class="mesh" points="675.3,1030.0 720.3,1056.0 720.3,1108.0 675.3,1134.0 630.3,1108.0 630.3,1056.0"/>
+                    <polygon class="mesh" points="765.4,1030.0 810.4,1056.0 810.4,1108.0 765.4,1134.0 720.4,1108.0 720.4,1056.0"/>
+                    <polygon class="mesh" points="855.5,1030.0 900.5,1056.0 900.5,1108.0 855.5,1134.0 810.5,1108.0 810.5,1056.0"/>
+                    <polygon class="mesh" points="945.5,1030.0 990.5,1056.0 990.5,1108.0 945.5,1134.0 900.5,1108.0 900.5,1056.0"/>
+                    <polygon class="mesh" points="1035.6,1030.0 1080.6,1056.0 1080.6,1108.0 1035.6,1134.0 990.6,1108.0 990.6,1056.0"/>
+                    <polygon class="pathhex" points="1125.7,1030.0 1170.7,1056.0 1170.7,1108.0 1125.7,1134.0 1080.7,1108.0 1080.7,1056.0"/>
+                    <polygon class="pathhex" points="1215.7,1030.0 1260.7,1056.0 1260.7,1108.0 1215.7,1134.0 1170.7,1108.0 1170.7,1056.0"/>
+                    <polygon class="pathfill" points="1125.7,1030.0 1170.7,1056.0 1170.7,1108.0 1125.7,1134.0 1080.7,1108.0 1080.7,1056.0"/>
+                    <polygon class="pathfill" points="1215.7,1030.0 1260.7,1056.0 1260.7,1108.0 1215.7,1134.0 1170.7,1108.0 1170.7,1056.0"/>
+
+                    <polygon class="mesh" points="270.1,1108.0 315.1,1134.0 315.1,1186.0 270.1,1212.0 225.1,1186.0 225.1,1134.0"/>
+                    <polygon class="mesh" points="360.1,1108.0 405.1,1134.0 405.1,1186.0 360.1,1212.0 315.1,1186.0 315.1,1134.0"/>
+                    <polygon class="mesh" points="450.2,1108.0 495.2,1134.0 495.2,1186.0 450.2,1212.0 405.2,1186.0 405.2,1134.0"/>
+                    <polygon class="mesh" points="540.3,1108.0 585.3,1134.0 585.3,1186.0 540.3,1212.0 495.3,1186.0 495.3,1134.0"/>
+                    <polygon class="mesh" points="630.3,1108.0 675.3,1134.0 675.3,1186.0 630.3,1212.0 585.3,1186.0 585.3,1134.0"/>
+                    <polygon class="mesh" points="720.4,1108.0 765.4,1134.0 765.4,1186.0 720.4,1212.0 675.4,1186.0 675.4,1134.0"/>
+                    <polygon class="mesh" points="810.5,1108.0 855.5,1134.0 855.5,1186.0 810.5,1212.0 765.5,1186.0 765.5,1134.0"/>
+                    <polygon class="mesh" points="900.5,1108.0 945.5,1134.0 945.5,1186.0 900.5,1212.0 855.5,1186.0 855.5,1134.0"/>
+                    <polygon class="mesh" points="990.6,1108.0 1035.6,1134.0 1035.6,1186.0 990.6,1212.0 945.6,1186.0 945.6,1134.0"/>
+                    <polygon class="pathhex" points="1080.7,1108.0 1125.7,1134.0 1125.7,1186.0 1080.7,1212.0 1035.7,1186.0 1035.7,1134.0"/>
+                    <polygon class="pathfill" points="1080.7,1108.0 1125.7,1134.0 1125.7,1186.0 1080.7,1212.0 1035.7,1186.0 1035.7,1134.0"/>
+                    <polygon class="mesh" points="1170.7,1108.0 1215.7,1134.0 1215.7,1186.0 1170.7,1212.0 1125.7,1186.0 1125.7,1134.0"/>
+                    <polygon class="mesh" points="1260.8,1108.0 1305.8,1134.0 1305.8,1186.0 1260.8,1212.0 1215.8,1186.0 1215.8,1134.0"/>
+
+                    <polygon class="mesh" points="225.0,1186.0 270.0,1212.0 270.0,1264.0 225.0,1290.0 180.0,1264.0 180.0,1212.0"/>
+                    <polygon class="mesh" points="315.1,1186.0 360.1,1212.0 360.1,1264.0 315.1,1290.0 270.1,1264.0 270.1,1212.0"/>
+                    <polygon class="mesh" points="405.1,1186.0 450.1,1212.0 450.1,1264.0 405.1,1290.0 360.1,1264.0 360.1,1212.0"/>
+                    <polygon class="mesh" points="495.2,1186.0 540.2,1212.0 540.2,1264.0 495.2,1290.0 450.2,1264.0 450.2,1212.0"/>
+                    <polygon class="mesh" points="585.3,1186.0 630.3,1212.0 630.3,1264.0 585.3,1290.0 540.3,1264.0 540.3,1212.0"/>
+                    <polygon class="mesh" points="675.3,1186.0 720.3,1212.0 720.3,1264.0 675.3,1290.0 630.3,1264.0 630.3,1212.0"/>
+                    <polygon class="mesh" points="765.4,1186.0 810.4,1212.0 810.4,1264.0 765.4,1290.0 720.4,1264.0 720.4,1212.0"/>
+                    <polygon class="mesh" points="855.5,1186.0 900.5,1212.0 900.5,1264.0 855.5,1290.0 810.5,1264.0 810.5,1212.0"/>
+                    <polygon class="pathhex" points="945.5,1186.0 990.5,1212.0 990.5,1264.0 945.5,1290.0 900.5,1264.0 900.5,1212.0"/>
+                    <polygon class="pathhex" points="1035.6,1186.0 1080.6,1212.0 1080.6,1264.0 1035.6,1290.0 990.6,1264.0 990.6,1212.0"/>
+                    <polygon class="pathfill" points="945.5,1186.0 990.5,1212.0 990.5,1264.0 945.5,1290.0 900.5,1264.0 900.5,1212.0"/>
+                    <polygon class="pathfill" points="1035.6,1186.0 1080.6,1212.0 1080.6,1264.0 1035.6,1290.0 990.6,1264.0 990.6,1212.0"/>
+                    <polygon class="mesh" points="1125.7,1186.0 1170.7,1212.0 1170.7,1264.0 1125.7,1290.0 1080.7,1264.0 1080.7,1212.0"/>
+                    <polygon class="mesh" points="1215.7,1186.0 1260.7,1212.0 1260.7,1264.0 1215.7,1290.0 1170.7,1264.0 1170.7,1212.0"/>
+
+                    <polygon class="mesh" points="270.1,1264.0 315.1,1290.0 315.1,1342.0 270.1,1368.0 225.1,1342.0 225.1,1290.0"/>
+                    <polygon class="mesh" points="360.1,1264.0 405.1,1290.0 405.1,1342.0 360.1,1368.0 315.1,1342.0 315.1,1290.0"/>
+                    <polygon class="mesh" points="450.2,1264.0 495.2,1290.0 495.2,1342.0 450.2,1368.0 405.2,1342.0 405.2,1290.0"/>
+                    <polygon class="mesh" points="540.3,1264.0 585.3,1290.0 585.3,1342.0 540.3,1368.0 495.3,1342.0 495.3,1290.0"/>
+                    <polygon class="mesh" points="630.3,1264.0 675.3,1290.0 675.3,1342.0 630.3,1368.0 585.3,1342.0 585.3,1290.0"/>
+                    <polygon class="mesh" points="720.4,1264.0 765.4,1290.0 765.4,1342.0 720.4,1368.0 675.4,1342.0 675.4,1290.0"/>
+                    <polygon class="mesh" points="810.5,1264.0 855.5,1290.0 855.5,1342.0 810.5,1368.0 765.5,1342.0 765.5,1290.0"/>
+                    <polygon class="pathhex" points="900.5,1264.0 945.5,1290.0 945.5,1342.0 900.5,1368.0 855.5,1342.0 855.5,1290.0"/>
+                    <polygon class="pathfill" points="900.5,1264.0 945.5,1290.0 945.5,1342.0 900.5,1368.0 855.5,1342.0 855.5,1290.0"/>
+                    <polygon class="mesh" points="990.6,1264.0 1035.6,1290.0 1035.6,1342.0 990.6,1368.0 945.6,1342.0 945.6,1290.0"/>
+                    <polygon class="mesh" points="1080.7,1264.0 1125.7,1290.0 1125.7,1342.0 1080.7,1368.0 1035.7,1342.0 1035.7,1290.0"/>
+                    <polygon class="mesh" points="1170.7,1264.0 1215.7,1290.0 1215.7,1342.0 1170.7,1368.0 1125.7,1342.0 1125.7,1290.0"/>
+                    <polygon class="mesh" points="1260.8,1264.0 1305.8,1290.0 1305.8,1342.0 1260.8,1368.0 1215.8,1342.0 1215.8,1290.0"/>
+
+                    <polygon class="mesh" points="225.0,1342.0 270.0,1368.0 270.0,1420.0 225.0,1446.0 180.0,1420.0 180.0,1368.0"/>
+                    <polygon class="mesh" points="315.1,1342.0 360.1,1368.0 360.1,1420.0 315.1,1446.0 270.1,1420.0 270.1,1368.0"/>
+                    <polygon class="mesh" points="405.1,1342.0 450.1,1368.0 450.1,1420.0 405.1,1446.0 360.1,1420.0 360.1,1368.0"/>
+                    <polygon class="mesh" points="495.2,1342.0 540.2,1368.0 540.2,1420.0 495.2,1446.0 450.2,1420.0 450.2,1368.0"/>
+                    <polygon class="mesh" points="585.3,1342.0 630.3,1368.0 630.3,1420.0 585.3,1446.0 540.3,1420.0 540.3,1368.0"/>
+                    <polygon class="mesh" points="675.3,1342.0 720.3,1368.0 720.3,1420.0 675.3,1446.0 630.3,1420.0 630.3,1368.0"/>
+                    <polygon class="mesh" points="765.4,1342.0 810.4,1368.0 810.4,1420.0 765.4,1446.0 720.4,1420.0 720.4,1368.0"/>
+                    <polygon class="pathhex" points="855.5,1342.0 900.5,1368.0 900.5,1420.0 855.5,1446.0 810.5,1420.0 810.5,1368.0"/>
+                    <polygon class="pathfill" points="855.5,1342.0 900.5,1368.0 900.5,1420.0 855.5,1446.0 810.5,1420.0 810.5,1368.0"/>
+                    <polygon class="mesh" points="945.5,1342.0 990.5,1368.0 990.5,1420.0 945.5,1446.0 900.5,1420.0 900.5,1368.0"/>
+                    <polygon class="mesh" points="1035.6,1342.0 1080.6,1368.0 1080.6,1420.0 1035.6,1446.0 990.6,1420.0 990.6,1368.0"/>
+                    <polygon class="mesh" points="1125.7,1342.0 1170.7,1368.0 1170.7,1420.0 1125.7,1446.0 1080.7,1420.0 1080.7,1368.0"/>
+                    <polygon class="mesh" points="1215.7,1342.0 1260.7,1368.0 1260.7,1420.0 1215.7,1446.0 1170.7,1420.0 1170.7,1368.0"/>
+
+                    <polygon class="mesh" points="270.1,1420.0 315.1,1446.0 315.1,1498.0 270.1,1524.0 225.1,1498.0 225.1,1446.0"/>
+                    <polygon class="mesh" points="360.1,1420.0 405.1,1446.0 405.1,1498.0 360.1,1524.0 315.1,1498.0 315.1,1446.0"/>
+                    <polygon class="mesh" points="450.2,1420.0 495.2,1446.0 495.2,1498.0 450.2,1524.0 405.2,1498.0 405.2,1446.0"/>
+                    <polygon class="mesh" points="540.3,1420.0 585.3,1446.0 585.3,1498.0 540.3,1524.0 495.3,1498.0 495.3,1446.0"/>
+                    <polygon class="mesh" points="630.3,1420.0 675.3,1446.0 675.3,1498.0 630.3,1524.0 585.3,1498.0 585.3,1446.0"/>
+                    <polygon class="pathhex" points="720.4,1420.0 765.4,1446.0 765.4,1498.0 720.4,1524.0 675.4,1498.0 675.4,1446.0"/>
+                    <polygon class="pathhex" points="810.5,1420.0 855.5,1446.0 855.5,1498.0 810.5,1524.0 765.5,1498.0 765.5,1446.0"/>
+                    <polygon class="pathfill" points="720.4,1420.0 765.4,1446.0 765.4,1498.0 720.4,1524.0 675.4,1498.0 675.4,1446.0"/>
+                    <polygon class="pathfill" points="810.5,1420.0 855.5,1446.0 855.5,1498.0 810.5,1524.0 765.5,1498.0 765.5,1446.0"/>
+                    <polygon class="mesh" points="900.5,1420.0 945.5,1446.0 945.5,1498.0 900.5,1524.0 855.5,1498.0 855.5,1446.0"/>
+                    <polygon class="mesh" points="990.6,1420.0 1035.6,1446.0 1035.6,1498.0 990.6,1524.0 945.6,1498.0 945.6,1446.0"/>
+                    <polygon class="mesh" points="1080.7,1420.0 1125.7,1446.0 1125.7,1498.0 1080.7,1524.0 1035.7,1498.0 1035.7,1446.0"/>
+                    <polygon class="mesh" points="1170.7,1420.0 1215.7,1446.0 1215.7,1498.0 1170.7,1524.0 1125.7,1498.0 1125.7,1446.0"/>
+                    <polygon class="mesh" points="1260.8,1420.0 1305.8,1446.0 1305.8,1498.0 1260.8,1524.0 1215.8,1498.0 1215.8,1446.0"/>
+
+                    <polygon class="mesh" points="225.0,1498.0 270.0,1524.0 270.0,1576.0 225.0,1602.0 180.0,1576.0 180.0,1524.0"/>
+                    <polygon class="mesh" points="315.1,1498.0 360.1,1524.0 360.1,1576.0 315.1,1602.0 270.1,1576.0 270.1,1524.0"/>
+                    <polygon class="mesh" points="405.1,1498.0 450.1,1524.0 450.1,1576.0 405.1,1602.0 360.1,1576.0 360.1,1524.0"/>
+                    <polygon class="mesh" points="495.2,1498.0 540.2,1524.0 540.2,1576.0 495.2,1602.0 450.2,1576.0 450.2,1524.0"/>
+                    <polygon class="mesh" points="585.3,1498.0 630.3,1524.0 630.3,1576.0 585.3,1602.0 540.3,1576.0 540.3,1524.0"/>
+                    <polygon class="pathhex" points="675.3,1498.0 720.3,1524.0 720.3,1576.0 675.3,1602.0 630.3,1576.0 630.3,1524.0"/>
+                    <polygon class="pathfill" points="675.3,1498.0 720.3,1524.0 720.3,1576.0 675.3,1602.0 630.3,1576.0 630.3,1524.0"/>
+                    <polygon class="mesh" points="765.4,1498.0 810.4,1524.0 810.4,1576.0 765.4,1602.0 720.4,1576.0 720.4,1524.0"/>
+                    <polygon class="mesh" points="855.5,1498.0 900.5,1524.0 900.5,1576.0 855.5,1602.0 810.5,1576.0 810.5,1524.0"/>
+                    <polygon class="mesh" points="945.5,1498.0 990.5,1524.0 990.5,1576.0 945.5,1602.0 900.5,1576.0 900.5,1524.0"/>
+                    <polygon class="mesh" points="1035.6,1498.0 1080.6,1524.0 1080.6,1576.0 1035.6,1602.0 990.6,1576.0 990.6,1524.0"/>
+                    <polygon class="mesh" points="1125.7,1498.0 1170.7,1524.0 1170.7,1576.0 1125.7,1602.0 1080.7,1576.0 1080.7,1524.0"/>
+                    <polygon class="mesh" points="1215.7,1498.0 1260.7,1524.0 1260.7,1576.0 1215.7,1602.0 1170.7,1576.0 1170.7,1524.0"/>
+
+                    <polygon class="mesh" points="270.1,1576.0 315.1,1602.0 315.1,1654.0 270.1,1680.0 225.1,1654.0 225.1,1602.0"/>
+                    <polygon class="mesh" points="360.1,1576.0 405.1,1602.0 405.1,1654.0 360.1,1680.0 315.1,1654.0 315.1,1602.0"/>
+                    <polygon class="mesh" points="450.2,1576.0 495.2,1602.0 495.2,1654.0 450.2,1680.0 405.2,1654.0 405.2,1602.0"/>
+                    <polygon class="mesh" points="540.3,1576.0 585.3,1602.0 585.3,1654.0 540.3,1680.0 495.3,1654.0 495.3,1602.0"/>
+                    <polygon class="pathhex" points="630.3,1576.0 675.3,1602.0 675.3,1654.0 630.3,1680.0 585.3,1654.0 585.3,1602.0"/>
+                    <polygon class="pathfill" points="630.3,1576.0 675.3,1602.0 675.3,1654.0 630.3,1680.0 585.3,1654.0 585.3,1602.0"/>
+                    <polygon class="mesh" points="720.4,1576.0 765.4,1602.0 765.4,1654.0 720.4,1680.0 675.4,1654.0 675.4,1602.0"/>
+                    <polygon class="mesh" points="810.5,1576.0 855.5,1602.0 855.5,1654.0 810.5,1680.0 765.5,1654.0 765.5,1602.0"/>
+                    <polygon class="mesh" points="900.5,1576.0 945.5,1602.0 945.5,1654.0 900.5,1680.0 855.5,1654.0 855.5,1602.0"/>
+                    <polygon class="mesh" points="990.6,1576.0 1035.6,1602.0 1035.6,1654.0 990.6,1680.0 945.6,1654.0 945.6,1602.0"/>
+                    <polygon class="mesh" points="1080.7,1576.0 1125.7,1602.0 1125.7,1654.0 1080.7,1680.0 1035.7,1654.0 1035.7,1602.0"/>
+                    <polygon class="mesh" points="1170.7,1576.0 1215.7,1602.0 1215.7,1654.0 1170.7,1680.0 1125.7,1654.0 1125.7,1602.0"/>
+                    <polygon class="mesh" points="1260.8,1576.0 1305.8,1602.0 1305.8,1654.0 1260.8,1680.0 1215.8,1654.0 1215.8,1602.0"/>
+
+                    <polygon class="mesh" points="225.0,1654.0 270.0,1680.0 270.0,1732.0 225.0,1758.0 180.0,1732.0 180.0,1680.0"/>
+                    <polygon class="mesh" points="315.1,1654.0 360.1,1680.0 360.1,1732.0 315.1,1758.0 270.1,1732.0 270.1,1680.0"/>
+                    <polygon class="mesh" points="405.1,1654.0 450.1,1680.0 450.1,1732.0 405.1,1758.0 360.1,1732.0 360.1,1680.0"/>
+                    <polygon class="pathhex" points="495.2,1654.0 540.2,1680.0 540.2,1732.0 495.2,1758.0 450.2,1732.0 450.2,1680.0"/>
+                    <polygon class="pathhex" points="585.3,1654.0 630.3,1680.0 630.3,1732.0 585.3,1758.0 540.3,1732.0 540.3,1680.0"/>
+                    <polygon class="pathfill" points="495.2,1654.0 540.2,1680.0 540.2,1732.0 495.2,1758.0 450.2,1732.0 450.2,1680.0"/>
+                    <polygon class="pathfill" points="585.3,1654.0 630.3,1680.0 630.3,1732.0 585.3,1758.0 540.3,1732.0 540.3,1680.0"/>
+                    <polygon class="mesh" points="675.3,1654.0 720.3,1680.0 720.3,1732.0 675.3,1758.0 630.3,1732.0 630.3,1680.0"/>
+                    <polygon class="mesh" points="765.4,1654.0 810.4,1680.0 810.4,1732.0 765.4,1758.0 720.4,1732.0 720.4,1680.0"/>
+                    <polygon class="mesh" points="855.5,1654.0 900.5,1680.0 900.5,1732.0 855.5,1758.0 810.5,1732.0 810.5,1680.0"/>
+                    <polygon class="mesh" points="945.5,1654.0 990.5,1680.0 990.5,1732.0 945.5,1758.0 900.5,1732.0 900.5,1680.0"/>
+                    <polygon class="mesh" points="1035.6,1654.0 1080.6,1680.0 1080.6,1732.0 1035.6,1758.0 990.6,1732.0 990.6,1680.0"/>
+                    <polygon class="mesh" points="1125.7,1654.0 1170.7,1680.0 1170.7,1732.0 1125.7,1758.0 1080.7,1732.0 1080.7,1680.0"/>
+                    <polygon class="mesh" points="1215.7,1654.0 1260.7,1680.0 1260.7,1732.0 1215.7,1758.0 1170.7,1732.0 1170.7,1680.0"/>
+
+                    <polygon class="mesh" points="270.1,1732.0 315.1,1758.0 315.1,1810.0 270.1,1836.0 225.1,1810.0 225.1,1758.0"/>
+                    <polygon class="pathhex" points="360.1,1732.0 405.1,1758.0 405.1,1810.0 360.1,1836.0 315.1,1810.0 315.1,1758.0"/>
+                    <polygon class="pathhex" points="450.2,1732.0 495.2,1758.0 495.2,1810.0 450.2,1836.0 405.2,1810.0 405.2,1758.0"/>
+                    <polygon class="pathfill" points="360.1,1732.0 405.1,1758.0 405.1,1810.0 360.1,1836.0 315.1,1810.0 315.1,1758.0"/>
+                    <polygon class="pathfill" points="450.2,1732.0 495.2,1758.0 495.2,1810.0 450.2,1836.0 405.2,1810.0 405.2,1758.0"/>
+                    <polygon class="mesh" points="540.3,1732.0 585.3,1758.0 585.3,1810.0 540.3,1836.0 495.3,1810.0 495.3,1758.0"/>
+                    <polygon class="mesh" points="630.3,1732.0 675.3,1758.0 675.3,1810.0 630.3,1836.0 585.3,1810.0 585.3,1758.0"/>
+                    <polygon class="mesh" points="720.4,1732.0 765.4,1758.0 765.4,1810.0 720.4,1836.0 675.4,1810.0 675.4,1758.0"/>
+                    <polygon class="mesh" points="810.5,1732.0 855.5,1758.0 855.5,1810.0 810.5,1836.0 765.5,1810.0 765.5,1758.0"/>
+                    <polygon class="mesh" points="900.5,1732.0 945.5,1758.0 945.5,1810.0 900.5,1836.0 855.5,1810.0 855.5,1758.0"/>
+                    <polygon class="mesh" points="990.6,1732.0 1035.6,1758.0 1035.6,1810.0 990.6,1836.0 945.6,1810.0 945.6,1758.0"/>
+                    <polygon class="mesh" points="1080.7,1732.0 1125.7,1758.0 1125.7,1810.0 1080.7,1836.0 1035.7,1810.0 1035.7,1758.0"/>
+                    <polygon class="mesh" points="1170.7,1732.0 1215.7,1758.0 1215.7,1810.0 1170.7,1836.0 1125.7,1810.0 1125.7,1758.0"/>
+                    <polygon class="mesh" points="1260.8,1732.0 1305.8,1758.0 1305.8,1810.0 1260.8,1836.0 1215.8,1810.0 1215.8,1758.0"/>
+
+                    <polygon class="pathhex" points="225.0,1810.0 270.0,1836.0 270.0,1888.0 225.0,1914.0 180.0,1888.0 180.0,1836.0"/>
+                    <polygon class="pathhex" points="315.1,1810.0 360.1,1836.0 360.1,1888.0 315.1,1914.0 270.1,1888.0 270.1,1836.0"/>
+                    <polygon class="pathfill" points="225.0,1810.0 270.0,1836.0 270.0,1888.0 225.0,1914.0 180.0,1888.0 180.0,1836.0"/>
+                    <polygon class="pathfill" points="315.1,1810.0 360.1,1836.0 360.1,1888.0 315.1,1914.0 270.1,1888.0 270.1,1836.0"/>
+                    <polygon class="mesh" points="405.1,1810.0 450.1,1836.0 450.1,1888.0 405.1,1914.0 360.1,1888.0 360.1,1836.0"/>
+                    <polygon class="mesh" points="495.2,1810.0 540.2,1836.0 540.2,1888.0 495.2,1914.0 450.2,1888.0 450.2,1836.0"/>
+                    <polygon class="mesh" points="585.3,1810.0 630.3,1836.0 630.3,1888.0 585.3,1914.0 540.3,1888.0 540.3,1836.0"/>
+                    <polygon class="mesh" points="675.3,1810.0 720.3,1836.0 720.3,1888.0 675.3,1914.0 630.3,1888.0 630.3,1836.0"/>
+                    <polygon class="mesh" points="765.4,1810.0 810.4,1836.0 810.4,1888.0 765.4,1914.0 720.4,1888.0 720.4,1836.0"/>
+                    <polygon class="mesh" points="855.5,1810.0 900.5,1836.0 900.5,1888.0 855.5,1914.0 810.5,1888.0 810.5,1836.0"/>
+                    <polygon class="mesh" points="945.5,1810.0 990.5,1836.0 990.5,1888.0 945.5,1914.0 900.5,1888.0 900.5,1836.0"/>
+                    <polygon class="mesh" points="1035.6,1810.0 1080.6,1836.0 1080.6,1888.0 1035.6,1914.0 990.6,1888.0 990.6,1836.0"/>
+                    <polygon class="mesh" points="1125.7,1810.0 1170.7,1836.0 1170.7,1888.0 1125.7,1914.0 1080.7,1888.0 1080.7,1836.0"/>
+                    <polygon class="mesh" points="1215.7,1810.0 1260.7,1836.0 1260.7,1888.0 1215.7,1914.0 1170.7,1888.0 1170.7,1836.0"/>
+
+                    <polygon class="pathhex" points="270.1,1888.0 315.1,1914.0 315.1,1966.0 270.1,1992.0 225.1,1966.0 225.1,1914.0"/>
+                    <polygon class="pathfill" points="270.1,1888.0 315.1,1914.0 315.1,1966.0 270.1,1992.0 225.1,1966.0 225.1,1914.0"/>
+                    <polygon class="mesh" points="360.1,1888.0 405.1,1914.0 405.1,1966.0 360.1,1992.0 315.1,1966.0 315.1,1914.0"/>
+                    <polygon class="mesh" points="450.2,1888.0 495.2,1914.0 495.2,1966.0 450.2,1992.0 405.2,1966.0 405.2,1914.0"/>
+                    <polygon class="mesh" points="540.3,1888.0 585.3,1914.0 585.3,1966.0 540.3,1992.0 495.3,1966.0 495.3,1914.0"/>
+                    <polygon class="mesh" points="630.3,1888.0 675.3,1914.0 675.3,1966.0 630.3,1992.0 585.3,1966.0 585.3,1914.0"/>
+                    <polygon class="mesh" points="720.4,1888.0 765.4,1914.0 765.4,1966.0 720.4,1992.0 675.4,1966.0 675.4,1914.0"/>
+                    <polygon class="mesh" points="810.5,1888.0 855.5,1914.0 855.5,1966.0 810.5,1992.0 765.5,1966.0 765.5,1914.0"/>
+                    <polygon class="mesh" points="900.5,1888.0 945.5,1914.0 945.5,1966.0 900.5,1992.0 855.5,1966.0 855.5,1914.0"/>
+                    <polygon class="mesh" points="990.6,1888.0 1035.6,1914.0 1035.6,1966.0 990.6,1992.0 945.6,1966.0 945.6,1914.0"/>
+                    <polygon class="mesh" points="1080.7,1888.0 1125.7,1914.0 1125.7,1966.0 1080.7,1992.0 1035.7,1966.0 1035.7,1914.0"/>
+                    <polygon class="mesh" points="1170.7,1888.0 1215.7,1914.0 1215.7,1966.0 1170.7,1992.0 1125.7,1966.0 1125.7,1914.0"/>
+                    <polygon class="mesh" points="1260.8,1888.0 1305.8,1914.0 1305.8,1966.0 1260.8,1992.0 1215.8,1966.0 1215.8,1914.0"/>
+                </g>
+
+                <g id="path">
+                    <line x1="147.1" y1="2000.0" x2="221.0" y2="1909.0" stroke="#fff6de" stroke-width="15"/>
+                    <circle cx="137.1" cy="2010.0" r="10" fill="#fff6de" filter="url(#softGlow)"/>
+
+                    <line x1="1260.7" y1="952.0" x2="1308.0" y2="900.0" stroke="#fff6de" stroke-width="15"/>
+                    <circle cx="1320.0" cy="888.0" r="10" fill="#fff6de" filter="url(#softGlow)"/>
+                </g>
+            </g>
+        </g>
+
+        <g id="front-text-overlay">
+            <!-- Series -->
+            <text x="2941.5" y="340" text-anchor="middle" class="series"
+                  style="font-size:40px; opacity:0.75;">
+                THE AI-AUGMENTED SERIES
+            </text>
+
+            <!-- Title -->
+            <text x="2941.5" y="740" text-anchor="middle" class="title">
+                <tspan x="2941.5" dy="0">AI-Augmented</tspan>
+                <tspan x="2941.5" dy="170">Education</tspan>
+            </text>
+
+            <!-- Subtitle -->
+
+            <text x="2941.5" y="1150" text-anchor="middle" class="subtitle">
+                <tspan x="2941.5" dy="0">A Practical Operating System</tspan>
+                <tspan x="2941.5" dy="84">for Modern Education</tspan>
+            </text>
+
+            <!-- Author -->
+            <text x="2941.5" y="2540" text-anchor="middle" class="author">
+                Dr. Darren Pulsipher
+            </text>
+        </g>
+    </g>
+
+</svg>

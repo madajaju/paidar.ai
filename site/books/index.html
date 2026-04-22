@@ -21,14 +21,18 @@
     <meta name="twitter:description" content="The AI-Augmented book series: foundational blueprints for building AI-augmented organizations, teams, and individuals." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/books/becoming-ai-augmented.svg" />
     <link rel="icon" href="/assets/img/favicon.ico" />
-    <link rel="stylesheet" href="/assets/css/paidar.css" />
+    <link rel="stylesheet" href="../assets/css/paidar.css" />
+    <style>
+        .card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(2, 6, 23, 0.15); }
+    </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
     <div class="container flex between center">
         <a class="brand" href="/">
-            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" />
+            <img src="../assets/img/paidar.svg" alt="Paidar.ai logo" width="64" />
         </a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="primary-nav" class="primary-nav" aria-label="Primary">
@@ -62,7 +66,7 @@
             <h1>From Individual Capability to Organizational Reliability</h1>
             <p class="lead">The AI-Augmented series provides the definitive frameworks for turning AI potential into consistent, defensible results. From individual judgment to enterprise-wide governance, these books are your practical guides to reliable execution.</p>
             <div class="flex wrap" style="gap: var(--space-4);">
-                <a class="btn btn-gold" href="/books/becoming-ai-augmented/" data-track="cta_view_books">Explore Book 1</a>
+                <a class="btn btn-gold" href="/books/becoming-ai-augmented/" data-track="cta_view_books">Explore the Book</a>
                 <a class="btn btn-primary" href="/assessments.html" data-track="cta_start_assessment">Take an Assessment</a>
                 <a class="btn btn-outline" href="/workshops/" data-track="cta_explore_workshops">Explore Workshops</a>
             </div>
@@ -92,27 +96,49 @@
     </section>
     <section class="section">
         <div class="container">
-            <span class="eyebrow">Choose Your Starting Point</span>
-            <h2>Books by Stage</h2>
-            <p class="text-muted">Whether you are an individual contributor, team leader, or executive sponsor, each book gives a concrete next action.</p>
-            <div class="grid-3">
-                <article class="card accent-modern">
-                    <img src="/assets/img/books/becoming-ai-augmented.svg" alt="Cover of Becoming AI-Augmented" style="width:100%;max-width:220px;border-radius:10px;border:1px solid #e5e7eb;margin-bottom:1rem;" />
-                    <h3>Book 1: Becoming AI-Augmented</h3>
-                    <p>Multiply your expertise in the age of AI.</p>
-                    <p><a class="btn btn-outline" href="/books/becoming-ai-augmented/" data-track="cta_view_books">Explore Book 1</a></p>
+            <span class="eyebrow">Core Series</span>
+            <h2>The AAOS Trilogy</h2>
+            <p class="text-muted">The foundational series for individual, team, and organizational transformation.</p>
+            <div class="grid-3" style="margin-top: var(--space-5);">
+                <article class="card accent-modern" style="text-align: center; align-items: center;">
+                    <img src="../assets/img/books/becoming-ai-augmented.svg" alt="Cover of Becoming AI-Augmented" style="width:100%;max-width:220px;border-radius:10px;border:1px solid #e5e7eb;margin-bottom:1rem;align-self:center;" />
+                    <h3>Becoming AI-Augmented</h3>
+                    <p>Multiply your expertise in the age of AI. Build personal judgment and master the transition to AI-enabled professional operations.</p>
+                    <p><a class="btn btn-outline" href="/books/becoming-ai-augmented/" data-track="cta_view_books">Explore the Book</a></p>
                 </article>
-                <article class="card accent-edge">
-                    <img src="/assets/img/books/ai-augmented-teams.svg" alt="Cover of AI-Augmented Teams" style="width:100%;max-width:220px;border-radius:10px;border:1px solid #e5e7eb;margin-bottom:1rem;" />
-                    <h3>Book 2: AI-Augmented Teams</h3>
-                    <p>How teams deliver reliable, defensible results with AI.</p>
-                    <p><a class="btn btn-outline" href="/books/ai-augmented-teams/" data-track="cta_view_books">Explore Book 2</a></p>
+                <article class="card accent-edge" style="text-align: center; align-items: center;">
+                    <img src="../assets/img/books/ai-augmented-teams.svg" alt="Cover of AI-Augmented Teams" style="width:100%;max-width:220px;border-radius:10px;border:1px solid #e5e7eb;margin-bottom:1rem;align-self:center;" />
+                    <h3>AI-Augmented Teams</h3>
+                    <p>How teams deliver reliable, defensible results with AI. Transition from inconsistent AI use to a stable operating model that ensures repeatable high-performance delivery.</p>
+                    <p><a class="btn btn-outline" href="/books/ai-augmented-teams/" data-track="cta_view_books">Explore the Book</a></p>
                 </article>
-                <article class="card accent-data">
-                    <img src="/assets/img/books/ai-augmented-organizations.svg" alt="Cover of AI-Augmented Organizations" style="width:100%;max-width:220px;border-radius:10px;border:1px solid #e5e7eb;margin-bottom:1rem;" />
-                    <h3>Book 3: AI-Augmented Organizations</h3>
-                    <p>Scale one standard across the enterprise.</p>
-                    <p><a class="btn btn-outline" href="/books/ai-augmented-organizations/" data-track="cta_view_books">Explore Book 3</a></p>
+                <article class="card accent-data" style="text-align: center; align-items: center;">
+                    <img src="../assets/img/books/ai-augmented-organizations.svg" alt="Cover of AI-Augmented Organizations" style="width:100%;max-width:220px;border-radius:10px;border:1px solid #e5e7eb;margin-bottom:1rem;align-self:center;" />
+                    <h3>AI-Augmented Organizations</h3>
+                    <p>Scale one standard across the enterprise. Align your organization under a consequence-aware operating baseline that enforces consistency without sacrificing speed.</p>
+                    <p><a class="btn btn-outline" href="/books/ai-augmented-organizations/" data-track="cta_view_books">Explore the Book</a></p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section tint">
+        <div class="container">
+            <span class="eyebrow">Education Series</span>
+            <h2>AI in the Classroom</h2>
+            <p class="text-muted">Specialized frameworks for the future of learning and academic integrity.</p>
+            <div class="grid-2" style="margin-top: var(--space-5);">
+                <article class="card accent-ai" style="text-align: center; align-items: center;">
+                    <img src="../assets/img/books/educating-the-ai-augmented.svg" alt="Cover of Educating the AI-Augmented" style="width:100%;max-width:220px;border-radius:10px;border:1px solid #e5e7eb;margin-bottom:1rem;align-self:center;" />
+                    <h3>Educating the AI-Augmented</h3>
+                    <p>Championing real learning in the age of AI. Move from grading products to verifying learning journeys that ensure students build deep domain expertise.</p>
+                    <p><a class="btn btn-outline" href="/books/educating-the-ai-augmented/" data-track="cta_view_books">Explore the Book</a></p>
+                </article>
+                <article class="card accent-modern" style="text-align: center; align-items: center;">
+                    <img src="../assets/img/books/ai-augmented-education.svg" alt="Cover of AI-Augmented Education" style="width:100%;max-width:220px;border-radius:10px;border:1px solid #e5e7eb;margin-bottom:1rem;align-self:center;" />
+                    <h3>AI-Augmented Education</h3>
+                    <p>Building the AI-Augmented Operating System for Education. Scale AI augmentation across your institution with a strategic framework covering classrooms to district policy.</p>
+                    <p><a class="btn btn-outline" href="/books/ai-augmented-education/" data-track="cta_view_books">Explore the Book</a></p>
                 </article>
             </div>
         </div>

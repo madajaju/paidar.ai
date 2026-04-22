@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1879"
+     height="2775"
+     viewBox="0 0 1879 2775.0"
+     version="1.1">
+    <title>Educating the  AI-Augmented</title>
+    <desc>
+        Full wrap SVG composition template for a 6x9 book cover.
+        Includes back cover, spine, and front cover groups, plus image placeholder groups
+        and text overlay groups for title, subtitle, author, back cover copy, and spine text.
+    </desc>
+
+    <defs>
+        <style>
+            .guide {
+            stroke: #64748b;
+            stroke-width: 2;
+            stroke-dasharray: 10 10;
+            opacity: 0.9;
+            }
+            .trim {
+            stroke: #0f172a;
+            stroke-width: 3;
+            fill: none;
+            }
+            .safe {
+            stroke: #94a3b8;
+            stroke-width: 2;
+            stroke-dasharray: 8 8;
+            fill: none;
+            }
+            .panel-label {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            fill: #0f172a;
+            opacity: 0.55;
+            }
+            .series {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 42px;
+            font-weight: 500;
+            letter-spacing: 6px;
+            fill: #D7DEE7;
+            }
+            .title {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 152px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            fill: #FFFFFF;
+            }
+                .subtitle {
+                font-family: 'Aptos', 'IBM Plex Sans', sans-serif;
+                font-size: 72px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                fill: #F3F4F6;
+                }
+                .subtitle-emphasis {
+                font-weight: 700;
+                }
+            .author {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 64px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            fill: #DCE0E6;
+            }
+            .back-hook {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 44px;
+            font-weight: 700;
+            line-height: 1.2;
+            fill: #FFFFFF;
+            }
+            .back-body {
+            font-family: "Source Serif Pro", IBM Plex Sans, serif;
+            font-size: 30px;
+            font-weight: 400;
+            fill: #F5F7FA;
+            }
+            .back-head {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            fill: #FFFFFF;
+            }
+            .spine-title {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 84px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            fill: #FFFFFF;
+            }
+            .spine-author {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 42px;
+            font-weight: 500;
+            fill: #E5E7EB;
+            }
+            .pp-mark {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            fill: #FFFFFF;
+            }
+            .placeholder {
+            fill: rgba(255,255,255,0.10);
+            stroke: rgba(255,255,255,0.35);
+            stroke-width: 3;
+            stroke-dasharray: 12 10;
+            }
+            .placeholder-text {
+            font-family: IBM Plex Sans, Arial, sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            fill: rgba(255,255,255,0.75);
+            letter-spacing: 1px;
+            }
+            .cls-1 {
+            stroke: #003456;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 5px;
+            }
+            .cls-font {
+            font-family: Arial, Helvetica, "Liberation Sans", "Nimbus Sans", "Noto Sans", "DejaVu Sans", sans-serif;
+            font-weight: 300;
+            font-size: 250px;
+            fill: #ffffff;
+            letter-spacing: -0.05em;
+            }
+            .cls-1, .cls-2, .cls-3 {
+            fill: #fff;
+            }
+            .cls-3 {
+            fill-rule: evenodd;
+            }
+            .cls-4 { fill: url(#grad-navy); }
+            .gold-light {
+            fill: #00A86B;
+            }
+            .gold-medium {
+            }
+            .gold-medium2 {
+            fill: url(#grad2);
+            }
+            .gold-medium3 {
+            fill: #03110d;
+            }
+            .gold-dark {
+            fill: #03110d;
+            }
+        </style>
+
+        <linearGradient id="blueBg" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#03110d"/>
+            <stop offset="50%" stop-color="#083a25"/>
+            <stop offset="100%" stop-color="#03110d"/>
+        </linearGradient>
+
+        <linearGradient id="backBg" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#03110d"/>
+            <stop offset="50%" stop-color="#083a25"/>
+            <stop offset="100%" stop-color="#03110d"/>
+        </linearGradient>
+        <linearGradient id="spineBg" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#03110d"/>
+            <stop offset="50%" stop-color="#083a25"/>
+            <stop offset="100%" stop-color="#03110d"/>
+        </linearGradient>
+
+        <linearGradient id="grad1" gradientTransform="rotate(90)">
+            <stop offset="5%" stop-color="#083a25" />
+            <stop offset="95%" stop-color="#03110d" />
+        </linearGradient>
+        <linearGradient id="grad2" gradientTransform="rotate(90)">
+            <stop offset="5%" stop-color="#03110d" />
+            <stop offset="95%" stop-color="#083a25" />
+        </linearGradient>
+
+        <linearGradient id="grad-navy" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#00A86B"/>
+              <stop offset="100%" stop-color="#DFFF95"/>
+          </linearGradient>
+    </defs>
+
+    <!-- FRONT COVER GROUP -->
+    <g id="front-cover" transform="translate(-2000,0)">
+        <rect x="2041.5" y="37.5" width="1800.0" height="2700.0" class="trim"/>
+        <rect x="2041.5" y="37.5" width="1800.0" height="2700.0" fill="url(#backBg)"/>
+        <rect x="2060.25" y="75" width="1762.5" height="2625.0" class="safe"/>
+
+        
+        <g id="front-graphic" transform="translate(2000,850)">
+            <g transform="translate(330, 430) scale(0.75, 0.75)">
+                <defs>
+                    <radialGradient id="bg" cx="50%" cy="50%" r="75%">
+                        <stop offset="0%" stop-color="#083a25"/>
+                        <stop offset="35%" stop-color="#062e1f"/>
+                        <stop offset="100%" stop-color="#03110d"/>
+                    </radialGradient>
+                    <radialGradient id="centerGlow" cx="50%" cy="50%" r="60%">
+                        <stop offset="0%" stop-color="#fcff33" stop-opacity="0.9"/>
+                        <stop offset="60%" stop-color="#00A84B" stop-opacity="0.4"/>
+                        <stop offset="100%" stop-color="#00884B" stop-opacity="0"/>
+                    </radialGradient>
+                    <filter id="glowSmall" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="3" result="b"/>
+                        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
+                    <filter id="glowMed" x="-60%" y="-60%" width="220%" height="220%">
+                        <feGaussianBlur stdDeviation="8" result="b"/>
+                        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
+                    <filter id="glowBig" x="-80%" y="-80%" width="260%" height="260%">
+                        <feGaussianBlur stdDeviation="22" result="b"/>
+                        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
+                    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#96ff73" stop-opacity="0.2"/>
+                        <stop offset="60%" stop-color="#eaff8b" stop-opacity="0.95"/>
+                        <stop offset="100%" stop-color="#d6ff60" stop-opacity="1"/>
+                    </linearGradient>
+                    <linearGradient id="hexStroke" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#c6ff8a"/>
+                        <stop offset="100%" stop-color="#65ff4c"/>
+                    </linearGradient>
+                    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#eaff8b" filter="url(#glowSmall)"/>
+                    </marker>
+                </defs>
+                <circle cx="800" cy="800" r="360" fill="url(#centerGlow)" filter="url(#glowBig)"/>
+                <circle cx="800" cy="800" r="150" fill="url(#centerGlow)" filter="url(#glowMed)" opacity="0.4"/>
+                <g opacity="0.25">
+                    <line x1="941.0" y1="851.3" x2="1288.6" y2="977.9" stroke="#2da46f" stroke-width="1.2"/>
+                    <line x1="863.4" y1="935.9" x2="1019.8" y2="1271.3" stroke="#2da46f" stroke-width="1.2"/>
+                    <line x1="748.7" y1="941.0" x2="622.1" y2="1288.6" stroke="#2da46f" stroke-width="1.2"/>
+                    <line x1="664.1" y1="863.4" x2="328.7" y2="1019.8" stroke="#2da46f" stroke-width="1.2"/>
+                    <line x1="664.1" y1="736.6" x2="328.7" y2="580.2" stroke="#2da46f" stroke-width="1.2"/>
+                    <line x1="748.7" y1="659.0" x2="622.1" y2="311.4" stroke="#2da46f" stroke-width="1.2"/>
+                    <line x1="875.0" y1="670.1" x2="1060.0" y2="349.7" stroke="#2da46f" stroke-width="1.2"/>
+                    <line x1="935.9" y1="736.6" x2="1271.3" y2="580.2" stroke="#2da46f" stroke-width="1.2"/>
+                </g>
+                <path d="M 70.0,420.0 L 170.0,420.0 L 250.0,500.0 L 400.0,500.0 L 520.0,560.0 L 650.0,650.0" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glowSmall)" stroke-dasharray="10 10"/>
+                <path d="M 520.0,560.0 L 650.0,650.0" fill="none" stroke="#efff9f" stroke-width="2.7" marker-end="url(#arrow)" filter="url(#glowSmall)"/>
+                <circle cx="170.0" cy="420.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <circle cx="400.0" cy="500.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <path d="M 200.0,250.0 L 300.0,250.0 L 380.0,380.0 L 540.0,380.0 L 690.0,610.0" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glowSmall)"/>
+                <path d="M 540.0,380.0 L 690.0,610.0" fill="none" stroke="#efff9f" stroke-width="2.7" marker-end="url(#arrow)" filter="url(#glowSmall)"/>
+                <circle cx="300.0" cy="250.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <circle cx="540.0" cy="380.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <path d="M 1050.0,150.0 L 1050.0,260.0 L 980.0,340.0 L 900.0,340.0 L 860.0,430.0 L 845.0,610.0" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glowSmall)"/>
+                <path d="M 860.0,430.0 L 845.0,610.0" fill="none" stroke="#efff9f" stroke-width="2.7" marker-end="url(#arrow)" filter="url(#glowSmall)"/>
+                <circle cx="1050.0" cy="260.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <circle cx="900.0" cy="340.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <path d="M 1370.0,220.0 L 1270.0,220.0 L 1190.0,320.0 L 1120.0,320.0 L 1060.0,430.0 L 935.0,615.0" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glowSmall)"/>
+                <path d="M 1060.0,430.0 L 935.0,615.0" fill="none" stroke="#efff9f" stroke-width="2.7" marker-end="url(#arrow)" filter="url(#glowSmall)"/>
+                <circle cx="1270.0" cy="220.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <circle cx="1120.0" cy="320.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <path d="M 1440.0,720.0 L 1320.0,720.0 L 1230.0,800.0 L 1100.0,800.0 L 1010.0,780.0 L 950.0,780.0" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glowSmall)" stroke-dasharray="10 10"/>
+                <path d="M 1010.0,780.0 L 950.0,780.0" fill="none" stroke="#efff9f" stroke-width="2.7" marker-end="url(#arrow)" filter="url(#glowSmall)"/>
+                <circle cx="1320.0" cy="720.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <circle cx="1100.0" cy="800.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <path d="M 1400.0,1120.0 L 1280.0,1020.0 L 1200.0,930.0 L 1090.0,930.0 L 1000.0,880.0 L 940.0,860.0" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glowSmall)"/>
+                <path d="M 1000.0,880.0 L 940.0,860.0" fill="none" stroke="#efff9f" stroke-width="2.7" marker-end="url(#arrow)" filter="url(#glowSmall)"/>
+                <circle cx="1280.0" cy="1020.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <circle cx="1090.0" cy="930.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <path d="M 1040.0,1460.0 L 1040.0,1320.0 L 960.0,1220.0 L 960.0,1090.0 L 900.0,980.0 L 860.0,930.0" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glowSmall)"/>
+                <path d="M 900.0,980.0 L 860.0,930.0" fill="none" stroke="#efff9f" stroke-width="2.7" marker-end="url(#arrow)" filter="url(#glowSmall)"/>
+                <circle cx="1040.0" cy="1320.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <circle cx="960.0" cy="1090.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <path d="M 420.0,1410.0 L 520.0,1320.0 L 610.0,1220.0 L 610.0,1080.0 L 690.0,980.0 L 740.0,930.0" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glowSmall)" stroke-dasharray="10 10"/>
+                <path d="M 690.0,980.0 L 740.0,930.0" fill="none" stroke="#efff9f" stroke-width="2.7" marker-end="url(#arrow)" filter="url(#glowSmall)"/>
+                <circle cx="520.0" cy="1320.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <circle cx="610.0" cy="1080.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <path d="M 120.0,1080.0 L 220.0,1080.0 L 300.0,990.0 L 430.0,990.0 L 560.0,930.0 L 665.0,875.0" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glowSmall)"/>
+                <path d="M 560.0,930.0 L 665.0,875.0" fill="none" stroke="#efff9f" stroke-width="2.7" marker-end="url(#arrow)" filter="url(#glowSmall)"/>
+                <circle cx="220.0" cy="1080.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <circle cx="430.0" cy="990.0" r="4" fill="#f0ffab" filter="url(#glowSmall)"/>
+                <g opacity="0.9">
+                    <polygon points="150.0,365.0 197.6,392.5 197.6,447.5 150.0,475.0 102.4,447.5 102.4,392.5" fill="none" stroke="#cfff74" stroke-width="2.2" opacity="0.75" filter="url(#glowSmall)"/>
+                    <polygon points="230.0,208.0 266.4,229.0 266.4,271.0 230.0,292.0 193.6,271.0 193.6,229.0" fill="none" stroke="#cfff74" stroke-width="2.2" opacity="0.75" filter="url(#glowSmall)"/>
+                    <polygon points="1050.0,98.0 1095.0,124.0 1095.0,176.0 1050.0,202.0 1005.0,176.0 1005.0,124.0" fill="none" stroke="#cfff74" stroke-width="2.2" opacity="0.75" filter="url(#glowSmall)"/>
+                    <polygon points="1370.0,175.0 1409.0,197.5 1409.0,242.5 1370.0,265.0 1331.0,242.5 1331.0,197.5" fill="none" stroke="#cfff74" stroke-width="2.2" opacity="0.75" filter="url(#glowSmall)"/>
+                    <polygon points="1440.0,670.0 1483.3,695.0 1483.3,745.0 1440.0,770.0 1396.7,745.0 1396.7,695.0" fill="none" stroke="#cfff74" stroke-width="2.2" opacity="0.75" filter="url(#glowSmall)"/>
+                    <polygon points="1400.0,1072.0 1441.6,1096.0 1441.6,1144.0 1400.0,1168.0 1358.4,1144.0 1358.4,1096.0" fill="none" stroke="#cfff74" stroke-width="2.2" opacity="0.75" filter="url(#glowSmall)"/>
+                    <polygon points="1040.0,1418.0 1076.4,1439.0 1076.4,1481.0 1040.0,1502.0 1003.6,1481.0 1003.6,1439.0" fill="none" stroke="#cfff74" stroke-width="2.2" opacity="0.75" filter="url(#glowSmall)"/>
+                    <polygon points="420.0,1352.0 470.2,1381.0 470.2,1439.0 420.0,1468.0 369.8,1439.0 369.8,1381.0" fill="none" stroke="#cfff74" stroke-width="2.2" opacity="0.75" filter="url(#glowSmall)"/>
+                    <polygon points="120.0,1032.0 161.6,1056.0 161.6,1104.0 120.0,1128.0 78.4,1104.0 78.4,1056.0" fill="none" stroke="#cfff74" stroke-width="2.2" opacity="0.75" filter="url(#glowSmall)"/>
+                </g>
+                <polygon points="800.0,540.0 1025.2,670.0 1025.2,930.0 800.0,1060.0 574.8,930.0 574.8,670.0" fill="#0a2f21" fill-opacity="0.14" stroke="#1fc96d" stroke-opacity="0.18" stroke-width="2"/>
+                <polygon points="800.0,590.0 981.9,695.0 981.9,905.0 800.0,1010.0 618.1,905.0 618.1,695.0" fill="#0a2f21" fill-opacity="0.14" stroke="#1fc96d" stroke-opacity="0.28" stroke-width="2.5"/>
+                <polygon points="800.0,650.0 929.9,725.0 929.9,875.0 800.0,950.0 670.1,875.0 670.1,725.0" fill="#0b2a1d" stroke="url(#hexStroke)" stroke-width="8" filter="url(#glowMed)"/>
+                <polygon points="800.0,635.0 942.9,717.5 942.9,882.5 800.0,965.0 657.1,882.5 657.1,717.5" fill="none" stroke="#9fff74" stroke-opacity="0.35" stroke-width="3" filter="url(#glowMed)"/>
+                <polygon points="800.0,665.0 916.9,732.5 916.9,867.5 800.0,935.0 683.1,867.5 683.1,732.5" fill="#08311f" stroke="#dfff95" stroke-opacity="0.85" stroke-width="2.2"/>
+                <polygon points="824.0,788.0 834.4,794.0 834.4,806.0 824.0,812.0 813.6,806.0 813.6,794.0" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="812.0,808.8 822.4,814.8 822.4,826.8 812.0,832.8 801.6,826.8 801.6,814.8" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="788.0,808.8 798.4,814.8 798.4,826.8 788.0,832.8 777.6,826.8 777.6,814.8" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="776.0,788.0 786.4,794.0 786.4,806.0 776.0,812.0 765.6,806.0 765.6,794.0" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="788.0,767.2 798.4,773.2 798.4,785.2 788.0,791.2 777.6,785.2 777.6,773.2" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="812.0,767.2 822.4,773.2 822.4,785.2 812.0,791.2 801.6,785.2 801.6,773.2" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="844.0,788.0 854.4,794.0 854.4,806.0 844.0,812.0 833.6,806.0 833.6,794.0" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="822.0,826.1 832.4,832.1 832.4,844.1 822.0,850.1 811.6,844.1 811.6,832.1" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="778.0,826.1 788.4,832.1 788.4,844.1 778.0,850.1 767.6,844.1 767.6,832.1" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="756.0,788.0 766.4,794.0 766.4,806.0 756.0,812.0 745.6,806.0 745.6,794.0" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="778.0,749.9 788.4,755.9 788.4,767.9 778.0,773.9 767.6,767.9 767.6,755.9" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="822.0,749.9 832.4,755.9 832.4,767.9 822.0,773.9 811.6,767.9 811.6,755.9" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="864.0,788.0 874.4,794.0 874.4,806.0 864.0,812.0 853.6,806.0 853.6,794.0" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="832.0,843.4 842.4,849.4 842.4,861.4 832.0,867.4 821.6,861.4 821.6,849.4" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="768.0,843.4 778.4,849.4 778.4,861.4 768.0,867.4 757.6,861.4 757.6,849.4" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="736.0,788.0 746.4,794.0 746.4,806.0 736.0,812.0 725.6,806.0 725.6,794.0" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="768.0,732.6 778.4,738.6 778.4,750.6 768.0,756.6 757.6,750.6 757.6,738.6" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="832.0,732.6 842.4,738.6 842.4,750.6 832.0,756.6 821.6,750.6 821.6,738.6" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="884.0,788.0 894.4,794.0 894.4,806.0 884.0,812.0 873.6,806.0 873.6,794.0" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="842.0,860.7 852.4,866.7 852.4,878.7 842.0,884.7 831.6,878.7 831.6,866.7" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="758.0,860.7 768.4,866.7 768.4,878.7 758.0,884.7 747.6,878.7 747.6,866.7" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="716.0,788.0 726.4,794.0 726.4,806.0 716.0,812.0 705.6,806.0 705.6,794.0" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="758.0,715.3 768.4,721.3 768.4,733.3 758.0,739.3 747.6,733.3 747.6,721.3" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="842.0,715.3 852.4,721.3 852.4,733.3 842.0,739.3 831.6,733.3 831.6,721.3" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="800.0,788.0 810.4,794.0 810.4,806.0 800.0,812.0 789.6,806.0 789.6,794.0" fill="none" stroke="#1d6f4b" stroke-width="1" opacity="0.18"/>
+                <polygon points="800.0,650.0 929.9,725.0 929.9,875.0 800.0,950.0 670.1,875.0 670.1,725.0" fill="none" stroke="#b8ff66" stroke-opacity="0.18" stroke-width="14" filter="url(#glowMed)"/>
+                <polygon points="800.0,650.0 929.9,725.0 929.9,875.0 800.0,950.0 670.1,875.0 670.1,725.0" fill="none" stroke="#b8ff66" stroke-opacity="0.35" stroke-width="8" filter="url(#glowMed)"/>
+                <polygon points="800.0,650.0 929.9,725.0 929.9,875.0 800.0,950.0 670.1,875.0 670.1,725.0" fill="none" stroke="#b8ff66" stroke-opacity="0.9" stroke-width="4" filter="url(#glowMed)"/>
+            </g>
+        </g>
+
+        <g id="front-text-overlay">
+            <!-- Series -->
+            <text x="2941.5" y="340" text-anchor="middle" class="series"
+                  style="font-size:40px; opacity:0.75;">
+                THE AI-AUGMENTED SERIES
+            </text>
+
+            <!-- Title -->
+            <text x="2941.5" y="740" text-anchor="middle" class="title">
+                <tspan x="2941.5" dy="0">Educating the</tspan>
+                <tspan x="2941.5" dy="170">AI-Augmented</tspan>
+            </text>
+
+            <!-- Subtitle -->
+
+            <text x="2941.5" y="1200" text-anchor="middle" class="subtitle">
+                <tspan x="2941.5" dy="0">Why Learning Must Change</tspan>
+                <tspan x="2941.5" dy="84">in the Age of AI</tspan>
+            </text>
+
+            <!-- Author -->
+            <text x="2941.5" y="2540" text-anchor="middle" class="author">
+                Dr. Darren Pulsipher
+            </text>
+        </g>
+    </g>
+
+    <!-- Guides -->
+    <line x1="37.5" y1="0" x2="37.5" y2="2775.0" class="guide"/>
+    <line x1="1837.5" y1="0" x2="1837.5" y2="2775.0" class="guide"/>
+    <line x1="2041.5" y1="0" x2="2041.5" y2="2775.0" class="guide"/>
+    <line x1="3841.5" y1="0" x2="3841.5" y2="2775.0" class="guide"/>
+    <line x1="0" y1="37.5" x2="3879" y2="37.5" class="guide"/>
+    <line x1="0" y1="2737.5" x2="3879" y2="2737.5" class="guide"/>
+</svg>
