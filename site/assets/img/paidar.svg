@@ -1,47 +1,16 @@
-<svg width="420" height="420" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="paidar.ai logo">
-    <defs>
-        <linearGradient id="darkest" x1="255" y1="140" x2="255" y2="70" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#081B33"/>
-            <stop offset="100%" stop-color="#17304F"/>
-        </linearGradient>
-
-        <linearGradient id="midleft" x1="415" y1="175" x2="315" y2="340" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#12F6E9"/>
-            <stop offset="100%" stop-color="#17304F"/>
-        </linearGradient>
-
-        <linearGradient id="brightright" x1="315" y1="145" x2="376" y2="280" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#DDA828"/>
-            <stop offset="100%" stop-color="#2F6E9D"/>
-        </linearGradient>
-
-        <linearGradient id="brightleft" x1="315" y1="245" x2="176" y2="280" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#DDA828"/>
-            <stop offset="100%" stop-color="#2F6E9D"/>
-        </linearGradient>
-
-        <linearGradient id="brightest" x1="255" y1="280" x2="255" y2="350" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#fDaf28"/>
-            <stop offset="100%" stop-color="#f1AA2B"/>
-        </linearGradient>
-
-        <linearGradient id="midright" x1="295" y1="145" x2="200" y2="180" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#2F6E9D"/>
-            <stop offset="100%" stop-color="#112A49"/>
-        </linearGradient>
-
-        <linearGradient id="segUpperLeft" x1="195" y1="175" x2="134" y2="140" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#112A49"/>
-            <stop offset="100%" stop-color="#2F6E9D"/>
-        </linearGradient>
-    </defs>
-
-    <!-- Six-segment hexagon ring -->
-    <polygon points="255,70 376,140 255,210 255,140" fill="url(#brightest)"/>
-    <polygon points="376,140 376,280 315,245 315,175" fill="url(#brightright)"/>
-    <polygon points="376,280 255,350 255,280 315,245" fill="url(#midright)"/>
-    <polygon points="255,350 134,280 255,210 255,280" fill="url(#darkest)"/>
-    <polygon points="134,280 134,140 195,175 195,245" fill="url(#midleft)"/>
-    <polygon points="134,140 255,70 255,140 195,175" fill="url(#brightleft)"/>
-
+<svg viewBox="0 0 680 680" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Paidar mark</title>
+  <desc id="desc">A structured hexagon with an integrated triangle breakthrough, symbolizing AI-augmented systems transformation.</desc>
+  <defs>
+    <clipPath id="clip-primary">
+      <rect x="-260" y="-380" width="520" height="200"/>
+    </clipPath>
+  </defs>
+  
+  <g transform="translate(340,355)">
+    <polygon fill="#C8A75A" points="0,-340 132.7,161.4 -132.7,161.4"/>
+    <polygon fill="none" stroke="#162F4D" stroke-width="40" stroke-linejoin="round" stroke-linecap="round"
+      points="0,-242 209.6,-121 209.6,121 0,242 -209.6,121 -209.6,-121"/>
+    <polygon fill="#C8A75A" clip-path="url(#clip-primary)" points="0,-340 132.7,161.4 -132.7,161.4"/>
+  </g>
 </svg>
