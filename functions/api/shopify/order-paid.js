@@ -1,4 +1,4 @@
-const AUDIOBOOK_SKUS = new Set(["AAT-AUDIOBOOK", "AAT-BUNDLE"]);
+const AUDIOBOOK_SKUS = new Set(["AAT-AUDIOBOOK", "AAT-AUDIO", "AAT-BUNDLE"]);
 const TRANSISTOR_SUBSCRIBERS_URL = "https://api.transistor.fm/v1/subscribers";
 
 function jsonResponse(body, status = 200) {
