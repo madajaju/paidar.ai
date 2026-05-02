@@ -99,6 +99,14 @@ export async function onRequestPost(context) {
         return jsonResponse({ error: "Invalid JSON payload" }, 400);
     }
 
+    console.log("Shopify line items:", order.line_items?.map((item) => ({
+        title: item.title,
+        variant_title: item.variant_title,
+        sku: item.sku,
+        product_id: item.product_id,
+        variant_id: item.variant_id
+    })));
+
     if (!hasAudiobookSku(order)) {
         console.log("Shopify order paid webhook received with no audiobook SKU.", {
             orderId: order.id,
