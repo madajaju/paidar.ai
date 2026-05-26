@@ -1,6 +1,5 @@
 <svg viewBox="0 0 680 680" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Paidar mark</title>
-  <desc id="desc">A structured hexagon with an integrated triangle breakthrough, symbolizing AI-augmented systems transformation.</desc>
   <defs>
     <clipPath id="clip-primary">
       <rect x="-260" y="-380" width="520" height="200"/>
@@ -8,9 +7,7 @@
   </defs>
   
   <g transform="translate(340,355)">
-    <polygon fill="#C8A75A" points="0,-340 132.7,161.4 -132.7,161.4"/>
-    <polygon fill="none" stroke="#162F4D" stroke-width="40" stroke-linejoin="round" stroke-linecap="round"
-      points="0,-242 209.6,-121 209.6,121 0,242 -209.6,121 -209.6,-121"/>
-    <polygon fill="#C8A75A" clip-path="url(#clip-primary)" points="0,-340 132.7,161.4 -132.7,161.4"/>
+    <polygon fill="none" stroke="#162F4D" stroke-width="60" points="0,-242 209.6,-121 209.6,121 0,242 -209.6,121 -209.6,-121"/>
+    <polygon fill="#c8a75A" points="0,-47 104.8,54.5 104.8,175.5 0,277 -104.8,175.5 -104.8,54.5"/>
   </g>
 </svg>

@@ -346,7 +346,6 @@ a:hover {
     z-index: 2;
     max-width: 60%;
     color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 1.0);
 }
 .hero {
     padding-inline: var(--space-3);
@@ -715,6 +714,114 @@ a:hover {
     text-align: center;
 }
 
+.resource-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: var(--space-5);
+}
+
+.resource-nav a,
+.resource-pill {
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 999px;
+    color: #fff;
+    display: inline-flex;
+    font-size: .95rem;
+    font-weight: 700;
+    padding: 8px 12px;
+}
+
+.download-list {
+    display: grid;
+    gap: var(--space-3);
+}
+
+.download-item {
+    align-items: center;
+    border: 1px solid var(--brand-line);
+    border-radius: 12px;
+    display: flex;
+    gap: var(--space-3);
+    justify-content: space-between;
+    padding: var(--space-3);
+}
+
+.download-item span {
+    color: var(--brand-muted);
+    display: block;
+    font-size: .95rem;
+}
+
+.step-list {
+    counter-reset: steps;
+    display: grid;
+    gap: var(--space-3);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.step-list li {
+    border-left: 4px solid var(--theme-bg, var(--brand-blue));
+    padding-left: var(--space-3);
+}
+
+.step-list li::before {
+    color: var(--theme-bg, var(--brand-blue));
+    content: counter(steps) ". ";
+    counter-increment: steps;
+    font-weight: 800;
+}
+
+.inline-form {
+    align-items: end;
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: 1fr auto;
+}
+
+.inline-form input,
+.tool-input,
+.tool-select {
+    border: 1px solid var(--brand-line);
+    border-radius: 10px;
+    font: inherit;
+    padding: 12px;
+    width: 100%;
+}
+
+.worksheet-grid {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.worksheet-grid .card {
+    box-shadow: none;
+}
+
+.mini-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.mini-table th,
+.mini-table td {
+    border-bottom: 1px solid var(--brand-line);
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.result-box {
+    background: var(--brand-wash);
+    border: 1px solid var(--brand-line);
+    border-radius: 12px;
+    margin-top: var(--space-3);
+    padding: var(--space-3);
+}
+
 .site-footer {
     background: var(--brand-ink);
     color: #fff;
@@ -784,8 +891,12 @@ a:hover {
     .nav-toggle {
         display: block;
     }
-    .grid-2, .grid-3 {
+    .grid-2, .grid-3, .worksheet-grid, .inline-form {
         grid-template-columns: 1fr;
+    }
+    .download-item {
+        align-items: flex-start;
+        flex-direction: column;
     }
     .primary-nav {
         display: none;

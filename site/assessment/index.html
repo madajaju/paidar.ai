@@ -160,7 +160,7 @@
     <section class="hero" style="--hero-image:url('/assets/img/about-hero.jpeg'); --hero-bg-color:#0e223b;">
         <div class="container">
             <h1>Team AI-Augmented Maturity Assessment</h1>
-            <p class="lead">Answer 16 questions in under 6 minutes to evaluate your team's operational stability and AI maturity.</p>
+            <p class="lead">Answer 28 questions across four pillars in under 10 minutes to evaluate your team's operational stability and AI maturity.</p>
             <p>
                 <a class="btn btn-gold" href="#assessment-form" data-track="assessment_start_hero">Start Assessment</a>
                 <a class="btn btn-outline" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_assessment" data-propagate-utm="true">Book a Session</a>
@@ -226,11 +226,11 @@
 
             <article class="card accent-ai" id="assessment-result" hidden>
                 <h2>Your Team Maturity Result</h2>
-                <p><strong>Total Score:</strong> <span id="result-score"></span> / 80</p>
+                <p><strong>Total Score:</strong> <span id="result-score"></span> / <span id="result-max-score">140</span></p>
                 <p><strong>Maturity Level:</strong> <span id="result-posture"></span></p>
                 <p><strong>Team Condition:</strong> <span id="result-risk"></span></p>
                 <p><strong>Immediate Priority:</strong> <span id="result-bottleneck"></span></p>
-                <p><strong>Strongest Domain:</strong> <span id="result-strongest"></span></p>
+                <p><strong>Strongest Pillar:</strong> <span id="result-strongest"></span></p>
                 <div id="result-stage-profile" class="result-stage-grid" aria-live="polite"></div>
                 <p><strong>Focus Area Recommendation:</strong></p>
                 <p id="result-priority-text" style="padding: 1rem; background: #fffbe6; border-left: 4px solid #fadb14; border-radius: 4px;"></p>
@@ -298,7 +298,10 @@
                 { id: "c1", text: "Critical tasks are assigned to individuals with both the domain expertise and the AI skills required for the task." },
                 { id: "c2", text: "We know exactly where AI is being used in our high-stakes workflows." },
                 { id: "c3", text: "Team members can review and take over each other's AI-assisted work without losing quality or context." },
-                { id: "c4", text: "The team’s overall ability to use AI safely is improving with every project." }
+                { id: "c4", text: "The team’s overall ability to use AI safely is improving with every project." },
+                { id: "c5", text: "Each AI-assisted workflow has an accountable human owner with authority to stop or correct the work." },
+                { id: "c6", text: "Team members understand the limits of the AI tools they use and do not treat generated output as expert judgment." },
+                { id: "c7", text: "We can maintain reliable AI-assisted operations when a key expert or workflow owner is unavailable." }
             ]
         },
         {
@@ -307,7 +310,10 @@
                 { id: "v1", text: "Important handoffs include a clear record of assumptions, data sources, and any logic used by the AI." },
                 { id: "v2", text: "The depth of our review process increases automatically when the potential cost of an error is higher." },
                 { id: "v3", text: "Every piece of AI-assisted work has a named owner responsible for verifying its accuracy before it moves forward." },
-                { id: "v4", text: "We catch logic errors or \"hallucinations\" during our internal review, before the work reaches the final user or client." }
+                { id: "v4", text: "We catch logic errors or \"hallucinations\" during our internal review, before the work reaches the final user or client." },
+                { id: "v5", text: "Reviewers verify consequential AI-generated claims against authoritative source material rather than relying on plausibility." },
+                { id: "v6", text: "We explicitly document uncertainty, missing evidence, and unresolved risk before an AI-assisted output is approved." },
+                { id: "v7", text: "We use red-team, stress-test, or independent review methods for outputs with significant impact." }
             ]
         },
         {
@@ -316,7 +322,10 @@
                 { id: "w1", text: "Our team follows a consistent, multi-stage process (Draft -> Verify -> Approve) for all AI-assisted work." },
                 { id: "w2", text: "Information passed between team members includes everything the receiver needs to verify the work without starting over." },
                 { id: "w3", text: "We use shared templates, prompt libraries, or checklists to ensure quality is consistent across the team." },
-                { id: "w4", text: "Everyone knows when a task's complexity or risk exceeds their authority and needs to be escalated." }
+                { id: "w4", text: "Everyone knows when a task's complexity or risk exceeds their authority and needs to be escalated." },
+                { id: "w5", text: "Our AI-assisted workflows define required inputs, decision gates, outputs, and validation steps in advance." },
+                { id: "w6", text: "We control changes to prompts, templates, or automation rules that could alter consequential results." },
+                { id: "w7", text: "Our standards specify when AI use must be disclosed, restricted, or replaced with direct human handling." }
             ]
         },
         {
@@ -325,10 +334,22 @@
                 { id: "f1", text: "We regularly review \"near misses\" to improve our processes, not just to fix the immediate error." },
                 { id: "f2", text: "We track how much rework is caused by AI errors and work to reduce it over time." },
                 { id: "f3", text: "Successful prompts, checklists, and validation rules are proactively shared across the team." },
-                { id: "f4", text: "Team members feel safe flagging AI uncertainty or potential errors early in the process." }
+                { id: "f4", text: "Team members feel safe flagging AI uncertainty or potential errors early in the process." },
+                { id: "f5", text: "We use metrics beyond speed or adoption, such as verified output, correction load, grounding, or outcome quality." },
+                { id: "f6", text: "Lessons from failures or near misses lead to documented changes in prompts, controls, or workflow standards." },
+                { id: "f7", text: "We periodically check whether our AI practices remain effective as tools, data, and business conditions change." }
             ]
         }
     ];
+
+    const questionsPerStage = assessmentData[0].questions.length;
+    const maximumStageScore = questionsPerStage * 5;
+    const maximumTotalScore = assessmentData.length * maximumStageScore;
+    const maturityThresholds = {
+        controlled: Math.ceil(maximumTotalScore * 0.45),
+        integrated: Math.ceil(maximumTotalScore * 0.6375),
+        optimized: Math.ceil(maximumTotalScore * 0.825)
+    };
 
     const questionsContainer = document.getElementById('assessment-questions');
     const assessmentForm = document.getElementById('webform6382022000009173064');
@@ -400,22 +421,22 @@
         let posture = "Level 1: Reactive";
         let condition = "AI use is experimental and fragmented. Quality depends on individuals. High risk of 'silent failure' in high-stakes tasks.";
         
-        if (totalScore >= 66) { 
+        if (totalScore >= maturityThresholds.optimized) {
             posture = "Level 4: Optimized"; 
             condition = "The team is a 'Self-Correcting System.' Controls are proactive, and the team serves as a model for others."; 
         }
-        else if (totalScore >= 51) { 
+        else if (totalScore >= maturityThresholds.integrated) {
             posture = "Level 3: Integrated"; 
             condition = "A standard verification loop is the default behavior. Quality holds even when key team members are away."; 
         }
-        else if (totalScore >= 36) { 
+        else if (totalScore >= maturityThresholds.controlled) {
             posture = "Level 2: Controlled"; 
             condition = "Basic checks are in place. High-risk areas are identified. The team is starting to use shared checklists."; 
         }
 
         // Find bottleneck (lowest scoring stage)
         let bottleneck = assessmentData[0].stage;
-        let minScore = 21; // Max possible is 20
+        let minScore = maximumStageScore + 1;
         let strongest = assessmentData[0].stage;
         let maxScore = -1;
         
@@ -424,14 +445,15 @@
             if (score > maxScore) { maxScore = score; strongest = name; }
             
             let status = "fragile";
-            if (score >= 16) status = "reliable";
-            else if (score >= 10) status = "developing";
+            if (score >= Math.ceil(maximumStageScore * 0.8)) status = "reliable";
+            else if (score >= Math.ceil(maximumStageScore * 0.5)) status = "developing";
             
             return { name, score, status };
         });
 
         // Update UI
         document.getElementById('result-score').textContent = totalScore;
+        document.getElementById('result-max-score').textContent = maximumTotalScore;
         document.getElementById('result-posture').textContent = posture;
         document.getElementById('result-risk').textContent = condition;
         document.getElementById('result-bottleneck').textContent = bottleneck;
@@ -442,7 +464,7 @@
             <div class="result-stage-card">
                 <h3>${s.name}</h3>
                 <div class="result-stage-meta">
-                    Score: <strong>${s.score}/20</strong> | 
+                    Score: <strong>${s.score}/${maximumStageScore}</strong> | 
                     Status: <span class="result-stage-status ${s.status}">${s.status.toUpperCase()}</span>
                 </div>
             </div>
@@ -457,23 +479,23 @@
         
         document.getElementById('result-priority-text').innerHTML = recommendations[bottleneck];
 
-        const nextStep = totalScore < 50 ? "Executive/Team Workshop" : "Custom Advisory Engagement";
+        const nextStep = totalScore < Math.ceil(maximumTotalScore * 0.625) ? "Executive/Team Workshop" : "Custom Advisory Engagement";
         document.getElementById('result-next-step').textContent = nextStep;
 
         // CRM Submission
         const descriptionContent = `Company: ${formData.get("Company")}
 [Team Maturity Assessment Results]
 Maturity Level: ${posture}
-Total Score: ${totalScore}/80
+Total Score: ${totalScore}/${maximumTotalScore}
 
 Overall Condition:
 ${condition}
 
-Domain Scores:
-- Capability and Ownership: ${scores["Capability and Ownership"]}/20
-- Validation and Quality Control: ${scores["Validation and Quality Control"]}/20
-- Workflow and Standards: ${scores["Workflow and Standards"]}/20
-- Feedback and Learning: ${scores["Feedback and Learning"]}/20
+Pillar Scores:
+- Capability and Ownership: ${scores["Capability and Ownership"]}/${maximumStageScore}
+- Validation and Quality Control: ${scores["Validation and Quality Control"]}/${maximumStageScore}
+- Workflow and Standards: ${scores["Workflow and Standards"]}/${maximumStageScore}
+- Feedback and Learning: ${scores["Feedback and Learning"]}/${maximumStageScore}
 
 Primary Bottleneck: ${bottleneck}
 Strongest Area: ${strongest}

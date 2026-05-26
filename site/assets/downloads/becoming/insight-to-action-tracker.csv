@@ -1,0 +1,2 @@
+Date,Observation,Insight,System Change,Owner,Due Date,Status
+2026-05-22,Corrections cluster around missing sources,Require source log before drafting,Add source-log gate,Owner,2026-05-29,Open
