@@ -480,47 +480,7 @@
 </header>
 <main id="main">
 <div id="survey-container"></div>
-<div id="lead-capture-container" style="display:none">
-    <div class="container" style="max-width: 600px; padding: 40px 24px;">
-        <article class="card">
-            <h2>See Your AI Readiness Report</h2>
-            <p>Enter your details below to receive your results and a personalized PDF report.</p>
-            <form id="lead-capture-form" style="display: flex; flex-direction: column; gap: 16px;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                    <div>
-                        <label for="first_name" style="font-size: 14px; font-weight: 600;">First Name</label>
-                        <input id="first_name" name="First_Name" type="text" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
-                    </div>
-                    <div>
-                        <label for="last_name" style="font-size: 14px; font-weight: 600;">Last Name</label>
-                        <input id="last_name" name="Last_Name" type="text" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
-                    </div>
-                </div>
-                <div>
-                    <label for="email" style="font-size: 14px; font-weight: 600;">Work Email</label>
-                    <input id="email" name="Email" type="email" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
-                </div>
-                <div>
-                    <label for="company" style="font-size: 14px; font-weight: 600;">Organization</label>
-                    <input id="company" name="Company" type="text" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
-                </div>
-                <input type="hidden" name="Lead_Source" value="Individual Assessment" />
-                <input type="hidden" name="Lead_Status" value="New" />
-                <!-- Attribution & Tracking -->
-                <input type="hidden" name="utm_source" data-utm-field="true" />
-                <input type="hidden" name="utm_medium" data-utm-field="true" />
-                <input type="hidden" name="utm_campaign" data-utm-field="true" />
-                <input type="hidden" name="utm_content" data-utm-field="true" />
-                <input type="hidden" name="qr" data-utm-field="true" />
-                <input type="hidden" name="book" data-utm-field="true" />
-                
-                <p id="lead-status" style="font-size: 14px; margin: 0;" hidden></p>
-                <button class="btn btn-primary" type="button" id="submit-survey-btn" style="width: 100%; padding: 12px; background: #1e3a8a; color: white; border: 0; border-radius: 8px; font-weight: 700; cursor: pointer;">View Results</button>
-            </form>
-        </article>
-    </div>
-</div>
-<div class="container" style="display:none">
+<div id="results-container" class="container" style="display:none">
 
     <!-- Toolbar -->
     <div class="toolbar">
@@ -589,53 +549,98 @@
             <div id="subskills" style="display:none; margin-bottom:12px" class="controls">
                 <!-- AI subskills -->
                 <div class="card">
-                    <div class="row"><span>AI  —  Prompting</span><span id="val-ai_prompting">50</span></div>
-                    <input class="subskill" id="ai_prompting" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>AI  —  Evaluation</span><span id="val-ai_evaluation">50</span></div>
-                    <input class="subskill" id="ai_evaluation" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>AI  —  Integration</span><span id="val-ai_integration">50</span></div>
-                    <input class="subskill" id="ai_integration" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>AI  —  Tool Selection</span><span id="val-ai_tool_selection">50</span></div>
-                    <input class="subskill" id="ai_tool_selection" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>AI — Prompting & Instruction Design</span><span id="val-ai_prompting_and_instruction_design">50</span></div>
+                    <input class="subskill" id="ai_prompting_and_instruction_design" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>AI — Grounding & Data Quality</span><span id="val-ai_grounding_and_data_quality">50</span></div>
+                    <input class="subskill" id="ai_grounding_and_data_quality" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>AI — Output Evaluation & Validation</span><span id="val-ai_output_evaluation_and_validation">50</span></div>
+                    <input class="subskill" id="ai_output_evaluation_and_validation" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>AI — Workflow Integration & Flow Orchestration</span><span id="val-ai_workflow_and_flow_orchestration">50</span></div>
+                    <input class="subskill" id="ai_workflow_and_flow_orchestration" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>AI — Tool Selection & Continuous Improvement</span><span id="val-ai_tool_selection_and_process_improvement">50</span></div>
+                    <input class="subskill" id="ai_tool_selection_and_process_improvement" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>AI — Governance, Traceability & Information Protection</span><span id="val-ai_governance_traceability_and_protection">50</span></div>
+                    <input class="subskill" id="ai_governance_traceability_and_protection" type="range" min="0" max="100" value="50"/>
                 </div>
 
                 <!-- Core subskills -->
                 <div class="card">
-                    <div class="row"><span>Core  —  Critical Thinking</span><span
-                            id="val-core_critical_thinking">50</span></div>
-                    <input class="subskill" id="core_critical_thinking" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Core  —  Digital Literacy</span><span id="val-core_digital_literacy">50</span>
-                    </div>
-                    <input class="subskill" id="core_digital_literacy" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Core  —  Collaboration</span><span id="val-core_collaboration">50</span></div>
-                    <input class="subskill" id="core_collaboration" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Core  —  Adaptability</span><span id="val-core_adaptability">50</span></div>
-                    <input class="subskill" id="core_adaptability" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Core — Critical Thinking & Evidence Evaluation</span><span id="val-core_critical_thinking_and_evidence">50</span></div>
+                    <input class="subskill" id="core_critical_thinking_and_evidence" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Core — Task Decomposition & Decision Framing</span><span id="val-core_decomposition_and_decision_framing">50</span></div>
+                    <input class="subskill" id="core_decomposition_and_decision_framing" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Core — Synthesis & Integration</span><span id="val-core_synthesis_and_integration">50</span></div>
+                    <input class="subskill" id="core_synthesis_and_integration" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Core — Logic Transparency & Pattern Recognition</span><span id="val-core_logic_transparency_and_pattern_recognition">50</span></div>
+                    <input class="subskill" id="core_logic_transparency_and_pattern_recognition" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Core — Team Enablement & Reuse</span><span id="val-core_team_enablement_and_reuse">50</span></div>
+                    <input class="subskill" id="core_team_enablement_and_reuse" type="range" min="0" max="100" value="50"/>
                 </div>
 
                 <!-- SME subskills -->
                 <div class="card">
-                    <div class="row"><span>SME  —  Foundation</span><span id="val-sme_foundation">50</span></div>
-                    <input class="subskill" id="sme_foundation" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>SME  —  Methods</span><span id="val-sme_methods">50</span></div>
-                    <input class="subskill" id="sme_methods" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>SME  —  Standards</span><span id="val-sme_standards">50</span></div>
-                    <input class="subskill" id="sme_standards" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>SME  —  Updating</span><span id="val-sme_updating">50</span></div>
-                    <input class="subskill" id="sme_updating" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>SME — Domain Foundation & Professional Methods</span><span id="val-sme_domain_foundation_and_methods">50</span></div>
+                    <input class="subskill" id="sme_domain_foundation_and_methods" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>SME — Local Context & Constraint Injection</span><span id="val-sme_local_context_and_constraints">50</span></div>
+                    <input class="subskill" id="sme_local_context_and_constraints" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>SME — Risk Intuition & Domain Logic Auditing</span><span id="val-sme_risk_and_logic_auditing">50</span></div>
+                    <input class="subskill" id="sme_risk_and_logic_auditing" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>SME — Standards & Quality Benchmarking</span><span id="val-sme_standards_and_quality_benchmarking">50</span></div>
+                    <input class="subskill" id="sme_standards_and_quality_benchmarking" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>SME — Knowledge Currency</span><span id="val-sme_knowledge_currency">50</span></div>
+                    <input class="subskill" id="sme_knowledge_currency" type="range" min="0" max="100" value="50"/>
                 </div>
 
                 <!-- Meta subskills -->
                 <div class="card">
-                    <div class="row"><span>Meta  —  Creativity</span><span id="val-meta_creativity">50</span></div>
-                    <input class="subskill" id="meta_creativity" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Meta  —  Ethics</span><span id="val-meta_ethics">50</span></div>
-                    <input class="subskill" id="meta_ethics" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Meta  —  Resilience</span><span id="val-meta_resilience">50</span></div>
-                    <input class="subskill" id="meta_resilience" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Meta  —  Leadership</span><span id="val-meta_leadership">50</span></div>
-                    <input class="subskill" id="meta_leadership" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Meta — Learning Agility & Adaptability</span><span id="val-meta_learning_agility_and_adaptability">50</span></div>
+                    <input class="subskill" id="meta_learning_agility_and_adaptability" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Meta — Resilience & Self-Awareness</span><span id="val-meta_resilience_and_self_awareness">50</span></div>
+                    <input class="subskill" id="meta_resilience_and_self_awareness" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Meta — Judgment Calibration & Ambiguity Navigation</span><span id="val-meta_judgment_and_ambiguity_navigation">50</span></div>
+                    <input class="subskill" id="meta_judgment_and_ambiguity_navigation" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Meta — Escalation & Governance Discipline</span><span id="val-meta_escalation_and_governance_discipline">50</span></div>
+                    <input class="subskill" id="meta_escalation_and_governance_discipline" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Meta — Systems Thinking & Accountability</span><span id="val-meta_systems_thinking_and_accountability">50</span></div>
+                    <input class="subskill" id="meta_systems_thinking_and_accountability" type="range" min="0" max="100" value="50"/>
                 </div>
+            </div>
+
+            <div id="lead-capture-container" class="card" style="margin-top: 24px;">
+                <h2>Get Your Personalized AI-Augmented Suggestion Plan</h2>
+                <p>Enter your details below to receive your results and a personalized plan for moving to AI-Augmented.</p>
+                <form id="lead-capture-form" style="display: flex; flex-direction: column; gap: 16px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div>
+                            <label for="first_name" style="font-size: 14px; font-weight: 600;">First Name</label>
+                            <input id="first_name" name="First_Name" type="text" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
+                        </div>
+                        <div>
+                            <label for="last_name" style="font-size: 14px; font-weight: 600;">Last Name</label>
+                            <input id="last_name" name="Last_Name" type="text" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email" style="font-size: 14px; font-weight: 600;">Work Email</label>
+                        <input id="email" name="Email" type="email" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
+                    </div>
+                    <div>
+                        <label for="company" style="font-size: 14px; font-weight: 600;">Organization</label>
+                        <input id="company" name="Company" type="text" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
+                    </div>
+                    <input type="hidden" name="Lead_Source" value="Individual Assessment" />
+                    <input type="hidden" name="Lead_Status" value="New" />
+                    <!-- Attribution & Tracking -->
+                    <input type="hidden" name="utm_source" data-utm-field="true" />
+                    <input type="hidden" name="utm_medium" data-utm-field="true" />
+                    <input type="hidden" name="utm_campaign" data-utm-field="true" />
+                    <input type="hidden" name="utm_content" data-utm-field="true" />
+                    <input type="hidden" name="qr" data-utm-field="true" />
+                    <input type="hidden" name="book" data-utm-field="true" />
+
+                    <p id="lead-status" style="font-size: 14px; margin: 0;" hidden></p>
+                    <button class="btn btn-primary" type="button" id="submit-survey-btn" style="width: 100%; padding: 12px; background: #1e3a8a; color: white; border: 0; border-radius: 8px; font-weight: 700; cursor: pointer;">Get My Plan</button>
+                </form>
             </div>
 
         </div>
@@ -721,560 +726,711 @@
     const surveyResults = {};
 
     const survey = {
-        "version": "1.0",
-        "scale": {
-            "low": [
-                0,
-                39
-            ],
-            "medium": [
-                40,
-                69
-            ],
-            "high": [
-                70,
-                100
-            ]
-        },
-        "pillars": [
+  "version": "1.3",
+  "scale": {
+    "low": [0, 39],
+    "medium": [40, 69],
+    "high": [70, 100]
+  },
+  "pillars": [
+    {
+      "id": "ai",
+      "name": "AI Skills",
+      "subskills": [
+        {
+          "id": "prompting_and_instruction_design",
+          "name": "Prompting & Instruction Design",
+          "question": "How confident are you in designing clear, structured AI instructions that define the role, task, audience, constraints, examples, and output format needed to produce high-quality results on the first attempt?",
+          "scale_labels": {
+            "1": "Not at all",
+            "2": "Slightly",
+            "3": "Moderately",
+            "4": "Confident",
+            "5": "Very Confident"
+          },
+          "ranges": [
             {
-                "id": "ai",
-                "name": "AI Skills",
-                "subskills": [
-                    {
-                        "id": "prompting",
-                        "name": "Prompting & Interaction",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "You\u2019re not yet getting reliable results from GenAI. Start with prompt basics (role, task, constraints, examples) and keep a prompt log to iterate."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "You can elicit useful outputs but it\u2019s inconsistent. Practice structured prompts (COT, critique, refine) and compare variants side-by-side."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "Strong prompt craft. Share templates with peers and explore advanced patterns (self-ask, toolformer, retrieval prompts)."
-                            }
-                        ],
-                        "question": "How confident are you in writing questions or instructions that get clear answers from AI tools?",
-                        "scale_labels": {
-                            "1": "Not at all confident",
-                            "2": "Slightly confident",
-                            "3": "Somewhat confident",
-                            "4": "Confident",
-                            "5": "Very confident"
-                        }
-                    },
-                    {
-                        "id": "evaluation",
-                        "name": "Evaluation & Validation",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "Risk of accepting errors/bias. Add a verification checklist: source cross-check, claims-to-evidence, bias scan, and citation requirements."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "You validate sometimes. Formalize it: require citations, run fact-checks on key claims, and compare with a trusted baseline."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "Reliable evaluator. Consider building rubrics/demos that teach others how to audit AI outputs in your context."
-                            }
-                        ],
-                        "question": "How often do you check if AI-generated answers are accurate and unbiased?",
-                        "scale_labels": {
-                            "1": "Never",
-                            "2": "Rarely",
-                            "3": "Sometimes",
-                            "4": "Often",
-                            "5": "Always"
-                        }
-                    },
-                    {
-                        "id": "integration",
-                        "name": "Integration & Workflow Use",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "AI is not yet embedded in your tasks. Start with one repeatable workflow (e.g., drafting, code review, lesson prep) and measure time/quality gains."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "Some embedding exists. Standardize prompts, add checkpoints, and automate handoffs (e.g., templates, snippets, simple scripts)."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "Well-integrated. Scale by documenting SOPs, adding guardrails, and mentoring your team/class on your workflows."
-                            }
-                        ],
-                        "question": "How much do you use AI tools as part of your regular work or daily tasks?",
-                        "scale_labels": {
-                            "1": "Never",
-                            "2": "Rarely",
-                            "3": "Sometimes",
-                            "4": "Often",
-                            "5": "Always"
-                        }
-                    },
-                    {
-                        "id": "tool_selection",
-                        "name": "Tool Selection & Application",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "Tool choice seems ad-hoc. Build a short playbook: which model/tool for text, code, data, image; when privacy/offline is needed; fallback options."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "You can choose tools but may miss fit. Run quick bake-offs (accuracy, latency, cost, privacy) before committing."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "Excellent selection instincts. Keep a living decision matrix and update as models/tools change."
-                            }
-                        ],
-                        "question": "How confident are you in choosing the right AI tool for a given task?",
-                        "scale_labels": {
-                            "1": "Not at all confident",
-                            "2": "Slightly confident",
-                            "3": "Somewhat confident",
-                            "4": "Confident",
-                            "5": "Very confident"
-                        }
-                    }
-                ]
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Results are inconsistent. Focus on defining clear roles, explicit tasks, examples, constraints, and desired output formats."
             },
             {
-                "id": "core",
-                "name": "Core Skills",
-                "subskills": [
-                    {
-                        "id": "critical_thinking",
-                        "name": "Critical Thinking & Evaluation",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "Increase rigor: ask \u2018what would disconfirm this?\u2019, separate facts from claims, and require evidence for key assertions."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "Good instincts; make them consistent with structured argument maps and claim-evidence-reasoning templates."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "High rigor. Teach your approach via short workshops or peer reviews."
-                            }
-                        ],
-                        "question": "How confident are you in questioning information and checking if it is supported by facts?",
-                        "scale_labels": {
-                            "1": "Not at all confident",
-                            "2": "Slightly confident",
-                            "3": "Somewhat confident",
-                            "4": "Confident",
-                            "5": "Very confident"
-                        }
-                    },
-                    {
-                        "id": "digital_literacy",
-                        "name": "Digital & Data Literacy",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "Build comfort with files, formats, basic data cleaning/visualization, and privacy settings in common tools."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "Solid basics. Add lightweight data analysis tasks and reproducible notebooks/templates."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "Strong literacy. Consider standardizing data handling and teaching others your tips."
-                            }
-                        ],
-                        "question": "How comfortable are you with using digital tools, files, and data in your work or daily life?",
-                        "scale_labels": {
-                            "1": "Not at all confident",
-                            "2": "Slightly confident",
-                            "3": "Somewhat confident",
-                            "4": "Confident",
-                            "5": "Very confident"
-                        }
-                    },
-                    {
-                        "id": "collaboration",
-                        "name": "Collaboration & Communication",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "Clarify roles, shared docs, versioning, and meeting notes. Practice concise, audience-aware summaries."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "Working well; tighten feedback cycles and adopt shared templates for briefs and updates."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "High-functioning collaborator. Facilitate retros and coach team communication norms."
-                            }
-                        ],
-                        "question": "How effective are you at working with others and sharing information clearly?",
-                        "scale_labels": {
-                            "1": "Not at all effective",
-                            "2": "Slightly effective",
-                            "3": "Moderately effective",
-                            "4": "Effective",
-                            "5": "Very effective"
-                        }
-                    },
-                    {
-                        "id": "adaptability",
-                        "name": "Adaptability & Problem-Solving",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "Start with small experiments. Create a safe sandbox to try new tools and reflect on outcomes."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "You adjust with effort. Add timeboxed trials, A/B comparisons, and post-mortems."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "Highly adaptable. Lead change pilots and document lessons learned."
-                            }
-                        ],
-                        "question": "How well do you adjust when plans or tools change unexpectedly?",
-                        "scale_labels": {
-                            "1": "Not at all well",
-                            "2": "Slightly well",
-                            "3": "Moderately well",
-                            "4": "Well",
-                            "5": "Very well"
-                        }
-                    }
-                ]
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good baseline prompting ability. Move toward reusable prompt templates, structured examples, and clearer success criteria."
             },
             {
-                "id": "sme",
-                "name": "SME-Specific Skills",
-                "subskills": [
-                    {
-                        "id": "foundation",
-                        "name": "Foundational Knowledge",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "Rebuild core concepts via targeted modules, spaced repetition, and guided practice."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "Decent base; deepen with problem sets and peer explanation to close gaps."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "Strong foundation. Consider tutoring, guest lectures, or authoring primers."
-                            }
-                        ],
-                        "question": "How strong is your basic knowledge in your field of work or study?",
-                        "scale_labels": {
-                            "1": "Very weak",
-                            "2": "Weak",
-                            "3": "Moderate",
-                            "4": "Strong",
-                            "5": "Very strong"
-                        }
-                    },
-                    {
-                        "id": "methods",
-                        "name": "Methods & Frameworks",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "Practice discipline-specific methods step-by-step with annotated exemplars."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "Apply methods in varied cases; compare AI vs. expert workflows."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "Methodologically strong. Publish case studies or design labs integrating AI checks."
-                            }
-                        ],
-                        "question": "How confident are you in using best practices or step-by-step processes in your field?",
-                        "scale_labels": {
-                            "1": "Not at all confident",
-                            "2": "Slightly confident",
-                            "3": "Somewhat confident",
-                            "4": "Confident",
-                            "5": "Very confident"
-                        }
-                    },
-                    {
-                        "id": "standards",
-                        "name": "Evaluation Against Standards",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "Learn your field\u2019s rubrics/benchmarks; build a quick checklist for AI outputs."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "Apply standards more consistently; keep exemplars of \u2018good\u2019 vs \u2018bad\u2019 outputs."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "Excellent evaluator. Create reference rubrics and train peers/students."
-                            }
-                        ],
-                        "question": "How often do you compare your work or AI outputs against accepted best practices or standards in your field?",
-                        "scale_labels": {
-                            "1": "Never",
-                            "2": "Rarely",
-                            "3": "Sometimes",
-                            "4": "Often",
-                            "5": "Always"
-                        }
-                    },
-                    {
-                        "id": "updating",
-                        "name": "Knowledge Updating & Growth",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "Set a cadence to review new literature/practice; subscribe to 1\u20132 trusted sources."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "You update periodically; formalize a reading/workshop plan and maintain notes."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "Always current. Share curated digests or journal clubs."
-                            }
-                        ],
-                        "question": "How regularly do you learn new things or keep up with changes in your field?",
-                        "scale_labels": {
-                            "1": "Never",
-                            "2": "Rarely",
-                            "3": "Sometimes",
-                            "4": "Often",
-                            "5": "Always"
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "meta",
-                "name": "Meta-Skills",
-                "subskills": [
-                    {
-                        "id": "creativity",
-                        "name": "Creativity & Innovation",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "Use divergent-thinking drills (SCAMPER, \u201810 ideas\u2019 sprints) and remix AI outputs creatively."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "Push for novelty: impose constraints, prototype quickly, and solicit critique."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "Consistently original. Lead ideation sessions and publish exemplars."
-                            }
-                        ],
-                        "question": "How often do you come up with new or original ideas in your work or daily life?",
-                        "scale_labels": {
-                            "1": "Not at all confident",
-                            "2": "Slightly confident",
-                            "3": "Somewhat confident",
-                            "4": "Confident",
-                            "5": "Very confident"
-                        }
-                    },
-                    {
-                        "id": "ethics",
-                        "name": "Ethics & Judgment",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "Review privacy, bias, attribution, and policy basics; apply an ethics checklist before use."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "Apply ethics in most cases; practice edge-cases and document decisions."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "Trusted judgment. Help define guardrails and teach responsible AI in your context."
-                            }
-                        ],
-                        "question": "How confident are you in noticing and addressing ethical issues such as fairness or bias when using AI?",
-                        "scale_labels": {
-                            "1": "Not at all confident",
-                            "2": "Slightly confident",
-                            "3": "Somewhat confident",
-                            "4": "Confident",
-                            "5": "Very confident"
-                        }
-                    },
-                    {
-                        "id": "resilience",
-                        "name": "Resilience & Adaptability",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "Adopt short reflection cycles, normalize small failures, and track learning gains."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "Good bounce-back; add stress-testing and contingency plans."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "Reliable under pressure. Coach others on coping and recovery tactics."
-                            }
-                        ],
-                        "question": "How well do you handle setbacks and keep moving forward?",
-                        "scale_labels": {
-                            "1": "I give up easily",
-                            "2": "I struggle but keep going a little",
-                            "3": "I bounce back sometimes",
-                            "4": "I bounce back most of the time",
-                            "5": "I always bounce back quickly"
-                        }
-                    },
-                    {
-                        "id": "leadership",
-                        "name": "Leadership & Influence",
-                        "ranges": [
-                            {
-                                "label": "low",
-                                "min": 0,
-                                "max": 39,
-                                "feedback": "Start small: lead a brief, run a demo, or own a checklist. Seek feedback."
-                            },
-                            {
-                                "label": "medium",
-                                "min": 40,
-                                "max": 69,
-                                "feedback": "Expand scope: coordinate a pilot, facilitate retros, and communicate results."
-                            },
-                            {
-                                "label": "high",
-                                "min": 70,
-                                "max": 100,
-                                "feedback": "High influence. Drive cross-unit adoption and mentor emerging leaders."
-                            }
-                        ],
-                        "question": "How confident are you in leading or influencing others in projects or group activities?",
-                        "scale_labels": {
-                            "1": "Not at all confident",
-                            "2": "Slightly confident",
-                            "3": "Somewhat confident",
-                            "4": "Confident",
-                            "5": "Very confident"
-                        }
-                    }
-                ]
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Advanced practitioner. You design reliable prompt systems with reusable patterns, negative constraints, and clear output schemas."
             }
-        ]
+          ]
+        },
+        {
+          "id": "grounding_and_data_quality",
+          "name": "Grounding & Data Quality",
+          "question": "How consistently do you provide AI with accurate, complete, fit-for-purpose source materials and instruct it to rely on those sources when accuracy, context, or evidence matters?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Confident",
+            "5": "Always / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "High hallucination and garbage-in/garbage-out risk. Start grounding AI tasks in specific sources and checking data quality before use."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You use some context and check basic quality. Improve by formalizing source verification, data cleaning, and retrieval-style instructions."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Expert at grounding. You ensure AI outputs are anchored in high-quality, relevant, and verified source material."
+            }
+          ]
+        },
+        {
+          "id": "output_evaluation_and_validation",
+          "name": "Output Evaluation & Validation",
+          "question": "How consistently do you validate AI-generated outputs for accuracy, bias, hallucinations, unsupported claims, logic errors, and alignment with your original intent before relying on them?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Confident",
+            "5": "Always / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "High risk of accepting errors. Implement a trust-but-verify protocol using source checks, bias checks, and logic review."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You check for obvious errors. Formalize this into a repeatable validation checklist for accuracy, bias, logic, and intent alignment."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Excellent rigor. You consistently identify subtle errors and use structured review methods before relying on AI output."
+            }
+          ]
+        },
+        {
+          "id": "workflow_and_flow_orchestration",
+          "name": "Workflow Integration & Flow Orchestration",
+          "question": "How effectively do you embed AI into repeatable professional workflows by connecting tasks into multi-step processes where outputs can feed later steps and verification gates prevent errors from compounding?",
+          "scale_labels": {
+            "1": "Not at all",
+            "2": "Slightly",
+            "3": "Moderately",
+            "4": "Well / Confident",
+            "5": "Extensively / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "AI usage is ad hoc. Identify one repeatable high-value task and design a simple multi-step AI-assisted workflow."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "AI is becoming a regular tool. Focus on connecting tasks, reducing manual handoffs, and adding verification gates between steps."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Seamless integration. You design complex, multi-stage workflows with human checkpoints and strong process control."
+            }
+          ]
+        },
+        {
+          "id": "tool_selection_and_process_improvement",
+          "name": "Tool Selection & Continuous Improvement",
+          "question": "How consistently do you choose the right AI tool, model, prompt, or workflow for the task and improve your approach over time using lessons learned, comparisons, and measured outcomes?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Confident",
+            "5": "Always / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "You may be using the same tool or process for everything. Build a simple selection matrix and review one workflow each month."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You switch tools and improve processes occasionally. Start comparing prompts, tools, and workflows using measurable criteria."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Strategic optimizer. You select tools based on task fit, cost, privacy, performance, and continuously refine your AI systems."
+            }
+          ]
+        },
+        {
+          "id": "governance_traceability_and_protection",
+          "name": "Governance, Traceability & Information Protection",
+          "question": "How consistently do you protect sensitive information while documenting prompts, sources, assumptions, evaluation criteria, and objective measures so your AI-assisted work is secure, traceable, and defensible?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Confident",
+            "5": "Always / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Governance and data protection gaps are likely. Start logging prompts, defining success criteria, and reviewing privacy rules before sharing data."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You show some governance discipline. Formalize your proof-of-work trail and create clear data-sharing boundaries."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Audit-ready. You maintain traceable, secure, and defensible AI workflows while protecting sensitive information."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "name": "Core Skills",
+      "subskills": [
+        {
+          "id": "critical_thinking_and_evidence",
+          "name": "Critical Thinking & Evidence Evaluation",
+          "question": "How confident are you in identifying hidden assumptions, logical flaws, unsupported claims, and weak evidence before accepting a conclusion or recommendation?",
+          "scale_labels": {
+            "1": "Not at all",
+            "2": "Slightly",
+            "3": "Moderately",
+            "4": "Confident",
+            "5": "Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Vulnerable to fluency bias. Practice questioning first responses, demanding evidence, and checking assumptions."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good skepticism. Focus on linking claims to evidence and isolating assumptions behind major conclusions."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "High rigor. You consistently separate plausible language from verified truth and maintain a strong evidence trail."
+            }
+          ]
+        },
+        {
+          "id": "decomposition_and_decision_framing",
+          "name": "Task Decomposition & Decision Framing",
+          "question": "How effectively do you break large or ambiguous goals into small, testable steps while defining success criteria, failure boundaries, and where human judgment is required?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Effective",
+            "5": "Always / Very Effective"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Tasks may be too broad or undefined. Practice breaking work into verifiable steps and defining success before beginning."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You create some structure. Improve by making each step testable and setting clear escalation or failure triggers."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Strong architect. You define goals, boundaries, and task structures that are easy to audit and govern."
+            }
+          ]
+        },
+        {
+          "id": "synthesis_and_integration",
+          "name": "Synthesis & Integration",
+          "question": "How effectively do you combine information from multiple sources, integrate AI-generated material with your own judgment, and turn fragmented inputs into a clear, cohesive recommendation or decision?",
+          "scale_labels": {
+            "1": "Not at all",
+            "2": "Slightly",
+            "3": "Moderately",
+            "4": "Effective",
+            "5": "Very Effective"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Outputs may remain fragmented. Practice actively integrating information and making the final logic your own."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good blending ability. Focus on ensuring the final conclusion reflects your reasoning, not just an AI summary."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Seamless integration. You convert multiple signals into unified, defensible professional actions."
+            }
+          ]
+        },
+        {
+          "id": "logic_transparency_and_pattern_recognition",
+          "name": "Logic Transparency & Pattern Recognition",
+          "question": "How effectively do you make your reasoning explicit, reusable, and understandable by turning repeated logic patterns into decision rules, checklists, templates, or processes that others and AI can follow?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Effective",
+            "5": "Always / Very Effective"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Your logic may remain hidden or task-specific. Practice writing out decision rules and identifying reusable patterns."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good visibility. Move toward reusable templates and explicit reasoning structures that others can apply."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Systems thinker. Your reasoning is transparent, reusable, verifiable, and ready for automation."
+            }
+          ]
+        },
+        {
+          "id": "team_enablement_and_reuse",
+          "name": "Team Enablement & Reuse",
+          "question": "How effectively do you create AI-assisted work products, documentation, prompts, templates, checklists, or reusable formats that colleagues can understand, verify, trust, and apply?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Effective",
+            "5": "Always / Very Effective"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Work may remain siloed. Focus on documenting process, assumptions, and outputs so others can trust and reuse them."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You produce some reusable outputs. Improve by standardizing formats, prompts, and review criteria."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Force multiplier. You make your AI-augmented expertise accessible, repeatable, and valuable across the team."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sme",
+      "name": "SME Skills",
+      "subskills": [
+        {
+          "id": "domain_foundation_and_methods",
+          "name": "Domain Foundation & Professional Methods",
+          "question": "How strong is your grasp of your field’s core concepts, principles, methods, and frameworks, and how consistently do you use them to guide or evaluate AI-assisted work?",
+          "scale_labels": {
+            "1": "Very Weak / Not at all",
+            "2": "Weak / Slightly",
+            "3": "Moderate / Moderately",
+            "4": "Strong / Confident",
+            "5": "Mastery / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Weak expert foundation. Rebuild core concepts and use professional frameworks to prevent generic or incorrect AI output."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Solid foundation. Deepen your understanding of why methods work and front-load those frameworks into AI tasks."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Strong domain architect. You use professional principles and methods to guide AI toward expert-level work."
+            }
+          ]
+        },
+        {
+          "id": "local_context_and_constraints",
+          "name": "Local Context & Constraint Injection",
+          "question": "How effectively do you identify and communicate the local policies, cultural norms, environmental factors, client context, unwritten rules, and professional constraints that AI must respect?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Well",
+            "5": "Always / Extensively"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "You may be relying on generic best practices. Start explicitly stating local constraints and professional boundaries."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good contextual awareness. Improve by defining the expert floor and the local rules AI must not violate."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Constraint master. You use local expertise to turn generic AI output into highly relevant professional work."
+            }
+          ]
+        },
+        {
+          "id": "risk_and_logic_auditing",
+          "name": "Risk Intuition & Domain Logic Auditing",
+          "question": "How confidently do you detect when professional-sounding AI output is locally incorrect or risky, and audit whether its reasoning aligns with domain-specific first principles?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Confident",
+            "5": "Always / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "You may be trusting plausible output too much. Build a failure log and begin checking why the AI chose its professional path."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good instincts. Focus on identifying confidence gaps and forcing AI to expose domain-specific reasoning."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Elite radar. You detect subtle domain errors and audit AI logic against professional first principles."
+            }
+          ]
+        },
+        {
+          "id": "standards_and_quality_benchmarking",
+          "name": "Standards & Quality Benchmarking",
+          "question": "How consistently do you define high-quality work in your field and evaluate AI-assisted outputs against professional standards, rubrics, benchmarks, or elite reference examples?",
+          "scale_labels": {
+            "1": "Never",
+            "2": "Rarely",
+            "3": "Sometimes",
+            "4": "Often",
+            "5": "Always"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Quality may be undefined. Learn your field’s rubrics, benchmarks, and examples of excellent work."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You use general standards. Improve by creating a reference set of elite examples and explicit evaluation criteria."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Elite evaluator. You hold AI-assisted work to senior expert standards using clear benchmarks and rubrics."
+            }
+          ]
+        },
+        {
+          "id": "knowledge_currency",
+          "name": "Knowledge Currency",
+          "question": "How consistently do you keep your domain knowledge current, recognize when AI may be relying on outdated information, and bring recent literature, research, or practices into AI-assisted work?",
+          "scale_labels": {
+            "1": "Never",
+            "2": "Rarely",
+            "3": "Monthly",
+            "4": "Weekly",
+            "5": "Daily"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Knowledge may be static. Set a cadence to review new developments and reduce reliance on potentially outdated AI knowledge."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You update periodically. Formalize your learning process and bring current knowledge into AI-assisted tasks."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Always current. Your up-to-date expertise allows you to correct AI knowledge lag and maintain professional edge."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta-Skills",
+      "subskills": [
+        {
+          "id": "learning_agility_and_adaptability",
+          "name": "Learning Agility & Adaptability",
+          "question": "How quickly and comfortably do you learn, experiment with, and apply unfamiliar software tools, AI models, or workflows before needing them for high-stakes work?",
+          "scale_labels": {
+            "1": "Very Slowly / Not at all",
+            "2": "Slowly / Slightly",
+            "3": "Moderately",
+            "4": "Quickly / Comfortable",
+            "5": "Very Quickly / Very Comfortable"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Adaptation may be slow. Create a safe sandbox to experiment with new tools regularly."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You adapt with effort. Focus on learning transferable tool patterns so you can switch systems more easily."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Rapid adapter. You absorb new technological shifts and integrate them into your professional system quickly."
+            }
+          ]
+        },
+        {
+          "id": "resilience_and_self_awareness",
+          "name": "Resilience & Self-Awareness",
+          "question": "How well do you maintain professional confidence when tools fail, recognize when stress or speed is lowering your standards, and reflect on mistakes before they affect future work?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Well",
+            "5": "Always / Very Well"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "You may become fragile under error or speed. Normalize short reflection cycles and monitor when standards begin to drift."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good recovery and awareness. Focus on detecting fatigue drift before it affects important decisions."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Highly resilient and mindful. You catch bias, fatigue, and process failures before they propagate."
+            }
+          ]
+        },
+        {
+          "id": "judgment_and_ambiguity_navigation",
+          "name": "Judgment Calibration & Ambiguity Navigation",
+          "question": "How well do you make defensible decisions under incomplete or conflicting information by matching your confidence to the available evidence and explicitly stating assumptions or uncertainty?",
+          "scale_labels": {
+            "1": "Not at all",
+            "2": "Slightly",
+            "3": "Moderately",
+            "4": "Well / Confident",
+            "5": "Perfectly / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Risk of overtrust or paralysis. Never let confidence exceed evidence, and practice making defensible assumptions."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good balance. Improve by explicitly stating uncertainty, assumptions, and confidence levels."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Precision judgment. You operate well in ambiguity and match confidence to evidence quality."
+            }
+          ]
+        },
+        {
+          "id": "escalation_and_governance_discipline",
+          "name": "Escalation & Governance Discipline",
+          "question": "How effectively do you define and apply stop rules, human-review triggers, and intervention points when AI workflows produce repeated errors, uncertainty, or high-stakes outputs?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Effective",
+            "5": "Always / Very Effective"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Failure may continue silently. Create clear stop rules and human-review triggers."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You know when to stop in some cases. Improve by defining high-stakes review triggers in advance."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Rigorous governance. You prevent systemic errors by knowing exactly when to pause, escalate, or override automation."
+            }
+          ]
+        },
+        {
+          "id": "systems_thinking_and_accountability",
+          "name": "Systems Thinking & Accountability",
+          "question": "How consistently do you consider downstream effects of your AI-assisted work on teams, customers, and processes, while taking personal responsibility for the final outcome and its consequences?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Willing",
+            "5": "Always / Completely Willing"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "You may be focused only on the immediate task. Start considering downstream effects and remember that you own the final result."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You show some systems awareness and accountability. Build a stronger defensibility trail for downstream decisions."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "High-level owner. You understand how AI-assisted decisions propagate through systems and take full responsibility for outcomes."
+            }
+          ]
+        }
+      ]
     }
+  ]
+};
     // Fetch survey.json from the server
     loadSurvey(survey);
 
@@ -1384,9 +1540,9 @@
             // Re-render visualization
             render();
 
-            // Transition: hide survey, show lead capture
+            // Transition: hide survey, show results directly
             surveyContainer.style.display = 'none';
-            document.getElementById('lead-capture-container').style.display = 'block';
+            document.getElementById('results-container').style.display = 'block';
             window.scrollTo(0, 0);
         }
     });
@@ -1511,40 +1667,21 @@
 
     function getSubskillValsFromUI() {
         const v = getVals();
-        const mirror = {
-            ai: {prompting: v.ai, evaluation: v.ai, integration: v.ai, tool_selection: v.ai},
-            core: {critical_thinking: v.core, digital_literacy: v.core, collaboration: v.core, adaptability: v.core},
-            sme: {foundation: v.sme, methods: v.sme, standards: v.sme, updating: v.sme},
-            meta: {creativity: v.meta, ethics: v.meta, resilience: v.meta, leadership: v.meta},
-        };
-        if (!document.getElementById('advanced').checked) return mirror;
-        const read = id => Number(document.getElementById(id).value);
-        return {
-            ai: {
-                prompting: read('ai_prompting'),
-                evaluation: read('ai_evaluation'),
-                integration: read('ai_integration'),
-                tool_selection: read('ai_tool_selection')
-            },
-            core: {
-                critical_thinking: read('core_critical_thinking'),
-                digital_literacy: read('core_digital_literacy'),
-                collaboration: read('core_collaboration'),
-                adaptability: read('core_adaptability')
-            },
-            sme: {
-                foundation: read('sme_foundation'),
-                methods: read('sme_methods'),
-                standards: read('sme_standards'),
-                updating: read('sme_updating')
-            },
-            meta: {
-                creativity: read('meta_creativity'),
-                ethics: read('meta_ethics'),
-                resilience: read('meta_resilience'),
-                leadership: read('meta_leadership')
-            }
-        };
+        const res = {};
+        const isAdvanced = document.getElementById('advanced').checked;
+
+        survey.pillars.forEach(p => {
+            res[p.id] = {};
+            p.subskills.forEach(s => {
+                if (isAdvanced) {
+                    const el = document.getElementById(`${p.id}_${s.id}`);
+                    res[p.id][s.id] = el ? Number(el.value) : v[p.id];
+                } else {
+                    res[p.id][s.id] = v[p.id];
+                }
+            });
+        });
+        return res;
     }
 
     function getFeedback() {
@@ -1575,7 +1712,7 @@
                 }
             });
         });
-        list.sort((a, b) => b.val - a.val);
+        list.sort((a, b) => a.val - b.val);
         return list;
     }
     function renderFeedback() {
@@ -1814,31 +1951,29 @@ ${Object.keys(surveyResults).map(p => `- ${p.toUpperCase()}: ${JSON.stringify(su
             });
             
             if (response.ok) {
-                document.getElementById('lead-capture-container').style.display = 'none';
-                document.querySelector('.container').style.display = 'block';
-                
-                // Add success message
+                // Add success message within the form
                 const successMsg = document.createElement('div');
                 successMsg.style.background = '#d1fae5';
                 successMsg.style.color = '#065f46';
                 successMsg.style.padding = '12px';
                 successMsg.style.borderRadius = '8px';
-                successMsg.style.marginBottom = '16px';
+                successMsg.style.marginTop = '16px';
                 successMsg.style.fontWeight = '600';
                 successMsg.style.textAlign = 'center';
                 successMsg.id = 'temp-success-msg';
-                successMsg.textContent = '✓ Results submitted! We are emailing you a formatted report.';
+                successMsg.textContent = '✓ Suggestion plan requested! We are emailing you a formatted report.';
                 
-                const container = document.querySelector('.container');
-                container.insertBefore(successMsg, container.firstChild);
+                leadForm.appendChild(successMsg);
+                status.hidden = true;
                 
-                // Remove after 10 seconds
+                // Disable form fields
+                leadForm.querySelectorAll('input, button').forEach(el => el.disabled = true);
+
+                // Remove message after 10 seconds
                 setTimeout(() => {
                     const el = document.getElementById('temp-success-msg');
                     if (el) el.remove();
                 }, 10000);
-
-                window.scrollTo(0, 0);
             } else {
                 throw new Error("Failed to submit results.");
             }
@@ -1922,7 +2057,7 @@ ${Object.keys(surveyResults).map(p => `- ${p.toUpperCase()}: ${JSON.stringify(su
     document.getElementById('btn-take-survey').addEventListener('click', () => {
         // Reset survey and show survey container again
         document.getElementById('survey-container').style.display = 'block';
-        document.querySelector('.container').style.display = 'none';
+        document.getElementById('results-container').style.display = 'none';
     });
 
     async function convertSvgToPng(svgElement) {
