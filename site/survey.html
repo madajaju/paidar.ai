@@ -3,24 +3,107 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Individual Assessment | Paidar.ai</title>
-    <meta name="description" content="Interactive AI readiness self-assessment to benchmark individual capability and identify next steps." />
+    <title>AI Readiness Self-Assessment for Individuals | Paidar.ai</title>
+    <meta name="description" content="Take a 4-pillar AI readiness self-assessment for individuals. Benchmark your current capability, identify gaps, and get a personalized next-step plan." />
     <link rel="canonical" href="https://paidar.ai/survey.html" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#123456" />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Individual Assessment | Paidar.ai" />
-    <meta property="og:description" content="Interactive AI readiness self-assessment to benchmark individual capability and identify next steps." />
+    <meta property="og:title" content="AI Readiness Self-Assessment for Individuals | Paidar.ai" />
+    <meta property="og:description" content="Benchmark your AI skills, subject matter expertise, stability, and scalability in one guided assessment." />
     <meta property="og:url" content="https://paidar.ai/survey.html" />
     <meta property="og:image" content="https://paidar.ai/assets/img/hero.jpeg" />
     <meta property="og:site_name" content="Paidar.ai" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Individual Assessment | Paidar.ai" />
-    <meta name="twitter:description" content="Interactive AI readiness self-assessment to benchmark individual capability and identify next steps." />
+    <meta name="twitter:title" content="AI Readiness Self-Assessment for Individuals | Paidar.ai" />
+    <meta name="twitter:description" content="Benchmark your AI skills, subject matter expertise, stability, and scalability in one guided assessment." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebPage",
+                    "@id": "https://paidar.ai/survey.html#webpage",
+                    "url": "https://paidar.ai/survey.html",
+                    "name": "AI Readiness Self-Assessment for Individuals | Paidar.ai",
+                    "description": "Take a 4-pillar AI readiness self-assessment for individuals. Benchmark your current capability, identify gaps, and get a personalized next-step plan.",
+                    "isPartOf": {
+                        "@id": "https://paidar.ai/#website"
+                    },
+                    "about": {
+                        "@id": "https://paidar.ai/#organization"
+                    },
+                    "primaryImageOfPage": "https://paidar.ai/assets/img/hero.jpeg"
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://paidar.ai/#website",
+                    "url": "https://paidar.ai/",
+                    "name": "Paidar.ai",
+                    "publisher": {
+                        "@id": "https://paidar.ai/#organization"
+                    }
+                },
+                {
+                    "@type": "Organization",
+                    "@id": "https://paidar.ai/#organization",
+                    "name": "Paidar.ai",
+                    "url": "https://paidar.ai/",
+                    "logo": "https://paidar.ai/assets/img/paidar.svg"
+                },
+                {
+                    "@type": "FAQPage",
+                    "@id": "https://paidar.ai/survey.html#faq",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Who is this AI readiness self-assessment for?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "This assessment is for individual professionals, managers, educators, and practitioners who want to benchmark how effectively they combine AI skills, subject matter expertise, judgment, and governance in real work."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How long does the assessment take?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Most people complete the assessment in about 4 to 6 minutes. It includes 21 questions across four readiness pillars."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "What will I get after I finish the assessment?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "You receive a readiness quadrant, an archetype label, and practical next-step recommendations. You can also request a personalized plan tailored to your results."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "What does the assessment measure?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "The assessment measures four dimensions of AI readiness: AI skills, core skills, subject matter expertise, and meta-skills related to scalability, governance, and judgment."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How is my information used?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Your contact details are only used to send your report and follow up with relevant assessment resources. Results are submitted after you review them."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
     <link rel="icon" href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="assets/css/paidar.css" />
     <style>
@@ -264,11 +347,6 @@
             background-color: #E5E7EB;
         }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-
         /* Center Quadrant Visualization */
         #quad {
             margin: 20px auto;
@@ -289,12 +367,165 @@
             margin-bottom: 10px;
         }
 
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .skip-link:focus {
+            left: 16px;
+            top: 16px;
+            width: auto;
+            height: auto;
+            padding: 10px 14px;
+            background: #ffffff;
+            color: #123456;
+            border: 2px solid #123456;
+            border-radius: 8px;
+            z-index: 1000;
+        }
+
         .survey-explanation {
             font-size: 1.1rem;
             color: #456789;
             text-align: center;
             margin-bottom: 20px;
             line-height: 1.5;
+        }
+
+        .survey-shell {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px 24px 48px;
+        }
+
+        .survey-hero {
+            margin-bottom: 24px;
+        }
+
+        .survey-hero-copy {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 24px;
+        }
+
+        .survey-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .survey-highlight {
+            background: #f8fafc;
+            border: 1px solid #d1d5db;
+            border-radius: 14px;
+            padding: 16px;
+        }
+
+        .survey-highlight strong,
+        .survey-highlight span {
+            display: block;
+        }
+
+        .survey-highlight strong {
+            color: #123456;
+            margin-bottom: 6px;
+        }
+
+        .survey-supporting-copy {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .survey-detail-copy {
+            margin-top: 20px;
+        }
+
+        .survey-detail-copy p {
+            color: #4b5563;
+            line-height: 1.7;
+        }
+
+        .survey-faq {
+            margin-top: 28px;
+            display: grid;
+            gap: 16px;
+        }
+
+        .survey-faq h2 {
+            margin: 0;
+            color: #123456;
+            text-align: center;
+        }
+
+        .faq-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .faq-item {
+            border: 1px solid #d1d5db;
+            border-radius: 14px;
+            background: #ffffff;
+            padding: 16px 18px;
+        }
+
+        .faq-item h3 {
+            margin: 0 0 8px;
+            color: #111827;
+            font-size: 1.05rem;
+        }
+
+        .faq-item p {
+            margin: 0;
+            color: #4b5563;
+        }
+
+        .progress-card {
+            position: sticky;
+            top: 84px;
+            z-index: 5;
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 16px;
+            padding: 16px;
+            margin: 0 auto 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .progress-topline {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            border-radius: 999px;
+            background: #e5e7eb;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, #123456 0%, #456789 100%);
+            transition: width 0.2s ease;
+        }
+
+        .progress-caption {
+            margin-top: 10px;
+            font-size: 0.95rem;
         }
 
         /* Pillar Card Style */
@@ -312,17 +543,29 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
             padding: 15px 20px;
             cursor: pointer;
             background-color: #e5e7eb;
             color: #111827;
             font-weight: bold;
             border-bottom: 1px solid #d1d5db;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
             transition: background-color 0.3s ease;
         }
 
         .pillar-header:hover {
             background-color: #d1d5db;
+        }
+
+        .pillar-header:focus-visible,
+        .toolbar-btn:focus-visible,
+        .dropdown-item:focus-visible,
+        .btn-submit:focus-visible {
+            outline: 3px solid #123456;
+            outline-offset: 2px;
         }
 
         .pillar-header h2 {
@@ -345,6 +588,10 @@
             padding: 20px;
             display: none;
             animation: fadeSlide 0.3s ease-in-out;
+        }
+
+        .pillar-content[hidden] {
+            display: none;
         }
 
         /* Fade and Slide Animation */
@@ -404,6 +651,31 @@
             color: #374151;
         }
 
+        .survey-footer-note {
+            margin-top: 16px;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        @media (max-width: 767px) {
+            .toolbar {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .likert-scale {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .likert-option {
+                text-align: left;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+
         /* Submit Button Styling */
         .btn-submit {
             display: block;
@@ -447,7 +719,7 @@
     </style>
 </head>
 <body>
-<a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
     <div class="container flex between center">
         <a class="brand" href="/">
@@ -483,27 +755,27 @@
 <div id="results-container" class="container" style="display:none">
 
     <!-- Toolbar -->
-    <div class="toolbar">
+    <div class="toolbar" aria-label="Results actions">
         <!-- Characteristic Label -->
         <div id="characteristic-label" class="characteristic-label">AI Change Agent (AI Augmented)</div>
         <button class="toolbar-btn" id="btn-take-survey">Retake Survey</button>
         <!-- Preset Dropdown -->
         <div class="dropdown">
-            <button class="toolbar-btn dropdown-toggle">Presets</button>
-            <div class="dropdown-content">
-                <button class="dropdown-item" data-preset="under">Underdeveloped</button>
-                <button class="dropdown-item" data-preset="fakers">AI Fakers</button>
-                <button class="dropdown-item" data-preset="unconf">Unconfident</button>
-                <button class="dropdown-item" data-preset="aug">AI Augmented</button>
+            <button class="toolbar-btn dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="preset-menu">Presets</button>
+            <div class="dropdown-content" id="preset-menu" hidden>
+                <button class="dropdown-item" type="button" data-preset="under">Underdeveloped</button>
+                <button class="dropdown-item" type="button" data-preset="fakers">AI Fakers</button>
+                <button class="dropdown-item" type="button" data-preset="unconf">Unconfident</button>
+                <button class="dropdown-item" type="button" data-preset="aug">AI Augmented</button>
             </div>
         </div>
 
         <!-- Download Dropdown -->
         <div class="dropdown">
-            <button class="toolbar-btn dropdown-toggle">Download</button>
-            <div class="dropdown-content">
-                <button id="download-png" class="dropdown-item">Download PNG</button>
-                <button id="download-pdf" class="dropdown-item">Download Report</button>
+            <button class="toolbar-btn dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="download-menu">Download</button>
+            <div class="dropdown-content" id="download-menu" hidden>
+                <button id="download-png" class="dropdown-item" type="button">Download PNG</button>
+                <button id="download-pdf" class="dropdown-item" type="button">Download Report</button>
             </div>
         </div>
     </div>
@@ -542,7 +814,7 @@
             <div style="margin:16px 0">
                 <label style="font-size:14px; display:flex; align-items:center; gap:8px">
                     <input type="checkbox" id="advanced"/>
-                    <span><b>Advanced mode:</b> score detailed <i>sub-skills</i> for personalized feedback</span>
+                    <span><b>Advanced mode (optional):</b> refine your recommendations by scoring detailed <i>sub-skills</i> after you have your core result.</span>
                 </label>
             </div>
 
@@ -609,6 +881,7 @@
             <div id="lead-capture-container" class="card" style="margin-top: 24px;">
                 <h2>Get Your Personalized AI-Augmented Suggestion Plan</h2>
                 <p>Enter your details below to receive your results and a personalized plan for moving to AI-Augmented.</p>
+                <p style="font-size: 14px; color: #6b7280;">We only use this information to send your report and follow up on relevant assessment resources. Your results are submitted after you review them.</p>
                 <form id="lead-capture-form" style="display: flex; flex-direction: column; gap: 16px;">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                         <div>
@@ -1445,14 +1718,16 @@
     });
 
     function loadSurvey(data) {
+        const totalQuestions = data.pillars.reduce((sum, pillar) => sum + pillar.subskills.length, 0);
         const surveyHtml = data.pillars.map(pillar => {
             // Generate questions for each subskill dynamically
             const subskillQuestions = pillar.subskills.map(subskill => `
             <div class="question">
-                <label for="${subskill.id}" class="question-label">
+                <fieldset style="border:0;padding:0;margin:0;">
+                <legend class="question-label">
                     <h3>${subskill.name}</h3>
                     <p class="subskill-description">${subskill.question}</p>
-                </label>
+                </legend>
                 <div class="likert-scale">
                 ${Object.entries(subskill.scale_labels).map(([key, label]) => `
                     <div class="likert-option">
@@ -1461,17 +1736,18 @@
                     </div>
                 `).join('')}
                 </div>
+                </fieldset>
             </div>
         `).join('');
 
             // Construct survey section with a collapsible card for each pillar
             return `
             <div class="pillar-card">
-                <div class="pillar-header" onclick="togglePillar(this)">
+                <button class="pillar-header" type="button" aria-expanded="false" aria-controls="pillar-${pillar.id}" data-pillar-trigger="${pillar.id}">
                     <h2 class="pillar-title" >${pillar.name}</h2>
                     <span class="pillar-toggle">+</span>
-                </div>
-                <div class="pillar-content">
+                </button>
+                <div class="pillar-content" id="pillar-${pillar.id}" hidden>
                     ${subskillQuestions}
                 </div>
             </div>
@@ -1480,16 +1756,119 @@
 
         // Wrap all survey sections with a title and a submit button
         surveyContainer.innerHTML = `
-        <h1 class="survey-title">AI Readiness Survey</h1>
-        <p class="survey-explanation">Please answer the following questions to assess your readiness levels for digital transformation.</p>
-        <form id="survey-form">
-            ${surveyHtml}
-            <button id="submit-survey" class="btn-submit">Submit</button>
-        </form>
+        <div class="survey-shell">
+            <section class="survey-hero" aria-labelledby="survey-title">
+                <div class="survey-hero-copy">
+                    <h1 id="survey-title" class="survey-title">AI Readiness Self-Assessment</h1>
+                    <p class="survey-explanation">Benchmark how effectively you combine AI skills, subject matter expertise, operational stability, and scalable judgment in real work.</p>
+                </div>
+                <div class="survey-highlights">
+                    <div class="survey-highlight">
+                        <strong>Time required</strong>
+                        <span>Takes about 4–6 minutes.</span>
+                    </div>
+                    <div class="survey-highlight">
+                        <strong>Assessment scope</strong>
+                        <span>${totalQuestions} questions across 4 readiness pillars.</span>
+                    </div>
+                    <div class="survey-highlight">
+                        <strong>What you get</strong>
+                        <span>Your quadrant, archetype, and practical next-step recommendations.</span>
+                    </div>
+                </div>
+                <div class="survey-supporting-copy">
+                    <div class="card">
+                        <h2>What this assessment covers</h2>
+                        <p>This self-assessment measures how well you apply AI in context, evaluate outputs, maintain professional standards, and operate with defensible judgment under real-world constraints.</p>
+                    </div>
+                    <div class="card">
+                        <h2>How to use the results</h2>
+                        <p>Your results highlight current strengths and the areas most likely to improve reliable execution. After the survey, you can request a personalized plan and explore books, training, or workshops that match your profile.</p>
+                    </div>
+                </div>
+                <div class="card survey-detail-copy">
+                    <h2>Why this page matters before you start</h2>
+                    <p>Many AI assessments focus only on enthusiasm or tool familiarity. This self-assessment is designed to go further by helping you benchmark how well you combine AI fluency with professional judgment, domain expertise, and repeatable execution. That means the outcome is not just a score. It is a clearer picture of whether your current AI usage is dependable, defensible, and ready to scale into real workflows.</p>
+                    <p>If you are experimenting with prompts, evaluating new tools, or trying to translate AI interest into practical capability, this page gives you a useful baseline. The four-pillar model highlights whether your biggest opportunity is better prompting, stronger evaluation habits, clearer domain constraints, or more mature governance and systems thinking. Use the result as a decision aid before investing more time in tools, training, or broader implementation.</p>
+                </div>
+                <section class="survey-faq" aria-labelledby="survey-faq-title">
+                    <h2 id="survey-faq-title">Frequently asked questions</h2>
+                    <div class="faq-list">
+                        <article class="faq-item">
+                            <h3>Who is this assessment for?</h3>
+                            <p>It is built for individual professionals, managers, educators, and practitioners who want to understand how effectively they use AI alongside subject matter expertise and professional judgment.</p>
+                        </article>
+                        <article class="faq-item">
+                            <h3>How long does the assessment take?</h3>
+                            <p>Most people finish in about 4–6 minutes. The survey covers ${totalQuestions} questions across four readiness pillars.</p>
+                        </article>
+                        <article class="faq-item">
+                            <h3>What do I get when I finish?</h3>
+                            <p>You receive your quadrant placement, an archetype label, and practical recommendations that point to the next most useful improvement areas.</p>
+                        </article>
+                        <article class="faq-item">
+                            <h3>What does the assessment actually measure?</h3>
+                            <p>It measures AI skills, core reasoning skills, subject matter expertise, and meta-skills related to scalability, governance, and accountable execution.</p>
+                        </article>
+                        <article class="faq-item">
+                            <h3>What happens to my information?</h3>
+                            <p>If you request a personalized plan, your contact details are used to send your report and follow up with relevant resources. Your results are submitted only after you review them.</p>
+                        </article>
+                    </div>
+                </section>
+            </section>
+            <form id="survey-form" aria-describedby="survey-progress-caption">
+                <div class="progress-card" aria-live="polite">
+                    <div class="progress-topline">
+                        <strong id="survey-progress-summary">0 of ${totalQuestions} questions answered</strong>
+                        <span id="survey-progress-percent">0% complete</span>
+                    </div>
+                    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="${totalQuestions}" aria-valuenow="0" aria-labelledby="survey-progress-summary">
+                        <div id="survey-progress-fill" class="progress-bar-fill"></div>
+                    </div>
+                    <p id="survey-progress-caption" class="progress-caption">Start with one pillar at a time. Open a section, answer each question, and your progress will update automatically.</p>
+                </div>
+                ${surveyHtml}
+                <button id="submit-survey" class="btn-submit">See My Results</button>
+                <p class="survey-footer-note">Need more context first? Visit the <a href="/assessments.html">assessment overview</a>, explore <a href="/books/">books</a>, or review <a href="/training/">training</a>.</p>
+            </form>
+        </div>
     `;
 
         // Show survey container
         surveyContainer.style.display = 'block';
+        bindSurveyInteractions(data);
+        updateSurveyProgress();
+    }
+
+    function bindSurveyInteractions(data) {
+        document.querySelectorAll('[data-pillar-trigger]').forEach((button, index) => {
+            button.addEventListener('click', () => togglePillar(button));
+            if (index === 0) {
+                togglePillar(button, true);
+            }
+        });
+
+        document.getElementById('survey-form')?.addEventListener('change', (e) => {
+            if (e.target.matches('input[type="radio"]')) {
+                updateSurveyProgress(data);
+            }
+        });
+    }
+
+    function updateSurveyProgress(data = survey) {
+        const totalQuestions = data.pillars.reduce((sum, pillar) => sum + pillar.subskills.length, 0);
+        const answered = document.querySelectorAll('#survey-form input[type="radio"]:checked').length;
+        const percent = totalQuestions ? Math.round((answered / totalQuestions) * 100) : 0;
+        const summary = document.getElementById('survey-progress-summary');
+        const percentLabel = document.getElementById('survey-progress-percent');
+        const fill = document.getElementById('survey-progress-fill');
+        const bar = document.querySelector('.progress-bar');
+
+        if (summary) summary.textContent = `${answered} of ${totalQuestions} questions answered`;
+        if (percentLabel) percentLabel.textContent = `${percent}% complete`;
+        if (fill) fill.style.width = `${percent}%`;
+        if (bar) bar.setAttribute('aria-valuenow', String(answered));
     }
 
 
@@ -1890,7 +2269,41 @@
             const p = presets[btn.getAttribute('data-preset')];
             Object.keys(p).forEach(k => sliders[k].value = p[k]);
             render();
+            closeDropdowns();
         });
+    });
+
+    function closeDropdowns() {
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            const menu = dropdown.querySelector('.dropdown-content');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+            if (menu) menu.hidden = true;
+        });
+    }
+
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const dropdown = toggle.closest('.dropdown');
+            const menu = dropdown?.querySelector('.dropdown-content');
+            const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+            closeDropdowns();
+            toggle.setAttribute('aria-expanded', String(!isOpen));
+            if (menu) menu.hidden = isOpen;
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown')) {
+            closeDropdowns();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeDropdowns();
+        }
     });
 
     const leadForm = document.getElementById('lead-capture-form');
@@ -2106,8 +2519,8 @@ ${Object.keys(surveyResults).map(p => `- ${p.toUpperCase()}: ${JSON.stringify(su
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>AI Readiness Self-Assessment | Paidar.ai</title>
-<meta name="description" content="Interactive AI readiness self-assessment to benchmark individual and team capability." />
+<title>AI Readiness Self-Assessment for Individuals | Paidar.ai</title>
+<meta name="description" content="Interactive AI readiness self-assessment to benchmark individual capability, identify gaps, and recommend the next best step." />
 <link rel="canonical" href="https://paidar.ai/survey.html" />
 <meta name="robots" content="index, follow" />
 <style>
@@ -2315,20 +2728,26 @@ ${Object.keys(surveyResults).map(p => `- ${p.toUpperCase()}: ${JSON.stringify(su
         return html;
     }
 
-    function togglePillar(element) {
+    function togglePillar(element, forceOpen = false) {
         const allCards = document.querySelectorAll('.pillar-card');
         const clickedCard = element.closest('.pillar-card');
 
         // Collapse all cards except the clicked one
         allCards.forEach(card => {
             const content = card.querySelector('.pillar-content');
+            const trigger = card.querySelector('.pillar-header');
             if (card === clickedCard) {
-                const isOpen = card.classList.contains('open');
-                content.style.display = isOpen ? 'none' : 'block'; // Toggle the clicked card
-                card.classList.toggle('open', !isOpen); // Add/remove 'open' class
+                const isOpen = forceOpen ? false : card.classList.contains('open');
+                const shouldOpen = forceOpen || !isOpen;
+                content.hidden = !shouldOpen;
+                content.style.display = shouldOpen ? 'block' : 'none';
+                card.classList.toggle('open', shouldOpen);
+                if (trigger) trigger.setAttribute('aria-expanded', String(shouldOpen));
             } else {
-                content.style.display = 'none'; // Always hide other cards
-                card.classList.remove('open'); // Remove 'open' class from others
+                content.hidden = true;
+                content.style.display = 'none';
+                card.classList.remove('open');
+                if (trigger) trigger.setAttribute('aria-expanded', 'false');
             }
         });
     }

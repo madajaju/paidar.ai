@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Higher Education | Paidar.ai</title>
-    <meta name="description" content="Outcome-oriented AI adoption for universities, focusing on academic integrity, governance, and operational efficiency." />
+    <title>Higher Education AI Solutions and Academic Integrity | Paidar.ai</title>
+    <meta name="description" content="Outcome-oriented AI adoption for universities with academic integrity, accessibility, governance, and operational efficiency built into the rollout." />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://paidar.ai/sectors/higher-education.html" />
     <meta name="keywords" content="AI training, cloud computing course, microservices course, enterprise architecture, GDXA, AI readiness" />
@@ -14,46 +14,52 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Higher Education | Paidar.ai" />
-    <meta property="og:description" content="Outcome-oriented AI adoption for universities, focusing on academic integrity, governance, and operational efficiency." />
+    <meta property="og:title" content="Higher Education AI Solutions and Academic Integrity | Paidar.ai" />
+    <meta property="og:description" content="Outcome-oriented AI adoption for universities with academic integrity, accessibility, governance, and operational efficiency built into the rollout." />
     <meta property="og:url" content="https://paidar.ai/sectors/higher-education.html" />
     <meta property="og:image" content="https://paidar.ai/assets/img/og-hero.jpg" />
     <meta property="og:site_name" content="Paidar.ai" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Higher Education | Paidar.ai" />
-    <meta name="twitter:description" content="Outcome-oriented AI adoption for universities, focusing on academic integrity, governance, and operational efficiency." />
+    <meta name="twitter:title" content="Higher Education AI Solutions and Academic Integrity | Paidar.ai" />
+    <meta name="twitter:description" content="Outcome-oriented AI adoption for universities with academic integrity, accessibility, governance, and operational efficiency built into the rollout." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/og-hero.jpg" />
 
     <!-- Assets -->
     <link rel="icon" href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="../assets/css/paidar.css" />
 
-    <!-- JSON-LD (Organization + Course catalog) -->
+    <!-- JSON-LD (Higher education sector page) -->
     <script type="application/ld+json">
         {
             "@context":"https://schema.org",
             "@graph":[
                 {
                     "@type":["Organization","ProfessionalService"],
-                    "name":"Paidar Systems LLC",
+                    "@id":"https://paidar.ai/#organization",
+                    "name":"Paidar.ai",
+                    "legalName":"Paidar Systems LLC",
                     "url":"https://paidar.ai/",
-                    "logo":"https://paidar.ai/assets/img/logo.svg",
+                    "logo":"https://paidar.ai/assets/img/paidar.svg",
                     "sameAs":["https://github.com/paidar","https://www.drdarrenspeaks.com"],
-                    "description":"Training, consulting, and solutioning to help organizations become AI-Augmented."
+                    "description":"Training, consulting, and solutioning to help organizations become AI-augmented."
                 },
                 {
-                    "@type":"ItemList",
-                    "name": "Paidar.ai Training Catalog",
-                    "itemListElement":[
-                        {"@type":"Course","name":"Gen AI driven Cloud Computing","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
-                        {"@type":"Course","name":"Gen AI enabled Scalable Microservice Architectures","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
-                        {"@type":"Course","name":"AI Readiness: From Awareness to Augmentation","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
-                        {"@type":"Course","name":"Becoming AI-Augmented: Tools and Mindset (Workshop)","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
-                        {"@type":"Course","name":"Enterprise Architecture for Digital Transformation (GDXA)","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
-                        {"@type":"Course","name":"Digital Transformation Masterclass (Keynote Library)","provider":{"@type":"Organization","name":"Paidar Systems LLC"}}
-                    ]
+                    "@type":"WebSite",
+                    "@id":"https://paidar.ai/#website",
+                    "name":"Paidar.ai",
+                    "url":"https://paidar.ai/"
+                },
+                {
+                    "@type":"WebPage",
+                    "@id":"https://paidar.ai/sectors/higher-education.html#webpage",
+                    "url":"https://paidar.ai/sectors/higher-education.html",
+                    "name":"Higher Education AI Solutions and Academic Integrity | Paidar.ai",
+                    "description":"Outcome-oriented AI adoption for universities with academic integrity, accessibility, governance, and operational efficiency built into the rollout.",
+                    "isPartOf":{"@id":"https://paidar.ai/#website"},
+                    "about":{"@id":"https://paidar.ai/#organization"},
+                    "primaryImageOfPage":"https://paidar.ai/assets/img/og-hero.jpg"
                 }
             ]
         }

@@ -497,7 +497,8 @@ a:hover {
 }
 
 .primary-nav .has-sub:hover > .sub,
-.primary-nav .has-sub:focus-within > .sub {
+.primary-nav .has-sub:focus-within > .sub,
+.primary-nav .has-sub > a[aria-expanded="true"] + .sub {
     display: block;
 }
 .primary-nav ul {
@@ -517,8 +518,13 @@ a:hover {
 }
 
 .primary-nav .has-sub:hover > .sub,
-.primary-nav .has-sub:focus-within > .sub {
+.primary-nav .has-sub:focus-within > .sub,
+.primary-nav .has-sub > a[aria-expanded="true"] + .sub {
     display: block;
+}
+
+.primary-nav .has-sub > a[aria-haspopup="true"] {
+    cursor: pointer;
 }
 
 .primary-nav .sub li a {

@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Training | Paidar.ai</title>
-    <meta name="description" content="Professional training and courses for AI readiness, cloud architecture, and executive digital transformation." />
+    <title>AI Training, Courses, and Executive Education | Paidar.ai</title>
+    <meta name="description" content="Explore Paidar.ai training, courses, and executive education for AI readiness, cloud architecture, enterprise design, and practical digital transformation." />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://paidar.ai/training/" />
     <meta name="keywords" content="AI training, cloud computing course, microservices course, enterprise architecture, GDXA, AI readiness" />
@@ -14,45 +14,64 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Training | Paidar.ai" />
-    <meta property="og:description" content="Professional training and courses for AI readiness, cloud architecture, and executive digital transformation." />
+    <meta property="og:title" content="AI Training, Courses, and Executive Education | Paidar.ai" />
+    <meta property="og:description" content="Explore Paidar.ai training, courses, and executive education for AI readiness, cloud architecture, enterprise design, and digital transformation." />
     <meta property="og:url" content="https://paidar.ai/training/" />
     <meta property="og:image" content="https://paidar.ai/assets/img/og-hero.jpg" />
     <meta property="og:site_name" content="Paidar.ai" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Training | Paidar.ai" />
-    <meta name="twitter:description" content="Professional training and courses for AI readiness, cloud architecture, and executive digital transformation." />
+    <meta name="twitter:title" content="AI Training, Courses, and Executive Education | Paidar.ai" />
+    <meta name="twitter:description" content="Explore Paidar.ai training, courses, and executive education for AI readiness, cloud architecture, enterprise design, and digital transformation." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/og-hero.jpg" />
 
     <!-- Assets -->
     <link rel="icon" href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="../assets/css/paidar.css" />
 
-    <!-- JSON-LD (Organization + Course catalog) -->
+    <!-- JSON-LD (Training hub + course catalog) -->
     <script type="application/ld+json">
         {
             "@context":"https://schema.org",
             "@graph":[
                 {
                     "@type":["Organization","ProfessionalService"],
-                    "name":"Paidar Systems LLC",
+                    "@id":"https://paidar.ai/#organization",
+                    "name":"Paidar.ai",
+                    "legalName":"Paidar Systems LLC",
                     "url":"https://paidar.ai/",
-                    "logo":"https://paidar.ai/assets/img/logo.svg",
+                    "logo":"https://paidar.ai/assets/img/paidar.svg",
                     "sameAs":["https://github.com/paidar","https://www.drdarrenspeaks.com"],
-                    "description":"Training, consulting, and solutioning to help organizations become AI-Augmented."
+                    "description":"Training, consulting, and solutioning to help organizations become AI-augmented."
+                },
+                {
+                    "@type":"WebSite",
+                    "@id":"https://paidar.ai/#website",
+                    "name":"Paidar.ai",
+                    "url":"https://paidar.ai/"
+                },
+                {
+                    "@type":"CollectionPage",
+                    "@id":"https://paidar.ai/training/#webpage",
+                    "url":"https://paidar.ai/training/",
+                    "name":"AI Training, Courses, and Executive Education | Paidar.ai",
+                    "description":"Explore Paidar.ai training, courses, and executive education for AI readiness, cloud architecture, enterprise design, and practical digital transformation.",
+                    "isPartOf":{"@id":"https://paidar.ai/#website"},
+                    "about":{"@id":"https://paidar.ai/#organization"},
+                    "primaryImageOfPage":"https://paidar.ai/assets/img/og-hero.jpg"
                 },
                 {
                     "@type":"ItemList",
+                    "@id":"https://paidar.ai/training/#catalog",
                     "name": "Paidar.ai Training Catalog",
                     "itemListElement":[
-                        {"@type":"Course","name":"Gen AI driven Cloud Computing","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
-                        {"@type":"Course","name":"Gen AI enabled Scalable Microservice Architectures","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
-                        {"@type":"Course","name":"AI Readiness: From Awareness to Augmentation","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
-                        {"@type":"Course","name":"Becoming AI-Augmented: Tools and Mindset (Workshop)","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
-                        {"@type":"Course","name":"Enterprise Architecture for Digital Transformation (GDXA)","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
-                        {"@type":"Course","name":"Digital Transformation Masterclass (Keynote Library)","provider":{"@type":"Organization","name":"Paidar Systems LLC"}}
+                        {"@type":"Course","name":"Gen AI driven Cloud Computing","provider":{"@id":"https://paidar.ai/#organization"}},
+                        {"@type":"Course","name":"Gen AI enabled Scalable Microservice Architectures","provider":{"@id":"https://paidar.ai/#organization"}},
+                        {"@type":"Course","name":"AI Readiness: From Awareness to Augmentation","provider":{"@id":"https://paidar.ai/#organization"}},
+                        {"@type":"Course","name":"Becoming AI-Augmented: Tools and Mindset (Workshop)","provider":{"@id":"https://paidar.ai/#organization"}},
+                        {"@type":"Course","name":"Enterprise Architecture for Digital Transformation (GDXA)","provider":{"@id":"https://paidar.ai/#organization"}},
+                        {"@type":"Course","name":"Digital Transformation Masterclass (Keynote Library)","provider":{"@id":"https://paidar.ai/#organization"}}
                     ]
                 }
             ]
@@ -100,6 +119,7 @@
             <div>
                 <h1>Training & Courses</h1>
                 <p class="lead">Self-paced and instructor-led programs in Cloud, AI Readiness, and Enterprise Architecture — built to make teams <em>AI-Augmented</em>.</p>
+                <p style="max-width: 760px;">Use this training hub when you need structured learning content rather than an assessment, workshop, or advisory engagement. It is designed for people building repeatable capability through courses, guided study, and executive education.</p>
                 <ul class="feature-list">
                     <li>University-grade lectures, practical labs, and executive modules</li>
                     <li>Vendor-neutral patterns with governance, security, and ROI</li>

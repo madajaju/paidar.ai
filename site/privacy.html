@@ -18,6 +18,43 @@
     <meta name="twitter:title" content="Privacy Policy | Paidar.ai" />
     <meta name="twitter:description" content="Privacy policy and data protection practices for Paidar.ai." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "@id": "https://paidar.ai/#website",
+                    "url": "https://paidar.ai/",
+                    "name": "Paidar.ai",
+                    "publisher": {
+                        "@id": "https://paidar.ai/#organization"
+                    }
+                },
+                {
+                    "@type": "Organization",
+                    "@id": "https://paidar.ai/#organization",
+                    "name": "Paidar.ai",
+                    "url": "https://paidar.ai/",
+                    "logo": "https://paidar.ai/assets/img/paidar.svg"
+                },
+                {
+                    "@type": "WebPage",
+                    "@id": "https://paidar.ai/privacy.html#webpage",
+                    "url": "https://paidar.ai/privacy.html",
+                    "name": "Privacy Policy | Paidar.ai",
+                    "description": "Privacy policy and data protection practices for Paidar.ai.",
+                    "isPartOf": {
+                        "@id": "https://paidar.ai/#website"
+                    },
+                    "about": {
+                        "@id": "https://paidar.ai/#organization"
+                    },
+                    "primaryImageOfPage": "https://paidar.ai/assets/img/hero.jpeg"
+                }
+            ]
+        }
+    </script>
     <link rel="icon" href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="assets/css/paidar.css" />
 </head>

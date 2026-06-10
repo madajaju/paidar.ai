@@ -7,7 +7,11 @@
   </defs>
   
   <g transform="translate(340,355)">
-    <polygon fill="none" stroke="#162F4D" stroke-width="60" points="0,-242 209.6,-121 209.6,121 0,242 -209.6,121 -209.6,-121"/>
-    <polygon fill="#c8a75A" points="0,-47 104.8,54.5 104.8,175.5 0,277 -104.8,175.5 -104.8,54.5"/>
+    <polygon fill="none" stroke="#162F4D" stroke-width="100" points="0,-242 209.6,-121 209.6,121 0,242 -209.6,121 -209.6,-121"/>
+    <g transform="scale(1.1, 1.2)">
+      <g transform="translate(0,-50)">
+    <polygon fill="#a8873A" points="0,-47 104.8,54.5 104.8,175.5 0,277 -104.8,175.5 -104.8,54.5"/>
+      </g>
+    </g>
   </g>
 </svg>

@@ -3,72 +3,83 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Services | Paidar.ai</title>
-    <meta name="description" content="Strategic AI advisory, governance, and implementation services designed to turn AI experimentation into reliable business outcomes." />
+    <title>AI Advisory, Governance, and Implementation Services | Paidar.ai</title>
+    <meta name="description" content="Paidar.ai provides AI advisory, governance, and implementation services that help organizations turn experimentation into accountable, measurable execution." />
     <link rel="canonical" href="https://paidar.ai/services.html" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#123456" />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Services | Paidar.ai" />
-    <meta property="og:description" content="Strategic AI advisory, governance, and implementation services designed to turn AI experimentation into reliable business outcomes." />
+    <meta property="og:title" content="AI Advisory, Governance, and Implementation Services | Paidar.ai" />
+    <meta property="og:description" content="Align AI strategy, governance, and implementation with advisory services built for accountable execution and measurable business outcomes." />
     <meta property="og:url" content="https://paidar.ai/services.html" />
     <meta property="og:image" content="https://paidar.ai/assets/img/hero.jpeg" />
     <meta property="og:site_name" content="Paidar.ai" />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Services | Paidar.ai" />
-    <meta name="twitter:description" content="Strategic AI advisory, governance, and implementation services designed to turn AI experimentation into reliable business outcomes." />
-    <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />    <link rel="icon" href="/assets/img/favicon.ico" />
+    <meta name="twitter:title" content="AI Advisory, Governance, and Implementation Services | Paidar.ai" />
+    <meta name="twitter:description" content="Align AI strategy, governance, and implementation with advisory services built for accountable execution and measurable business outcomes." />
+    <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />
+    <link rel="icon" href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="assets/css/paidar.css" />
-    <!-- JSON-LD: Organization, Website, Services, ItemList, FAQ -->
+    <!-- JSON-LD: Organization, Website, Services -->
     <script type="application/ld+json">
         {
             "@context":"https://schema.org",
             "@graph":[
                 {
                     "@type":["Organization","ProfessionalService"],
+                    "@id":"https://paidar.ai/#organization",
                     "name":"Paidar.ai",
                     "legalName":"Paidar Systems LLC",
                     "url":"https://paidar.ai/",
-                    "logo":"https://paidar.ai/assets/img/logo.svg",
+                    "logo":"https://paidar.ai/assets/img/paidar.svg",
                     "sameAs":[
                         "https://github.com/paidar",
                         "https://www.drdarrenspeaks.com"
                     ],
-                    "description":"Training, consulting, and advisory services to help organizations turn AI experimentation into reliable execution."
+                    "description":"AI advisory, governance, and implementation services to help organizations turn experimentation into reliable execution."
+                },
+                {
+                    "@type":"WebPage",
+                    "@id":"https://paidar.ai/services.html#webpage",
+                    "url":"https://paidar.ai/services.html",
+                    "name":"AI Advisory, Governance, and Implementation Services | Paidar.ai",
+                    "description":"Paidar.ai provides AI advisory, governance, and implementation services that help organizations turn experimentation into accountable, measurable execution.",
+                    "isPartOf":{"@id":"https://paidar.ai/#website"},
+                    "about":{"@id":"https://paidar.ai/#organization"},
+                    "primaryImageOfPage":"https://paidar.ai/assets/img/hero.jpeg"
                 },
                 {
                     "@type":"WebSite",
+                    "@id":"https://paidar.ai/#website",
                     "name":"Paidar.ai",
-                    "url":"https://paidar.ai/",
-                    "potentialAction":{
-                        "@type":"SearchAction",
-                        "target":"https://paidar.ai/search?q={query}",
-                        "query-input":"required name=query"
-                    }
+                    "url":"https://paidar.ai/"
                 },
                 {
                     "@type":"Service",
+                    "@id":"https://paidar.ai/services.html#advisory",
                     "name":"AI Advisory & Strategy",
                     "serviceType":"Executive AI Readiness",
-                    "provider":{"@type":"Organization","name":"Paidar Systems LLC"},
+                    "provider":{"@id":"https://paidar.ai/#organization"},
                     "areaServed":"Worldwide",
                     "audience":{"@type":"Audience","audienceType":["Higher Education","Government","Enterprise"]}
                 },
                 {
                     "@type":"Service",
+                    "@id":"https://paidar.ai/services.html#governance",
                     "name":"AI Governance & Risk",
                     "serviceType":"Policy & Risk Frameworks",
-                    "provider":{"@type":"Organization","name":"Paidar Systems LLC"},
+                    "provider":{"@id":"https://paidar.ai/#organization"},
                     "areaServed":"Worldwide",
                     "audience":{"@type":"Audience","audienceType":["Higher Education","Government","Enterprise"]}
                 },
                 {
                     "@type":"Service",
+                    "@id":"https://paidar.ai/services.html#implementation",
                     "name":"AI Implementation",
                     "serviceType":"AAOS Framework Adoption",
-                    "provider":{"@type":"Organization","name":"Paidar Systems LLC"},
+                    "provider":{"@id":"https://paidar.ai/#organization"},
                     "areaServed":"Worldwide",
                     "audience":{"@type":"Audience","audienceType":["Higher Education","Government","Enterprise"]}
                 }
@@ -114,11 +125,17 @@
         <div class="container">
             <h1>Turn AI Experimentation Into Reliable Execution</h1>
             <p class="lead">Bridging the gap between strategic vision and operational reality through structured advisory, governance, and implementation support.</p>
+            <p style="max-width: 760px;">Choose services when you need operating-model clarity, governance decisions, or implementation support that extends beyond a single workshop or assessment and into accountable execution.</p>
             <div class="flex wrap" style="gap: var(--space-4); margin-top: var(--space-6);">
                 <a class="btn btn-primary" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_strategy_session" data-propagate-utm="true">Book a Strategy Session</a>
                 <a class="btn btn-gold" href="/assessments.html" data-track="cta_start_assessment">Start an Assessment</a>
                 <a class="btn btn-outline" href="/workshops/" data-track="cta_explore_workshops">Explore Workshops</a>
             </div>
+            <ul class="feature-list" style="margin-top: var(--space-5); max-width: 760px;">
+                <li><strong>Choose an assessment</strong> to benchmark readiness and expose capability gaps.</li>
+                <li><strong>Choose a workshop</strong> to align a team around a focused use case or decision.</li>
+                <li><strong>Choose services</strong> when you need roadmap, governance, and implementation help across the operating model.</li>
+            </ul>
         </div>
     </section>
 

@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Cloud Computing Training | Paidar.ai</title>
-    <meta name="description" content="Hands-on cloud computing course for AI teams, covering architecture, operations, and governance." />
+    <title>AI-Augmented Cloud Computing Training for Technologists | Paidar.ai</title>
+    <meta name="description" content="Hands-on cloud computing training for technologists building AI-ready systems, covering architecture, operations, governance, and portfolio-grade delivery." />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://paidar.ai/training/cloud-computing.html" />
     <meta name="keywords" content="AI training, cloud computing course, microservices course, enterprise architecture, GDXA, AI readiness" />
@@ -14,46 +14,59 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Cloud Computing Training | Paidar.ai" />
-    <meta property="og:description" content="Hands-on cloud computing course for AI teams, covering architecture, operations, and governance." />
+    <meta property="og:title" content="AI-Augmented Cloud Computing Training for Technologists | Paidar.ai" />
+    <meta property="og:description" content="Hands-on cloud computing training for technologists building AI-ready systems, covering architecture, operations, governance, and portfolio-grade delivery." />
     <meta property="og:url" content="https://paidar.ai/training/cloud-computing.html" />
     <meta property="og:image" content="https://paidar.ai/assets/img/og-hero.jpg" />
     <meta property="og:site_name" content="Paidar.ai" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Cloud Computing Training | Paidar.ai" />
-    <meta name="twitter:description" content="Hands-on cloud computing course for AI teams, covering architecture, operations, and governance." />
+    <meta name="twitter:title" content="AI-Augmented Cloud Computing Training for Technologists | Paidar.ai" />
+    <meta name="twitter:description" content="Hands-on cloud computing training for technologists building AI-ready systems, covering architecture, operations, governance, and portfolio-grade delivery." />
     <meta name="twitter:image" content="https://paidar.ai/assets/img/og-hero.jpg" />
 
     <!-- Assets -->
     <link rel="icon" href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="../assets/css/paidar.css" />
 
-    <!-- JSON-LD (Organization + Course catalog) -->
+    <!-- JSON-LD (Cloud computing course page) -->
     <script type="application/ld+json">
         {
             "@context":"https://schema.org",
             "@graph":[
                 {
                     "@type":["Organization","ProfessionalService"],
-                    "name":"Paidar Systems LLC",
+                    "@id":"https://paidar.ai/#organization",
+                    "name":"Paidar.ai",
+                    "legalName":"Paidar Systems LLC",
                     "url":"https://paidar.ai/",
-                    "logo":"https://paidar.ai/assets/img/logo.svg",
+                    "logo":"https://paidar.ai/assets/img/paidar.svg",
                     "sameAs":["https://github.com/paidar","https://www.drdarrenspeaks.com"],
-                    "description":"Training, consulting, and solutioning to help organizations become AI-Augmented."
+                    "description":"Training, consulting, and solutioning to help organizations become AI-augmented."
                 },
                 {
-                    "@type":"ItemList",
-                    "name": "Paidar.ai Training Catalog",
-                    "itemListElement":[
-                        {"@type":"Course","name":"Gen AI driven Cloud Computing","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
-                        {"@type":"Course","name":"Gen AI enabled Scalable Microservice Architectures","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
-                        {"@type":"Course","name":"AI Readiness: From Awareness to Augmentation","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
-                        {"@type":"Course","name":"Becoming AI-Augmented: Tools and Mindset (Workshop)","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
-                        {"@type":"Course","name":"Enterprise Architecture for Digital Transformation (GDXA)","provider":{"@type":"Organization","name":"Paidar Systems LLC"}},
-                        {"@type":"Course","name":"Digital Transformation Masterclass (Keynote Library)","provider":{"@type":"Organization","name":"Paidar Systems LLC"}}
-                    ]
+                    "@type":"WebSite",
+                    "@id":"https://paidar.ai/#website",
+                    "name":"Paidar.ai",
+                    "url":"https://paidar.ai/"
+                },
+                {
+                    "@type":"WebPage",
+                    "@id":"https://paidar.ai/training/cloud-computing.html#webpage",
+                    "url":"https://paidar.ai/training/cloud-computing.html",
+                    "name":"AI-Augmented Cloud Computing Training for Technologists | Paidar.ai",
+                    "description":"Hands-on cloud computing training for technologists building AI-ready systems, covering architecture, operations, governance, and portfolio-grade delivery.",
+                    "isPartOf":{"@id":"https://paidar.ai/#website"},
+                    "about":{"@id":"https://paidar.ai/#organization"},
+                    "primaryImageOfPage":"https://paidar.ai/assets/img/og-hero.jpg"
+                },
+                {
+                    "@type":"Course",
+                    "name":"AI-Augmented Cloud Computing for Technologists",
+                    "description":"A hands-on cloud computing course covering architecture, governance, deployment, and operations for AI-ready systems.",
+                    "provider":{"@id":"https://paidar.ai/#organization"},
+                    "url":"https://paidar.ai/training/cloud-computing.html"
                 }
             ]
         }

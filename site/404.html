@@ -79,7 +79,7 @@
         }
     </style>
 
-    <!-- JSON-LD: Organization, Website, Services, ItemList, FAQ -->
+    <!-- JSON-LD: 404 page -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -89,125 +89,36 @@
                         "Organization",
                         "ProfessionalService"
                     ],
-                    "name": "Paidar Systems LLC",
+                    "@id": "https://paidar.ai/#organization",
+                    "name": "Paidar.ai",
+                    "legalName": "Paidar Systems LLC",
                     "url": "https://paidar.ai/",
-                    "logo": "https://paidar.ai/assets/img/logo.svg",
+                    "logo": "https://paidar.ai/assets/img/paidar.svg",
                     "sameAs": [
                         "https://github.com/paidar",
                         "https://www.drdarrenspeaks.com"
                     ],
-                    "description": "Training, consulting, and solutioning to help organizations become AI-Augmented."
+                    "description": "Training, consulting, and solutioning to help organizations become AI-augmented."
                 },
                 {
                     "@type": "WebSite",
+                    "@id": "https://paidar.ai/#website",
                     "name": "Paidar.ai",
-                    "url": "https://paidar.ai/",
-                    "potentialAction": {
-                        "@type": "SearchAction",
-                        "target": "https://paidar.ai/search?q={query}",
-                        "query-input": "required name=query"
-                    }
+                    "url": "https://paidar.ai/"
                 },
                 {
-                    "@type": "Service",
-                    "serviceType": "Executive AI Readiness",
-                    "provider": {
-                        "@type": "Organization",
-                        "name": "Paidar Systems LLC"
+                    "@type": "WebPage",
+                    "@id": "https://paidar.ai/404.html#webpage",
+                    "url": "https://paidar.ai/404.html",
+                    "name": "404 | Paidar.ai",
+                    "description": "The page you requested could not be found. Navigate back to Paidar.ai resources.",
+                    "isPartOf": {
+                        "@id": "https://paidar.ai/#website"
                     },
-                    "areaServed": "US",
-                    "audience": {
-                        "@type": "Audience",
-                        "audienceType": [
-                            "Higher Education",
-                            "Government",
-                            "Enterprise",
-                            "AI Agents"
-                        ]
-                    }
-                },
-                {
-                    "@type": "Service",
-                    "serviceType": "Architecture & Roadmaps",
-                    "provider": {
-                        "@type": "Organization",
-                        "name": "Paidar Systems LLC"
+                    "about": {
+                        "@id": "https://paidar.ai/#organization"
                     },
-                    "areaServed": "US",
-                    "audience": {
-                        "@type": "Audience",
-                        "audienceType": [
-                            "Higher Education",
-                            "Government",
-                            "Enterprise",
-                            "AI Agents"
-                        ]
-                    }
-                },
-                {
-                    "@type": "ItemList",
-                    "name": "Solutioning Projects",
-                    "itemListElement": [
-                        {
-                            "@type": "SoftwareApplication",
-                            "name": "Sruth",
-                            "applicationCategory": "AI"
-                        },
-                        {
-                            "@type": "SoftwareApplication",
-                            "name": "Ailtire",
-                            "applicationCategory": "DeveloperTools"
-                        },
-                        {
-                            "@type": "SoftwareApplication",
-                            "name": "Guthan",
-                            "applicationCategory": "Multimedia"
-                        },
-                        {
-                            "@type": "SoftwareApplication",
-                            "name": "Tuig",
-                            "applicationCategory": "AI"
-                        },
-                        {
-                            "@type": "SoftwareApplication",
-                            "name": "Treoir",
-                            "applicationCategory": "Utilities"
-                        },
-                        {
-                            "@type": "SoftwareApplication",
-                            "name": "Runaire",
-                            "applicationCategory": "SecurityApplication"
-                        }
-                    ]
-                },
-                {
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "What does it mean to become AI-Augmented?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "AI-Augmented organizations blend people, process, policy, and technology so Generative AI enhances�rather than replaces�human expertise. We focus on governance, architecture, and measurable outcomes."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Do you support Higher Education and Government?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. We serve Higher Education and Government with mission-aligned, secure approaches, alongside private industry."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Are your tools open-source?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. Our software is open source to reduce lock-in, accelerate adoption, and enable secure adaptation in your environment."
-                            }
-                        }
-                    ]
+                    "primaryImageOfPage": "https://paidar.ai/assets/img/og-hero.jpg"
                 }
             ]
         }
