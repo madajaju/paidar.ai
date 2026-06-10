@@ -1,459 +1,1356 @@
-# Paidar.ai Landing Page Content: Becoming AI-Augmented
+# Paidar.ai Codex Punch List
 
-Use this as the implementation brief for the website agent. Each page should be direct, resource-focused, and easy to scan. These pages support QR codes printed in *Becoming AI-Augmented*.
+Target site: `https://paidar-ai.pages.dev/`  
+Goal: turn the staging site into an SEO-visible, AI-citable authority platform for AI readiness assessments, workshops, advisory, books, and frameworks.
 
-## Global Guidance
+## Current Observations From Staging Site
 
-- Keep all URLs stable.
-- Include the book title and short resource promise on every page.
-- Include clear download buttons.
-- Include a newsletter/update signup on every page or in a persistent footer.
-- Avoid making these pages feel like generic marketing pages. They are companion-resource pages for readers.
-- Every page should link back to `/becoming`.
+The homepage already has a strong core message: **“Turn AI Into Reliable Execution Across Your Organization.”** It also presents a useful journey from assessments to workshops to advisory, with CTAs for assessment, workshops, the book, and strategy session.
 
-## URL Map
+Remaining gaps to fix:
 
-| Page | URL | Primary Purpose |
-|---|---|---|
-| Companion Hub | `https://paidar.ai/becoming` | Central resource hub for the book |
-| Diagnose | `https://paidar.ai/becoming/diagnose` | Help readers identify posture and establish defensibility |
-| Activate | `https://paidar.ai/becoming/activate` | Build balanced AI capability and repeatable practice |
-| Control | `https://paidar.ai/becoming/control` | Create trust through grounding, validation, and disclosure |
-| Execute | `https://paidar.ai/becoming/execute` | Convert one-off tasks into workflow loops |
-| Measure | `https://paidar.ai/becoming/measure` | Track whether AI is improving outcomes, not just speed |
-| Scale | `https://paidar.ai/becoming/scale` | Move from individual augmentation to reusable capability |
-| Next | `https://paidar.ai/becoming/next` | Continue the reader relationship after the book |
+- Darren’s credibility is not visible early enough.
+- AAOS is mentioned but not explained.
+- Frameworks are not yet treated as core intellectual property.
+- The site lacks canonical reference pages for AI operating model, AI governance, AI readiness, and reliable execution.
+- The site needs stronger entity SEO, schema, social proof, and `llms.txt`.
+- Books are present but need to act as authority assets, not just resources.
 
-## `/becoming`
+---
 
-### Page Purpose
+# Implementation Principles
 
-Central companion hub for *Becoming AI-Augmented*.
+## Do Not Break Existing Site
 
-### Hero Copy
+- Preserve current design language, logo, colors, and typography unless a specific change is listed.
+- Keep existing CTAs unless replacing them with stronger equivalents.
+- Maintain mobile responsiveness.
+- Do not remove existing content without migrating it into the new structure.
 
-**Heading:** Becoming AI-Augmented Companion Resources
+## Optimize For Three Audiences
 
-**Subheading:** Download the worksheets, templates, dashboards, and operating tools that help you move from AI user to augmented architect.
+1. Executives and enterprise buyers.
+2. Google/search engines.
+3. AI answer engines such as ChatGPT, Claude, Gemini, and Perplexity.
 
-### Core Sections
+## Voice And Positioning
 
-1. **Start Here**
-    - Short welcome for book readers.
-    - Explain that the QR resources are organized by the six-part AAOS journey: Diagnose, Activate, Control, Execute, Measure, Scale.
-    - Mention that resources may be updated after publication.
+Use clear executive language:
 
-2. **Recommended Path**
-    - Take the Diagnose assessment.
-    - Build your first Individual Integrity Packet.
-    - Create one workflow loop.
-    - Track one metric for seven days.
-    - Return to the companion hub for updates.
+- Reliable execution
+- Defensible outcomes
+- AI operating model
+- Governance
+- Readiness
+- Decision discipline
+- Transformation at scale
+- Human accountability
+- Measurable business outcomes
 
-3. **Resource Library**
-    - Link cards for each part page.
-    - Each card should include the part name, short description, and CTA.
+Avoid generic AI vendor language:
 
-4. **Downloads**
-    - Full workbook PDF.
-    - All templates ZIP.
-    - AI-Augmented Operating Standard overview.
-    - Glossary/reference sheet.
+- “Unlock the power of AI”
+- “Revolutionize your business”
+- “Harness cutting-edge technology”
+- “Transform with innovation”
 
-5. **Updates**
-    - Errata.
-    - Version/update log.
-    - Newsletter signup for updated templates.
+---
 
-### Downloads
+# Priority 0 — Repo Discovery
 
-- Full workbook PDF
-- All templates ZIP
-- AI-Augmented Operating Standard overview
-- Glossary/reference sheet
+## Task 0.1: Identify Site Stack
 
-### CTA
+Before editing, inspect the repo and determine:
 
-Start with Diagnose
+- Static HTML, Astro, Next.js, SvelteKit, Hugo, Eleventy, or another framework.
+- Source directory.
+- Routing convention.
+- Layout component location.
+- Navigation component location.
+- Metadata/head component location.
+- Schema/JSON-LD pattern, if one exists.
+- Sitemap generation method.
+- Robots.txt location.
 
-## `/becoming/diagnose`
+## Acceptance Criteria
 
-### Page Purpose
+- Add a short implementation note in PR summary listing the stack and main files changed.
+- Do not introduce a new framework.
 
-Help readers identify their current AI posture and establish defensibility before increasing speed.
+---
 
-### Hero Copy
+# Priority 1 — Homepage Authority Upgrade
 
-**Heading:** Diagnose Your AI Posture
+## Task 1.1: Add Founder Authority Section Near Top
 
-**Subheading:** Before you amplify, identify where you stand and what kind of proof your work needs.
+Add a section immediately after the hero or after the first “Why AI Adoption Fails” block.
 
-### Core Sections
+Suggested heading:
 
-1. **Why Diagnose Comes First**
-    - AI speed can hide weak judgment.
-    - Diagnosis turns anxiety into a practical next step.
-    - Readers should understand whether they are under-leveraged, faking fluency, grounded but slow, or truly augmented.
+```text
+Led by Dr. Darren Pulsipher
+```
 
-2. **Posture Self-Assessment**
-    - 10 to 16 question assessment.
-    - Output should recommend a posture and next resource.
+Suggested copy:
 
-3. **16 Archetype Matrix**
-    - Visual map of the posture model.
-    - Short descriptions for each quadrant/archetype.
+```text
+Paidar.ai is led by Dr. Darren Pulsipher, an enterprise architect, author, professor, and transformation leader who helps organizations move from AI experimentation to reliable, defensible execution.
+```
 
-4. **Leverage Inflection Worksheet**
-    - Help readers identify the point where speed and defensibility diverge.
+Add credibility bullets/cards:
 
-5. **Individual Integrity Packet Starter**
-    - Introduce the six-part packet: Outcome, Assumptions, Evidence, Validation, Ownership, Risk.
+```text
+Chief Enterprise Architect, Public Sector, Intel
+Vanderbilt University Professor
+Author of AI-Augmented Teams and Becoming AI-Augmented
+Host of Embracing Digital Transformation
+Open Group leadership in digital transformation architecture
+8 patents in cloud and distributed systems
+```
 
-6. **Weak vs. Defensible Output**
-    - Show examples of polished but fragile AI output.
-    - Show the same output with evidence, assumptions, and accountability.
+CTA buttons:
 
-### Downloads
+```text
+Meet Darren
+Book a Strategy Session
+```
 
-- Posture Assessment PDF
-- Individual Integrity Packet template
-- Leverage Inflection worksheet
-- Verified Output Ratio tracker
+Preferred links:
 
-### Interactive Option
+```text
+/about/dr-darren-pulsipher/
+/contact/
+```
 
-10-question posture quiz with recommended next step.
+## Acceptance Criteria
 
-### CTA
+- Darren’s credibility is visible within the first two scrolls on desktop and mobile.
+- The section links to the new Darren entity page.
+- The section does not make the homepage feel like a personal brand site; it should support Paidar.ai’s credibility.
 
-Build Your First Integrity Packet
+---
 
-## `/becoming/activate`
+# Priority 2 — Add Frameworks As Core Navigation
 
-### Page Purpose
+## Task 2.1: Add Top-Level Navigation Item
 
-Turn AI use into repeatable skill growth.
+Add a top-level navigation item:
 
-### Hero Copy
+```text
+Frameworks
+```
 
-**Heading:** Activate Balanced AI Capability
+Under it, create links to:
 
-**Subheading:** Activation is not collecting prompts. It is building the skills that let AI speed remain grounded in judgment.
+```text
+/frameworks/
+/frameworks/aaos/
+/frameworks/ai-operating-model/
+/frameworks/gdxa/
+/frameworks/gear/
+/frameworks/odxa/
+```
 
-### Core Sections
+If the nav does not support dropdowns, add `Frameworks` as a top-level page and include child links there.
 
-1. **The Four Pillars**
-    - AI Skills: creating repeatable leverage.
-    - SME Skills: grounding output in local truth.
-    - Core Skills: strengthening cognitive infrastructure.
-    - Meta Skills: governing self and system under pressure.
+## Acceptance Criteria
 
-2. **Prompt Practice Drills**
-    - Exercises for adding context, constraints, evidence, and validation.
+- Frameworks is visible in primary navigation.
+- All child pages are reachable within two clicks from the homepage.
+- Footer includes a Frameworks link.
 
-3. **Workflow Amplification Canvas**
-    - Identify repeatable work.
-    - Map inputs, judgment points, AI steps, validation steps, and final ownership.
+---
 
-4. **SME Capture Worksheet**
-    - Help readers externalize tacit knowledge and expert constraints.
+# Priority 3 — Create Frameworks Landing Page
 
-5. **Anti-Faker Checklist**
-    - Help readers detect fluent but ungrounded work.
+## Task 3.1: Create `/frameworks/`
 
-6. **Constraint Call Exercise**
-    - Teach readers to define the average, add the expert edge, and force recalculation.
+Page title:
 
-### Downloads
+```text
+AI Transformation Frameworks for Reliable Execution
+```
 
-- Four Pillars worksheet
-- Prompt drill pack
-- Workflow amplification canvas
-- SME capture template
-- Anti-faker checklist
+Meta title:
 
-### Interactive Option
+```text
+AI Transformation Frameworks | Paidar.ai
+```
 
-Prompt improvement exercise where users rewrite a weak prompt using constraints, evidence, and validation.
+Meta description:
 
-### CTA
+```text
+Explore Paidar.ai frameworks for AI-augmented organizations, including AAOS, AI operating models, GDXA, GEAR, and ODXA.
+```
 
-Practice a Constraint Call
+Page sections:
 
-## `/becoming/control`
+1. Hero
+2. Why frameworks matter
+3. Framework cards
+4. How the frameworks work together
+5. CTA to assessment/workshop
 
-### Page Purpose
+Framework cards:
 
-Help readers create trust, grounding, validation, and disclosure practices.
+- AAOS — AI-Augmented Operating System
+- AI Operating Model
+- GDXA — Government Digital Transformation Architecture
+- GEAR — Government Enterprise Architecture Reference
+- ODXA — Open Digital Transformation Architecture
 
-### Hero Copy
+Suggested hero copy:
 
-**Heading:** Control Speed With Trust
+```text
+AI adoption fails when organizations treat technology as the transformation. Paidar.ai frameworks help leaders connect strategy, governance, operating models, team capability, and measurable execution.
+```
 
-**Subheading:** Control is how AI-assisted speed becomes professionally defensible.
+## Acceptance Criteria
 
-### Core Sections
+- Page has unique H1.
+- Each framework card links to its canonical page.
+- Page links to assessments, workshops, advisory, and books.
 
-1. **Why Control Matters**
-    - Fast output is not enough.
-    - Consequential work needs grounding, validation, and ownership.
+---
 
-2. **Grounding Checklist**
-    - Identify source files, live data, constraints, exclusions, and manual checks.
+# Priority 4 — Create AAOS Canonical Page
 
-3. **Source Log Template**
-    - Track what the AI used, what the human verified, and what remains uncertain.
+## Task 4.1: Create `/frameworks/aaos/`
 
-4. **Validation Ladder Worksheet**
-    - Move from surface check to stress test to expert review to accountable approval.
+Page title:
 
-5. **Red-Team Prompts**
-    - Examples that force the AI to challenge assumptions, find missing evidence, and identify failure modes.
+```text
+AAOS: The AI-Augmented Operating System
+```
 
-6. **Disclosure Language**
-    - Internal disclosure examples.
-    - External/client disclosure examples.
-    - Report footer examples.
+Meta title:
 
-7. **Escalation Path**
-    - Decision tree for when AI-assisted work needs human review or direct human handling.
+```text
+AAOS Framework | AI-Augmented Operating System | Paidar.ai
+```
 
-### Downloads
+Meta description:
 
-- Grounding checklist
-- Validation Ladder worksheet
-- Source-log template
-- Disclosure statement samples
-- Escalation decision tree
+```text
+AAOS is Paidar.ai’s framework for helping organizations deliver reliable, defensible outcomes with AI through disciplined human accountability, validation, and operating model design.
+```
 
-### Interactive Option
+Required sections:
 
-Decision wizard: "Should I disclose AI use here?"
+1. What is AAOS?
+2. Why AAOS exists
+3. The six AAOS stages
+4. Decision Packets
+5. Reliability and defensibility
+6. How AAOS applies to individuals, teams, and organizations
+7. Related workshops and assessments
+8. FAQ
 
-### CTA
+Suggested definition:
 
-Create a Validation Ladder
+```text
+AAOS, the AI-Augmented Operating System, is a practical operating framework for helping individuals, teams, and organizations use AI to produce reliable, defensible decisions and outcomes. It connects human accountability, structured workflows, validation discipline, and governance into a repeatable model for AI-enabled work.
+```
 
-## `/becoming/execute`
+Six stages placeholder:
 
-### Page Purpose
+```text
+Diagnose
+Design
+Develop
+Validate
+Deploy
+Evolve
+```
 
-Help readers convert one-off AI tasks into repeatable workflow loops.
+If the repo already contains the canonical AAOS stage names, use those instead.
 
-### Hero Copy
+FAQ questions:
 
-**Heading:** Execute With Workflow Loops
+```text
+What is AAOS?
+How is AAOS different from AI governance?
+Who uses AAOS?
+What is a Decision Packet?
+How does AAOS reduce AI risk?
+```
 
-**Subheading:** Execution means building systems that can be reused, audited, and improved.
+## Acceptance Criteria
 
-### Core Sections
+- AAOS page is the canonical explanation of AAOS.
+- Page links to book pages and workshops.
+- FAQ schema is added.
+- The term “AI-Augmented Operating System” appears in title, H1, and first 100 words.
 
-1. **From Task to System**
-    - Explain the shift from one-off prompting to reusable operating loops.
+---
 
-2. **Personal Operating Loop Builder**
-    - Define trigger, inputs, AI steps, human judgment gates, output, validation, and metric.
+# Priority 5 — Create AI Operating Model Page
 
-3. **Workflow Loop Canvas**
-    - Template for mapping recurring work.
+## Task 5.1: Create `/frameworks/ai-operating-model/`
 
-4. **Orchestration Map**
-    - Show how multiple AI steps, human checks, and source materials connect.
+Page title:
 
-5. **Task-to-System Worksheet**
-    - Convert a recurring task into a repeatable engine.
+```text
+AI Operating Model for Enterprise Execution
+```
 
-6. **Prompt Chain Examples**
-    - Email engine.
-    - Analysis engine.
-    - Decision packet engine.
-    - Review engine.
+Meta title:
 
-7. **Silent Failure Monitor**
-    - Checklist for detecting when automated work looks right but is drifting.
+```text
+AI Operating Model | Enterprise AI Governance and Execution | Paidar.ai
+```
 
-### Downloads
+Meta description:
 
-- Workflow loop builder
-- Orchestration map
-- Task-to-system worksheet
-- Prompt-chain examples
-- Implementation checklist
+```text
+Learn how an AI operating model connects strategy, governance, workflows, roles, decision rights, and metrics so organizations can scale AI responsibly.
+```
 
-### Interactive Option
+Target keywords:
 
-User enters a recurring task and receives a simple workflow-loop outline.
+- AI operating model
+- enterprise AI operating model
+- AI operating framework
+- AI governance operating model
+- AI transformation operating model
 
-### CTA
+Required sections:
 
-Build a Workflow Loop
+1. What is an AI operating model?
+2. Why AI pilots fail without an operating model
+3. Core components
+4. Governance and decision rights
+5. Roles and responsibilities
+6. Metrics and accountability
+7. Relationship to AAOS
+8. CTA to assessment and advisory
 
-## `/becoming/measure`
+Core components list:
 
-### Page Purpose
+```text
+Strategy alignment
+Governance and policy
+Use-case intake
+Risk classification
+Workflow redesign
+Human accountability
+Validation discipline
+Measurement and feedback
+```
 
-Help readers track whether AI is improving outcomes, not just speed.
+## Acceptance Criteria
 
-### Hero Copy
+- Page is written as a reference article, not a sales page.
+- CTA appears after educational content.
+- Internal links to AAOS, assessments, workshops, and services.
+- FAQ schema included.
 
-**Heading:** Measure What Changed
+---
 
-**Subheading:** Measure the work, not just the time saved.
+# Priority 6 — Create Reliable AI Execution Pillar Page
 
-### Core Sections
+## Task 6.1: Create `/insights/reliable-ai-execution/`
 
-1. **Why Measurement Matters**
-    - Speed is easy to count.
-    - Trust, correction load, and defensibility are the real signals.
+Page title:
 
-2. **Personal AI Metrics Dashboard**
-    - Recommended dashboard layout.
-    - Weekly inputs.
-    - Monthly review.
+```text
+Reliable AI Execution: Moving Beyond Pilots and Experiments
+```
 
-3. **Core Metrics**
-    - Verified Output Ratio.
-    - Rework Rate.
-    - Correction Load.
-    - Grounding Compliance.
-    - Insight Conversion Rate.
-    - Reclaimed Time ROI.
+Meta title:
 
-4. **Weekly Review Template**
-    - What improved?
-    - What failed?
-    - Why did it fail?
-    - What system rule changes next week?
+```text
+Reliable AI Execution | Paidar.ai
+```
 
-5. **Insight-to-Action Tracker**
-    - Convert observations into system changes.
+Meta description:
 
-6. **Sample Scorecards**
-    - Individual contributor.
-    - Manager.
-    - Consultant.
-    - Technical expert.
+```text
+Reliable AI execution helps organizations move beyond pilots by connecting AI strategy, governance, team capability, validation, and measurable business outcomes.
+```
 
-### Downloads
+Required sections:
 
-- Metrics dashboard spreadsheet
-- Weekly review template
-- Insight-to-action tracker
-- Sample scorecards
+1. Definition
+2. Why AI pilots stall
+3. What reliable execution requires
+4. The role of governance
+5. The role of human accountability
+6. The role of Decision Packets
+7. How Paidar.ai helps
+8. FAQ
 
-### Interactive Option
+Suggested definition:
 
-Calculator for Reclaimed Time ROI or Correction Load.
+```text
+Reliable AI execution is the organizational ability to use AI consistently, safely, and measurably across real workflows. It requires more than tools. It requires clear priorities, accountable humans, validated outputs, operating discipline, and feedback loops that improve performance over time.
+```
 
-### CTA
+## Acceptance Criteria
 
-Track One Metric This Week
+- This page becomes the flagship explanatory page for “reliable AI execution.”
+- Page links back to homepage, AAOS, AI Operating Model, assessments, workshops, advisory, and books.
+- Add FAQ schema.
 
-## `/becoming/scale`
+---
 
-### Page Purpose
+# Priority 7 — Create Darren Entity Page
 
-Help readers move from individual augmentation to reusable capability.
+## Task 7.1: Create `/about/dr-darren-pulsipher/`
 
-### Hero Copy
+Page title:
 
-**Heading:** Scale Your Judgment
+```text
+Dr. Darren Pulsipher
+```
 
-**Subheading:** Scale begins when your standard can travel without you personally carrying every decision.
+Meta title:
 
-### Core Sections
+```text
+Dr. Darren Pulsipher | AI-Augmented Organizations, Enterprise Architecture, and Digital Transformation
+```
 
-1. **From Contributor to Multiplier**
-    - Explain the shift from doing better work to making better work repeatable.
+Meta description:
 
-2. **Meta-Skill Roadmap**
-    - Self-awareness.
-    - Systems thinking.
-    - Governance.
-    - Teaching.
-    - Adaptation.
+```text
+Dr. Darren Pulsipher is an enterprise architect, author, professor, podcast host, and AI transformation advisor helping organizations become AI-augmented.
+```
 
-3. **Contributor-to-Multiplier Worksheet**
-    - Identify what only you know.
-    - Turn it into a reusable artifact.
+Required sections:
 
-4. **User-to-Architect Transition Map**
-    - Tool user.
-    - Workflow designer.
-    - System architect.
-    - Standard setter.
+1. Hero bio
+2. Professional roles
+3. Books
+4. Speaking and workshops
+5. Podcast and media
+6. Frameworks and methods
+7. Patents and technical background
+8. Board and standards leadership
+9. CTA to book strategy session or speaking inquiry
 
-5. **Mastery Engine Audit**
-    - Check for logic drift, stale prompts, missing evidence, and over-automation.
+Suggested short bio:
 
-6. **Capability Progression Planner**
-    - 30-day, 60-day, and 90-day next steps.
+```text
+Dr. Darren Pulsipher helps leaders, teams, and institutions become AI-augmented. He brings decades of enterprise architecture, public sector modernization, cloud computing, and AI transformation experience to organizations that need reliable, defensible execution at scale.
+```
 
-7. **Team Handoff Checklist**
-    - What someone else needs to run your system without guessing.
+Include credibility bullets:
 
-### Downloads
+```text
+Chief Enterprise Architect, Public Sector, Intel
+Vanderbilt University Professor
+Author of AI-Augmented Teams
+Author of Becoming AI-Augmented
+Host of Embracing Digital Transformation
+Open Group leadership in digital transformation architecture
+8 patents in cloud and distributed systems
+```
 
-- Meta-skill roadmap
-- Multiplier worksheet
-- User-to-architect transition map
-- Mastery Engine audit checklist
-- Team handoff checklist
+## Acceptance Criteria
 
-### Interactive Option
+- Page acts as canonical entity page for Darren on Paidar.ai.
+- Uses Person schema.
+- Links to drdarrenspeaks.com, embracingdigital.org, LinkedIn, YouTube, books, and frameworks.
+- Linked from homepage authority section, About page, footer, and relevant service pages.
 
-Assessment: "What should I systematize next?"
+---
 
-### CTA
+# Priority 8 — Strengthen Books Section
 
-Create a Reusable Standard
+## Task 8.1: Upgrade `/books/`
 
-## `/becoming/next`
+Reframe books as authority assets, not passive resources.
 
-### Page Purpose
+Suggested H1:
 
-Continue the reader relationship after the book.
+```text
+Books and Field Guides for AI-Augmented Work
+```
 
-### Hero Copy
+Add intro:
 
-**Heading:** Continue the AI-Augmented Journey
+```text
+Paidar.ai books provide the shared language, operating discipline, and practical frameworks leaders need to move AI from experimentation into reliable execution.
+```
 
-**Subheading:** Keep building the operating standard that makes AI speed trustworthy.
+Required book cards:
 
-### Core Sections
+1. AI-Augmented Teams
+2. Becoming AI-Augmented
 
-1. **What Comes Next**
-    - Short note from the author.
-    - Reinforce the transition from AI user to augmented architect.
+Each card should include:
 
-2. **Recommended Next Books**
-    - Link to the AI-Augmented series.
-    - Include suggested reading order.
+- Cover image, if available.
+- Summary.
+- Best audience.
+- Key concepts.
+- CTA to learn more.
+- CTA to buy or inquire about bulk/team use.
 
-3. **Workshops and Speaking**
-    - Workshop formats.
-    - Team training.
-    - Executive briefings.
-    - Speaking inquiry form.
+## Task 8.2: Create or Upgrade `/books/ai-augmented-teams/`
 
-4. **Updated Resources**
-    - Link back to companion hub.
-    - Latest template bundle.
-    - Updates and errata.
+Required sections:
 
-5. **Newsletter / Updates**
-    - Signup for updated templates, new operating standards, and future releases.
+1. Book overview
+2. Who it is for
+3. Key ideas
+4. Connection to workshops
+5. Reviews/testimonials
+6. Buy CTA
+7. Bulk/team inquiry CTA
 
-6. **Community or Cohort**
-    - Waitlist or interest form if available.
+## Task 8.3: Create or Upgrade `/books/becoming-ai-augmented/`
 
-### Downloads
+Required sections:
 
-- AI-Augmented series roadmap
-- One-page AAOS summary
-- Updated templates bundle
+1. Book overview
+2. AAOS connection
+3. Who it is for
+4. Key ideas
+5. Connection to assessments/workshops
+6. Buy or join list CTA
 
-### CTA
+## Acceptance Criteria
 
-Join the Update List
+- Book pages include Book schema.
+- Books link to AAOS, workshops, assessments, and Darren entity page.
+- Homepage book section links to the improved book pages.
 
+---
+
+# Priority 9 — Add Social Proof And Outcomes
+
+## Task 9.1: Add Trust Section To Homepage
+
+Add a section after the process or advisory section.
+
+Suggested heading:
+
+```text
+Credibility You Can Take to the Executive Table
+```
+
+Current site has this section, but it is too generic. Expand it.
+
+Add outcome-oriented proof points:
+
+```text
+Public sector modernization experience
+Enterprise architecture and governance leadership
+Higher education AI transformation experience
+Executive workshop design and facilitation
+AI adoption models for individuals, teams, and organizations
+Cloud, data, cybersecurity, and digital transformation background
+```
+
+Add optional “organizations and ecosystems” section if legally safe:
+
+```text
+Experience across public sector, higher education, enterprise technology, and regulated environments.
+```
+
+Avoid using customer logos unless the repo already has permission/approved assets.
+
+## Task 9.2: Add Testimonials Component
+
+Create reusable component or section for testimonials.
+
+Initial placeholders should be easy to replace:
+
+```text
+“Darren helped our leadership team move from AI curiosity to a practical plan for execution.”
+— Executive Workshop Participant
+```
+
+```text
+“The framework gave our team a common language for using AI responsibly and productively.”
+— Team Enablement Participant
+```
+
+Mark placeholders clearly in code comments as placeholders requiring approval.
+
+## Acceptance Criteria
+
+- Homepage contains stronger credibility language.
+- Testimonials do not claim named customers unless verified in repo content.
+- No unsupported quantitative claims are added.
+
+---
+
+# Priority 10 — Add AI Readiness Reference Page
+
+## Task 10.1: Create `/insights/ai-readiness-assessment/`
+
+Page title:
+
+```text
+AI Readiness Assessment: What Leaders Should Measure Before Scaling AI
+```
+
+Meta title:
+
+```text
+AI Readiness Assessment | Paidar.ai
+```
+
+Meta description:
+
+```text
+An AI readiness assessment helps leaders evaluate strategy, governance, workflows, data, team capability, risk, and execution maturity before scaling AI.
+```
+
+Required sections:
+
+1. What is an AI readiness assessment?
+2. Why readiness matters
+3. What to assess
+4. Individual, team, and organizational readiness
+5. Common findings
+6. What happens after the assessment
+7. CTA to assessment page
+8. FAQ
+
+Target keywords:
+
+- AI readiness assessment
+- AI maturity assessment
+- enterprise AI readiness
+- AI adoption readiness
+
+## Acceptance Criteria
+
+- Links to `/assessments/`.
+- FAQ schema included.
+- Educational first, sales second.
+
+---
+
+# Priority 11 — Add AI Governance Reference Page
+
+## Task 11.1: Create `/insights/ai-governance-framework/`
+
+Page title:
+
+```text
+AI Governance Framework for Reliable and Defensible Execution
+```
+
+Meta title:
+
+```text
+AI Governance Framework | Paidar.ai
+```
+
+Meta description:
+
+```text
+An AI governance framework defines the policies, roles, risk controls, validation practices, and accountability needed to scale AI responsibly.
+```
+
+Required sections:
+
+1. What is an AI governance framework?
+2. Why governance must enable speed, not block it
+3. Core governance components
+4. Risk classification
+5. Human accountability
+6. Decision Packets
+7. Relationship to AI operating model
+8. CTA to advisory/workshop
+9. FAQ
+
+Core components:
+
+```text
+Policy
+Risk classification
+Data handling
+Model/tool approval
+Human review
+Validation evidence
+Auditability
+Continuous improvement
+```
+
+## Acceptance Criteria
+
+- Links to AI Operating Model, AAOS, advisory/services, and workshops.
+- FAQ schema included.
+
+---
+
+# Priority 12 — Create Supporting Framework Pages
+
+## Task 12.1: Create `/frameworks/gdxa/`
+
+Title:
+
+```text
+GDXA: Government Digital Transformation Architecture
+```
+
+Purpose:
+
+Explain GDXA as a public-sector digital transformation architecture approach.
+
+Required sections:
+
+- What is GDXA?
+- Why government digital transformation needs architecture
+- Core concepts
+- How GDXA supports public sector modernization
+- Relationship to GEAR and ODXA
+- CTA to public sector advisory
+
+## Task 12.2: Create `/frameworks/gear/`
+
+Title:
+
+```text
+GEAR: Government Enterprise Architecture Reference
+```
+
+Purpose:
+
+Explain GEAR as a reference model for government enterprise architecture and modernization.
+
+Required sections:
+
+- What is GEAR?
+- Layers and aspects
+- How it helps public sector leaders
+- Relationship to GDXA
+- CTA
+
+## Task 12.3: Create `/frameworks/odxa/`
+
+Title:
+
+```text
+ODXA: Open Digital Transformation Architecture
+```
+
+Purpose:
+
+Explain ODXA as a digital transformation architecture approach suitable for broader organizations and ecosystems.
+
+Required sections:
+
+- What is ODXA?
+- Why open digital transformation architecture matters
+- How it supports business and technology alignment
+- Relationship to GDXA and GEAR
+- CTA
+
+## Acceptance Criteria
+
+- All framework pages have unique meta titles/descriptions.
+- Pages link to each other through a “Related Frameworks” component.
+- No unsupported standards claims unless present in existing repo content.
+
+---
+
+# Priority 13 — Improve Services And Advisory Pages
+
+## Task 13.1: Audit `/services/`
+
+Make sure the services page clearly maps to buyer problems:
+
+- AI governance
+- AI operating model
+- executive advisory
+- transformation roadmap
+- team enablement
+- implementation support
+
+Add section:
+
+```text
+When to Engage Paidar.ai
+```
+
+Use bullets:
+
+```text
+You have AI pilots but no operating model.
+You need governance that enables speed instead of blocking progress.
+Your teams use AI inconsistently.
+You need a roadmap executives can fund and teams can execute.
+You need reliable, defensible outcomes from AI-enabled workflows.
+```
+
+## Task 13.2: Add Advisory CTA Blocks Across Relevant Pages
+
+Add CTA component:
+
+```text
+Ready to move from AI pilots to reliable execution?
+Book a strategy session with Paidar.ai.
+```
+
+Use on:
+
+- Framework pages
+- AI Operating Model page
+- Reliable AI Execution page
+- AI Governance page
+- Services page
+
+## Acceptance Criteria
+
+- Services page speaks to pains and outcomes before offerings.
+- CTA appears consistently but not excessively.
+
+---
+
+# Priority 14 — Improve Assessments Page
+
+## Task 14.1: Upgrade `/assessments/`
+
+Add clear segmentation:
+
+```text
+Individual AI Readiness
+Team AI Readiness
+Organizational AI Readiness
+```
+
+For each, include:
+
+- Who it is for
+- What it measures
+- What the customer receives
+- Typical next step
+
+Add section:
+
+```text
+What You Receive
+```
+
+Deliverables:
+
+```text
+Readiness baseline
+Capability gaps
+Workflow bottlenecks
+Governance risks
+Prioritized recommendations
+Roadmap for next steps
+```
+
+## Acceptance Criteria
+
+- Assessments page explains deliverables clearly.
+- Links to AI Readiness Assessment insight page.
+- CTA remains prominent.
+
+---
+
+# Priority 15 — Improve Workshops Page
+
+## Task 15.1: Upgrade `/workshops/`
+
+Create workshop cards for:
+
+```text
+Executive AI-Augmented Organization Workshop
+Team AI Enablement Workshop
+Individual AI Capability Workshop
+AI Governance and Operating Model Workshop
+ODXA / GDXA Workshop
+Train-the-Trainer Workshop
+```
+
+Each card should include:
+
+- Audience
+- Duration
+- Outcomes
+- Deliverables
+- CTA
+
+## Acceptance Criteria
+
+- Workshop page supports executive, team, individual, and public-sector buyer paths.
+- Links to AAOS and AI Operating Model.
+
+---
+
+# Priority 16 — Add FAQ Sections And Schema
+
+## Task 16.1: Build Reusable FAQ Component
+
+Create reusable FAQ component if one does not exist.
+
+Requirements:
+
+- Accessible markup.
+- FAQPage JSON-LD output for pages using FAQ.
+- Supports multiple Q/A pairs.
+
+## Task 16.2: Add FAQ To Key Pages
+
+Add FAQ sections to:
+
+```text
+/frameworks/aaos/
+/frameworks/ai-operating-model/
+/insights/reliable-ai-execution/
+/insights/ai-readiness-assessment/
+/insights/ai-governance-framework/
+/assessments/
+/workshops/
+/services/
+```
+
+## Acceptance Criteria
+
+- FAQ schema validates with Google Rich Results Test or schema validator.
+- FAQ answers are concise, factual, and not stuffed with keywords.
+
+---
+
+# Priority 17 — Add Structured Data
+
+## Task 17.1: Add Organization Schema
+
+Add sitewide Organization schema for Paidar Systems LLC / Paidar.ai.
+
+Include fields where known:
+
+```json
+{
+  "@type": "Organization",
+  "name": "Paidar.ai",
+  "legalName": "Paidar Systems LLC",
+  "url": "https://paidar.ai/",
+  "sameAs": [
+    "https://www.linkedin.com/",
+    "https://www.youtube.com/",
+    "https://embracingdigital.org/",
+    "https://drdarrenspeaks.com/"
+  ]
+}
+```
+
+Use exact social links from existing repo/site when available. Do not leave generic social homepage URLs if specific profiles exist.
+
+## Task 17.2: Add Person Schema For Darren Page
+
+Use Person schema on `/about/dr-darren-pulsipher/`.
+
+Include:
+
+- name
+- honorificPrefix
+- jobTitle
+- affiliation
+- worksFor
+- url
+- sameAs
+- knowsAbout
+- authorOf, if supported by schema structure
+
+## Task 17.3: Add Book Schema
+
+Use Book schema on book pages.
+
+## Task 17.4: Add WebSite Schema
+
+Add WebSite schema with SearchAction if the site has search. If no search exists, omit SearchAction.
+
+## Acceptance Criteria
+
+- JSON-LD is valid.
+- No placeholder URLs remain.
+- Schema is rendered in final HTML.
+
+---
+
+# Priority 18 — Add `llms.txt`
+
+## Task 18.1: Create `/llms.txt`
+
+Create a root-level `llms.txt` file.
+
+Suggested content:
+
+```text
+# Paidar.ai
+
+Paidar.ai is the website for Paidar Systems LLC, focused on helping organizations become AI-augmented through assessments, workshops, advisory services, books, software, and transformation frameworks.
+
+## Core Concepts
+
+- Reliable AI Execution
+- AI-Augmented Organizations
+- AI-Augmented Operating System (AAOS)
+- AI Operating Model
+- AI Readiness Assessment
+- AI Governance Framework
+- Decision Packets
+- Government Digital Transformation Architecture (GDXA)
+- Government Enterprise Architecture Reference (GEAR)
+- Open Digital Transformation Architecture (ODXA)
+
+## Key Pages
+
+- Homepage: https://paidar.ai/
+- Frameworks: https://paidar.ai/frameworks/
+- AAOS: https://paidar.ai/frameworks/aaos/
+- AI Operating Model: https://paidar.ai/frameworks/ai-operating-model/
+- Reliable AI Execution: https://paidar.ai/insights/reliable-ai-execution/
+- AI Readiness Assessment: https://paidar.ai/insights/ai-readiness-assessment/
+- AI Governance Framework: https://paidar.ai/insights/ai-governance-framework/
+- Assessments: https://paidar.ai/assessments/
+- Workshops: https://paidar.ai/workshops/
+- Services: https://paidar.ai/services/
+- Books: https://paidar.ai/books/
+- Dr. Darren Pulsipher: https://paidar.ai/about/dr-darren-pulsipher/
+
+## About Dr. Darren Pulsipher
+
+Dr. Darren Pulsipher is an enterprise architect, author, professor, podcast host, and AI transformation advisor. His work focuses on AI-augmented organizations, enterprise architecture, digital transformation, cloud computing, public sector modernization, and reliable AI execution.
+
+## Related Properties
+
+- Dr. Darren Speaks: https://drdarrenspeaks.com/
+- Embracing Digital Transformation: https://embracingdigital.org/
+```
+
+## Acceptance Criteria
+
+- `https://paidar.ai/llms.txt` resolves after deployment.
+- If staging uses `paidar-ai.pages.dev`, the file should also resolve there.
+- URLs should be production URLs unless the repo convention requires relative URLs.
+
+---
+
+# Priority 19 — Sitemap And Robots
+
+## Task 19.1: Ensure Sitemap Includes New Pages
+
+Update sitemap generation or static sitemap to include:
+
+```text
+/frameworks/
+/frameworks/aaos/
+/frameworks/ai-operating-model/
+/frameworks/gdxa/
+/frameworks/gear/
+/frameworks/odxa/
+/insights/reliable-ai-execution/
+/insights/ai-readiness-assessment/
+/insights/ai-governance-framework/
+/about/dr-darren-pulsipher/
+/books/ai-augmented-teams/
+/books/becoming-ai-augmented/
+/llms.txt
+```
+
+## Task 19.2: Check Robots.txt
+
+Ensure robots.txt does not block important routes.
+
+Add sitemap reference:
+
+```text
+Sitemap: https://paidar.ai/sitemap.xml
+```
+
+## Acceptance Criteria
+
+- Sitemap is accessible.
+- New pages appear in sitemap.
+- Robots.txt allows crawling.
+
+---
+
+# Priority 20 — Internal Linking Plan
+
+## Task 20.1: Add Crosslinks
+
+Add links from homepage to:
+
+- `/frameworks/`
+- `/frameworks/aaos/`
+- `/frameworks/ai-operating-model/`
+- `/about/dr-darren-pulsipher/`
+- `/insights/reliable-ai-execution/`
+
+Add links from AAOS to:
+
+- Books
+- Workshops
+- Assessments
+- AI Operating Model
+- Darren page
+
+Add links from AI Operating Model to:
+
+- AAOS
+- AI Governance Framework
+- Reliable AI Execution
+- Services
+
+Add links from Darren page to:
+
+- Books
+- Frameworks
+- Workshops
+- drdarrenspeaks.com
+- embracingdigital.org
+
+## Acceptance Criteria
+
+- No orphan pages.
+- Every new page has at least 3 internal links pointing to it.
+- Every new page links to at least 3 relevant internal pages.
+
+---
+
+# Priority 21 — Metadata Standards
+
+## Task 21.1: Add Unique Metadata To Every Page
+
+For every new and modified page, ensure:
+
+- One H1.
+- Unique title tag.
+- Unique meta description.
+- Canonical URL.
+- Open Graph title.
+- Open Graph description.
+- Open Graph image, if site pattern supports it.
+- Twitter card metadata, if site pattern supports it.
+
+## Acceptance Criteria
+
+- No duplicate page titles among new pages.
+- No missing meta descriptions.
+- Canonical URLs use production domain unless staging convention requires otherwise.
+
+---
+
+# Priority 22 — Conversion Tracking Hooks
+
+## Task 22.1: Add Consistent CTA Labels
+
+Use consistent CTA text:
+
+```text
+Start an Assessment
+Explore Workshops
+Book a Strategy Session
+Meet Darren
+Explore Frameworks
+Read the Book
+```
+
+## Task 22.2: Add Data Attributes For Analytics
+
+If site already uses analytics conventions, add CTA tracking attributes.
+
+Example:
+
+```html
+<a data-cta="book-strategy-session" data-location="homepage-hero">
+```
+
+## Acceptance Criteria
+
+- CTAs are consistent across pages.
+- Analytics hooks do not break styling or links.
+
+---
+
+# Priority 23 — Content Quality Pass
+
+## Task 23.1: Remove Generic Language
+
+Search for and rewrite phrases like:
+
+```text
+unlock the power
+leverage cutting-edge
+revolutionize
+transform your business with AI
+innovative solutions
+```
+
+Replace with specific Paidar.ai language:
+
+```text
+reliable execution
+defensible outcomes
+AI operating discipline
+workflow-level adoption
+governance that enables speed
+measurable business outcomes
+```
+
+## Task 23.2: Ensure Buyer-Specific Language
+
+Add references to:
+
+- Executives
+- Public sector leaders
+- Higher education leaders
+- Functional teams
+- Enterprise architects
+- CIOs / CTOs / digital transformation leaders
+
+## Acceptance Criteria
+
+- Copy sounds like Paidar.ai, not a generic AI agency.
+- Pages clearly state outcomes and deliverables.
+
+---
+
+# Priority 24 — Visual And UX Enhancements
+
+## Task 24.1: Add Framework Diagram Placeholder
+
+On `/frameworks/` and `/frameworks/aaos/`, add a visual section for diagrams.
+
+If no final graphic exists, create a styled HTML/CSS block diagram instead of using placeholder stock art.
+
+Suggested AAOS block diagram:
+
+```text
+Diagnose → Design → Develop → Validate → Deploy → Evolve
+              ↓
+        Decision Packets
+              ↓
+ Reliable, Defensible Outcomes
+```
+
+## Task 24.2: Add “Path” Cards
+
+Use consistent cards for:
+
+- Assess readiness
+- Build capability
+- Align governance
+- Scale execution
+
+## Acceptance Criteria
+
+- No broken image placeholders.
+- Diagrams are readable on mobile.
+- Visuals support comprehension, not decoration.
+
+---
+
+# Priority 25 — QA Checklist
+
+## Task 25.1: Build And Test
+
+Run available commands:
+
+```bash
+npm install
+npm run build
+npm run lint
+npm run test
+```
+
+Only run commands that exist in the repo.
+
+## Task 25.2: Manual QA
+
+Check:
+
+- Homepage
+- Navigation
+- Footer
+- Frameworks page
+- AAOS page
+- AI Operating Model page
+- Darren page
+- Books page
+- Assessments page
+- Workshops page
+- Services page
+- Contact CTA
+
+## Task 25.3: SEO QA
+
+Check rendered HTML for:
+
+- Title tags
+- Meta descriptions
+- Canonicals
+- JSON-LD
+- H1s
+- Internal links
+- Sitemap
+- Robots
+- llms.txt
+
+## Acceptance Criteria
+
+- Build passes.
+- No broken internal links.
+- No console errors caused by changes.
+- New pages are reachable from nav/footer or internal links.
+- Staging deployment works.
+
+---
+
+# Recommended Implementation Order
+
+## Phase 1: Authority And Navigation
+
+1. Add homepage Darren authority section.
+2. Add Frameworks nav item.
+3. Create `/frameworks/`.
+4. Create `/about/dr-darren-pulsipher/`.
+
+## Phase 2: Canonical Reference Pages
+
+5. Create `/frameworks/aaos/`.
+6. Create `/frameworks/ai-operating-model/`.
+7. Create `/insights/reliable-ai-execution/`.
+8. Create `/insights/ai-readiness-assessment/`.
+9. Create `/insights/ai-governance-framework/`.
+
+## Phase 3: Supporting IP Pages
+
+10. Create GDXA, GEAR, and ODXA pages.
+11. Strengthen books pages.
+12. Improve assessments, workshops, and services pages.
+
+## Phase 4: AI Visibility And SEO
+
+13. Add schema.
+14. Add FAQ sections and FAQ schema.
+15. Add `llms.txt`.
+16. Update sitemap and robots.
+17. Complete internal linking pass.
+
+## Phase 5: QA And Polish
+
+18. Run build/lint/tests.
+19. Check mobile rendering.
+20. Validate schema.
+21. Verify CTAs and forms.
+22. Deploy to staging.
+
+---
+
+# Final Acceptance Criteria
+
+The implementation is complete when:
+
+- Paidar.ai clearly explains who it serves, what it does, and why it is credible.
+- Darren’s credibility is visible and machine-readable.
+- AAOS has a canonical explanation page.
+- Frameworks are treated as strategic intellectual property.
+- Key SEO pages exist for AI operating model, AI governance, AI readiness, and reliable AI execution.
+- Books are positioned as authority assets.
+- The site includes Organization, Person, Book, and FAQ schema where appropriate.
+- `/llms.txt`, sitemap, and robots.txt are present and correct.
+- Internal links connect homepage, frameworks, books, services, assessments, workshops, and Darren’s entity page.
+- All new pages are crawlable, mobile-friendly, and conversion-oriented.

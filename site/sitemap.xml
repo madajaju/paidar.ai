@@ -18,6 +18,13 @@
   <url><loc>https://paidar.ai/becoming/scale/</loc></url>
   <url><loc>https://paidar.ai/becoming/next/</loc></url>
   <url><loc>https://paidar.ai/aaos/</loc></url>
+  <url><loc>https://paidar.ai/frameworks/</loc></url>
+  <url><loc>https://paidar.ai/frameworks/aaos/</loc></url>
+  <url><loc>https://paidar.ai/frameworks/ai-operating-model/</loc></url>
+  <url><loc>https://paidar.ai/frameworks/gdxa/</loc></url>
+  <url><loc>https://paidar.ai/frameworks/gear/</loc></url>
+  <url><loc>https://paidar.ai/frameworks/odxa/</loc></url>
+  <url><loc>https://paidar.ai/about/dr-darren-pulsipher/</loc></url>
   <url><loc>https://paidar.ai/contact.html</loc></url>
   <url><loc>https://paidar.ai/aaos-start/</loc></url>
   <url><loc>https://paidar.ai/assessment/</loc></url>
@@ -34,6 +41,9 @@
   <url><loc>https://paidar.ai/solutions.html</loc></url>
   <url><loc>https://paidar.ai/survey.html</loc></url>
   <url><loc>https://paidar.ai/workshops/</loc></url>
+  <url><loc>https://paidar.ai/insights/reliable-ai-execution/</loc></url>
+  <url><loc>https://paidar.ai/insights/ai-readiness-assessment/</loc></url>
+  <url><loc>https://paidar.ai/insights/ai-governance-framework/</loc></url>
   <url><loc>https://paidar.ai/privacy.html</loc></url>
   <url><loc>https://paidar.ai/accessibility.html</loc></url>
   <url><loc>https://paidar.ai/educators/</loc></url>
@@ -45,4 +55,5 @@
   <url><loc>https://paidar.ai/training/</loc></url>
   <url><loc>https://paidar.ai/training/cloud-computing.html</loc></url>
   <url><loc>https://paidar.ai/training/microservices.html</loc></url>
+  <url><loc>https://paidar.ai/llms.txt</loc></url>
 </urlset>

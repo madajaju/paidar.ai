@@ -73,6 +73,33 @@ document.querySelectorAll('.primary-nav a').forEach(a => {
   }
 });
 
+function ensureNavLink(nav, label, href, beforeSelector) {
+  if (!nav) return;
+  const existing = Array.from(nav.querySelectorAll('a')).some(a => a.getAttribute('href') === href || a.textContent?.trim() === label);
+  if (existing) return;
+
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+  a.href = href;
+  a.textContent = label;
+  li.appendChild(a);
+
+  const before = beforeSelector ? nav.querySelector(beforeSelector) : null;
+  if (before?.parentElement) {
+    before.parentElement.insertBefore(li, before);
+  } else {
+    nav.appendChild(li);
+  }
+}
+
+document.querySelectorAll('.primary-nav .nav-list').forEach(nav => {
+  ensureNavLink(nav, 'Frameworks', '/frameworks/', 'li.has-sub');
+});
+
+document.querySelectorAll('.footer-nav .nav-reset').forEach(nav => {
+  ensureNavLink(nav, 'Frameworks', '/frameworks/', 'li:nth-child(3)');
+});
+
 /**
  * Reusable CTA Block Component
  * Usage: <cta-block data-type="assessment"></cta-block>
@@ -237,6 +264,69 @@ class RecommendedStep extends HTMLElement {
 
 if (!customElements.get('cta-block')) {
   customElements.define('cta-block', CTABlock);
+}
+
+/**
+ * Reusable FAQ Component
+ * Usage:
+ * <faq-list data-heading="Frequently Asked Questions">
+ *   <details><summary>Question</summary><p>Answer.</p></details>
+ * </faq-list>
+ */
+class FAQList extends HTMLElement {
+  connectedCallback() {
+    if (this.dataset.ready === 'true') return;
+    this.dataset.ready = 'true';
+
+    const details = Array.from(this.querySelectorAll('details'));
+    const heading = this.getAttribute('data-heading') || 'Frequently Asked Questions';
+    const subtitle = this.getAttribute('data-subtitle') || '';
+    const items = details.map(detail => {
+      const summary = detail.querySelector('summary')?.textContent?.trim() || '';
+      const answer = Array.from(detail.childNodes)
+        .filter(node => node.nodeName !== 'SUMMARY')
+        .map(node => node.textContent?.trim() || '')
+        .join(' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+      return { summary, answer };
+    }).filter(item => item.summary && item.answer);
+
+    this.innerHTML = `
+      <section class="section tint theme-modern">
+        <div class="container">
+          <span class="eyebrow">FAQ</span>
+          <h2>${heading}</h2>
+          ${subtitle ? `<p class="lead">${subtitle}</p>` : ''}
+          <div class="faq-grid">
+            ${details.map(detail => detail.outerHTML).join('')}
+          </div>
+        </div>
+      </section>
+    `;
+
+    if (items.length) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: items.map(item => ({
+          '@type': 'Question',
+          name: item.summary,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer
+          }
+        }))
+      });
+      this.appendChild(script);
+    }
+  }
+}
+
+if (!customElements.get('faq-list')) {
+  customElements.define('faq-list', FAQList);
 }
 
 if (!customElements.get('recommended-step')) {

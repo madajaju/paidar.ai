@@ -12,6 +12,16 @@ Paidar.ai helps organizations become AI-Augmented with practical guidance across
 - https://paidar.ai/aaos-implementation/ (Strategic Implementation)
 - https://paidar.ai/next-step/ (Dynamic Results/Lead Path)
 - https://paidar.ai/sectors/ (Industry Solutions)
+- https://paidar.ai/frameworks/ (Frameworks Hub)
+- https://paidar.ai/frameworks/aaos/ (AAOS)
+- https://paidar.ai/frameworks/ai-operating-model/ (AI Operating Model)
+- https://paidar.ai/frameworks/gdxa/ (GDXA)
+- https://paidar.ai/frameworks/gear/ (GEAR)
+- https://paidar.ai/frameworks/odxa/ (ODXA)
+- https://paidar.ai/insights/reliable-ai-execution/ (Reliable AI Execution)
+- https://paidar.ai/insights/ai-readiness-assessment/ (AI Readiness Assessment)
+- https://paidar.ai/insights/ai-governance-framework/ (AI Governance Framework)
+- https://paidar.ai/about/dr-darren-pulsipher/ (Dr. Darren Pulsipher)
 
 ## Core Components
 - `<cta-block>`: Dynamic conversion component in `main.js`.
@@ -25,4 +35,3 @@ Paidar.ai helps organizations become AI-Augmented with practical guidance across
 - For legal pages, use:
   - https://paidar.ai/privacy.html
   - https://paidar.ai/accessibility.html
-
