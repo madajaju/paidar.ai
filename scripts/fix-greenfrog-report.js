@@ -166,6 +166,25 @@ function updateImages(filePath, content) {
 function updateByFile(relPath, content) {
   const replacements = [];
   const add = (from, to) => replacements.push([from, to]);
+  const globalReplacements = [
+    ['https://drdarrenspeaks.com/workshops/ai-augmented-education/', '/workshops/'],
+    ['https://drdarrenspeaks.com/workshops/ai-executive-workshop/', '/workshops/'],
+    ['https://drdarrenspeaks.com/workshops/becoming-ai-augmented/', '/workshops/'],
+    ['https://drdarrenspeaks.com/workshops/public-sector-ai-strategy/', '/workshops/'],
+    ['https://drdarrenspeaks.com/workshops/team-ai-enablement/', '/workshops/'],
+    ['https://drdarrenspeaks.com/workshops/', '/workshops/'],
+    ['https://www.drdarrenspeaks.com', '/about/dr-darren-pulsipher/'],
+    ['https://drdarrenspeaks.com', '/about/dr-darren-pulsipher/'],
+    ['https://embracingdigital.org/en/aaos/control_stage/integrity-package.html?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink', '/integrity-packet-template/'],
+    ['https://embracingdigital.org/en/aaos/measure.html?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink', '/dashboard-template/'],
+    ['https://embracingdigital.org/en/aaos/models/index.html?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink', '/frameworks/aaos/'],
+    ['https://embracingdigital.org/en/aaos/models/operating-dashboard/?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink', '/dashboard-template/'],
+    ['https://embracingdigital.org/en/aaos/?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink', '/frameworks/aaos/'],
+    ['https://embracingdigital.org/?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink', '/frameworks/aaos/'],
+    ['https://embracingdigital.org/', '/frameworks/aaos/'],
+    ['https://www.runaire.ai', '/software.html#runaire'],
+    ['https://www.treoir.ai', '/software.html#treoir'],
+  ];
 
   if (relPath === 'aaos-implementation/index.html') {
     add('<title>AAOS Implementation Services and Engagement Paths | Paidar.ai</title>', '<title>AAOS Implementation Services | Paidar.ai</title>');
@@ -296,6 +315,10 @@ function updateByFile(relPath, content) {
   }
 
   for (const [from, to] of replacements) {
+    content = replaceAllExact(content, from, to);
+  }
+
+  for (const [from, to] of globalReplacements) {
     content = replaceAllExact(content, from, to);
   }
 

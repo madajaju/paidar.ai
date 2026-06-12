@@ -971,7 +971,7 @@
             <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener">
                 <img class="social-icon" src="/assets/img/linkedin.svg" alt="LinkedIn" width="800" height="800" />
             </a>
-            <a href="https://embracingdigital.org/?utm_source=paidar&utm_medium=referral&utm_campaign=aaos_crosslink" aria-label="Podcast" target="_blank" rel="noopener">
+            <a href="/frameworks/aaos/" aria-label="Podcast" target="_blank" rel="noopener">
                 <img class="social-icon" src="/assets/img/edt.svg" alt="Embracing Digital" width="750" height="750" />
             </a>
         </div>
@@ -2510,6 +2510,9 @@ ${Object.keys(surveyResults).map(p => `- ${p.toUpperCase()}: ${JSON.stringify(su
         const svg = document.getElementById('quad'); // Access the graph/visualization element
 
         // STEP 2: Convert the SVG Quadrant to Base64
+        const svgRect = svg.getBoundingClientRect();
+        const imageWidth = Math.round(svgRect.width);
+        const imageHeight = Math.round(svgRect.height);
         const base64Image = await convertSvgToPng(svg);
 
         // STEP 3: Create the HTML structure for the analysis
@@ -2648,7 +2651,7 @@ ${Object.keys(surveyResults).map(p => `- ${p.toUpperCase()}: ${JSON.stringify(su
   </div>
   <div class="grid">
     <section class="card figure">
-      <img src="${base64Image}" />
+      <img src="${base64Image}" width="${imageWidth}" height="${imageHeight}" alt="Survey quadrant chart" />
     </section>
 
     <section class="card">
