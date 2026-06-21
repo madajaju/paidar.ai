@@ -1,17 +1,24 @@
-<svg viewBox="0 0 680 680" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Paidar mark</title>
-  <defs>
-    <clipPath id="clip-primary">
-      <rect x="-260" y="-380" width="520" height="200"/>
-    </clipPath>
-  </defs>
-  
-  <g transform="translate(340,355)">
-    <polygon fill="none" stroke="#162F4D" stroke-width="100" points="0,-242 209.6,-121 209.6,121 0,242 -209.6,121 -209.6,-121"/>
-    <g transform="scale(1.1, 1.2)">
-      <g transform="translate(0,-50)">
-    <polygon fill="#a8873A" points="0,-47 104.8,54.5 104.8,175.5 0,277 -104.8,175.5 -104.8,54.5"/>
-      </g>
-    </g>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Paidar logo</title>
+  <desc id="desc">A segmented navy hexagon surrounding a centered P.</desc>
+  <style>
+
+    .segment1 { fill: #14B8A6; }
+    .segment2 { fill: #123B66; }
+    .letter {
+    fill: #123B66;
+    }
+  </style>
+
+  <polygon class="segment1" points="272,55 433,153 386,180 272,109"/>
+  <polygon class="segment1" points="433,153 433,358 386,331 386,179"/>
+  <polygon class="segment1" points="433,358 272,457 272,402 386,330"/>
+
+  <polygon class="segment2" points="239,457 78,358 125,330 239,401"/>
+  <polygon class="segment2" points="78,358 78,153 125,179 125,331"/>
+  <polygon class="segment2" points="78,153 239,55 239,109 125,180"/>
+  <g transform="translate(-370, 185)">
+    <!-- P -->
+    <path class="letter" d="M572.47,2.56h63.83c31.06,0,51.97,17.29,51.97,44.18,0,30.95-23.75,45.18-52.92,45.18h-23.03v48.37h-39.85V2.56ZM612.32,63.52h16.46c11.41,0,19.52-4.75,19.52-16.24s-8.17-16.37-19.41-16.37h-16.56v32.62Z"/>
   </g>
 </svg>
