@@ -336,14 +336,14 @@ a:hover {
     /* layer the hero image first (if provided), then your radial + linear gradients */
     background-image:
     var(--hero-image, none),
-    radial-gradient(1200px 600px at 10% -10%, #e0f2fe 0%, rgba(224,242,254,0) 60%),
-    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    radial-gradient(1200px 600px at 10% -10%, #e0f2fe 0%, rgba(254,254,254,0) 60%),
+    linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
 
     /* apply no-repeat only to the image layer, allow gradients to fill */
     background-repeat: no-repeat, repeat, repeat, repeat;
 
     /* center the image; gradients don’t need explicit positioning */
-    background-position: center, center, center, center;
+    background-position: var(--hero-image-position, center center), center, center, center;
 
     /* cover the image; gradients auto-size */
     background-size: cover, auto, auto, auto;
@@ -354,10 +354,10 @@ a:hover {
     inset: 0;
     background: linear-gradient(
             to right,
-            rgba(52, 86, 120, 0.1) 0%,
-            rgba(52, 86, 120, 0.8) 20%,
-            rgba(52, 86, 120, 0.6) 75%,
-            rgba(52, 86, 120, 0.0) 100%
+            rgba(60, 60, 60, 0.1) 0%,
+            rgba(60, 60, 60, 0.8) 20%,
+            rgba(60, 60, 60, 0.6) 75%,
+            rgba(60, 60, 60, 0.0) 100%
     );
     pointer-events: none;
     z-index: 1; /* above the background, below the text */
@@ -961,3 +961,4 @@ a:hover {
         padding-left: 20px;
     }
 }
+
