@@ -62,18 +62,31 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
     <div class="container flex between center">
-        <a class="brand" href="/"><img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" height="25" /></a>
+        <a class="brand" href="/">
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" height="25" />
+        </a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="primary-nav" class="primary-nav" aria-label="Primary">
             <ul class="nav-list nav-reset">
                 <li><a href="/">Home</a></li>
-                <li><a href="/assessments.html">Assessments</a></li>
-                <li><a href="/workshops/">Workshops</a></li>
+                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
                 <li><a href="/solutions.html">Solutions</a></li>
-                <li><a href="/services.html">Services</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
                 <li><a href="/about.html">About</a></li>
                 <li><a href="/insights.html">Insights</a></li>
-                <li><a class="btn btn-primary" href="/contact.html">Contact</a></li>
+                <li><a href="/frameworks/">Frameworks</a></li>
+                <li class="has-sub">
+                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
+                    <ul class="sub" role="menu">
+                        <li role="none"><a role="menuitem" href="/training/">Training</a></li>
+                        <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
+                        <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
+                        <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
+                        <li role="none"><a role="menuitem" href="/educators/">Educators</a></li>
+                    </ul>
+                </li>
+                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -140,10 +153,7 @@
                 <span class="eyebrow">Updates</span>
                 <h2>Stay Current</h2>
                 <p>Use the update list for new templates, errata, and revised operating standards as the companion library evolves.</p>
-                <form class="inline-form" action="/contact.html" method="get">
-                    <label><span class="eyebrow">Email</span><input type="email" name="email" placeholder="you@example.com" /></label>
-                    <button class="btn btn-primary" type="submit">Join Updates</button>
-                </form>
+                <p><a class="btn btn-primary" href="/newsletter.html" data-track="cta_join_newsletter" data-propagate-utm="true">Join the Newsletter</a></p>
                 <p><a class="arrow" href="/becoming/next/">See next steps</a></p>
             </article>
         </div>
@@ -151,9 +161,33 @@
 </main>
 <footer class="site-footer">
     <div class="footer-grid">
-        <div class="footer-socials"><a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube"><img class="social-icon" src="/assets/img/youtube.svg" alt="YouTube" width="800" height="800" /></a><a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn"><img class="social-icon" src="/assets/img/linkedin.svg" alt="LinkedIn" width="800" height="800" /></a></div>
-        <div class="footer-brand"><img src="/assets/img/paidar.svg" alt="Paidar.ai logo" class="footer-logo" width="520" height="200" /><div class="brand-name">Paidar.ai</div><small>&copy; <span id="y"></span> Paidar Systems LLC</small></div>
-        <nav aria-label="Footer" class="footer-nav"><ul class="nav-reset"><li><a href="/about.html">About</a></li><li><a href="/services.html">Services</a></li><li><a href="/insights.html">Insights</a></li><li><a href="/contact.html">Contact</a></li></ul></nav>
+        <div class="footer-socials" aria-label="Follow us">
+            <a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/youtube.svg" alt="YouTube" width="800" height="800" />
+            </a>
+            <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/linkedin.svg" alt="LinkedIn" width="800" height="800" />
+            </a>
+            <a href="https://embracingdigital.org" aria-label="Embracing Digital" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/edt.svg" alt="Embracing Digital" width="750" height="750" />
+            </a>
+        </div>
+
+        <div class="footer-brand">
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" class="footer-logo" width="520" height="200" />
+            <div class="brand-name">Paidar.ai</div>
+            <small>&copy; <span id="y"></span> Paidar Systems LLC</small>
+        </div>
+
+        <nav aria-label="Footer" class="footer-nav">
+            <ul class="nav-reset">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/frameworks/">Frameworks</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+                <li><a href="/insights.html">Insights</a></li>
+                <li><a href="/contact.html" data-track="cta_contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
 </footer>
 <script src="/assets/js/funnel-tracking.js"></script>

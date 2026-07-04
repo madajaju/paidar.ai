@@ -1,0 +1,3 @@
+/frameworks/gdxa /frameworks/odxa 301
+/frameworks/gdxa/ /frameworks/odxa/ 301
+/frameworks/gdxa/* /frameworks/odxa/:splat 301
