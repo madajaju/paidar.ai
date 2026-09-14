@@ -349,6 +349,7 @@ a:hover {
 .hero {
     position: relative; /* still useful if you have children positioned against it */
     padding-block: var(--space-8);
+    --hero-image: url('/assets/img/hero.jpeg');
     /* layer the hero image first (if provided), then your radial + linear gradients */
     background-image:
     var(--hero-image, none),
