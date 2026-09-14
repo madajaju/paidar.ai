@@ -1,6 +1,17 @@
 document.getElementById('y')?.setAttribute('textContent', new Date().getFullYear());
 if (document.getElementById('y')) document.getElementById('y').textContent = new Date().getFullYear();
 
+// Normalize legacy route-relative hero image declarations to site-root assets.
+// This keeps /about, /assessments, /workshops/, and nested routes consistent.
+document.querySelectorAll('.hero').forEach((hero) => {
+  const style = hero.getAttribute('style') || '';
+  const match = style.match(/--hero-image\s*:\s*url\(\s*(['"]?)([^'")]+)\1\s*\)/i);
+  const raw = match?.[2];
+  const assetIndex = raw?.indexOf('assets/');
+  if (!raw || raw.startsWith('/') || raw.startsWith('data:') || assetIndex < 0) return;
+  hero.style.setProperty('--hero-image', `url('/${raw.slice(assetIndex)}')`);
+});
+
 let toggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.primary-nav');
 
@@ -152,6 +163,84 @@ document.querySelectorAll('.primary-nav .has-sub .sub').forEach(menu => {
     li.appendChild(a);
     menu.appendChild(li);
   });
+});
+
+// Keep every page on the same user-decision navigation, including legacy templates.
+// The labels follow the visitor's decision path. Books remain discoverable under
+// Resources so the primary menu stays focused on services and outcomes.
+const canonicalPrimaryNav = [
+  ['What We Do', '/services.html', 'cta_path_design'],
+  ['Assess', '/assessments.html', 'cta_start_assessment'],
+  ['Implement', '/aaos-implementation/', 'cta_path_implement'],
+  ['Industries', '/sectors/', ''],
+  ['Frameworks', '/frameworks/', ''],
+  ['Resources', '/resources/', ''],
+  ['About', '/about.html', ''],
+  ['Contact', '/contact.html', 'cta_contact']
+];
+
+const canonicalResourceNav = [
+  ['Books', '/books/', 'cta_view_books'],
+  ['Insights', '/insights.html', ''],
+  ['Training', '/training/', ''],
+  ['Workshops', '/workshops/', ''],
+  ['Software', '/software.html', '']
+];
+
+document.querySelectorAll('.primary-nav').forEach((primaryNav) => {
+  let list = primaryNav.querySelector('.nav-list');
+  if (!list) {
+    list = document.createElement('ul');
+    list.className = 'nav-list nav-reset';
+    primaryNav.replaceChildren(list);
+  }
+  list.replaceChildren(...canonicalPrimaryNav.map(([label, href, track]) => {
+    const li = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = href;
+    link.textContent = label;
+    if (track) link.dataset.track = track;
+    if (label === 'Resources') {
+      li.className = 'has-sub';
+      link.setAttribute('aria-haspopup', 'true');
+      link.setAttribute('aria-expanded', 'false');
+      const submenu = document.createElement('ul');
+      submenu.className = 'sub nav-reset';
+      canonicalResourceNav.forEach(([resourceLabel, resourceHref, resourceTrack]) => {
+        const resourceItem = document.createElement('li');
+        const resourceLink = document.createElement('a');
+        resourceLink.href = resourceHref;
+        resourceLink.textContent = resourceLabel;
+        resourceLink.setAttribute('role', 'menuitem');
+        if (resourceTrack) resourceLink.dataset.track = resourceTrack;
+        resourceItem.appendChild(resourceLink);
+        submenu.appendChild(resourceItem);
+      });
+      li.append(link, submenu);
+      return li;
+    }
+    if (label === 'Contact') link.className = 'btn btn-primary';
+    li.appendChild(link);
+    return li;
+  }));
+});
+
+document.querySelectorAll('.primary-nav a').forEach((link) => {
+  const href = new URL(link.href, window.location.origin);
+  if (href.pathname === current) {
+    link.classList.add('active');
+    link.setAttribute('aria-current', 'page');
+    const parentSub = link.closest('.has-sub');
+    if (parentSub) {
+      const parentLink = parentSub.querySelector(':scope > a');
+      parentLink?.classList.add('active');
+    }
+  }
+});
+
+// AAOS uses Controls as the canonical stage name. Preserve ordinary prose such as "control speed".
+document.querySelectorAll('.resource-nav a, .aaos-stage a').forEach((link) => {
+  if (link.textContent.trim() === 'Control') link.textContent = 'Controls';
 });
 
 document.querySelectorAll('.footer-nav .nav-reset').forEach(nav => {

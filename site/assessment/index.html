@@ -168,10 +168,9 @@
                         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="primary-nav" class="primary-nav" aria-label="Primary">
 <ul class="nav-list nav-reset">
-    <li><a href="/services.html" data-track="cta_path_design">How We Help</a></li>
+    <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
     <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
-    <li><a href="/workshops/" data-track="cta_path_enable">Enablement</a></li>
-    <li><a href="/frameworks/">Frameworks</a></li>
+    <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
     <li><a href="/books/" data-track="cta_view_books">Books</a></li>
     <li><a href="/about.html">About</a></li>
     <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
@@ -263,10 +262,7 @@
                 <p id="result-priority-text" style="padding: 1rem; background: #fffbe6; border-left: 4px solid #fadb14; border-radius: 4px;"></p>
                 <p style="font-style: italic; margin-top: 1.5rem; color: var(--brand-muted);">"Team maturity is not just the sum of individual skills; it is the reliability of the shared process."</p>
                 <p><strong>Recommended Next Step:</strong> <span id="result-next-step"></span></p>
-                <p>
-                    <a class="btn btn-gold" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_from_result" data-propagate-utm="true">Book an Advisory Session</a>
-                    <a class="btn btn-outline" href="/workshops/" data-track="cta_path_enable">Build Team Capability</a>
-                </p>
+                <p id="result-next-actions"></p>
             </article>
         </div>
     </section>
@@ -276,10 +272,7 @@
             <div class="banner theme-modern">
                 <h2>Next Action After Assessment</h2>
                 <p>Move from insight to execution. Book a strategy session to review your bottleneck and reduce reliability risk.</p>
-                <p>
-                    <a class="btn btn-gold" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_next_book_session" data-propagate-utm="true">Book a Strategy Session</a>
-                    <a class="btn btn-outline" href="/workshops/" data-track="cta_path_enable">Build Team Capability</a>
-                </p>
+                <p><a class="btn btn-primary" href="/assessments.html">Choose an Assessment Path</a> <a class="btn btn-outline" href="/contact.html?inquiry=Implementation">Talk With Paidar</a></p>
                 <p style="margin-top: var(--space-4);">Resources: <a href="/integrity-packet-template/">Download the Integrity Packet Template</a></p>
             </div>
         </div>
@@ -307,7 +300,7 @@
         <nav aria-label="Footer" class="footer-nav">
             <ul class="nav-reset">
                 <li><a href="/about.html">About</a></li>
-    <li><a href="/services.html" data-track="cta_path_design">How We Help</a></li>
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
                 <li><a href="/insights.html">Insights</a></li>
                 <li><a href="/contact.html" data-track="cta_contact">Contact</a></li>
             </ul>
@@ -506,8 +499,39 @@
         
         document.getElementById('result-priority-text').innerHTML = recommendations[bottleneck];
 
-        const nextStep = totalScore < Math.ceil(maximumTotalScore * 0.625) ? "Executive/Team Workshop" : "Custom Advisory Engagement";
+        const recommendationByBottleneck = {
+            "Capability and Ownership": {
+                label: "Enable the team",
+                text: "Build shared capability and role clarity before expanding AI use.",
+                href: "/workshops/team-ai-enablement/",
+                cta: "Plan Team Enablement"
+            },
+            "Validation and Quality Control": {
+                label: "Design governance and controls",
+                text: "Define review, evidence, escalation, and accountability practices for consequential work.",
+                href: "/services.html?entry_stage=design",
+                cta: "Design Governance"
+            },
+            "Workflow and Standards": {
+                label: "Redesign a priority workflow",
+                text: "Choose one high-frequency workflow and move it from individual practice into a shared operating standard.",
+                href: "/workshops/team-ai-enablement/",
+                cta: "Redesign a Workflow"
+            },
+            "Feedback and Learning": {
+                label: "Implement the next operating practice",
+                text: "Turn review findings into an accountable implementation plan with measures and follow-through.",
+                href: "/aaos-implementation/",
+                cta: "Put the Plan Into Action"
+            }
+        };
+        const recommendation = recommendationByBottleneck[bottleneck] || recommendationByBottleneck["Workflow and Standards"];
+        const isMature = totalScore >= maturityThresholds.optimized;
+        const nextStep = isMature ? "Scale the operating model" : recommendation.label;
         document.getElementById('result-next-step').textContent = nextStep;
+        document.getElementById('result-next-actions').innerHTML = isMature
+            ? '<a class="btn btn-gold" href="/frameworks/ai-operating-model/" data-track="cta_operating_model_from_result">Scale the Operating Model</a> <a class="btn btn-outline" href="/services.html?entry_stage=scale" data-track="cta_scale_from_result">Plan Scale Support</a>'
+            : `<a class="btn btn-gold" href="${recommendation.href}" data-track="cta_need_based_recommendation">${recommendation.cta}</a> <a class="btn btn-outline" href="/contact.html?inquiry=Implementation" data-track="cta_contact_from_result">Discuss the Next Step</a>`;
 
         // CRM Submission
         const descriptionContent = `Company: ${formData.get("Company")}
