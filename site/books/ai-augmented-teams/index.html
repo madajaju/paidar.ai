@@ -54,13 +54,34 @@
                 },
                 {
                     "@type": "Book",
+                    "@id": "https://paidar.ai/books/ai-augmented-teams/#book",
                     "name": "AI-Augmented Teams",
                     "url": "https://paidar.ai/books/ai-augmented-teams/",
                     "image": "https://paidar.ai/assets/img/books/ai-augmented-teams.svg",
                     "description": "A team operating model for turning AI use into repeatable performance under pressure.",
+                    "author": { "@id": "https://paidar.ai/about/dr-darren-pulsipher/#person" },
                     "publisher": {
-                        "@id": "https://paidar.ai/#organization"
+                        "@type": "Organization",
+                        "name": "Paidar Press",
+                        "url": "https://paidar.ai/"
                     }
+                },
+                {
+                    "@type": "BookSeries",
+                    "@id": "https://paidar.ai/books/#ai-augmented-series",
+                    "name": "The AI-Augmented Series",
+                    "url": "https://paidar.ai/books/",
+                    "author": { "@id": "https://paidar.ai/about/dr-darren-pulsipher/#person" }
+                },
+                {
+                    "@type": "Person",
+                    "@id": "https://paidar.ai/about/dr-darren-pulsipher/#person",
+                    "name": "Dr. Darren Pulsipher",
+                    "url": "https://paidar.ai/about/dr-darren-pulsipher/",
+                    "sameAs": [
+                        "https://www.linkedin.com/company/embracing-digital-transformation",
+                        "https://www.youtube.com/@embracingdigital"
+                    ]
                 }
             ]
         }
@@ -86,7 +107,7 @@
                 <li><a href="/about.html">About</a></li>
                 <li><a href="/insights.html">Insights</a></li>
                 <li class="has-sub">
-                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
+                    <a href="/resources/" aria-haspopup="true" aria-expanded="false">Resources</a>
                     <ul class="sub" role="menu">
                         <li role="none"><a role="menuitem" href="/training/">Training</a></li>
                         <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
@@ -99,6 +120,7 @@
         </nav>
     </div>
 </header>
+<div class="container" style="padding:0.75rem 1rem;text-align:center;background:#eef6ff;"><a href="https://ai-augmented.ai" target="_blank" rel="noopener">Take the AI Augmentation Assessment at ai-augmented.ai →</a></div>
 <main id="main">
     <section class="hero" style="--hero-image:url('../../assets/img/books/ai-augmented-teams.svg'); --hero-image-position:center calc(50% - 42vh); --hero-bg-color:#0e223b;">
         <div class="container">
@@ -108,6 +130,14 @@
             <p style="max-width: 760px;">This page is for managers, team leads, and operators who need a repeatable team operating model before moving into broader service engagements. It focuses on team discipline, validation, and workflow reliability rather than individual-only AI habits.</p>
         </div>
     </section>
+
+    <section class="section definition-block" aria-labelledby="about-book"><div class="container"><h3 id="about-book">What is AI-Augmented Teams about?</h3><p>AI-Augmented Teams explains how managers and operators can turn individual AI experiments into reliable team delivery. The book provides a shared operating model for validation, handoffs, accountability, and workflow design so teams can move faster while keeping results defensible, explainable, and ready for real-world pressure.</p><ul><li><strong>Target audience:</strong> Team leads, managers, architects, and operators.</li><li><strong>Primary focus:</strong> Team operating models and reliable AI-enabled delivery.</li><li><strong>Key deliverables:</strong> Validation routines, handoff standards, and auditable workflows.</li></ul></div></section>
+    <faq-list data-heading="AI-Augmented Teams Frequently Asked Questions">
+        <details>
+            <summary>Where can I buy AI-Augmented Teams?</summary>
+            <p>AI-Augmented Teams by Dr. Darren Pulsipher is published by Paidar Press and available via Amazon and paidar.ai/books.</p>
+        </details>
+    </faq-list>
     <section class="section">
         <div class="container-right">
             <img src="../../assets/img/books/ai-augmented-teams.svg" alt="Cover of AI-Augmented Teams" class="img-fluid" style="border-radius:12px;border:1px solid #e5e7eb;" width="576" height="864" />

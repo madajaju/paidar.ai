@@ -1,3 +1,8 @@
 /frameworks/gdxa /frameworks/odxa 301
 /frameworks/gdxa/ /frameworks/odxa/ 301
 /frameworks/gdxa/* /frameworks/odxa/:splat 301
+/aaos /frameworks/aaos/ 301
+/aaos/ /frameworks/aaos/ 301
+/consulting.html /services.html 301
+/decision-packet-template /integrity-packet-template/ 301
+/decision-packet-template/ /integrity-packet-template/ 301
