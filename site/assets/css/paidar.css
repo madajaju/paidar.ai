@@ -237,6 +237,17 @@ a:hover {
     color: var(--brand-blue);
 }
 
+/* Keep outline buttons readable inside dark cards and hero sections. */
+.btn.btn-outline {
+    color: var(--brand-blue);
+}
+
+.btn.btn-outline:hover,
+.btn.btn-outline:focus-visible {
+    background: var(--brand-wash);
+    color: var(--brand-blue);
+}
+
 .arrow {
     font-weight: 700;
     color: var(--brand-blue);
