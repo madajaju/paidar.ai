@@ -1,4 +1,4 @@
-# AI-Augmented Operating Standard Overview
+# AI-Augmented Operating System Overview
 
 AAOS turns AI-assisted work into defensible, repeatable operating practice.
 

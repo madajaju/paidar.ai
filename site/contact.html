@@ -71,26 +71,14 @@
         </a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="primary-nav" class="primary-nav" aria-label="Primary">
-            <ul class="nav-list nav-reset">
-                <li><a href="/">Home</a></li>
-                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
-                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
-                <li><a href="/solutions.html">Solutions</a></li>
-                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/insights.html">Insights</a></li>
-                <li class="has-sub">
-                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
-                    <ul class="sub" role="menu">
-                        <li role="none"><a role="menuitem" href="/training/">Training</a></li>
-                        <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
-                        <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
-                        <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
-                        <li role="none"><a role="menuitem" href="/educators/">Educators</a></li>
-                    </ul>
-                </li>
-                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
-            </ul>
+<ul class="nav-list nav-reset">
+    <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+    <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+    <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
+    <li><a href="/books/" data-track="cta_view_books">Books</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
+</ul>
         </nav>
     </div>
 </header>
@@ -98,7 +86,7 @@
 <main id="main">
     <section class="hero" style="--hero-image:url('assets/img/contact-hero.jpeg'); --hero-image-position:center center; --hero-bg-color:#0e223b;">
         <div class="container">
-            <h1>Start the Right Conversation</h1>
+            <h1>Talk About Your Needs</h1>
             <p class="lead">Route your inquiry by engagement type and we will respond with the best next step for your timeline, scope, and stakeholders.</p>
             <p style="max-width: 760px;">Use this page when you are ready to talk with Paidar.ai directly. Share your assessment, workshop, advisory, or speaking need and expect a routed response based on the type of support you are requesting.</p>
         </div>
@@ -123,6 +111,11 @@
                     <h3>Advisory / Consulting Inquiry</h3>
                     <p>For roadmap, governance, and implementation planning support.</p>
                     <p><a class="arrow" href="/services.html" data-track="cta_book_strategy_session">Explore services</a></p>
+                </article>
+                <article class="card accent-edge">
+                    <h3>Implementation Inquiry</h3>
+                    <p>For hands-on support moving from an approved roadmap into repeatable operating practice.</p>
+                    <p><a class="arrow" href="/aaos-implementation/" data-track="cta_enterprise_implementation">Discuss an implementation</a></p>
                 </article>
                 <article class="card accent-data">
                     <h3>Speaking / Executive Sessions Inquiry</h3>
@@ -166,9 +159,26 @@
                         </p>
                     </div>
                     <p>
-                        <label for="description">AI Usage and Challenge</label><br />
-                        <textarea id="description" name="Description" rows="4" placeholder="What is your current usage and what challenges are you having using AI today?"></textarea>
+                        <label for="inquiry_type">What can we help with?</label><br />
+                        <select id="inquiry_type" name="Inquiry_Type" required>
+                            <option value="">Select an engagement path</option>
+                            <option value="Assessment">Assessment</option>
+                            <option value="Workshop">Workshop</option>
+                            <option value="Advisory / Consulting">Advisory / Consulting</option>
+                            <option value="Implementation">Implementation</option>
+                            <option value="Speaking / Executive Session">Speaking / Executive Session</option>
+                            <option value="General">General</option>
+                        </select>
                     </p>
+                    <p>
+                        <label for="description">Request and Current Challenge</label><br />
+                        <textarea id="description" name="Description" rows="4" placeholder="What would you like to assess, workshop, advise on, or implement?"></textarea>
+                    </p>
+
+                    <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;">
+                        <label for="website">Website</label>
+                        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+                    </div>
 
                     <input type="hidden" name="Lead_Source" value="Contact Form" />
                     <input type="hidden" name="Lead_Status" value="New" />
@@ -267,7 +277,9 @@
             Last_Name: String(formData.get("Last_Name") || "").trim(),
             Email: String(formData.get("Email") || "").trim(),
             Company: String(formData.get("Company") || "").trim(),
+            Inquiry_Type: String(formData.get("Inquiry_Type") || "").trim(),
             Description: String(formData.get("Description") || "").trim(),
+            website: String(formData.get("website") || "").trim(),
             Lead_Source: "Contact Form",
             Lead_Status: "New",
             utm_source: formData.get("utm_source") || "",
@@ -310,4 +322,3 @@
 </script>
 </body>
 </html>
-

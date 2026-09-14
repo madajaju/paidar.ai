@@ -167,27 +167,14 @@
         </a>
                         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="primary-nav" class="primary-nav" aria-label="Primary">
-            <ul class="nav-list nav-reset">
-                <li><a href="/">Home</a></li>
-                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
-                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
-                <li><a href="/solutions.html">Solutions</a></li>
-                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/insights.html">Insights</a></li>
-                <li><a href="/frameworks/">Frameworks</a></li>
-                <li class="has-sub">
-                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
-                    <ul class="sub" role="menu">
-                        <li role="none"><a role="menuitem" href="/training/">Training</a></li>
-                        <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
-                        <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
-                        <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
-                        <li role="none"><a role="menuitem" href="/educators/">Educators</a></li>
-                    </ul>
-                </li>
-                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
-            </ul>
+<ul class="nav-list nav-reset">
+    <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+    <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+    <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
+    <li><a href="/books/" data-track="cta_view_books">Books</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
+</ul>
         </nav>
     </div>
 </header>
@@ -337,7 +324,7 @@
                 { id: "c1", text: "Critical tasks are assigned to individuals with both the domain expertise and the AI skills required for the task." },
                 { id: "c2", text: "We know exactly where AI is being used in our high-stakes workflows." },
                 { id: "c3", text: "Team members can review and take over each other's AI-assisted work without losing quality or context." },
-                { id: "c4", text: "The team’s overall ability to use AI safely is improving with every project." },
+                { id: "c4", text: "The team-s overall ability to use AI safely is improving with every project." },
                 { id: "c5", text: "Each AI-assisted workflow has an accountable human owner with authority to stop or correct the work." },
                 { id: "c6", text: "Team members understand the limits of the AI tools they use and do not treat generated output as expert judgment." },
                 { id: "c7", text: "We can maintain reliable AI-assisted operations when a key expert or workflow owner is unavailable." }
@@ -631,7 +618,7 @@ Submitted At: ${new Date().toISOString()}`;
                 successMsg.style.fontWeight = '700';
                 successMsg.style.textAlign = 'center';
                 successMsg.id = 'temp-success-msg';
-                successMsg.textContent = '✓ Results submitted! We are emailing you a formatted report.';
+                successMsg.textContent = '- Results submitted! We are emailing you a formatted report.';
                 
                 resultSection.insertBefore(successMsg, resultSection.firstChild);
                 
@@ -657,4 +644,3 @@ Submitted At: ${new Date().toISOString()}`;
     </script>
 </body>
 </html>
-

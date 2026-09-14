@@ -1,8 +1,20 @@
 document.getElementById('y')?.setAttribute('textContent', new Date().getFullYear());
 if (document.getElementById('y')) document.getElementById('y').textContent = new Date().getFullYear();
 
-const toggle = document.querySelector('.nav-toggle');
+let toggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.primary-nav');
+
+// Keep the static navigation usable on pages that omit the mobile toggle.
+if (!toggle && nav) {
+  const generatedToggle = document.createElement('button');
+  generatedToggle.className = 'nav-toggle';
+  generatedToggle.setAttribute('aria-expanded', 'false');
+  generatedToggle.setAttribute('aria-controls', 'primary-nav');
+  generatedToggle.setAttribute('aria-label', 'Toggle navigation');
+  generatedToggle.textContent = 'Menu';
+  nav.parentElement?.insertBefore(generatedToggle, nav);
+  toggle = generatedToggle;
+}
 
 if (toggle && nav) {
   toggle.addEventListener('click', () => {
@@ -42,6 +54,7 @@ navSubmenus.forEach((item, index) => {
   }
 
   trigger.setAttribute('aria-controls', menu.id);
+  if (trigger.textContent.trim() === 'Resources') trigger.href = '/resources/';
 
   trigger.addEventListener('click', (e) => {
     e.preventDefault();
@@ -93,7 +106,52 @@ function ensureNavLink(nav, label, href, beforeSelector) {
 }
 
 document.querySelectorAll('.primary-nav .nav-list').forEach(nav => {
+  ensureNavLink(nav, 'Solutions', '/solutions.html', 'li:nth-child(5)');
   ensureNavLink(nav, 'Frameworks', '/frameworks/', 'li.has-sub');
+});
+
+// Normalize legacy page navigation to the canonical Paidar.ai order.
+document.querySelectorAll('.primary-nav .nav-list').forEach(nav => {
+  const order = ['Home', 'Assessments', 'Workshops', 'Solutions', 'Services', 'About', 'Insights', 'Frameworks', 'Resources', 'Contact'];
+  const items = Array.from(nav.children).filter(item => item.tagName === 'LI');
+  const byLabel = new Map(items.map(item => [item.querySelector(':scope > a')?.textContent.trim(), item]));
+  order.forEach(label => {
+    const item = byLabel.get(label);
+    if (item) nav.appendChild(item);
+  });
+
+  const resources = byLabel.get('Resources');
+  const submenu = resources?.querySelector(':scope > .sub');
+  if (submenu) {
+    const submenuOrder = ['Books', 'Software', 'Training', 'Sectors', 'Educators'];
+    const subItems = Array.from(submenu.children);
+    const bySubLabel = new Map(subItems.map(item => [item.querySelector('a')?.textContent.trim(), item]));
+    submenuOrder.forEach(label => {
+      const item = bySubLabel.get(label);
+      if (item) submenu.appendChild(item);
+    });
+  }
+});
+
+document.querySelectorAll('.primary-nav .has-sub .sub').forEach(menu => {
+  const resources = [
+    ['Books', '/books/'],
+    ['Software', '/software.html'],
+    ['Training', '/training/'],
+    ['Sectors', '/sectors/'],
+    ['Educators', '/educators/']
+  ];
+  resources.forEach(([label, href]) => {
+    if (Array.from(menu.querySelectorAll('a')).some(a => a.getAttribute('href') === href)) return;
+    const li = document.createElement('li');
+    li.setAttribute('role', 'none');
+    const a = document.createElement('a');
+    a.setAttribute('role', 'menuitem');
+    a.href = href;
+    a.textContent = label;
+    li.appendChild(a);
+    menu.appendChild(li);
+  });
 });
 
 document.querySelectorAll('.footer-nav .nav-reset').forEach(nav => {

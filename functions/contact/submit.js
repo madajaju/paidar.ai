@@ -32,6 +32,13 @@ export async function onRequestPost(context) {
                 payload = { rawBody: text };
             }
         }
+
+        if (payload && String(payload.website || "").trim()) {
+            return new Response(JSON.stringify({ success: true }), {
+                status: 200,
+                headers: { "Content-Type": "application/json" }
+            });
+        }
         
         const response = await fetch(CRM_ENDPOINT, {
             method: "POST",

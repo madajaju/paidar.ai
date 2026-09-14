@@ -727,27 +727,14 @@
         </a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="primary-nav" class="primary-nav" aria-label="Primary">
-            <ul class="nav-list nav-reset">
-                <li><a href="/">Home</a></li>
-                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
-                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
-                <li><a href="/solutions.html">Solutions</a></li>
-                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/insights.html">Insights</a></li>
-                <li><a href="/frameworks/">Frameworks</a></li>
-                <li class="has-sub">
-                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
-                    <ul class="sub" role="menu">
-                        <li role="none"><a role="menuitem" href="/training/">Training</a></li>
-                        <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
-                        <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
-                        <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
-                        <li role="none"><a role="menuitem" href="/educators/">Educators</a></li>
-                    </ul>
-                </li>
-                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
-            </ul>
+<ul class="nav-list nav-reset">
+    <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+    <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+    <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
+    <li><a href="/books/" data-track="cta_view_books">Books</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
+</ul>
         </nav>
     </div>
 </header>
@@ -759,7 +746,7 @@
     <div class="toolbar" aria-label="Results actions">
         <!-- Characteristic Label -->
         <div id="characteristic-label" class="characteristic-label">AI Change Agent (AI Augmented)</div>
-        <button class="toolbar-btn" id="btn-take-survey">Retake Survey</button>
+        <button type="button" class="toolbar-btn" id="btn-take-survey">Retake Survey</button>
         <!-- Preset Dropdown -->
         <div class="dropdown">
             <button class="toolbar-btn dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="preset-menu">Presets</button>
@@ -822,59 +809,59 @@
             <div id="subskills" style="display:none; margin-bottom:12px" class="controls">
                 <!-- AI subskills -->
                 <div class="card">
-                    <div class="row"><span>AI — Prompting & Instruction Design</span><span id="val-ai_prompting_and_instruction_design">50</span></div>
+                    <div class="row"><span>AI - Prompting & Instruction Design</span><span id="val-ai_prompting_and_instruction_design">50</span></div>
                     <input class="subskill" id="ai_prompting_and_instruction_design" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>AI — Grounding & Data Quality</span><span id="val-ai_grounding_and_data_quality">50</span></div>
+                    <div class="row"><span>AI - Grounding & Data Quality</span><span id="val-ai_grounding_and_data_quality">50</span></div>
                     <input class="subskill" id="ai_grounding_and_data_quality" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>AI — Output Evaluation & Validation</span><span id="val-ai_output_evaluation_and_validation">50</span></div>
+                    <div class="row"><span>AI - Output Evaluation & Validation</span><span id="val-ai_output_evaluation_and_validation">50</span></div>
                     <input class="subskill" id="ai_output_evaluation_and_validation" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>AI — Workflow Integration & Flow Orchestration</span><span id="val-ai_workflow_and_flow_orchestration">50</span></div>
+                    <div class="row"><span>AI - Workflow Integration & Flow Orchestration</span><span id="val-ai_workflow_and_flow_orchestration">50</span></div>
                     <input class="subskill" id="ai_workflow_and_flow_orchestration" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>AI — Tool Selection & Continuous Improvement</span><span id="val-ai_tool_selection_and_process_improvement">50</span></div>
+                    <div class="row"><span>AI - Tool Selection & Continuous Improvement</span><span id="val-ai_tool_selection_and_process_improvement">50</span></div>
                     <input class="subskill" id="ai_tool_selection_and_process_improvement" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>AI — Governance, Traceability & Information Protection</span><span id="val-ai_governance_traceability_and_protection">50</span></div>
+                    <div class="row"><span>AI - Governance, Traceability & Information Protection</span><span id="val-ai_governance_traceability_and_protection">50</span></div>
                     <input class="subskill" id="ai_governance_traceability_and_protection" type="range" min="0" max="100" value="50"/>
                 </div>
 
                 <!-- Core subskills -->
                 <div class="card">
-                    <div class="row"><span>Core — Critical Thinking & Evidence Evaluation</span><span id="val-core_critical_thinking_and_evidence">50</span></div>
+                    <div class="row"><span>Core - Critical Thinking & Evidence Evaluation</span><span id="val-core_critical_thinking_and_evidence">50</span></div>
                     <input class="subskill" id="core_critical_thinking_and_evidence" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Core — Task Decomposition & Decision Framing</span><span id="val-core_decomposition_and_decision_framing">50</span></div>
+                    <div class="row"><span>Core - Task Decomposition & Decision Framing</span><span id="val-core_decomposition_and_decision_framing">50</span></div>
                     <input class="subskill" id="core_decomposition_and_decision_framing" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Core — Synthesis & Integration</span><span id="val-core_synthesis_and_integration">50</span></div>
+                    <div class="row"><span>Core - Synthesis & Integration</span><span id="val-core_synthesis_and_integration">50</span></div>
                     <input class="subskill" id="core_synthesis_and_integration" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Core — Logic Transparency & Pattern Recognition</span><span id="val-core_logic_transparency_and_pattern_recognition">50</span></div>
+                    <div class="row"><span>Core - Logic Transparency & Pattern Recognition</span><span id="val-core_logic_transparency_and_pattern_recognition">50</span></div>
                     <input class="subskill" id="core_logic_transparency_and_pattern_recognition" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Core — Team Enablement & Reuse</span><span id="val-core_team_enablement_and_reuse">50</span></div>
+                    <div class="row"><span>Core - Team Enablement & Reuse</span><span id="val-core_team_enablement_and_reuse">50</span></div>
                     <input class="subskill" id="core_team_enablement_and_reuse" type="range" min="0" max="100" value="50"/>
                 </div>
 
                 <!-- SME subskills -->
                 <div class="card">
-                    <div class="row"><span>SME — Domain Foundation & Professional Methods</span><span id="val-sme_domain_foundation_and_methods">50</span></div>
+                    <div class="row"><span>SME - Domain Foundation & Professional Methods</span><span id="val-sme_domain_foundation_and_methods">50</span></div>
                     <input class="subskill" id="sme_domain_foundation_and_methods" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>SME — Local Context & Constraint Injection</span><span id="val-sme_local_context_and_constraints">50</span></div>
+                    <div class="row"><span>SME - Local Context & Constraint Injection</span><span id="val-sme_local_context_and_constraints">50</span></div>
                     <input class="subskill" id="sme_local_context_and_constraints" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>SME — Risk Intuition & Domain Logic Auditing</span><span id="val-sme_risk_and_logic_auditing">50</span></div>
+                    <div class="row"><span>SME - Risk Intuition & Domain Logic Auditing</span><span id="val-sme_risk_and_logic_auditing">50</span></div>
                     <input class="subskill" id="sme_risk_and_logic_auditing" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>SME — Standards & Quality Benchmarking</span><span id="val-sme_standards_and_quality_benchmarking">50</span></div>
+                    <div class="row"><span>SME - Standards & Quality Benchmarking</span><span id="val-sme_standards_and_quality_benchmarking">50</span></div>
                     <input class="subskill" id="sme_standards_and_quality_benchmarking" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>SME — Knowledge Currency</span><span id="val-sme_knowledge_currency">50</span></div>
+                    <div class="row"><span>SME - Knowledge Currency</span><span id="val-sme_knowledge_currency">50</span></div>
                     <input class="subskill" id="sme_knowledge_currency" type="range" min="0" max="100" value="50"/>
                 </div>
 
                 <!-- Meta subskills -->
                 <div class="card">
-                    <div class="row"><span>Meta — Learning Agility & Adaptability</span><span id="val-meta_learning_agility_and_adaptability">50</span></div>
+                    <div class="row"><span>Meta - Learning Agility & Adaptability</span><span id="val-meta_learning_agility_and_adaptability">50</span></div>
                     <input class="subskill" id="meta_learning_agility_and_adaptability" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Meta — Resilience & Self-Awareness</span><span id="val-meta_resilience_and_self_awareness">50</span></div>
+                    <div class="row"><span>Meta - Resilience & Self-Awareness</span><span id="val-meta_resilience_and_self_awareness">50</span></div>
                     <input class="subskill" id="meta_resilience_and_self_awareness" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Meta — Judgment Calibration & Ambiguity Navigation</span><span id="val-meta_judgment_and_ambiguity_navigation">50</span></div>
+                    <div class="row"><span>Meta - Judgment Calibration & Ambiguity Navigation</span><span id="val-meta_judgment_and_ambiguity_navigation">50</span></div>
                     <input class="subskill" id="meta_judgment_and_ambiguity_navigation" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Meta — Escalation & Governance Discipline</span><span id="val-meta_escalation_and_governance_discipline">50</span></div>
+                    <div class="row"><span>Meta - Escalation & Governance Discipline</span><span id="val-meta_escalation_and_governance_discipline">50</span></div>
                     <input class="subskill" id="meta_escalation_and_governance_discipline" type="range" min="0" max="100" value="50"/>
-                    <div class="row"><span>Meta — Systems Thinking & Accountability</span><span id="val-meta_systems_thinking_and_accountability">50</span></div>
+                    <div class="row"><span>Meta - Systems Thinking & Accountability</span><span id="val-meta_systems_thinking_and_accountability">50</span></div>
                     <input class="subskill" id="meta_systems_thinking_and_accountability" type="range" min="0" max="100" value="50"/>
                 </div>
             </div>
@@ -1378,7 +1365,7 @@
         {
           "id": "domain_foundation_and_methods",
           "name": "Domain Foundation & Professional Methods",
-          "question": "How strong is your grasp of your field’s core concepts, principles, methods, and frameworks, and how consistently do you use them to guide or evaluate AI-assisted work?",
+          "question": "How strong is your grasp of your field-s core concepts, principles, methods, and frameworks, and how consistently do you use them to guide or evaluate AI-assisted work?",
           "scale_labels": {
             "1": "Very Weak / Not at all",
             "2": "Weak / Slightly",
@@ -1487,7 +1474,7 @@
               "label": "low",
               "min": 0,
               "max": 39,
-              "feedback": "Quality may be undefined. Learn your field’s rubrics, benchmarks, and examples of excellent work."
+              "feedback": "Quality may be undefined. Learn your field-s rubrics, benchmarks, and examples of excellent work."
             },
             {
               "label": "medium",
@@ -1766,7 +1753,7 @@
                 <div class="survey-highlights">
                     <div class="survey-highlight">
                         <strong>Time required</strong>
-                        <span>Takes about 4–6 minutes.</span>
+                        <span>Takes about 4-6 minutes.</span>
                     </div>
                     <div class="survey-highlight">
                         <strong>Assessment scope</strong>
@@ -1801,7 +1788,7 @@
                         </article>
                         <article class="faq-item">
                             <h3>How long does the assessment take?</h3>
-                            <p>Most people finish in about 4–6 minutes. The survey covers ${totalQuestions} questions across four readiness pillars.</p>
+                            <p>Most people finish in about 4-6 minutes. The survey covers ${totalQuestions} questions across four readiness pillars.</p>
                         </article>
                         <article class="faq-item">
                             <h3>What do I get when I finish?</h3>
@@ -1830,7 +1817,7 @@
                     <p id="survey-progress-caption" class="progress-caption">Start with one pillar at a time. Open a section, answer each question, and your progress will update automatically.</p>
                 </div>
                 ${surveyHtml}
-                <button id="submit-survey" class="btn-submit">See My Results</button>
+                <button type="button" id="submit-survey" class="btn-submit">See My Results</button>
                 <p class="survey-footer-note">Need more context first? Visit the <a href="/assessments.html">assessment overview</a>, explore <a href="/books/">books</a>, or review <a href="/training/">training</a>.</p>
             </form>
         </div>
@@ -1885,10 +1872,10 @@
                 surveyResults[input.title][input.name] = input.value;
             });
 
-            // Map Likert scale (1 — 5) to range (0 — 100)
-            // Map Likert scores (1 — 5) to 0 — 100 for subskills and normalize pillar scores
+            // Map Likert scale (1 - 5) to range (0 - 100)
+            // Map Likert scores (1 - 5) to 0 - 100 for subskills and normalize pillar scores
             const pillarScores = {}; // Object to store aggregated pillar scores
-            const scaleToScore = value => ((value - 1) / 4) * 100; // Map Likert scale (1 — 5) to 0 — 100
+            const scaleToScore = value => ((value - 1) / 4) * 100; // Map Likert scale (1 - 5) to 0 - 100
 
             // Iterate through pillars and calculate normalized scores
             for (let pid in surveyResults) {
@@ -2107,7 +2094,7 @@
             "'": "&#39;"
         }[m]));
         document.getElementById('feedback-list').innerHTML =
-            top.map(item => `<li><b>${item.pillar.toUpperCase()}  —  ${pretty(item.subskill)}</b>  —  score ${item.val}. ${esc(item.advice)}</li>`).join('');
+            top.map(item => `<li><b>${item.pillar.toUpperCase()}  -  ${pretty(item.subskill)}</b>  -  score ${item.val}. ${esc(item.advice)}</li>`).join('');
     }
 
     /* ======= Quadrant Drawing (SVG) with Petal Glyphs ======= */
@@ -2220,9 +2207,9 @@
 
         // Compute intensity based on the area of the ellipse (Core * Meta)
         const area = core * meta; // Maximum area = 100 * 100 = 10000
-        const intensity = Math.min(area / 10000, 1); // Scale to 0 — 1
+        const intensity = Math.min(area / 10000, 1); // Scale to 0 - 1
 
-        // Dynamic hue from red (0 — ) to green (120 —  based on intensity)
+        // Dynamic hue from red (0 - ) to green (120 -  based on intensity)
         const hue = 0 + (intensity * 120); // 0 (red) ? 120 (green)
         const saturation = 80; // Fixed vibrant saturation
         const lightness = 50 - (intensity * 10); // Slightly darker green for higher intensity
@@ -2375,7 +2362,7 @@ ${Object.keys(surveyResults).map(p => `- ${p.toUpperCase()}: ${JSON.stringify(su
                 successMsg.style.fontWeight = '600';
                 successMsg.style.textAlign = 'center';
                 successMsg.id = 'temp-success-msg';
-                successMsg.textContent = '✓ Suggestion plan requested! We are emailing you a formatted report.';
+                successMsg.textContent = '- Suggestion plan requested! We are emailing you a formatted report.';
                 
                 leadForm.appendChild(successMsg);
                 status.hidden = true;
@@ -2648,7 +2635,7 @@ ${Object.keys(surveyResults).map(p => `- ${p.toUpperCase()}: ${JSON.stringify(su
   </header>
 
   <div class="btnbar">
-    <button class="btn" onclick="window.print()">Download / Print PDF</button>
+    <button type="button" class="btn" onclick="window.print()">Download / Print PDF</button>
   </div>
   <div class="grid">
     <section class="card figure">
@@ -2658,7 +2645,7 @@ ${Object.keys(surveyResults).map(p => `- ${p.toUpperCase()}: ${JSON.stringify(su
     <section class="card">
       <h2>Survey Results</h2>
     <div style="text-align:right">
-      <div class="Archtype">Archetype: <span class="badge">${escapeHtml(archetype)}</span></div>
+      <div class="Archetype">Archetype: <span class="badge">${escapeHtml(archetype)}</span></div>
       <div class="Quadrant">Quadrant: <span class="badge">${escapeHtml(quadrant)}</span></div>
     </div>
       <ul class="kv">

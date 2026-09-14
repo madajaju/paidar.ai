@@ -1,6 +1,6 @@
 # One-Page AAOS Summary
 
-AAOS is a practical operating standard for AI-assisted work.
+AAOS is the AI-Augmented Operating System for AI-assisted work. It helps people create repeatable operating systems.
 
 ## Six Moves
 

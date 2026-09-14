@@ -32,11 +32,15 @@
                     }
                 },
                 {
-                    "@type": "Organization",
+                    "@type": "ProfessionalService",
                     "@id": "https://paidar.ai/#organization",
-                    "name": "Paidar.ai",
+                    "name": "Paidar Systems",
+                    "legalName": "Paidar Productions LLC",
                     "url": "https://paidar.ai/",
-                    "logo": "https://paidar.ai/assets/img/paidar.svg"
+                    "logo": "https://paidar.ai/assets/img/paidar.svg",
+                    "founder": { "@id": "https://paidar.ai/#darren-pulsipher" },
+                    "description": "Enterprise AI readiness assessments, AAOS framework workshops, and strategic executive advisory.",
+                    "knowsAbout": ["AI Governance", "AAOS", "Hallucination Debt", "Digital Transformation"]
                 },
                 {
                     "@type": "WebPage",
@@ -54,13 +58,38 @@
                 },
                 {
                     "@type": "Book",
+                    "@id": "https://paidar.ai/#book-becoming-ai-augmented",
                     "name": "Becoming AI-Augmented",
                     "url": "https://paidar.ai/books/becoming-ai-augmented/",
                     "image": "https://paidar.ai/assets/img/books/becoming-ai-augmented.svg",
                     "description": "A practical guide for individuals who want to use AI without losing judgment, credibility, or craft.",
+                    "author": { "@id": "https://paidar.ai/#darren-pulsipher" },
                     "publisher": {
                         "@id": "https://paidar.ai/#organization"
-                    }
+                    },
+                    "isbn": "197252304X",
+                    "bookEdition": "The AI-Augmented Series: Book 1",
+                    "inLanguage": "en"
+                },
+                {
+                    "@type": "BookSeries",
+                    "@id": "https://paidar.ai/books/#ai-augmented-series",
+                    "name": "The AI-Augmented Series",
+                    "url": "https://paidar.ai/books/",
+                    "author": { "@id": "https://paidar.ai/#darren-pulsipher" }
+                },
+                {
+                    "@type": "Person",
+                    "@id": "https://paidar.ai/#darren-pulsipher",
+                    "name": "Dr. Darren Pulsipher",
+                    "jobTitle": "Chief Enterprise Architect & Author",
+                    "worksFor": { "@id": "https://paidar.ai/#organization" },
+                    "url": "https://paidar.ai/about/dr-darren-pulsipher/",
+                    "sameAs": [
+                        "https://ai-augmented.ai",
+                        "https://embracingdigital.org",
+                        "https://drdarrenspeaks.com"
+                    ]
                 }
             ]
         }
@@ -77,28 +106,18 @@
         </a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="primary-nav" class="primary-nav" aria-label="Primary">
-            <ul class="nav-list nav-reset">
-                <li><a href="/">Home</a></li>
-                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
-                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
-                <li><a href="/solutions.html">Solutions</a></li>
-                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/insights.html">Insights</a></li>
-                <li class="has-sub">
-                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
-                    <ul class="sub" role="menu">
-                        <li role="none"><a role="menuitem" href="/training/">Training</a></li>
-                        <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
-                        <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
-                        <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
-                    </ul>
-                </li>
-                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
-            </ul>
+<ul class="nav-list nav-reset">
+    <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+    <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+    <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
+    <li><a href="/books/" data-track="cta_view_books">Books</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
+</ul>
         </nav>
     </div>
 </header>
+<div class="container" style="padding:0.75rem 1rem;text-align:center;background:#eef6ff;"><a href="https://ai-augmented.ai" target="_blank" rel="noopener">Take the AI Augmentation Assessment at ai-augmented.ai →</a></div>
 <main id="main">
     <section class="hero" style="--hero-image:url('../../assets/img/books/becoming-ai-augmented.svg'); --hero-image-position:center  calc(50% - 42vh); --hero-bg-color:#0e223b;">
         <div class="container">
@@ -108,6 +127,14 @@
             <p style="max-width: 760px;">This book page is for individual professionals who want practical guidance before moving into assessments, workshops, or broader organizational work. It focuses on judgment, evaluation, and responsible AI-enabled performance at the personal level.</p>
         </div>
     </section>
+
+    <section class="section definition-block" aria-labelledby="about-book"><div class="container"><h3 id="about-book">What is Becoming AI-Augmented about?</h3><p>Becoming AI-Augmented is a practical guide to building personal AI judgment. Dr. Darren Pulsipher shows readers how to move from casual prompting to disciplined, trustworthy work by evaluating outputs, protecting credibility, and developing the habits that make human and machine capability compound.</p><ul><li><strong>Target audience:</strong> Professionals and leaders building reliable AI habits.</li><li><strong>Primary focus:</strong> Personal judgment, evaluation, and trustworthy AI use.</li><li><strong>Key deliverables:</strong> Repeatable workflows, validation habits, and practical frameworks.</li></ul></div></section>
+    <faq-list data-heading="Becoming AI-Augmented Frequently Asked Questions">
+        <details>
+            <summary>What is Becoming AI-Augmented?</summary>
+            <p>Becoming AI-Augmented is a practical guide by Dr. Darren Pulsipher for using AI without losing judgment, credibility, or craft.</p>
+        </details>
+    </faq-list>
     <section class="section">
         <div class="container-right">
             <img src="../../assets/img/books/becoming-ai-augmented.svg" alt="Cover of Becoming AI-Augmented" class="img-fluid" style="border-radius:12px;border:1px solid #e5e7eb;" width="576" height="864" />

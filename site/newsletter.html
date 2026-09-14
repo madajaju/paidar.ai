@@ -409,27 +409,14 @@
         </a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="primary-nav" class="primary-nav" aria-label="Primary">
-            <ul class="nav-list nav-reset">
-                <li><a href="/">Home</a></li>
-                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
-                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
-                <li><a href="/solutions.html">Solutions</a></li>
-                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/insights.html">Insights</a></li>
-                <li><a href="/frameworks/">Frameworks</a></li>
-                <li class="has-sub">
-                    <a href="#" aria-haspopup="true" aria-expanded="false">Resources</a>
-                    <ul class="sub" role="menu">
-                        <li role="none"><a role="menuitem" href="/training/">Training</a></li>
-                        <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
-                        <li role="none"><a role="menuitem" href="/books/" data-track="cta_view_books">Books</a></li>
-                        <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
-                        <li role="none"><a role="menuitem" href="/educators/">Educators</a></li>
-                    </ul>
-                </li>
-                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
-            </ul>
+<ul class="nav-list nav-reset">
+    <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+    <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+    <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
+    <li><a href="/books/" data-track="cta_view_books">Books</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
+</ul>
         </nav>
     </div>
 </header>
@@ -470,7 +457,7 @@
                                                 <tbody>
                                                     <tr>
                                                         <td width="10%">
-                                                            <img class="successicon" src="https://lsfo-zgfl.maillist-manage.com/images/challangeiconenable.jpg" align="absmiddle">
+                                                            <img class="successicon" src="https://lsfo-zgfl.maillist-manage.com/images/challangeiconenable.jpg" alt="" align="absmiddle">
                                                         </td>
                                                         <td>
                                                             <span id="signupSuccessMsg" style="color: rgb(73, 140, 132); font-family: sans-serif; font-size: 14px;word-break:break-word">&nbsp;&nbsp;Thank you for Signing Up</span>
@@ -525,7 +512,7 @@
                                                         <div style="padding: 10px 0px 10px 15px;" id="captchaOld" class="recaptcha" name="captchaContainer">
                                                             <div style="">
                                                                 <div style="width: 59%; float: left; min-width: 170px; max-width: 70%;" id="captchaParent">
-                                                                    <img src="//campaigns.zoho.com/images/refresh_icon.png" style="cursor: pointer;float:right;margin-right:4px" onclick="loadCaptcha('https://campaigns.zoho.com/campaigns/CaptchaVerify.zc?mode=generate',this,'#sf3z48d34bc44b911e5b1c4025477f34fa57102849dfc54c33fb8876123171441f44');" id="relCaptcha">
+                                                                    <img src="//campaigns.zoho.com/images/refresh_icon.png" alt="Refresh CAPTCHA" style="cursor: pointer;float:right;margin-right:4px" onclick="loadCaptcha('https://campaigns.zoho.com/campaigns/CaptchaVerify.zc?mode=generate',this,'#sf3z48d34bc44b911e5b1c4025477f34fa57102849dfc54c33fb8876123171441f44');" id="relCaptcha">
                                                                     <div id="captchaDiv" captcha="true" name="" style="padding: 20px;background:#fff;border: 1px solid rgb(222, 222, 222);box-sizing: border-box;width:98.8%"></div>
                                                                     <input placeholder="Captcha" id="captchaText" name="captchaText" changeitem="SIGNUP_FORM_FIELD" style="margin-top: 5px; height: 28px; padding: 2px; width: 98.7%; color: rgb(68, 68, 68); background-color: rgb(255, 255, 255); border: 1px solid rgb(222, 222, 222); font-size: 12px; box-sizing: border-box; font-family: Arial;" maxlength="100" type="text">
                                                                     <span name="SIGNUP_REQUIRED" id="capRequired" style="color: rgb(180, 0, 0); font-size: 11px; font-family: Arial; margin-top: -16px; margin-right: -2px; float: right;">*</span>
@@ -602,19 +589,19 @@
                                     </form>
                                 </div>
                                 <div style="margin: 0px auto;margin-top:20px;text-align:left;height:76px;" id="privacyNotes" identity="privacyNotes">
-                                    <span>Note: It is our responsibility to protect your privacy and we guarantee that your data will be completely confidential.</span>
+                                    <span>Note: We protect your privacy and handle submitted information according to our privacy policy.</span>
                                 </div>
                             </div>
                         </div>
                         <input type="hidden" id="isCaptchaNeeded" value="true">
                         <input type="hidden" id="superAdminCap" value="0">
-                        <img src="https://lsfo-zgfl.maillist-manage.com/images/spacer.gif" id="refImage" onload="referenceSetter(this)" style="display:none;">
+                        <img src="https://lsfo-zgfl.maillist-manage.com/images/spacer.gif" id="refImage" alt="" onload="referenceSetter(this)" style="display:none;">
                     </div>
                 </div>
                 <div id="zcOptinOverLay" oncontextmenu="return false" style="display:none;text-align: center; background-color: rgb(0, 0, 0); opacity: 0.5; z-index: 100; position: fixed; width: 100%; top: 0px; left: 0px; height: 988px;"></div>
                 <div id="zcOptinSuccessPopup" style="display:none;z-index: 9999;width: 800px; height: 40%;top: 84px;position: fixed; left: 26%;background-color: #FFFFFF;border-color: #E6E6E6; border-style: solid; border-width: 1px;  box-shadow: 0 1px 10px #424242;padding: 35px;">
                     <span style="position: absolute;top: -16px;right:-14px;z-index:99999;cursor: pointer;" id="closeSuccess">
-                        <img src="https://lsfo-zgfl.maillist-manage.com/images/videoclose.png">
+                        <img src="https://lsfo-zgfl.maillist-manage.com/images/videoclose.png" alt="Close">
                     </span>
                     <div id="zcOptinSuccessPanel"></div>
                 </div>

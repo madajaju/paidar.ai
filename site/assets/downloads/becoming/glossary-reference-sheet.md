@@ -2,7 +2,7 @@
 
 ## Key Terms
 
-**AI-Augmented Operating Standard:** A practical standard for making AI-assisted work reliable, grounded, and repeatable.
+**AI-Augmented Operating System:** A practical framework for making AI-assisted work reliable, grounded, and repeatable.
 
 **Individual Integrity Packet:** A six-part artifact covering Outcome, Assumptions, Evidence, Validation, Ownership, and Risk.
 
