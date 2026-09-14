@@ -14,4 +14,4 @@ Connects loops, evidence, controls, and metrics.
 
 ## Standard Setter
 
-Creates operating standards others can adopt.
+Creates operating systems others can adopt.

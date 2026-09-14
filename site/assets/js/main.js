@@ -4,32 +4,7 @@ if (document.getElementById('y')) document.getElementById('y').textContent = new
 let toggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.primary-nav');
 
-// Convert legacy flat navigation markup into the shared structure before binding behavior.
-document.querySelectorAll('.primary-nav').forEach(primaryNav => {
-  if (primaryNav.querySelector('.nav-list')) return;
-  primaryNav.innerHTML = `<ul class="nav-list nav-reset">
-    <li><a href="/">Home</a></li>
-    <li><a href="/assessments.html">Assessments</a></li>
-    <li><a href="/workshops/">Workshops</a></li>
-    <li><a href="/solutions.html">Solutions</a></li>
-    <li><a href="/services.html">Services</a></li>
-    <li><a href="/about.html">About</a></li>
-    <li><a href="/insights.html">Insights</a></li>
-    <li><a href="/frameworks/">Frameworks</a></li>
-    <li class="has-sub"><a href="/resources/" aria-haspopup="true" aria-expanded="false">Resources</a>
-      <ul class="sub nav-reset" role="menu">
-        <li role="none"><a role="menuitem" href="/books/">Books</a></li>
-        <li role="none"><a role="menuitem" href="/software.html">Software</a></li>
-        <li role="none"><a role="menuitem" href="/training/">Training</a></li>
-        <li role="none"><a role="menuitem" href="/sectors/">Sectors</a></li>
-        <li role="none"><a role="menuitem" href="/educators/">Educators</a></li>
-      </ul>
-    </li>
-    <li><a href="/contact.html">Contact</a></li>
-  </ul>`;
-});
-
-// Keep legacy static pages on the same mobile navigation behavior.
+// Keep the static navigation usable on pages that omit the mobile toggle.
 if (!toggle && nav) {
   const generatedToggle = document.createElement('button');
   generatedToggle.className = 'nav-toggle';

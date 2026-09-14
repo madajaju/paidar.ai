@@ -1,957 +1,859 @@
-You are working on the Paidar.ai static website repository.
+# Paidar.ai — IUC Readiness Punch List
 
-Your task is to perform a **site-wide consistency, navigation, content architecture, and cleanup pass** based on the current production structure.
+## Goal
 
-Do not redesign the site. Do not invent new offerings. Preserve the existing visual system, CSS classes, overall branding, and current workshop page designs unless a change is explicitly required below.
+Prepare `paidar.ai` for IUC traffic and make sure visitors coming from the AI-Augmented ecosystem see Paidar as the **implementation and transformation company** behind the movement.
 
-The goal is to make the entire site feel like one current version of Paidar.ai rather than a mixture of legacy pages and newer AAOS/workshop content.
+Core positioning:
 
-## Primary objectives
+> **Paidar Systems helps organizations turn AI experimentation into reliable, defensible operating capability.**
 
-1. Standardize AAOS terminology and stages.
-2. Standardize site navigation/header/footer.
-3. Remove obsolete or duplicate canonical pages.
-4. Fix workshop page shell inconsistencies.
-5. Standardize audience terminology and CTA language.
-6. Clarify the relationship between Assessments, Workshops, Services, Solutions, and Frameworks.
-7. Clean up legacy training/resource references.
-8. Regenerate sitemap consistency.
-9. Preserve all working content and links unless specifically superseded.
-10. Produce a change report after completion.
+The site should complement `ai-augmented.ai`, not compete with it.
 
 ---
 
-# 1. Standardize AAOS terminology
+# P0 — MUST FIX BEFORE IUC
 
-The canonical name must be:
+## P0.1 — Resolve AAOS naming everywhere
 
-**AI-Augmented Operating System (AAOS)**
+There is currently inconsistent terminology around AAOS.
 
-Search the entire repository for references to:
-
-* AI-Augmented Operating Standard
-* operating standard when used as the formal expansion of AAOS
-* conflicting AAOS definitions
-
-Change the formal AAOS name everywhere to:
+Choose one canonical name:
 
 **AI-Augmented Operating System**
 
-Do NOT remove the concept of operating standards. Instead distinguish them:
+Use it consistently across Paidar.
 
-AAOS is the operating system/framework.
+Do not alternate between:
 
-Operating standards are reusable practices, controls, workflows, and artifacts created through AAOS.
+* AI-Augmented Operating System
+* AI-Augmented Operating Standard
 
-Where appropriate, use wording such as:
+Unless a separate formal standard actually exists.
 
-> AAOS helps organizations create repeatable operating standards for AI-assisted work.
+### Canonical AAOS stages
 
-Pay particular attention to:
-
-`/frameworks/aaos/`
-
-The page must not call AAOS an “Operating Standard” in one place and an “Operating System” elsewhere.
-
----
-
-# 2. Standardize AAOS stage names
-
-The canonical six stages are:
+Use exactly:
 
 1. Diagnose
 2. Activate
-3. Control
+3. Controls
 4. Execute
 5. Measure
 6. Scale
 
 Search the entire repository for:
 
+* Operating Standard
+* Operating System
+* Control
 * Controls
-* Apply Controls
-* Activate Talent
-* other alternate names used as stage labels
+* AAOS stages
 
-When they represent the formal AAOS stages, replace them with the canonical names above.
-
-This does NOT mean the noun “controls” cannot be used.
-
-Correct example:
-
-> During Control, teams define the controls required for reliable execution.
-
-Make sure workshop pages, framework pages, AAOS resources, training pages, and metadata all use the same six formal stage names.
+Correct inconsistent references.
 
 ---
 
-# 3. Fix workshop page shells
-
-Review these workshop pages:
-
-* `/workshops/executive-ai-organization/`
-* `/workshops/team-ai-enablement/`
-* `/workshops/becoming-ai-augmented/`
-* `/workshops/ai-augmented-education/`
-* `/workshops/public-sector-ai-strategy/`
-
-These pages currently use a simpler navigation/header than the rest of the modern Paidar.ai site.
-
-Update all five so they use the same canonical site shell as the main workshop landing page and current primary pages.
-
-Canonical primary navigation:
-
-* Home
-* Assessments
-* Workshops
-* Solutions
-* Services
-* About
-* Insights
-* Frameworks
-* Resources
-* Contact
-
-Resources should use the canonical Resources submenu defined later in this prompt.
-
-Add the standard:
-
-* mobile menu button
-* primary-nav structure
-* footer
-* social links
-* funnel tracking script if used by the rest of the site
-* main.js
-* skip-link
-
-Do not change the actual workshop content unless needed for consistency with terminology.
-
-The five workshop pages should feel like first-class Paidar.ai pages, not microsites.
-
----
-
-# 4. Remove stray Markdown fences
-
-Search all production `.html` files for literal Markdown code fences such as:
-
-```text
-```
-
-````
-
-or lines consisting only of three backticks.
-
-At minimum, inspect:
-
-- `/workshops/ai-augmented-education/index.html`
-- `/workshops/team-ai-enablement/index.html`
-
-Remove any stray Markdown fences or artifact text from production HTML.
-
-Perform a repository-wide scan to ensure no other production HTML files contain accidental Markdown fences.
-
----
-
-# 5. Create one canonical navigation
-
-There are currently multiple generations of site navigation.
-
-Refactor the site so standard Paidar.ai pages use one canonical header/navigation structure.
-
-Canonical order:
-
-Home  
-Assessments  
-Workshops  
-Solutions  
-Services  
-About  
-Insights  
-Frameworks  
-Resources  
-Contact
-
-Resources should be a dropdown containing:
-
-- Books
-- Software
-- Training
-- Sectors
-- Educators
-
-Preferred order:
-
-Books  
-Software  
-Training  
-Sectors  
-Educators
-
-Use the current CSS and JavaScript system.
-
-Do not create a new design.
-
-Where possible, extract the header/footer into a reusable include/component/template if the current build architecture supports it.
-
-If the site is pure static HTML without includes, update all applicable files consistently.
-
-Do not force companion-book microsites or deliberately separate branded experiences to use this shell if their existing structure is intentionally distinct.
-
-Document any exceptions.
-
----
-
-# 6. Fix the Resources parent link
-
-The Resources parent currently uses patterns such as:
-
-```html
-<a href="#">Resources</a>
-````
-
-Create a real resource landing page at:
-
-`/resources/`
-
-The Resources parent link should point to:
-
-`/resources/`
-
-while still supporting the dropdown behavior.
-
-The new `/resources/` page should be simple and use existing design patterns.
-
-It should provide clear entry points to:
-
-* Books
-* Software
-* Training
-* Sectors
-* Educators
-* AAOS tools/templates if appropriate
-* Insights where useful
-
-Do not create large amounts of new marketing copy.
-
-The page should primarily organize existing resources.
-
----
-
-# 7. Resolve legacy duplicate/canonical pages
-
-Inspect the following duplicate or legacy paths.
-
-## AAOS
-
-Current duplicate:
-
-`/aaos/`
-
-Canonical destination:
-
-`/frameworks/aaos/`
-
-Make `/frameworks/aaos/` the one authoritative AAOS page.
-
-If the hosting/build system supports redirects, implement:
-
-`/aaos/` → `/frameworks/aaos/`
-
-Use a permanent redirect where appropriate.
-
-Do not maintain two independent AAOS pages.
-
----
-
-## Consulting
-
-Legacy:
-
-`/consulting.html`
-
-Canonical:
-
-`/services.html`
-
-Implement:
-
-`/consulting.html` → `/services.html`
-
-Do not maintain duplicate content.
-
----
-
-## GDXA Change to ODXA
-
-Inspect:
-
-`/frameworks/gdxa/`
-
-It currently appears to canonicalize to:
-
-`/frameworks/odxa/`
-
-GDXA has been intentionally superseded by ODXA based on the existing repository content.
-
-If the repository clearly supports that relationship, implement:
-
-`/frameworks/gdxa/` → `/frameworks/odxa/`
-
-Remove GDXA from active navigation and sitemap.
-
-Do not delete historical source content unless necessary.
-
----
-
-## Decision Packet Change to Integrity Packet
-
-Inspect:
-
-`/decision-packet-template/`
-
-and:
-
-`/integrity-packet-template/`
-
-The Decision Packet page currently appears to canonicalize to the Integrity Packet.
-
-Redirect Decision Packet to Integrity Packet.
-
-If clearly distinct:
-
-Remove the incorrect canonical relationship.
-
-Do not guess if the source is ambiguous. Report the ambiguity.
-
----
-
-# 8. Regenerate sitemap logic
-
-Review `sitemap.xml`.
-
-The sitemap should contain only current canonical content URLs.
-
-Remove entries that are redirects or legacy aliases, including where applicable:
-
-* `/aaos/`
-* `/frameworks/gdxa/`
-* `/consulting.html`
-* any other URL that canonicalizes elsewhere
-
-Add valid canonical pages that are missing.
-
-Review `newsletter.html` specifically if it is an active canonical page.
-
-Rule:
-
-**one canonical page = one sitemap entry**
-
-Redirect-only URLs must not appear in the sitemap.
-
-Also check that workshop detail pages and `/resources/` are present.
-
----
-
-# 9. Standardize audience terminology
-
-Across Solutions, Workshops, Assessments, homepage sections, sectors, and related content, use a consistent audience model.
-
-Canonical audience terminology:
-
-### Individual
-
-Preferred public label:
-
-**Professionals / Individuals**
-
-Use whichever fits the sentence naturally, but avoid switching randomly between staff, all staff, individual contributors, and individuals as primary taxonomy labels.
-
-### Team
-
-**Teams**
-
-### Organization
-
-**Executive Leadership / Organizations**
-
-Use “Executive Leadership” when referring to people.
-
-Use “Organizations” when referring to the unit of change.
-
-### Education
-
-**Higher Education**
-
-Use:
-
-**AI-Augmented Education**
-
-as the workshop/solution name.
-
-Use:
-
-**Educators**
-
-for educator-specific resources.
-
-### Government
-
-Preferred umbrella label:
-
-**Public Sector**
-
-Use “Government & Public Service” where fuller wording is helpful.
-
-Workshop name remains:
-
-**Public Sector AI Strategy**
-
-Review and align:
+## P0.2 — Run full editorial cleanup
+
+Perform a repository-wide review for spelling, grammar, punctuation, and encoding problems.
+
+Known issues to check include:
+
+* `Acelleration` → `Acceleration`
+* `Architecct` → `Architect`
+* `chariman` → `chairman`
+* malformed characters such as `�`
+* broken arrows rendered as `?`
+* duplicate punctuation
+* inconsistent capitalization
+* missing articles
+* incomplete sentences
+
+Pay special attention to:
 
 * homepage
-* `/solutions.html`
-* `/workshops/`
-* workshop detail pages
-* assessments
-* sector pages
-* resources
-* training references
+* Darren bio
+* higher education
+* AAOS
+* AI Operating Model
+* software
+* training
+* contact
+* workshops
 
-Do not over-edit prose where a more specific audience term is appropriate.
-
-The goal is taxonomy consistency, not repetitive wording.
+No obvious typo should remain on a site claiming reliable execution.
 
 ---
 
-# 10. Clarify Solutions versus Workshops
+## P0.3 — Standardize the Paidar value proposition
 
-Keep both sections, but make their roles distinct.
+Use one primary value proposition across the site.
 
-## Solutions
+Recommended:
 
-Solutions should answer:
+> **Turn AI experimentation into reliable, defensible operating capability.**
 
-**Who are you trying to help / what type of organizational problem are you solving?**
+Supporting language can vary by page, but the core idea should remain consistent.
 
-Expected solution paths:
+Avoid mixing too many competing claims such as:
 
-* Professionals / Individuals
-* Teams
-* Organizations / Executive Leadership
-* Higher Education
-* Public Sector
+* AI transformation
+* digital transformation
+* innovation
+* AI readiness
+* enterprise architecture
+* AI enablement
 
-Each solution should route users toward relevant:
+These can support the main proposition, but should not replace it.
 
+---
+
+## P0.4 — Clarify relationship to AI-Augmented
+
+Add concise language where appropriate explaining the relationship.
+
+Recommended positioning:
+
+**AI-Augmented defines the framework and movement. Paidar Systems helps organizations put it into practice.**
+
+Do not over-explain the corporate structure.
+
+Add contextual links from Paidar to:
+
+`https://ai-augmented.ai`
+
+especially from:
+
+* AAOS
+* education
+* training
 * assessment
-* workshop
-* resources
-* services
-
-Do not make Solutions a duplicate workshop catalog.
-
-## Workshops
-
-Workshops should answer:
-
-**What kind of facilitated working session do you need?**
-
-Keep the five primary workshops:
-
-* Becoming AI-Augmented
-* AI-Augmented Teams
-* AI-Augmented Organization Executive Working Session
-* AI-Augmented Education
-* Public Sector AI Strategy
-
-Preserve the new buyer-oriented workshop positioning.
+* AI-Augmented workshop content
 
 ---
 
-# 11. Preserve the workshop progression
-
-The current workshop portfolio should retain this conceptual differentiation:
-
-## Individual
-
-Goal:
-
-Help a professional work effectively with AI while retaining judgment, validation, ownership, and credibility.
-
-## Team
-
-Goal:
-
-Turn individual AI use into reliable shared team execution.
-
-## Executive / Organization
-
-Goal:
-
-Turn AI ambition into aligned strategy, governance, investment decisions, and executable organizational action.
-
-## Higher Education
-
-Goal:
-
-Adopt AI without weakening learning, assessment, integrity, or institutional trust.
-
-## Public Sector
-
-Goal:
-
-Create mission-aligned AI value while preserving accountability, security, governance, and public trust.
-
-Do not collapse these into generic AI training.
-
----
-
-# 12. Standardize workshop formats
-
-Older pages currently include fixed language such as:
-
-* two half-days
-* two half-days per cohort
-* four executive reinforcement sessions
-
-The new canonical workshop model is:
-
-* Half-Day
-* Full-Day
-* Workshop Series / Follow-Up Engagement
-
-Use this model across the workshop landing page and workshop detail pages unless a specific offering genuinely requires a different format.
-
-Do not make unsupported promises.
-
----
-
-# 13. Standardize CTA hierarchy
-
-Use these canonical CTA types.
-
-## Assessment pages
-
-Primary:
-
-**Start an Assessment**
-
-## Workshop pages
-
-Primary:
-
-**Request This Workshop**
-
-For executive sessions, this may be:
-
-**Request This Executive Session**
-
-## Services / advisory pages
-
-Primary:
-
-**Book a Strategy Session**
-
-## Generic site CTA
-
-**Contact Us**
-
-or where the context is exploratory:
-
-**Talk About Your Needs**
-
-Remove inconsistent interchangeable phrases such as:
-
-* Request a Proposal
-* Start the Right Conversation
-* Talk to Darren
-* Request Organizational Assessment
-
-unless they serve a unique, clearly intentional purpose.
-
-Do not change external booking URLs.
-
----
-
-# 14. Update the training section
+## P0.5 — Make Higher Education implementation-focused
 
 Review:
 
-`/training/`
+`/sectors/higher-education`
 
-and all training pages.
+The page should not duplicate the education journey on `ai-augmented.ai`.
 
-Training should no longer imply that detailed workshop pages live on Dr. Darren Speaks if the canonical workshop pages now live on Paidar.ai.
+Paidar should focus on institutional execution.
 
-Remove or update stale language such as:
+Recommended emphasis:
 
-> See workshop details on Dr. Darren Speaks.
+* AI readiness assessment
+* leadership alignment
+* faculty development
+* institutional AI strategy
+* governance
+* operating model design
+* workflow redesign
+* student success use cases
+* administrative efficiency
+* implementation roadmap
+* measurable outcomes
 
-Reposition training as:
+Add a clear link:
 
-**Training & Curriculum**
+**Explore the AI-Augmented Education framework**
 
-Separate conceptually:
+→ `https://ai-augmented.ai/education`
 
-### Professional / Technical Courses
+And a Paidar CTA such as:
 
-Examples:
-
-* Cloud Computing
-* Microservices
-
-### AI Capability Programs
-
-These should route to the canonical Paidar workshop pages instead of duplicating workshop descriptions.
-
-Do not delete valid course content.
-
----
-
-# 15. Clarify framework relationships
-
-The main current framework family should be:
-
-* AAOS
-* ODXA
-* GEAR
-
-Review whether “AI Operating Model” is intended to be a distinct named framework.
-
-If it is primarily explanatory content for AAOS, do not position it as a fourth equal framework.
-
-On the main framework page, make the relationship between the three primary frameworks clear.
-
-Suggested conceptual relationship:
-
-### GEAR
-
-Provides architectural domains for understanding organizational systems.
-
-### ODXA
-
-Uses organizational architecture to identify transformation gaps, dependencies, and opportunities.
-
-### AAOS
-
-Provides the operating system for reliable AI-Augmented execution.
-
-Use repository-supported language.
-
-Do not invent technical claims.
-
-If the existing source shows a different formal relationship, preserve that and document it.
+**Bring AI-Augmented Education to Your Institution**
 
 ---
 
-# 16. Reduce homepage duplication
+## P0.6 — Verify IUC referral path
 
-Review the homepage for repeated credibility, authority, frameworks, and proof sections.
+Assume an IUC attendee follows this flow:
 
-There are currently multiple sections that communicate similar themes such as:
+```text
+IUC
+→ ai-augmented.ai/education
+→ Education Leader
+→ Learn / Apply / Augment
+→ Paidar
+```
 
-* credibility
-* authority
-* authorship
-* framework intellectual property
-* executive credibility
+Make sure the Paidar landing experience makes sense.
 
-Consolidate overlapping sections.
+The visitor should immediately understand:
 
-Do not remove important proof points.
+1. Who Paidar is.
+2. What Paidar can do for an institution.
+3. What the next step is.
 
-Target a clearer homepage flow:
-
-1. Hero
-2. Why AI adoption fails / core problem
-3. Choose your starting point
-4. Who we help
-5. How we work / AAOS
-6. Framework ecosystem
-7. Proof / credibility
-8. Resources / insights
-9. Final CTA
-
-Aim to reduce redundant homepage copy by approximately 20–30% where possible without reducing substance.
-
-Do not make the homepage sparse.
+Avoid sending them into a generic services catalog.
 
 ---
 
-# 17. Make the engagement journey consistent
+## P0.7 — Add a clear institutional CTA
 
-Use the following conceptual journey wherever Paidar explains how customers engage:
+Create or standardize a primary CTA for higher-education visitors.
+
+Recommended options:
+
+* `Schedule an Executive Briefing`
+* `Request an AI Readiness Discussion`
+* `Explore an Institutional Workshop`
+* `Talk With Paidar`
+
+Use one primary action consistently.
+
+---
+
+# P1 — HIGH PRIORITY BEFORE IUC
+
+## P1.1 — Simplify the commercial journey
+
+Paidar currently presents several overlapping engagement models.
+
+Standardize around:
+
+```text
+Assess
+→ Design
+→ Enable
+→ Implement
+→ Scale
+```
+
+### Assess
+
+Understand current capability, maturity, risk, and opportunity.
+
+### Design
+
+Develop strategy, architecture, roadmap, governance, and operating model.
+
+### Enable
+
+Build leadership, workforce, team, and institutional capability.
+
+### Implement
+
+Redesign workflows, establish controls, launch pilots, and operationalize solutions.
+
+### Scale
+
+Measure results, govern adoption, expand proven workflows, and sustain capability.
+
+Use this as the primary transformation journey.
+
+---
+
+## P1.2 — Add Implementation explicitly
+
+Paidar should not sound like it only provides advice.
+
+Add **Implementation** as a visible capability.
+
+Potential language:
+
+**Implementation**
+
+Turn strategy into working capability through workflow redesign, governance, architecture, pilot execution, and technology integration.
+
+This is important because Paidar's work goes beyond consulting recommendations.
+
+---
+
+## P1.3 — Simplify homepage engagement choices
+
+Avoid presenting multiple overlapping groupings such as:
+
+* assessment / workshops / advisory
+* assessment / enablement / scaling
+* books / workshops / consulting
+
+Use one customer journey.
+
+Recommended homepage flow:
+
+1. Problem
+2. Outcome
+3. Paidar approach
+4. Assess → Design → Enable → Implement → Scale
+5. Frameworks
+6. Engagement options
+7. Proof
+8. CTA
+
+---
+
+## P1.4 — Make the three engagement types subordinate to the journey
+
+Keep:
+
+* Assessment
+* Workshop
+* Advisory
+
+But describe them as **ways to engage**, not as the transformation lifecycle.
+
+Example:
 
 ### Assessment
 
-Understand the current state.
+Best when you need to understand where you are.
 
 ### Workshop
 
-Turn findings or known challenges into decisions, capability, workflows, governance, and action.
+Best when you need alignment, decisions, and capability building.
 
-### Services
+### Advisory
 
-Support implementation, operating-model change, architecture, governance, or scale.
+Best when you need sustained transformation support.
 
-Do not imply that every customer must begin with an assessment.
+Add:
 
-Use language such as:
+### Implementation
 
-> If you already understand the problem and desired outcome, you can begin directly with a workshop.
+Best when you need help turning plans into operational workflows and systems.
 
-This model should be consistent on:
+---
+
+## P1.5 — Tighten the AI Operating Model page
+
+This is one of Paidar's strongest concepts.
+
+Preserve the distinction:
+
+**AAOS**
+
+How AI-augmented work operates.
+
+**AI Operating Model**
+
+How the organization institutionalizes AI-augmented work.
+
+Check that the page consistently reinforces:
+
+* strategy
+* governance
+* operating structure
+* use-case intake
+* accountability
+* workflow design
+* validation
+* measurement
+
+Add links between:
+
+* AAOS
+* AI Operating Model
+* AI Governance
+* assessments
+* advisory
+
+---
+
+## P1.6 — Clarify architecture framework relationships
+
+Make the framework hierarchy understandable.
+
+Recommended conceptual stack:
+
+```text
+Work
+↓
+AAOS
+
+Organization
+↓
+AI Operating Model
+
+Architecture
+↓
+ODXA / GDXA
+```
+
+Do not dump every framework into the homepage.
+
+Explain the stack on a framework overview page instead.
+
+---
+
+## P1.7 — Review certification and credential claims
+
+Search the site for terms such as:
+
+* certified
+* certification
+* credential
+* professional pathway
+* badge
+* digital badge
+
+If a program does not yet have:
+
+* competency requirements
+* assessment
+* issuing authority
+* badge infrastructure
+* verification
+* renewal policy
+
+then do not imply it is an established certification.
+
+Use safer wording such as:
+
+* professional learning pathway
+* structured learning pathway
+* certificate of completion
+
+only if accurate.
+
+---
+
+## P1.8 — Reorganize software messaging
+
+Do not remove the software products before IUC.
+
+But group them around capability instead of listing unrelated tools.
+
+Suggested categories:
+
+### Architecture & Transformation
+
+* Ailtire
+* Treoir
+
+### Data & Knowledge
+
+* Tuig
+* Sruth
+
+### Workflow & Automation
+
+* Runaire
+
+### Content Operations
+
+* Guthan
+
+Add explanatory copy such as:
+
+> Paidar develops specialized software where existing platforms do not adequately support architecture, data, workflow, and AI-enabled operating models.
+
+This keeps the software portfolio from feeling disconnected.
+
+---
+
+## P1.9 — Reframe Guthan
+
+Do not lead with podcast management alone.
+
+Position Guthan more broadly as:
+
+**AI-enabled content and publication operations**
+
+Then explain podcast automation as an initial use case.
+
+This makes it fit better within Paidar's enterprise story.
+
+---
+
+# P2 — IUC TRUST AND PROOF
+
+## P2.1 — Strengthen Higher Education proof
+
+Where supported, mention experience with:
+
+* universities
+* higher-education leadership
+* faculty development
+* curriculum
+* AI workforce initiatives
+* executive workshops
+* institutional strategy
+
+Do not invent customer logos or statistics.
+
+Use actual examples only.
+
+---
+
+## P2.2 — Make Darren's credibility concise
+
+Keep Darren visible.
+
+He is an important trust signal for Paidar.
+
+But avoid turning every page into a biography.
+
+Use a compact credibility block with items such as:
+
+* Chief Enterprise Architect
+* Vanderbilt professor
+* author
+* Open Group leadership
+* enterprise/public-sector experience
+* patents
+* podcast reach
+
+Link to full bio.
+
+---
+
+## P2.3 — Verify all statistics
+
+Check any claims involving:
+
+* podcast downloads
+* subscribers
+* organizations
+* workshops
+* customers
+* years of experience
+* patents
+* published books
+
+Ensure they are accurate and current.
+
+Prefer centralized data rather than duplicated hardcoded metrics.
+
+---
+
+## P2.4 — Review customer and organization claims
+
+For every named organization or customer reference verify:
+
+* wording is accurate
+* relationship can be publicly stated
+* no implication of endorsement
+* no confidential engagement details
+
+Especially review government and education references.
+
+---
+
+# P3 — CONTACT AND CONVERSION
+
+## P3.1 — Simplify contact paths
+
+The current intent-based contact structure is good.
+
+Keep choices such as:
+
+* Assessment
+* Workshop
+* Advisory / Consulting
+* Speaking / Executive Session
+* General
+
+Add Implementation if appropriate.
+
+---
+
+## P3.2 — Make contact CTAs context-aware
+
+Do not use the same generic `Contact Us` everywhere.
+
+Examples:
+
+On higher education:
+
+`Discuss Your Institution`
+
+On AAOS:
+
+`Assess Your Organization`
+
+On workshops:
+
+`Plan a Workshop`
+
+On AI Operating Model:
+
+`Discuss Your Operating Model`
+
+On implementation:
+
+`Discuss an Implementation`
+
+---
+
+## P3.3 — Verify forms
+
+Test all forms.
+
+Check:
+
+* successful submission
+* validation
+* mobile usability
+* confirmation message
+* destination email/system
+* spam protection
+* no console errors
+* no dead buttons
+
+---
+
+# P4 — SEO / AEO
+
+## P4.1 — Align page titles with Paidar positioning
+
+Review titles for:
 
 * homepage
-* assessments
-* workshops
-* services
-* solutions
+* AAOS
+* AI Operating Model
+* AI Governance
+* Higher Education
+* Workshops
+* Training
+* Software
+* Assessment
+
+Use language around:
+
+* reliable AI execution
+* AI operating model
+* AI governance
+* enterprise AI implementation
+* AI readiness
+* organizational AI capability
+
+Avoid generic "AI consulting company" language where possible.
 
 ---
 
-# 18. Organize AAOS tools and templates under Resources
+## P4.2 — Preserve strong FAQ content
 
-Review current standalone resources such as:
+Keep clear answers for:
 
-* `/aaos-start/`
-* `/aaos-implementation/`
-* `/executive-brief/`
-* `/next-step/`
-* `/workflow-kit/`
-* `/dashboard-template/`
-* `/integrity-packet-template/`
-* `/decision-packet-template/`
+* What is AAOS?
+* What is an AI Operating Model?
+* What is AI governance?
+* What is AI readiness?
+* How do organizations scale AI?
+* How is AI augmentation different from automation?
+* How do organizations move from pilots to operational capability?
 
-Do not automatically delete or move URLs if that would break external links.
-
-Instead:
-
-1. Keep working URLs where needed.
-2. Group and expose them through `/resources/`.
-3. Consider using a logical category such as:
-
-**AAOS Tools & Templates**
-
-Where safe and supported by the static-site architecture, future canonical paths may use:
-
-`/resources/aaos/...`
-
-But do not perform a large URL migration unless redirects can be implemented safely.
-
-The immediate goal is information architecture and discoverability.
+These are strong AEO topics.
 
 ---
 
-# 19. Standardize book status language
+## P4.3 — Improve internal linking
 
-Review all book pages.
+Create intentional clusters.
 
-Use consistent status labels where needed:
+Example:
 
-* Available Now
-* Coming Soon
-* In Development
+```text
+Reliable AI Execution
+├── AI Readiness
+├── AAOS
+├── AI Operating Model
+├── AI Governance
+├── Workflow Transformation
+├── Architecture
+└── Implementation
+```
 
-Remove stale launch/preorder language where it is no longer accurate.
-
-Do not invent release dates or availability.
-
-Preserve known purchase links.
-
----
-
-# 20. Check all internal links after changes
-
-Run a site-wide internal link check.
-
-Validate:
-
-* href targets
-* relative paths
-* asset paths
-* canonical URLs
-* sitemap URLs
-* navigation links
-* footer links
-* workshop links
-* Resources dropdown
-* redirects/aliases where supported
-
-Report:
-
-* broken internal links
-* unresolved references
-* intentionally external links
-* ambiguous legacy paths
-
-Do not silently ignore broken links.
+Cross-link these pages naturally.
 
 ---
 
-# 21. Check HTML hygiene
+# P5 — TECHNICAL QA BEFORE IUC
 
-Run a repository-wide scan for:
+## P5.1 — Run broken-link audit
 
-* literal Markdown fences
-* empty href attributes
-* `href="#"` that are not intentional JS controls
-* duplicate IDs
-* malformed closing tags
-* duplicate canonical declarations
-* missing `<title>`
-* missing meta description
-* obvious placeholder/TBD language
-* stale “coming soon” text where current content exists
-* malformed relative paths
+Check:
 
-Do not modify deliberate JavaScript controls unless they cause an accessibility or navigation issue.
-
----
-
-# 22. Preserve styling
-
-Do not redesign the visual language.
-
-Continue using:
-
-* existing Paidar CSS
-* current cards
-* tint sections
-* badges
+* internal links
+* external links
 * buttons
-* grid systems
-* existing color variables
-* current typography
-* current image assets
+* anchors
+* image references
+* downloads
+* redirects
 
-Only add CSS if required to support a consistency fix.
-
-Prefer existing classes.
+Fix all obvious failures.
 
 ---
 
-# 23. Do not invent content
+## P5.2 — Test mobile
 
-Important:
+Especially test:
 
-Do not invent:
+* homepage
+* higher education
+* AAOS
+* workshops
+* contact
+* software
+* Darren bio
 
-* clients
-* case studies
-* metrics
-* testimonials
-* certifications
-* release dates
-* workshop prices
-* attendance limits
-* project outcomes
-* regulatory claims
-* product capabilities
+Common viewport widths:
 
-When existing site content conflicts and the repository does not make the intended answer clear, preserve the safest current state and report the ambiguity.
+* 375px
+* 390px
+* 430px
 
 ---
 
-# 24. Final validation
+## P5.3 — Check malformed characters
 
-Before completing:
+Search the repository for:
 
-1. Build or serve the site locally if the project supports it.
-2. Run an internal link scan.
-3. Check the five workshop pages manually.
-4. Check:
+```text
+�
+?
+â
+Ã
+```
 
-    * homepage
-    * workshops landing
-    * assessments
-    * solutions
-    * services
-    * frameworks
-    * AAOS
-    * ODXA
-    * GEAR
-    * training
-    * books
-    * Resources
-    * contact
-5. Verify canonical links.
-6. Verify sitemap.
-7. Verify no Markdown fences remain.
-8. Verify AAOS formal name and six stage labels globally.
-9. Verify canonical navigation is consistent.
+and other encoding artifacts.
+
+Be careful not to replace legitimate question marks.
 
 ---
 
-# Deliverable
+## P5.4 — Check metadata
 
-Make the code changes directly.
+Verify major pages have:
 
-Then create:
+* title
+* description
+* canonical
+* OpenGraph title
+* OpenGraph description
+* OpenGraph image
 
-`SITE-CONSISTENCY-REPORT.md`
+---
 
-Include:
+## P5.5 — Check heading hierarchy
 
-## Summary
+Each page should have:
 
-What was changed.
+* one meaningful H1
+* logical H2/H3 structure
 
-## AAOS terminology
+Avoid using headings simply for styling.
 
-Files changed and key normalization decisions.
+---
 
-## Navigation
+## P5.6 — Check accessibility basics
 
-Pages/templates updated and any intentional exceptions.
+Verify:
 
-## Redirects / legacy URLs
+* alt text
+* contrast
+* keyboard navigation
+* button labels
+* form labels
+* visible focus
+* semantic navigation
+* mobile tap size
 
-What was redirected or retained.
+---
 
-## Sitemap
+# P6 — DO NOT DO BEFORE IUC
 
-Entries added/removed.
+Avoid high-risk structural work immediately before the conference.
 
-## Workshops
+Do not:
 
-Confirmation that all five use the canonical shell.
+* massively redesign the site
+* rename large numbers of routes
+* migrate frameworks to new paths without redirects
+* remove product pages
+* rebuild the CMS/site generator
+* combine Paidar and AI-Augmented
+* move every education asset right now
+* reorganize the full software architecture
+* launch unfinished certification programs
 
-## Audience terminology
+Focus on consistency, credibility, routing, and conversion.
 
-Any major taxonomy changes.
+---
 
-## Training / resources cleanup
+# FINAL IUC SMOKE TEST
 
-What changed.
+## Journey 1 — University CIO
 
-## Technical issues fixed
+1. Arrive from AI-Augmented Education.
+2. Understand Paidar within five seconds.
+3. See institutional relevance.
+4. Understand the transformation approach.
+5. Find governance, operating model, and implementation help.
+6. Find a clear way to engage.
 
-Broken links, Markdown artifacts, empty links, malformed HTML, etc.
+## Journey 2 — Provost
 
-## Remaining ambiguities
+1. Enter Higher Education.
+2. See academic and institutional relevance.
+3. Find faculty and governance support.
+4. Understand the relationship to AI-Augmented Education.
+5. Find workshop or advisory options.
 
-Anything that could not be safely resolved from repository evidence.
+## Journey 3 — Enterprise Executive
 
-## Validation
+1. Open homepage.
+2. Understand that Paidar moves AI from experimentation to execution.
+3. Understand Assess → Design → Enable → Implement → Scale.
+4. See credible methodology.
+5. Find an engagement path.
 
-Include counts for:
+## Journey 4 — Technical/Architecture Leader
 
-* HTML files scanned
-* internal links checked
-* broken internal links remaining
-* duplicate canonical URLs remaining
-* Markdown fence artifacts remaining
-* distinct primary navigation variants remaining
+1. Find AAOS.
+2. Understand AI Operating Model.
+3. Understand architecture relationships.
+4. Find implementation capability.
+5. Reach an appropriate CTA.
 
-Target final state:
+---
 
-* 0 known broken internal links
-* 0 accidental Markdown fences
-* 0 conflicting formal AAOS expansions
-* 0 alternate formal AAOS stage names
-* 1 canonical primary Paidar navigation for normal site pages
-* 1 authoritative AAOS content page
-* no redirect-only URLs in sitemap
+# DEFINITION OF DONE
 
-Do not stop after analysis. Make the changes, validate them, and produce the report.
+Paidar is IUC-ready when:
+
+* AAOS is consistently called the AI-Augmented Operating System.
+* AAOS stages are consistent everywhere.
+* obvious spelling and encoding errors are fixed.
+* the homepage has one clear corporate value proposition.
+* Paidar is clearly positioned as the implementation arm of the AI-Augmented ecosystem.
+* Higher Education focuses on institutional transformation rather than duplicating AI-Augmented Education.
+* Assess → Design → Enable → Implement → Scale is understandable.
+* implementation is visible as a capability.
+* unsupported certification claims are removed or qualified.
+* contact forms work.
+* mobile experience is clean.
+* no obvious broken links remain.
+* an IUC attendee can move naturally from `ai-augmented.ai/education` to a meaningful Paidar engagement.
+
+---
+
+# EXECUTION ORDER
+
+Codex should work in this order:
+
+1. Fix AAOS terminology.
+2. Fix spelling, grammar, and encoding errors.
+3. Standardize Paidar value proposition.
+4. Clarify Paidar ↔ AI-Augmented relationship.
+5. Update Higher Education positioning.
+6. Add/strengthen implementation capability.
+7. Introduce Assess → Design → Enable → Implement → Scale.
+8. Improve IUC referral and CTAs.
+9. Review certification claims.
+10. Tighten AI Operating Model / framework relationships.
+11. Reorganize software presentation.
+12. Verify metrics and proof claims.
+13. Test forms.
+14. Run broken-link audit.
+15. Run mobile/accessibility QA.
+16. Verify metadata and internal linking.
+17. Run the final IUC smoke tests.
+
+Do not proceed into major post-IUC architecture changes as part of this pass.
