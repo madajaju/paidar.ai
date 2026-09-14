@@ -72,9 +72,10 @@
         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
         <nav id="primary-nav" class="primary-nav" aria-label="Primary">
 <ul class="nav-list nav-reset">
-    <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+    <li><a href="/services.html" data-track="cta_path_design">How We Help</a></li>
     <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
-    <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
+    <li><a href="/workshops/" data-track="cta_path_enable">Enablement</a></li>
+    <li><a href="/frameworks/">Frameworks</a></li>
     <li><a href="/books/" data-track="cta_view_books">Books</a></li>
     <li><a href="/about.html">About</a></li>
     <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
@@ -159,7 +160,7 @@
                     <p><strong>Who it is for:</strong> Executive leaders managing enterprise AI transformation.</p>
                     <p><strong>What it diagnoses:</strong> Governance posture, strategy alignment, and scaling readiness.</p>
                     <p><strong>What you get:</strong> Executive briefing pack and enterprise readiness roadmap.</p>
-                    <p><strong>Next steps:</strong> <a href="/frameworks/ai-operating-model/">AI Operating Model</a>, <a href="https://darrenpulsipher.zohobookings.com/#/AIConsult" data-track="cta_book_strategy_session" data-propagate-utm="true">Strategy Session</a>, or <a href="/services.html" data-track="cta_book_strategy_session">Consulting</a>.</p>
+                    <p><strong>Next steps:</strong> <a href="/frameworks/ai-operating-model/">AI Operating Model</a>, <a href="https://darrenpulsipher.zohobookings.com/#/AIConsult" data-track="cta_book_strategy_session" data-propagate-utm="true">Strategy Session</a>, or <a href="/services.html" data-track="cta_path_design">Build Your Roadmap</a>.</p>
                     <p style="margin-top: auto; padding-top: var(--space-4);">
                         <a class="btn btn-primary" href="#paidar-assessment-inquiry-form" data-track="cta_start_assessment">Start an Assessment</a>
                     </p>
@@ -242,6 +243,8 @@
                     <input type="hidden" name="utm_content" data-utm-field="true" />
                     <input type="hidden" name="qr" data-utm-field="true" />
                     <input type="hidden" name="book" data-utm-field="true" />
+                    <input type="hidden" name="source_page" data-utm-field="true" />
+                    <input type="hidden" name="entry_stage" data-utm-field="true" />
                     <p id="form-status" hidden></p>
                     <p>
                         <button class="btn btn-primary" type="button" id="submit-inquiry-btn">Request Assessment Path</button>
@@ -366,6 +369,8 @@
             utm_content: formData.get("utm_content") || "",
             qr: formData.get("qr") || "",
             book: formData.get("book") || "",
+            source_page: formData.get("source_page") || "",
+            entry_stage: formData.get("entry_stage") || "",
             submitted_at: new Date().toISOString(),
             page: window.location.pathname
         };
