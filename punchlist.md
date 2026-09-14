@@ -63,7 +63,7 @@ Known issues to check include:
 * `Acelleration` → `Acceleration`
 * `Architecct` → `Architect`
 * `chariman` → `chairman`
-* malformed characters such as `�`
+* malformed encoding artifacts
 * broken arrows rendered as `?`
 * duplicate punctuation
 * inconsistent capitalization
@@ -703,13 +703,11 @@ Common viewport widths:
 
 ## P5.3 — Check malformed characters
 
-Search the repository for:
+Search the repository for replacement characters, misdecoded UTF-8 prefixes, and other encoding artifacts:
 
 ```text
-�
-?
-â
-Ã
+replacement character
+misdecoded UTF-8 prefix
 ```
 
 and other encoding artifacts.

@@ -211,10 +211,22 @@ a:hover {
     display: inline-block;
     border-radius: 12px;
     padding: 12px 18px;
+    min-height: 44px;
+    line-height: 1.2;
     font-weight: 700;
     border: 0;
     cursor: pointer;
     text-decoration: none
+}
+
+.btn:focus-visible,
+.arrow:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--brand-gold);
+    outline-offset: 3px;
 }
 
 .btn-primary {
@@ -967,6 +979,11 @@ a:hover {
         padding: 12px 10px;
         border-radius: 10px;
         font-weight: 700;
+    }
+    .hero .flex .btn,
+    .card .btn {
+        min-width: 12rem;
+        text-align: center;
     }
     .primary-nav .has-sub > .sub {
         position: static;
