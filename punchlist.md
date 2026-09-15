@@ -58,7 +58,7 @@ unless a separate formal standard is intentionally created.
 
 ## P0.2 — Standardize AAOS Stages
 
-Use exactly:
+Canonical stages:
 
 1. Diagnose
 2. Activate
@@ -373,7 +373,18 @@ Use practical user-facing categories such as:
 
 ### Advisory
 
-### Implementation
+> Explore the AI-Augmented Education framework and role-based journeys at AI-Augmented.ai.
+
+Paidar should own:
+
+* institutional implementation
+* readiness
+* governance
+* strategy
+* faculty enablement
+* operating model
+* architecture
+* workflow implementation
 
 ### Software
 
@@ -417,7 +428,7 @@ Do not restructure URLs yet.
 
 Use metadata where possible.
 
----
+Examples:
 
 # P6 — Higher Education Cleanup
 
@@ -743,7 +754,7 @@ Relevant:
 * executive engagements
 * ongoing support
 
----
+On Implementation:
 
 # P23 — Build Canonical Offerings Catalog
 
@@ -896,7 +907,7 @@ Under Frameworks:
 * AI-Augmented
 * ODXA
 
----
+Focus on:
 
 # P29 — Integrate Asset Metadata
 

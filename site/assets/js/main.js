@@ -274,11 +274,11 @@ class CTABlock extends HTMLElement {
         tertiary: { text: "Book a Workshop", href: "/workshops/" }
       },
       book_detail: {
-        title: "What to Do Next?",
+        title: "Put the Ideas Into Practice",
         subtitle: "The books provide the framework. Now, apply it to your organization.",
-        primary: { text: "Take the Assessment", href: "/assessments.html" },
-        secondary: { text: "Book a Workshop", href: "/workshops/" },
-        tertiary: { text: "Schedule a Strategy Session", href: "https://darrenpulsipher.zohobookings.com/#/AIConsult" }
+        primary: { text: "Understand Where You Are", href: "/assessments.html?source_page=book&entry_stage=assess" },
+        secondary: { text: "Enable Your Team", href: "/workshops/?source_page=book&entry_stage=enable" },
+        tertiary: { text: "Put the Plan Into Action", href: "/aaos-implementation/?source_page=book&entry_stage=implement" }
       },
       workshop: {
         title: "Bridge the Gap Between Strategy and Execution",
