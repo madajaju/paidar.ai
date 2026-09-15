@@ -592,6 +592,60 @@ textarea:focus-visible {
     color: var(--brand-blue);
 }
 
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-5);
+}
+
+/* Phase 2 offering discovery */
+.catalog-filters {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background: var(--brand-wash);
+    border: 1px solid var(--brand-line);
+    border-radius: var(--radius-1);
+}
+
+.catalog-filters label {
+    display: grid;
+    gap: 6px;
+    font-weight: 700;
+}
+
+.catalog-filters select {
+    min-height: 42px;
+    padding: 8px 10px;
+    border: 1px solid var(--brand-line);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.offering-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.offering-card > p:last-child {
+    margin-top: auto;
+    padding-top: var(--space-3);
+}
+
+.catalog-related {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    padding: var(--space-6);
+    text-align: center;
+    background: var(--brand-wash);
+    border-radius: var(--radius-1);
+}
+
 /* Right-side items (search + CTA) */
 .nav-ctas {
     display: flex;
@@ -946,6 +1000,12 @@ textarea:focus-visible {
 
 /* 8) RESPONSIVE (Small Screens) */
 @media (max-width: 980px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .catalog-filters {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
     .nav-toggle {
         display: block;
     }
@@ -993,6 +1053,13 @@ textarea:focus-visible {
         box-shadow: none;
         border: none;
         padding-left: 20px;
+    }
+}
+
+@media (max-width: 560px) {
+    .grid-4,
+    .catalog-filters {
+        grid-template-columns: 1fr;
     }
 }
 
