@@ -1,6 +1,13 @@
 document.getElementById('y')?.setAttribute('textContent', new Date().getFullYear());
 if (document.getElementById('y')) document.getElementById('y').textContent = new Date().getFullYear();
 
+// Keep legacy homepage copy aligned with the Phase 1 Learn → Apply → Augment model.
+document.querySelectorAll('h2').forEach((heading) => {
+  if (heading.textContent.includes('Assess') && heading.textContent.includes('Design') && heading.textContent.includes('Implement')) {
+    heading.textContent = 'Learn → Apply → Augment';
+  }
+});
+
 let toggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.primary-nav');
 
@@ -152,6 +159,78 @@ document.querySelectorAll('.primary-nav .has-sub .sub').forEach(menu => {
     li.appendChild(a);
     menu.appendChild(li);
   });
+});
+
+// Phase 2 commercial discovery navigation. Keep domains and offerings as the
+// primary jobs while retaining the existing framework and resource URLs.
+const phaseTwoNav = [
+  ['Domains', '/domains/', 'domains', [
+    ['Business', '/domains/business/'],
+    ['Education', '/domains/education/'],
+    ['Legal', '/domains/legal/'],
+    ['Medical', '/domains/medical/']
+  ]],
+  ['Offerings', '/offerings/', 'offerings'],
+  ['Frameworks', '/frameworks/', 'frameworks', [
+    ['AI-Augmented', '/frameworks/aaos/'],
+    ['ODXA', '/frameworks/odxa/']
+  ]],
+  ['Software', '/software.html', 'software'],
+  ['Resources', '/resources/', 'resources', [
+    ['Books & Guides', '/books/'],
+    ['Training', '/training/'],
+    ['Workshops', '/workshops/'],
+    ['Toolkits & Playbooks', '/toolkit/']
+  ]],
+  ['About', '/about.html', 'about'],
+  ['Contact', '/contact.html', 'contact']
+];
+
+document.querySelectorAll('.primary-nav').forEach((primaryNav) => {
+  let list = primaryNav.querySelector('.nav-list');
+  if (!list) {
+    list = document.createElement('ul');
+    list.className = 'nav-list nav-reset';
+    primaryNav.replaceChildren(list);
+  }
+  list.replaceChildren(...phaseTwoNav.map(([label, href, key, children]) => {
+    const item = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = href;
+    link.textContent = label;
+    link.dataset.navKey = key;
+    if (label === 'Contact') link.className = 'btn btn-primary';
+    if (children) {
+      item.className = 'has-sub';
+      link.setAttribute('aria-haspopup', 'true');
+      link.setAttribute('aria-expanded', 'false');
+      const submenu = document.createElement('ul');
+      submenu.className = 'sub nav-reset';
+      children.forEach(([childLabel, childHref]) => {
+        const childItem = document.createElement('li');
+        const childLink = document.createElement('a');
+        childLink.href = childHref;
+        childLink.textContent = childLabel;
+        childLink.setAttribute('role', 'menuitem');
+        childItem.appendChild(childLink);
+        submenu.appendChild(childItem);
+      });
+      item.append(link, submenu);
+    } else {
+      item.appendChild(link);
+    }
+    return item;
+  }));
+});
+
+document.querySelectorAll('.primary-nav a').forEach((link) => {
+  const href = new URL(link.href, window.location.origin);
+  if (href.pathname === current || (current === '/' && href.pathname === '/')) {
+    link.classList.add('active');
+    link.setAttribute('aria-current', 'page');
+    const parentLink = link.closest('.has-sub')?.querySelector(':scope > a');
+    parentLink?.classList.add('active');
+  }
 });
 
 document.querySelectorAll('.footer-nav .nav-reset').forEach(nav => {

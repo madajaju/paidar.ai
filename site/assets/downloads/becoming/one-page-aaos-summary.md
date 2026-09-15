@@ -4,7 +4,7 @@ AAOS is the AI-Augmented Operating System for AI-assisted work. It helps people 
 
 ## Six Moves
 
-Diagnose, Activate, Control, Execute, Measure, Scale.
+Diagnose, Activate, Controls, Execute, Measure, Scale.
 
 ## Core Artifact
 
