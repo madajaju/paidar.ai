@@ -1,38 +1,61 @@
 # Paidar.ai — Phase 1 and Phase 2 Punch List
 
-## Goal
+## Purpose
 
-Prepare `paidar.ai` for IUC traffic and make sure visitors coming from the AI-Augmented ecosystem see Paidar as the **implementation and transformation company** behind the movement.
+This document separates immediate Paidar.ai improvements from the future structural redesign.
 
-Core positioning:
+The goal is to avoid rebuilding Paidar twice.
 
-> **Paidar Systems helps organizations turn AI experimentation into reliable, defensible operating capability.**
+Current strategy:
+
+> **AI-Augmented.ai helps users understand what they need.**
+> **Paidar.ai helps users find and engage the assets, offerings, and services that help them move forward.**
+
+Future strategy:
 
 The site should complement `ai-augmented.ai`, not compete with it. Paidar is the commercial and fulfillment layer for assets, offerings, services, implementation, and software.
 
 ---
 
-# P0 — MUST FIX BEFORE IUC
+# PHASE 1 — ALIGN NOW, DO NOT RESTRUCTURE
 
-## P0.1 — Resolve AAOS naming everywhere
+## Goal
 
-There is currently inconsistent terminology around AAOS.
+Improve Paidar.ai immediately without changing the site's fundamental URL structure or committing to a future taxonomy before AI-Augmented.ai is finalized.
 
-Choose one canonical name:
+Phase 1 should focus on:
+
+* clarity
+* consistency
+* simplification
+* ecosystem handoffs
+* editorial quality
+* offerings alignment
+* preparation for the future redesign
+
+Do not perform a major information-architecture migration in Phase 1.
+
+---
+
+# P0 — Fix Canon and Quality Issues
+
+## P0.1 — Standardize AAOS Naming
+
+Use:
 
 **AI-Augmented Operating System**
 
-Use it consistently across Paidar.
-
-Do not alternate between:
+Do not use:
 
 * AI-Augmented Operating System
 
-Unless a separate formal standard actually exists.
+unless a separate formal standard is intentionally created.
 
-### Canonical AAOS stages
+---
 
-Use exactly:
+## P0.2 — Standardize AAOS Stages
+
+Canonical stages:
 
 1. Diagnose
 2. Activate
@@ -52,161 +75,184 @@ Correct inconsistent references.
 
 ---
 
-## P0.2 — Run full editorial cleanup
+## P0.3 — Fix Editorial Errors
 
-Perform a repository-wide review for spelling, grammar, punctuation, and encoding problems.
+Run a site-wide proofreading pass.
 
-Known issues to check include:
+Known issues include:
 
-* `Acelleration` → `Acceleration`
-* `Architecct` → `Architect`
-* `chariman` → `chairman`
-* malformed characters such as `�`
-* broken arrows rendered as `?`
-* duplicate punctuation
+* Acelleration → Acceleration
+* Architecct → Architect
+* chariman → chairman
+* malformed encoding characters
+* broken arrows
+* double punctuation
 * inconsistent capitalization
-* missing articles
-* incomplete sentences
-
-Pay special attention to:
-
-* homepage
-* Darren bio
-* higher education
-* AAOS
-* AI Operating Model
-* software
-* training
-* contact
-* workshops
-
-No obvious typo should remain on a site claiming reliable execution.
+* awkward generated copy
 
 ---
 
-## P0.3 — Standardize the Paidar value proposition
+## P0.4 — Run UTF-8 / Encoding Cleanup
 
-Use one primary value proposition across the site.
+Search the repository and built output for:
+
+```text
+�
+â
+Ã
+?
+```
+
+Do not replace legitimate question marks.
+
+Verify:
+
+* apostrophes
+* arrows
+* em dashes
+* smart quotes
+* imported markdown
+* generated HTML
+* JSON content
+
+---
+
+# P1 — Clarify Paidar's Purpose
+
+## P1.1 — Establish One Core Positioning Statement
 
 Recommended:
 
-> **Turn AI experimentation into reliable, defensible operating capability.**
+> **Paidar Systems helps organizations turn ideas, frameworks, and AI strategy into reliable operating capability.**
 
-Supporting language can vary by page, but the core idea should remain consistent.
+Alternative:
 
-Avoid mixing too many competing claims such as:
+> **Turn AI strategy into reliable execution.**
 
-* AI transformation
-* digital transformation
-* innovation
-* AI readiness
-* enterprise architecture
-* AI enablement
-
-These can support the main proposition, but should not replace it.
+Use consistently across major pages.
 
 ---
 
-## P0.4 — Clarify relationship to AI-Augmented
+## P1.2 — Make Paidar the Offerings and Implementation Hub
 
-Add concise language where appropriate explaining the relationship.
+Paidar should visibly serve as the place to find:
 
-Recommended positioning:
-
-**AI-Augmented defines the framework and movement. Paidar Systems helps organizations put it into practice.**
-
-Do not over-explain the corporate structure.
-
-Add contextual links from Paidar to:
-
-`https://ai-augmented.ai`
-
-especially from:
-
-* AAOS
-* education
+* books
+* assessments
+* workbooks
+* toolkits
+* workshops
 * training
-* assessment
-* AI-Augmented workshop content
+* keynotes
+* executive sessions
+* advisory
+* implementation
+* architecture engagements
+* software
+
+Do not make Paidar re-teach the entire AI-Augmented framework.
 
 ---
 
-## P0.5 — Make Higher Education implementation-focused
+## P1.3 — Use Learn / Apply / Augment Lightly
 
-Review:
+Use Learn / Apply / Augment as ecosystem continuity, not as a full duplicate of AI-Augmented.ai.
 
-`/sectors/higher-education`
+Recommended framing:
 
-The page should not duplicate the education journey on `ai-augmented.ai`.
+### Learn
 
-Paidar should focus on institutional execution.
+New to the ideas?
 
-Recommended emphasis:
+→ Explore AI-Augmented.ai
 
-* AI readiness assessment
-* leadership alignment
-* faculty development
-* institutional AI strategy
-* governance
-* operating model design
-* workflow redesign
-* student success use cases
-* administrative efficiency
-* implementation roadmap
-* measurable outcomes
+### Apply
 
-Add a clear link:
+Use Paidar assets, assessments, workshops, playbooks, and tools.
 
-**Explore the AI-Augmented Education framework**
+### Augment
 
-→ `https://ai-augmented.ai/education`
+Engage Paidar for advisory, implementation, architecture, and transformation.
 
-And a Paidar CTA such as:
-
-**Bring AI-Augmented Education to Your Institution**
+Visually emphasize Apply and Augment.
 
 ---
 
-## P0.6 — Verify IUC referral path
+# P2 — Simplify the Homepage
 
-Assume an IUC attendee follows this flow:
+## P2.1 — Remove Non-Canonical Transformation Journeys
+
+Do not make:
+
+Assess → Design → Enable → Implement → Scale
+
+the main customer-facing model.
+
+That can remain an internal delivery concept if useful, but it should not become new public canon.
+
+---
+
+## P2.2 — Keep Homepage Focused on Paidar's Role
+
+Recommended Phase 1 homepage flow:
 
 ```text
-IUC
-→ ai-augmented.ai/education
-→ Education Leader
-→ Learn / Apply / Augment
-→ Paidar
+Hero
+↓
+Problems Paidar Solves
+↓
+Put the Framework to Work
+   Learn → Apply → Augment
+↓
+Apply Offerings
+↓
+Augment Engagements
+↓
+Frameworks / Methods
+↓
+Proof
+↓
+Continue Your Journey
+↓
+Final CTA
 ```
 
-Make sure the Paidar landing experience makes sense.
+---
 
-The visitor should immediately understand:
+## P2.3 — Reduce Catalog Noise
 
-1. Who Paidar is.
-2. What Paidar can do for an institution.
-3. What the next step is.
+Avoid giving equal visual weight to:
 
-Avoid sending them into a generic services catalog.
+* books
+* software
+* workshops
+* training
+* advisory
+* consulting
+* frameworks
+* assessments
+
+Group them according to user intent.
 
 ---
 
-## P0.7 — Add a clear institutional CTA
+# P3 — Add "Continue Your Journey"
 
-Create or standardize a primary CTA for higher-education visitors.
+## P3.1 — Book Reader Path
 
-Recommended options:
+Add:
 
-* `Schedule an Executive Briefing`
-* `Request an AI Readiness Discussion`
-* `Explore an Institutional Workshop`
-* `Talk With Paidar`
+### Read one of the books?
 
-Use one primary action consistently.
+You already understand the ideas. Put them into practice.
+
+CTA:
+
+**Put the Ideas Into Practice**
 
 ---
 
-# P1 — HIGH PRIORITY BEFORE IUC
+## P3.2 — Workshop Attendee Path
 
 ## P1.1 — Standardize the customer discovery model
 
@@ -250,33 +296,50 @@ Help visitors engage Paidar for advisory, implementation, architecture, transfor
 
 ---
 
-## P1.2 — Add Implementation explicitly
+# P4 — Ecosystem Handoffs
 
-Paidar should not sound like it only provides advice.
+## P4.1 — AI-Augmented.ai
 
-Add **Implementation** as a visible capability.
+Use language such as:
 
-Potential language:
+> **Learn the framework at AI-Augmented.ai. Put it into practice with Paidar.**
 
-**Implementation**
+Link appropriately from:
 
-Turn strategy into working capability through workflow redesign, governance, architecture, pilot execution, and technology integration.
+* AI-Augmented offerings
+* AAOS
+* education
+* assessments
+* books
 
-This is important because Paidar's work goes beyond consulting recommendations.
+---
+
+## P4.2 — DrDarrenSpeaks.com
+
+Paidar may list keynotes and Darren-led workshops as offerings.
+
+But detailed speaker marketing should route to DrDarrenSpeaks.
+
+Recommended:
+
+> **Looking for keynote details or speaker information? Visit DrDarrenSpeaks.**
+
+Paidar should remain the commercial catalog/engagement hub.
 
 ---
 
 ## P1.3 — Simplify homepage discovery choices
 
-Avoid presenting multiple overlapping groupings such as:
+Position as:
 
-* assessment / workshops / advisory
-* assessment / enablement / scaling
-* books / workshops / consulting
+> **The media and community conversation behind the ecosystem.**
 
 Use one discovery flow and give Apply and Augment the strongest visual emphasis.
 
-Recommended homepage flow:
+* podcast episodes
+* interviews
+* community stories
+* deep dives
 
 1. Problem
 2. Outcome
@@ -306,150 +369,166 @@ Offering types describe what Paidar provides:
 
 Learn, Apply, and Augment describe how the visitor engages with the offering. Do not use Assess → Design → Enable → Implement → Scale as the primary public navigation model.
 
-Example:
+---
 
 Use context-specific CTAs such as Get the Book, Take the Assessment, Plan a Workshop, Continue the Work, Discuss Implementation, and Explore the Toolkit.
 
 ---
 
-## P1.5 — Tighten the AI Operating Model page
+## P5.2 — Make Offerings Outcome-Oriented
 
-This is one of Paidar's strongest concepts.
+Every offering should answer:
 
-Preserve the distinction:
+* What problem does this solve?
+* Who is it for?
+* What do I get?
+* What outcome should I expect?
+* What is the format?
+* What should I do next?
 
-**AAOS**
+---
 
-How AI-augmented work operates.
+## P5.3 — Connect Offerings to Framework Family
 
-**AI Operating Model**
+Where useful, tag offerings as:
 
-How the organization institutionalizes AI-augmented work.
+* AI-Augmented
+* ODXA
+* Other / general architecture
 
-Check that the page consistently reinforces:
+Do not expose overly technical taxonomy unless useful to users.
 
-* strategy
-* governance
-* operating structure
-* use-case intake
-* accountability
-* workflow design
-* validation
-* measurement
+---
 
-Add links between:
+## P5.4 — Connect Offerings to Domain
 
-* AAOS
-* AI Operating Model
-* AI Governance
+Prepare offerings to eventually support domains such as:
+
+* Business
+* Education
+* Legal
+* Medical
+
+Do not restructure URLs yet.
+
+Use metadata where possible.
+
+Examples:
+
+# P6 — Higher Education Cleanup
+
+## P6.1 — Keep Current Page but Simplify
+
+Do not fully redesign around the future domain taxonomy yet.
+
+Improve current page by emphasizing:
+
+* institutional challenges
+* relevant offerings
+* outcomes
+* Learn / Apply / Augment handoff
+
+---
+
+## P6.2 — Link to AI-Augmented Education
+
+Use AI-Augmented.ai for:
+
+* education framework
+* student journey
+* teacher journey
+* education leader journey
+* maturity
+* learning content
+
+Use Paidar for:
+
 * assessments
-* advisory
+* faculty enablement
+* workshops
+* governance
+* institutional strategy
+* implementation
 
 ---
 
-## P1.6 — Clarify architecture framework relationships
+# P7 — Training Cleanup
 
-Make the framework hierarchy understandable.
+## P7.1 — Improve Current Organization
 
-Recommended conceptual stack:
+Separate:
 
-```text
-Work
-↓
-AAOS
+### AI & Organizational Capability
 
-Organization
-↓
-AI Operating Model
+from:
 
-Architecture
-↓
-ODXA / GDXA
-```
+### Architecture & Technology
 
-Do not dump every framework into the homepage.
-
-Explain the stack on a framework overview page instead.
+Do not perform a major IA migration yet.
 
 ---
 
-## P1.7 — Review certification and credential claims
+## P7.2 — Clarify Training vs Workshops
 
-Search the site for terms such as:
+### Training
 
-* certified
-* certification
-* credential
-* professional pathway
-* badge
-* digital badge
+Builds knowledge and capability.
 
-If a program does not yet have:
+### Workshop
 
-* competency requirements
-* assessment
-* issuing authority
-* badge infrastructure
-* verification
-* renewal policy
-
-then do not imply it is an established certification.
-
-Use safer wording such as:
-
-* professional learning pathway
-* structured learning pathway
-* certificate of completion
-
-only if accurate.
+Produces decisions, outputs, plans, or working artifacts.
 
 ---
 
-## P1.8 — Reorganize software messaging
+## P7.3 — Review Certification Claims
 
-Do not remove the software products before IUC.
+Remove or qualify any claim that implies a formal credential unless the program actually exists.
 
-But group them around capability instead of listing unrelated tools.
+---
 
-Suggested categories:
+# P8 — Software Cleanup
+
+## P8.1 — Group Software by Customer Need
+
+Suggested current grouping:
 
 ### Architecture & Transformation
 
-* Ailtire
-* Treoir
-
 ### Data & Knowledge
-
-* Tuig
-* Sruth
 
 ### Workflow & Automation
 
-* Runaire
-
 ### Content Operations
-
-* Guthan
-
-Add explanatory copy such as:
-
-> Paidar develops specialized software where existing platforms do not adequately support architecture, data, workflow, and AI-enabled operating models.
-
-This keeps the software portfolio from feeling disconnected.
 
 ---
 
-## P1.9 — Reframe Guthan
+## P8.2 — Explain Software in Outcome Terms
 
-Do not lead with podcast management alone.
+Each product should answer:
 
-Position Guthan more broadly as:
+* What problem does this solve?
+* Who uses it?
+* Why does Paidar use/provide it?
+* What outcome does it enable?
 
-**AI-enabled content and publication operations**
+---
 
-Then explain podcast automation as an initial use case.
+# P9 — Contact and Conversion
 
-This makes it fit better within Paidar's enterprise story.
+## P9.1 — Simplify Contact Intent
+
+Suggested:
+
+* Assessment
+* Workshop / Training
+* Advisory
+* Implementation
+* Keynote / Executive Session
+* Partnership / Other
+
+Paidar can retain keynote intake if Paidar is the commercial fulfillment layer.
+
+Detailed speaker content can route to DrDarrenSpeaks.
 
 ---
 
@@ -484,204 +563,314 @@ All full downloads should be delivered through the Paidar Shop so guest data, co
 
 # P2 — IUC TRUST AND PROOF
 
-## P2.1 — Strengthen Higher Education proof
-
-Where supported, mention experience with:
-
-* universities
-* higher-education leadership
-* faculty development
-* curriculum
-* AI workforce initiatives
-* executive workshops
-* institutional strategy
-
-Do not invent customer logos or statistics.
-
-Use actual examples only.
-
----
-
-## P2.2 — Make Darren's credibility concise
-
-Keep Darren visible.
-
-He is an important trust signal for Paidar.
-
-But avoid turning every page into a biography.
-
-Use a compact credibility block with items such as:
-
-* Chief Enterprise Architect
-* Vanderbilt professor
-* author
-* Open Group leadership
-* enterprise/public-sector experience
-* patents
-* podcast reach
-
-Link to full bio.
-
----
-
-## P2.3 — Verify all statistics
-
-Check any claims involving:
-
-* podcast downloads
-* subscribers
-* organizations
-* workshops
-* customers
-* years of experience
-* patents
-* published books
-
-Ensure they are accurate and current.
-
-Prefer centralized data rather than duplicated hardcoded metrics.
-
----
-
-## P2.4 — Review customer and organization claims
-
-For every named organization or customer reference verify:
-
-* wording is accurate
-* relationship can be publicly stated
-* no implication of endorsement
-* no confidential engagement details
-
-Especially review government and education references.
-
----
-
-# P3 — CONTACT AND CONVERSION
-
-## P3.1 — Simplify contact paths
-
-The current intent-based contact structure is good.
-
-Keep choices such as:
-
-* Assessment
-* Workshop
-* Advisory / Consulting
-* Speaking / Executive Session
-* General
-
-Add Implementation if appropriate.
-
----
-
-## P3.2 — Make contact CTAs context-aware
-
-Do not use the same generic `Contact Us` everywhere.
-
 Examples:
 
-On higher education:
+* Get the Book
+* Take the Assessment
+* Plan a Workshop
+* Continue the Work
+* Discuss Implementation
+* Book the Keynote
+* Explore the Toolkit
 
-`Discuss Your Institution`
-
-On AAOS:
-
-`Assess Your Organization`
-
-On workshops:
-
-`Plan a Workshop`
-
-On AI Operating Model:
-
-`Discuss Your Operating Model`
-
-On implementation:
-
-`Discuss an Implementation`
+Avoid generic `Learn More`.
 
 ---
 
-## P3.3 — Verify forms
+# P10 — Phase 1 Technical Preparation
 
-Test all forms.
+## P10.1 — Add Metadata to Offerings
 
-Check:
+Prepare the data model now for the future redesign.
 
-* successful submission
-* validation
-* mobile usability
-* confirmation message
-* destination email/system
-* spam protection
-* no console errors
-* no dead buttons
+Where possible, add fields such as:
 
----
-
-# P4 — SEO / AEO
-
-## P4.1 — Align page titles with Paidar positioning
-
-Review titles for:
-
-* homepage
-* AAOS
-* AI Operating Model
-* AI Governance
-* Higher Education
-* Workshops
-* Training
-* Software
-* Assessment
-
-Use language around:
-
-* reliable AI execution
-* AI operating model
-* AI governance
-* enterprise AI implementation
-* AI readiness
-* organizational AI capability
-
-Avoid generic "AI consulting company" language where possible.
-
----
-
-## P4.2 — Preserve strong FAQ content
-
-Keep clear answers for:
-
-* What is AAOS?
-* What is an AI Operating Model?
-* What is AI governance?
-* What is AI readiness?
-* How do organizations scale AI?
-* How is AI augmentation different from automation?
-* How do organizations move from pilots to operational capability?
-
-These are strong AEO topics.
-
----
-
-## P4.3 — Improve internal linking
-
-Create intentional clusters.
-
-Example:
-
-```text
-Reliable AI Execution
-├── AI Readiness
-├── AAOS
-├── AI Operating Model
-├── AI Governance
-├── Workflow Transformation
-├── Architecture
-└── Implementation
+```json
+{
+  "domain": ["education"],
+  "framework": ["ai-augmented"],
+  "engagement": ["apply"],
+  "offeringType": ["workshop"],
+  "audience": ["education-leader"]
+}
 ```
 
-Cross-link these pages naturally.
+Do not expose all of these publicly yet.
+
+---
+
+## P10.2 — Avoid Risky URL Changes
+
+Do not:
+
+* rename entire sections
+* migrate domain URLs
+* remove existing pages
+* restructure framework paths
+
+until Phase 2.
+
+Use redirects later when the canonical taxonomy is settled.
+
+---
+
+# PHASE 1 DEFINITION OF DONE
+
+Phase 1 is complete when:
+
+* AAOS terminology is correct
+* editorial errors are fixed
+* Paidar's commercial purpose is clear
+* Learn / Apply / Augment is used lightly and correctly
+* Apply and Augment are emphasized
+* books and workshops are easy to find
+* workshop attendees can continue their work
+* book readers can find the next offering
+* AI-Augmented referrals have a clear handoff
+* Embracing Digital is linked as the community/media source
+* Paidar is prepared for ODXA offerings
+* offering metadata supports future domains/frameworks
+* no major IA or URL migration has occurred
+
+---
+
+# PHASE 2 — FULL PAIDAR RESTRUCTURE
+
+## Trigger
+
+Begin Phase 2 only after:
+
+* AI-Augmented.ai domain model is finalized
+* Learn / Apply / Augment UX is stable
+* offering taxonomy is stable
+* ODXA direction is clearer
+* the future role of ODXA.org is sufficiently defined
+
+---
+
+# Phase 2 Goal
+
+Rebuild Paidar as the commercial and fulfillment hub for multiple frameworks and domains.
+
+The future Paidar user question becomes:
+
+> **What asset, offering, or engagement will help me move forward?**
+
+---
+
+# P20 — Establish Canonical Domain Taxonomy
+
+## P20.1 — Mirror Framework-Site Domains
+
+If AI-Augmented.ai establishes:
+
+* Business
+* Education
+* Legal
+* Medical
+
+use the same domain names on Paidar.
+
+Do not invent a second taxonomy.
+
+---
+
+## P20.2 — Keep Domain Meaning Consistent
+
+On AI-Augmented.ai:
+
+> How does this framework apply in this domain?
+
+On Paidar.ai:
+
+> What assets and offerings are available for this domain?
+
+Same domain.
+
+Different job.
+
+---
+
+## P20.3 — Prepare for Additional Domains
+
+Support future additions without redesign.
+
+Potential future examples:
+
+* Public Sector
+* Healthcare as distinct from Medical, if needed
+* Industry-specific verticals
+
+Only add when strategically justified.
+
+---
+
+# P21 — Build Domain Landing Pages
+
+Create:
+
+```text
+/domains/business/
+/domains/education/
+/domains/legal/
+/domains/medical/
+```
+
+Each domain page should answer:
+
+* What problems exist here?
+* What frameworks apply?
+* What can I Learn?
+* What can I Apply?
+* How can I Augment?
+* What offerings are available?
+
+---
+
+# P22 — Use Learn / Apply / Augment Within Domains
+
+## Learn
+
+Relevant:
+
+* books
+* guides
+* courses
+* content
+* framework references
+
+Where appropriate, link outward to AI-Augmented.ai or ODXA.org.
+
+---
+
+## Apply
+
+Relevant:
+
+* assessments
+* workbooks
+* toolkits
+* workshops
+* playbooks
+* templates
+* software tools
+
+---
+
+## Augment
+
+Relevant:
+
+* advisory
+* implementation
+* architecture
+* transformation
+* executive engagements
+* ongoing support
+
+On Implementation:
+
+# P23 — Build Canonical Offerings Catalog
+
+Create a unified offering taxonomy.
+
+Suggested top-level categories:
+
+```text
+Offerings
+├── Books & Guides
+├── Assessments
+├── Toolkits & Playbooks
+├── Workshops
+├── Training
+├── Keynotes
+├── Advisory
+├── Implementation
+└── Software
+```
+
+Each offering can belong to:
+
+* one or more domains
+* one or more frameworks
+* Learn / Apply / Augment
+* one or more audiences
+
+---
+
+# P24 — Build Framework Family Layer
+
+Support:
+
+### AI-Augmented
+
+Current canonical framework site:
+
+`ai-augmented.ai`
+
+### ODXA
+
+Current Paidar-hosted content initially.
+
+Future canonical framework site may become:
+
+`odxa.org`
+
+### Future Frameworks
+
+Paidar should support additional framework families without changing the site's base architecture.
+
+---
+
+# P25 — Prepare ODXA Migration Path
+
+If `odxa.org` launches:
+
+ODXA.org should own:
+
+* framework explanation
+* architecture journey
+* GEAR
+* GDXA
+* methods
+* standards/community content
+
+Paidar should own:
+
+* ODXA assessments
+* ODXA workshops
+* ODXA implementation
+* architecture engagements
+* tooling
+* advisory
+
+Do not duplicate the complete framework narrative.
+
+---
+
+# P26 — Rebuild Homepage Around Commercial Discovery
+
+Recommended future homepage:
+
+```text
+Hero
+↓
+What Do You Need?
+↓
+Choose a Domain
+↓
+Learn / Apply / Augment
+↓
+Featured Offerings
+↓
+Framework Families
+↓
+Continue Your Journey
+↓
+Proof / Outcomes
+↓
+Final CTA
+```
 
 ---
 
@@ -795,138 +984,235 @@ ODXA pages remain excluded from this implementation until the ODXA.org role and 
 
 # P5 — TECHNICAL QA BEFORE IUC
 
-## P5.1 — Run broken-link audit
+### I need to understand
 
-Check:
+→ Learn
 
-* internal links
-* external links
-* buttons
-* anchors
-* image references
-* downloads
-* redirects
+### I need tools to apply this
 
-Fix all obvious failures.
+→ Apply
 
----
+### I need expert help
 
-## P5.2 — Test mobile
+→ Augment
 
-Especially test:
+### I already know what I want
 
-* homepage
-* higher education
-* AAOS
-* workshops
-* contact
-* software
-* Darren bio
-
-Common viewport widths:
-
-* 375px
-* 390px
-* 430px
+→ Browse Offerings
 
 ---
 
-## P5.3 — Check malformed characters
+# P28 — Domain Navigation
 
-Search the repository for:
+Top-level conceptual navigation could become:
 
 ```text
-�
-?
-â
-Ã
+Domains
+Offerings
+Frameworks
+Software
+Resources
+About
 ```
 
-and other encoding artifacts.
+Under Domains:
 
-Be careful not to replace legitimate question marks.
+* Business
+* Education
+* Legal
+* Medical
 
----
+Under Frameworks:
 
-## P5.4 — Check metadata
+* AI-Augmented
+* ODXA
 
-Verify major pages have:
+Focus on:
 
-* title
-* description
-* canonical
-* OpenGraph title
-* OpenGraph description
-* OpenGraph image
+# P29 — Integrate Asset Metadata
 
----
+Each asset/offering should support metadata such as:
 
-## P5.5 — Check heading hierarchy
+```json
+{
+  "domain": [
+    "education"
+  ],
+  "framework": [
+    "ai-augmented"
+  ],
+  "engagement": [
+    "apply"
+  ],
+  "offeringType": "workshop",
+  "audience": [
+    "education-leader",
+    "teacher"
+  ],
+  "relatedAssets": [],
+  "relatedOfferings": []
+}
+```
 
-Each page should have:
+Use this to dynamically generate:
 
-* one meaningful H1
-* logical H2/H3 structure
-
-Avoid using headings simply for styling.
-
----
-
-## P5.6 — Check accessibility basics
-
-Verify:
-
-* alt text
-* contrast
-* keyboard navigation
-* button labels
-* form labels
-* visible focus
-* semantic navigation
-* mobile tap size
-
----
-
-# P6 — DO NOT DO BEFORE IUC
-
-Avoid high-risk structural work immediately before the conference.
-
-Do not:
-
-* massively redesign the site
-* rename large numbers of routes
-* migrate frameworks to new paths without redirects
-* remove product pages
-* rebuild the CMS/site generator
-* combine Paidar and AI-Augmented
-* move every education asset right now
-* reorganize the full software architecture
-* launch unfinished certification programs
-
-Focus on consistency, credibility, routing, and conversion.
+* domain catalogs
+* related offerings
+* continuation paths
+* cross-framework recommendations
 
 ---
 
-# FINAL IUC SMOKE TEST
+# P30 — Create Offering Relationships
 
-## Journey 1 — University CIO
+Offerings should be able to include assets.
 
-1. Arrive from AI-Augmented Education.
-2. Understand Paidar within five seconds.
-3. See institutional relevance.
-4. Understand the transformation approach.
-5. Find governance, operating model, and implementation help.
-6. Find a clear way to engage.
+Example:
 
-## Journey 2 — Provost
+```text
+AI-Augmented Education Leadership Workshop
+├── Assessment
+├── Participant Workbook
+├── Facilitator Guide
+├── Presentation Deck
+├── Governance Toolkit
+└── Follow-Up Assessment
+```
 
-1. Enter Higher Education.
-2. See academic and institutional relevance.
-3. Find faculty and governance support.
-4. Understand the relationship to AI-Augmented Education.
-5. Find workshop or advisory options.
+Paidar presents the offering.
 
-## Journey 3 — Enterprise Executive
+The asset model defines its contents.
+
+---
+
+# P31 — Build Cross-Site Handoffs
+
+## AI-Augmented.ai → Paidar
+
+Examples:
+
+* Get the Book
+* Use the Toolkit
+* Take the Paid Assessment
+* Book the Workshop
+* Get Expert Help
+
+---
+
+## ODXA.org → Paidar
+
+Examples:
+
+* Run an ODXA Assessment
+* Book an Architecture Workshop
+* Start an ODXA Engagement
+
+---
+
+## EmbracingDigital.org → Framework / Paidar
+
+Podcast content should route based on intent:
+
+Learn framework:
+
+→ AI-Augmented.ai or ODXA.org
+
+Get offering:
+
+→ Paidar.ai
+
+---
+
+## DrDarrenSpeaks.com → Paidar
+
+Speaker marketing may route to the canonical Paidar offering for:
+
+* keynote purchase/booking
+* workshop engagement
+* executive session
+
+depending on final commercial architecture.
+
+---
+
+# P32 — Build Better Search and Filtering
+
+Support filtering by:
+
+### Domain
+
+* Business
+* Education
+* Legal
+* Medical
+
+### Engagement
+
+* Learn
+* Apply
+* Augment
+
+### Offering Type
+
+* Book
+* Assessment
+* Workshop
+* Training
+* Keynote
+* Toolkit
+* Advisory
+* Implementation
+* Software
+
+### Framework
+
+* AI-Augmented
+* ODXA
+
+### Audience
+
+Where useful.
+
+---
+
+# P33 — Build Personalized Continuation
+
+Future experience:
+
+> You came from AI-Augmented Education.
+
+Paidar can prioritize:
+
+* education domain
+* AI-Augmented framework
+* relevant Apply offerings
+* relevant Augment services
+
+Likewise:
+
+> You came from ODXA Physical Domain.
+
+Paidar can surface the relevant ODXA offerings.
+
+---
+
+# P34 — Preserve Clean Separation of Roles
+
+Final ecosystem:
+
+## EmbracingDigital.org
+
+Media, podcasts, interviews, community conversation.
+
+## AI-Augmented.ai
+
+AI-Augmented movement, framework, maturity, learning journey.
+
+## ODXA.org
+
+Architecture and transformation framework/community, when launched.
+
+## Paidar.ai
 
 1. Open homepage.
 2. Understand that Paidar moves AI from experimentation to execution.
@@ -934,19 +1220,15 @@ Focus on consistency, credibility, routing, and conversion.
 4. Find Apply or Augment offerings.
 5. See credible methodology and a clear engagement path.
 
-## Journey 4 — Technical/Architecture Leader
+## DrDarrenSpeaks.com
 
-1. Find AAOS.
-2. Understand AI Operating Model.
-3. Understand architecture relationships.
-4. Find implementation capability.
-5. Reach an appropriate CTA.
+Darren's personal authority, speaker experience, and keynote/workshop marketing.
 
 ---
 
-# DEFINITION OF DONE
+# PHASE 2 DEFINITION OF DONE
 
-Paidar is IUC-ready when:
+Phase 2 is complete when:
 
 * AAOS is consistently called the AI-Augmented Operating System.
 * AAOS stages are consistent everywhere.
@@ -966,9 +1248,17 @@ Paidar is IUC-ready when:
 
 ---
 
-# EXECUTION ORDER
+# Final Strategy
 
-Codex should work in this order:
+## Phase 1
+
+> **Fix Paidar without rebuilding Paidar.**
+
+Make the current site clearer, simpler, cleaner, and prepared for the future taxonomy.
+
+## Phase 2
+
+> **Rebuild Paidar as the commercial hub for domains, frameworks, assets, and offerings.**
 
 1. Fix AAOS terminology.
 2. Fix spelling, grammar, and encoding errors.
@@ -989,4 +1279,5 @@ Codex should work in this order:
 17. Add and validate asset metadata, shop routing, and reusable asset pages.
 18. Run the final IUC smoke tests.
 
-Do not proceed into major post-IUC architecture changes as part of this pass.
+> **Framework sites help users discover what they need.**
+> **Paidar helps them find and engage what they can use.**
