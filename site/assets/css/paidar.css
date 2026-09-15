@@ -935,13 +935,13 @@ textarea:focus-visible {
 }
 
 .site-footer {
-    background: var(--brand-ink);
-    color: #fff;
+    background: #cccccc;
+    color: var(--brand-ink);
     padding: var(--space-8) 0;
 }
 .site-footer .footer-grid a,
 .site-footer .footer-grid small {
-    color: #fff;
+    color: var(--brand-ink);
 }
 .footer-socials img {
     display: inline-block;

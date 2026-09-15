@@ -13,9 +13,7 @@ Current strategy:
 
 Future strategy:
 
-> Paidar should become the commercial and fulfillment layer for multiple framework families, including AI-Augmented and potentially ODXA.
-
-Paidar should therefore remain framework-neutral at its core while supporting strong continuity with AI-Augmented today.
+The site should complement `ai-augmented.ai`, not compete with it. Paidar is the commercial and fulfillment layer for assets, offerings, services, implementation, and software.
 
 ---
 
@@ -49,8 +47,7 @@ Use:
 
 Do not use:
 
-* AI-Augmented Operating Standard
-* professional operating standard
+* AI-Augmented Operating System
 
 unless a separate formal standard is intentionally created.
 
@@ -67,7 +64,14 @@ Canonical stages:
 5. Measure
 6. Scale
 
-Replace `Control` with `Controls` wherever referring to the AAOS stage.
+Search the entire repository for:
+
+* Operating System
+* Control
+* Controls
+* AAOS stages
+
+Correct inconsistent references.
 
 ---
 
@@ -250,45 +254,45 @@ CTA:
 
 ## P3.2 — Workshop Attendee Path
 
-Add:
+## P1.1 — Standardize the customer discovery model
 
-### Attended a workshop?
+Use one simple public model:
 
-Continue from the decisions, plans, and outputs you already created.
+```text
+Domain
+→ Lens
+→ Persona
+→ Learn / Apply / Augment
+→ Offering
+```
 
-CTA:
+### Domain
 
-**Continue the Work**
+Use the canonical domains established by the framework sites, beginning with Business, Education, Legal, and Medical.
 
----
+### Lens
 
-## P3.3 — AI-Augmented Referral Path
+Use the level of change:
 
-Add:
+* Individual
+* Team
+* Organization
 
-### Coming from AI-Augmented?
+### Persona
 
-Move from understanding the framework to applying or augmenting it.
+Use the domain-specific role or context, such as student, teacher, education leader, employee, manager, executive, attorney, clinician, or health-system leader.
 
-CTA:
+### Learn
 
-**Explore Paidar Offerings**
+Help visitors understand the framework through books, guides, courses, and related content. Link to the canonical framework site when it owns the explanation.
 
----
+### Apply
 
-## P3.4 — Podcast / Community Referral
+Help visitors use assessments, workbooks, toolkits, playbooks, workshops, templates, and software.
 
-Add contextual handoff from EmbracingDigital.org where appropriate.
+### Augment
 
-Visitors arriving from the podcast/community should be able to move toward:
-
-* relevant framework
-* book
-* assessment
-* workshop
-* offering
-
-without having to search manually.
+Help visitors engage Paidar for advisory, implementation, architecture, transformation, executive sessions, and ongoing support.
 
 ---
 
@@ -324,69 +328,50 @@ Paidar should remain the commercial catalog/engagement hub.
 
 ---
 
-## P4.3 — EmbracingDigital.org
+## P1.3 — Simplify homepage discovery choices
 
 Position as:
 
 > **The media and community conversation behind the ecosystem.**
 
-Link to relevant:
+Use one discovery flow and give Apply and Augment the strongest visual emphasis.
 
 * podcast episodes
 * interviews
 * community stories
 * deep dives
 
-Avoid duplicating podcast content on Paidar.
+1. Problem
+2. Outcome
+3. Paidar approach
+4. Put the framework to work: Learn → Apply → Augment
+5. Apply offerings
+6. Augment engagements
+7. Frameworks and proof
+8. Continue Your Journey
+9. CTA
 
 ---
 
-## P4.4 — Prepare for Future ODXA.org
+## P1.4 — Keep offering types separate from engagement stages
 
-Do not hardwire Paidar's information architecture to AI-Augmented only.
+Offering types describe what Paidar provides:
 
-Ensure future offerings can be associated with:
+* Books and Guides
+* Assessments
+* Toolkits and Playbooks
+* Workshops
+* Training
+* Keynotes
+* Advisory
+* Implementation
+* Software
 
-* AI-Augmented
-* ODXA
-* future framework families
+Learn, Apply, and Augment describe how the visitor engages with the offering. Do not use Assess → Design → Enable → Implement → Scale as the primary public navigation model.
 
 ---
 
-# P5 — Offerings Alignment
-
-## P5.1 — Define Offering Categories
-
-Use practical user-facing categories such as:
-
-### Books & Guides
-
-### Assessments
-
-### Toolkits & Playbooks
-
-### Workshops
-
-### Training
-
-### Keynotes
-
-### Advisory
-
-> Explore the AI-Augmented Education framework and role-based journeys at AI-Augmented.ai.
-
-Paidar should own:
-
-* institutional implementation
-* readiness
-* governance
-* strategy
-* faculty enablement
-* operating model
-* architecture
-* workflow implementation
-
-### Software
+Use context-specific CTAs such as Get the Book, Take the Assessment, Plan a Workshop, Continue the Work, Discuss Implementation, and Explore the Toolkit.
 
 ---
 
@@ -547,7 +532,36 @@ Detailed speaker content can route to DrDarrenSpeaks.
 
 ---
 
-## P9.2 — Use Context-Specific CTAs
+## P1.10 — Define the reusable asset page model
+
+Every sellable or downloadable asset should be able to generate a consistent Paidar page from its `asset.json` record.
+
+Each page should answer:
+
+* What is this asset?
+* What problem does it solve?
+* Who is it for?
+* What lens does it serve: Individual, Team, or Organization?
+* Which domain and persona does it address?
+* Is it Learn, Apply, or Augment?
+* What does the customer receive?
+* What outcome should the customer expect?
+* What is the format and delivery method?
+* What should the customer do next?
+
+Use a stable page pattern such as:
+
+```text
+/offerings/<asset-slug>/
+```
+
+The page should include a clear summary, raw HTML answer block, deliverables, format, related offerings, structured data, and a primary Paidar Shop CTA.
+
+All full downloads should be delivered through the Paidar Shop so guest data, consent, fulfillment, and attribution remain in one place. Public previews and sample content may remain directly accessible.
+
+---
+
+# P2 — IUC TRUST AND PROOF
 
 Examples:
 
@@ -860,9 +874,115 @@ Final CTA
 
 ---
 
-# P27 — "What Do You Need?" Discovery Layer
+# PHASE 2 — COMMERCIAL CATALOG AND ASSET MODEL
 
-Support user intent such as:
+Phase 2 begins after the Phase 1 positioning, editorial, and quality work is complete. The goal is to make Paidar the commercial discovery and fulfillment hub without duplicating the framework narrative owned by AI-Augmented.ai or any future framework site.
+
+## P20 — Establish the canonical catalog model
+
+Each asset or offering should support these independent dimensions:
+
+```json
+{
+  "domains": ["education"],
+  "lenses": ["individual", "team", "organization"],
+  "personas": ["student", "teacher", "education-leader"],
+  "engagement": "apply",
+  "frameworks": ["ai-augmented"],
+  "offeringType": "assessment"
+}
+```
+
+Domain identifies where the work applies. Lens identifies the level of change. Persona identifies the role or context within the domain. Engagement identifies the visitor's next mode: Learn, Apply, or Augment.
+
+Do not use persona names as substitutes for lenses. A student and teacher may both be Individuals; a faculty group is a Team; an institution is an Organization.
+
+## P21 — Make asset records commercially viable
+
+The shared `asset.json` model should include, where applicable:
+
+* stable asset identity, title, slug, status, and version
+* authorship, stewardship, rights, and ownership
+* domains, lenses, personas, audiences, and framework families
+* problem, purpose, outcome, and maturity level
+* deliverables, formats, requirements, and delivery mode
+* related assets and related offerings
+* shop product ID and product URL
+* access model: free, paid, quote required, or application required
+* page URL, SEO title, SEO description, image, and structured-data inputs
+
+Use the existing schema's standard fields first. Keep website-specific page and shop fields inside a controlled `metadata` or `experience` block until the shared schema formally adopts them.
+
+## P22 — Generate one consistent asset page
+
+Create one reusable page template for:
+
+```text
+/offerings/<asset-slug>/
+```
+
+Every page should include:
+
+* title and concise hero summary
+* Domain, Lens, Persona, and Learn / Apply / Augment labels
+* a 40–60 word direct answer under a literal H3 heading
+* problem, audience, outcome, deliverables, and format
+* purchase or download CTA
+* related offerings and next steps
+* Book, Product, Service, or other appropriate JSON-LD
+
+The template must be data-driven so adding a new asset means adding a validated record and its shop product rather than inventing a new page structure.
+
+## P23 — Route all downloads through the Paidar Shop
+
+Full downloads should use a Paidar Shop product or free product checkout. The shop should manage:
+
+* guest data and consent
+* product attribution
+* delivery files
+* purchase and download records
+* follow-up communication
+
+Paidar pages may expose previews, summaries, sample chapters, and public reference content directly. The primary full-download CTA should route to the shop with source, domain, lens, persona, and offering tracking parameters where supported.
+
+## P24 — Build relationships and continuation paths
+
+An offering may contain or deliver multiple assets:
+
+```text
+AI-Augmented Education Leadership Workshop
+├── Assessment
+├── Participant Workbook
+├── Facilitator Guide
+├── Presentation Deck
+├── Governance Toolkit
+└── Follow-Up Assessment
+```
+
+Use relationships to connect books to assessments, assessments to workshops, workshops to implementation, and implementation to advisory or software. Every asset should have a useful next step when one exists.
+
+## P25 — Build the unified catalog filters
+
+Support filtering by:
+
+* Domain
+* Lens
+* Persona
+* Learn / Apply / Augment
+* Offering type
+* Framework family
+
+The same metadata should power catalog cards, domain pages, related offerings, and continuation paths.
+
+## P26 — Preserve framework separation
+
+Paidar may catalog offerings for AI-Augmented, ODXA, and future framework families. Framework sites explain the frameworks; Paidar presents the assets, offerings, services, and fulfillment path.
+
+ODXA pages remain excluded from this implementation until the ODXA.org role and canonical content ownership are settled.
+
+---
+
+# P5 — TECHNICAL QA BEFORE IUC
 
 ### I need to understand
 
@@ -1094,7 +1214,11 @@ Architecture and transformation framework/community, when launched.
 
 ## Paidar.ai
 
-Commercial catalog, assets, offerings, services, implementation, and fulfillment.
+1. Open homepage.
+2. Understand that Paidar moves AI from experimentation to execution.
+3. Choose the relevant domain, lens, and persona.
+4. Find Apply or Augment offerings.
+5. See credible methodology and a clear engagement path.
 
 ## DrDarrenSpeaks.com
 
@@ -1106,17 +1230,21 @@ Darren's personal authority, speaker experience, and keynote/workshop marketing.
 
 Phase 2 is complete when:
 
-* domains mirror canonical framework-site domains
-* Paidar has domain landing pages
-* Learn / Apply / Augment is used consistently as an engagement model
-* offerings are centrally cataloged
-* assets and offerings are related through metadata
-* AI-Augmented offerings can be discovered by domain
-* ODXA offerings can coexist cleanly
-* ODXA.org can launch later without Paidar restructuring again
-* cross-site handoffs are deliberate
-* books, workshops, keynotes, advisory, implementation, and software are all discoverable through the same catalog
-* Paidar feels like the commercial action layer behind the broader ecosystem
+* AAOS is consistently called the AI-Augmented Operating System.
+* AAOS stages are consistent everywhere.
+* obvious spelling and encoding errors are fixed.
+* the homepage has one clear corporate value proposition.
+* Paidar is clearly positioned as the implementation arm of the AI-Augmented ecosystem.
+* Higher Education focuses on institutional transformation rather than duplicating AI-Augmented Education.
+* Domain, Lens, Persona, and Learn / Apply / Augment are understandable.
+* implementation is visible as a capability.
+* assets and offerings have clear outcomes, deliverables, formats, and next steps.
+* full downloads route through the Paidar Shop for fulfillment and consented guest capture.
+* unsupported certification claims are removed or qualified.
+* contact forms work.
+* mobile experience is clean.
+* no obvious broken links remain.
+* an IUC attendee can move naturally from `ai-augmented.ai/education` to a meaningful Paidar engagement.
 
 ---
 
@@ -1132,7 +1260,24 @@ Make the current site clearer, simpler, cleaner, and prepared for the future tax
 
 > **Rebuild Paidar as the commercial hub for domains, frameworks, assets, and offerings.**
 
-The end-state relationship should be:
+1. Fix AAOS terminology.
+2. Fix spelling, grammar, and encoding errors.
+3. Standardize Paidar value proposition.
+4. Clarify Paidar ↔ AI-Augmented relationship.
+5. Update Higher Education positioning.
+6. Add/strengthen implementation capability.
+7. Standardize Learn / Apply / Augment and make Apply and Augment prominent.
+8. Improve IUC referral and CTAs.
+9. Review certification claims.
+10. Tighten AI Operating Model / framework relationships.
+11. Reorganize software presentation.
+12. Verify metrics and proof claims.
+13. Test forms.
+14. Run broken-link audit.
+15. Run mobile/accessibility QA.
+16. Verify metadata and internal linking.
+17. Add and validate asset metadata, shop routing, and reusable asset pages.
+18. Run the final IUC smoke tests.
 
 > **Framework sites help users discover what they need.**
 > **Paidar helps them find and engage what they can use.**
