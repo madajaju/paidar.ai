@@ -6,7 +6,7 @@ AAOS turns AI-assisted work into defensible, repeatable operating practice.
 
 1. Diagnose posture and risk.
 2. Activate balanced capability.
-3. Control speed through grounding and validation.
+3. Build controls for speed through grounding and validation.
 4. Execute reusable workflow loops.
 5. Measure outcome quality, not just time saved.
 6. Scale judgment through standards and handoffs.

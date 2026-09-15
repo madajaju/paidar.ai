@@ -1,6 +1,6 @@
 # Becoming AI-Augmented Companion Workbook
 
-Use this workbook as the collected companion packet for the six AAOS moves: Diagnose, Activate, Control, Execute, Measure, and Scale.
+Use this workbook as the collected companion packet for the six AAOS moves: Diagnose, Activate, Controls, Execute, Measure, and Scale.
 
 ## 1. Diagnose
 
@@ -28,7 +28,7 @@ Balance the four skills:
 - Core Skills:
 - Meta Skills:
 
-## 3. Control
+## 3. Controls
 
 Control checklist:
 
