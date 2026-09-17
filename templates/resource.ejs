@@ -95,6 +95,18 @@
         </div>
     </section>
 
+    <% if (asset.userProblem || (asset.useCases && asset.useCases.length) || (asset.examples && asset.examples.length)) { %>
+    <section class="section">
+        <div class="container grid-2">
+            <div>
+                <% if (asset.userProblem) { %><span class="eyebrow">The need</span><h2>Why use this asset?</h2><p><%= asset.userProblem %></p><% } %>
+                <% if (asset.useCases && asset.useCases.length) { %><h3>Good uses for this asset</h3><ul class="feature-list"><% asset.useCases.forEach(function(useCase) { %><li><%= typeof useCase === 'string' ? useCase : useCase.description || useCase.title %></li><% }); %></ul><% } %>
+            </div>
+            <% if (asset.examples && asset.examples.length) { %><aside class="card accent-edge"><h2>Example uses</h2><% asset.examples.forEach(function(example) { %><p><strong><%= example.title || 'Example' %></strong><br><%= example.description || example.scenario || example.result || example %></p><% }); %></aside><% } %>
+        </div>
+    </section>
+    <% } %>
+
     <% if ((asset.inputs && asset.inputs.length) || (asset.activities && asset.activities.length) || (asset.completionCriteria && asset.completionCriteria.length)) { %>
     <section class="section tint theme-data">
         <div class="container grid-2">

@@ -1,0 +1,137 @@
+<!--
+  EJS RESOURCE TEMPLATE: asset overview page
+
+  Required injected variables:
+    pageTitle       String used for the document title and page heading.
+    metaDescription String used for the SEO description.
+    canonicalUrl    Absolute canonical URL for this rendered page.
+    breadcrumb      Array of { label, href } objects. The last item may omit href.
+    domain          { key, label } such as { key: 'business', label: 'Business' }.
+    target          { key, label } such as { key: 'team', label: 'Teams' }.
+    level           { key, label } such as { key: 'learn', label: 'Learn' }.
+    asset           { name, type, description, purpose, prerequisites, outcomes }.
+                    outcomes is an array of strings; the remaining values are strings.
+    stages          Array of { key, label, description, href } objects for learn,
+                    apply, and augment. href points to the rendered sub-resource.
+    relatedResources Array of { title, description, href } objects. Optional; use [].
+
+  Optional injected variables:
+    heroImage       CSS image URL. Leave empty for the default gradient hero.
+    heroPosition    CSS background-position value. Defaults to 'center center'.
+    siteName        Brand name. Defaults to 'Paidar.ai'.
+    currentYear     Copyright year. Defaults to the current year in the generator.
+    primaryNav      Array of { label, href } objects. Defaults to the site nav below.
+-->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Work Classification and Consequence Worksheet | Paidar.ai</title>
+    <meta name="description" content="A worksheet for classifying work, consequence, authority, evidence, and required control depth.">
+    <link rel="canonical" href="https://paidar.ai/resources/business/organization/toolkit-work-classification-consequence-worksheet/">
+    <link rel="icon" href="/assets/img/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/paidar.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="container flex between center">
+        <a class="brand" href="/"><img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" height="25"></a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+            <ul class="nav-list nav-reset">
+                <li><a href="/services.html">Services</a></li><li><a href="/assessments.html">Assessments</a></li><li><a href="/workshops/">Workshops</a></li><li><a href="/books/">Books</a></li><li><a href="/about.html">About</a></li>
+                <li><a class="btn btn-primary" href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+    <section class="hero">
+        <div class="container">
+            <nav aria-label="Breadcrumb" class="text-muted">
+                <a href="/resources/">Resources</a> / <span aria-current="page">Work Classification and Consequence Worksheet</span>
+            </nav>
+            <span class="eyebrow">business · organization · Resource</span>
+            <h1>Work Classification and Consequence Worksheet</h1>
+            <p class="lead">A worksheet for classifying work, consequence, authority, evidence, and required control depth.</p>
+            <nav class="resource-nav" aria-label="Resource stages">
+                <a href="./" aria-current="page">Overview</a>
+                <a href="learn.html">Learn</a><a href="apply.html">Apply</a><a href="augment.html">Augment</a>
+            </nav>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container grid-2">
+            <div>
+                <span class="eyebrow">Asset description</span>
+                <h2>Work Classification and Consequence Worksheet</h2>
+                <p>The worksheet guides a team through a bounded workflow, assesses its consequence dimensions, assigns a Low, Medium, or High consequence level, and translates that level into a control posture.</p>
+                <h3>What this resource helps you do</h3>
+                <ul class="feature-list">
+                    <li>completed Learn artifact</li><li>evidence or decision record</li><li>next review action</li>
+                </ul>
+            </div>
+            <aside class="card accent-ai">
+                <h2>At a glance</h2>
+                <p><strong>Domain:</strong> business</p>
+                <p><strong>Audience:</strong> organization</p>
+                <p><strong>Stage:</strong> Resource</p>
+                <p><strong>Asset type:</strong> toolkit</p>
+                <p><strong>Prerequisites:</strong> book and corpus source material, organizational context, learner-selected workflow, constraints</p>
+            </aside>
+        </div>
+    </section>
+
+    
+    <section class="section">
+        <div class="container grid-2">
+            <div>
+                <span class="eyebrow">The need</span><h2>Why use this asset?</h2><p>Teams can approve an AI use case because it appears routine while overlooking sensitive data, difficult to reverse errors, affected people, or unclear decision authority.</p>
+                <h3>Good uses for this asset</h3><ul class="feature-list"><li>Reviewing a proposed AI use case before deployment</li><li>Determining the required human review and approval depth</li><li>Documenting why a workflow has a particular consequence classification</li><li>Identifying stop conditions and reassessment triggers</li></ul>
+            </div>
+            <aside class="card accent-edge"><h2>Example uses</h2><p><strong>Supplier proposal comparison</strong><br>A team compares supplier proposals against an approved rubric. Because the result affects money and supplier selection, the worksheet supports a Medium consequence classification and requires a named validator and buyer approval.</p><p><strong>Eligibility or service recommendation</strong><br>A workflow uses sensitive records to recommend an action affecting a person’s access or service. The worksheet identifies High consequence, restricted AI use, independent validation, explicit approval, and stop conditions.</p></aside>
+        </div>
+    </section>
+    
+
+    
+    <section class="section tint theme-data">
+        <div class="container grid-2">
+            <div>
+                <span class="eyebrow">How it works</span>
+                <h2>Work through the offering</h2>
+                <h3>What you bring</h3><ul class="feature-list"><li>book and corpus source material</li><li>organizational context</li><li>learner-selected workflow</li><li>constraints</li></ul>
+                <h3>What you leave with</h3><ul class="feature-list"><li>completed Learn artifact</li><li>evidence or decision record</li><li>next review action</li></ul>
+                <h3>Activities</h3><ol class="step-list"><li><strong>Define the work boundary</strong> Name the outcome, affected parties, workflow boundary, and decision context.</li><li><strong>Assess consequence dimensions</strong> Evaluate judgment, determinism, data sensitivity, affected parties, reversibility, and authority.</li><li><strong>Select the control posture</strong> Choose the consequence level and map it to permissions, validation, authority, monitoring, and stop conditions.</li><li><strong>Accept the classification</strong> Record the accepting authority, evidence basis, next action, and reassessment trigger.</li></ol>
+            </div>
+            <aside class="card accent-edge"><h2>Completion criteria</h2><ul class="feature-list"><li>purpose and scope understood</li><li>all Learn fields completed</li><li>worked example included</li><li>result validated against the source or transfer test</li><li>next action and owner recorded</li></ul></aside>
+        </div>
+    </section>
+    
+
+    <section class="section"><div class="container"><span class="eyebrow">Offering materials</span><h2>Preview the materials</h2><div class="grid-3"><figure class="card"><img src="images/learn__exports__cover-background.svg" alt="cover background" loading="lazy"><figcaption>cover background</figcaption></figure><figure class="card"><img src="images/learn__exports__cover.generated.svg" alt="cover.generated" loading="lazy"><figcaption>cover.generated</figcaption></figure><figure class="card"><img src="images/learn__exports__shopify-product-image.svg" alt="shopify product image" loading="lazy"><figcaption>shopify product image</figcaption></figure></div></div></section>
+
+    <section class="section tint theme-modern">
+        <div class="container">
+            <span class="eyebrow">Resource pathway</span>
+            <h2>Move from understanding to execution</h2>
+            <div class="grid-3">
+                <article class="card"><h3>Learn</h3><p>Understand how consequence dimensions affect the control depth an AI supported workflow needs.</p><a class="arrow" href="learn.html">Open Learn</a></article><article class="card"><h3>Apply</h3><p>Use the classification to define permissions, responsibilities, validation, approval, and escalation.</p><a class="arrow" href="apply.html">Open Apply</a></article><article class="card"><h3>Augment</h3><p>Connect the control posture to governed AI use and ongoing monitoring.</p><a class="arrow" href="augment.html">Open Augment</a></article>
+            </div>
+        </div>
+    </section>
+
+    
+</main>
+
+<footer class="site-footer"><div class="footer-grid"><div class="footer-socials" aria-label="Follow us"><a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener"><img src="/assets/img/youtube.svg" alt="YouTube" width="48" height="48"></a> <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="/assets/img/linkedin.svg" alt="LinkedIn" width="48" height="48"></a></div><div class="footer-brand"><img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="120" height="48"><div class="brand-name">Paidar.ai</div><small>&copy; 2026 Paidar Systems LLC</small></div><nav aria-label="Footer" class="footer-nav"><ul class="nav-reset"><li><a href="/resources/">Resources</a></li><li><a href="/frameworks/">Frameworks</a></li><li><a href="/contact.html">Contact</a></li></ul></nav></div></footer>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
