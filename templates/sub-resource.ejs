@@ -1,0 +1,79 @@
+<!--
+  EJS SUB-RESOURCE TEMPLATE: learn, apply, or augment companion page
+
+  Required injected variables:
+    pageTitle       String used for the document title and page heading.
+    metaDescription String used for the SEO description.
+    canonicalUrl    Absolute canonical URL for this rendered page.
+    breadcrumb      Array of { label, href } objects. The last item may omit href.
+    domain          { key, label }.
+    target          { key, label }.
+    level           { key, label } for the parent resource path.
+    stage           { key, label, intro, objective } for this companion page.
+    asset           { name, description } for the parent asset.
+    sections        Array of { heading, body, items } objects. items is an array
+                    of strings and may be empty. body is plain text.
+    steps           Array of { title, description } objects for the practical steps.
+    relatedStages   Array of { key, label, href } objects for sibling pages.
+
+  Optional injected variables:
+    heroImage       CSS image URL. Leave empty for the default gradient hero.
+    heroPosition    CSS background-position value. Defaults to 'center center'.
+    siteName        Brand name. Defaults to 'Paidar.ai'.
+    currentYear     Copyright year. Defaults to the current year in the generator.
+    primaryNav      Array of { label, href } objects. Defaults to the site nav below.
+-->
+<% const brand = typeof siteName !== 'undefined' ? siteName : 'Paidar.ai'; %>
+<% const year = typeof currentYear !== 'undefined' ? currentYear : new Date().getFullYear(); %>
+<% const nav = (typeof primaryNav !== 'undefined' && primaryNav.length) ? primaryNav : [
+    { label: 'Services', href: '/services.html' },
+    { label: 'Assessments', href: '/assessments.html' },
+    { label: 'Workshops', href: '/workshops/' },
+    { label: 'Books', href: '/books/' },
+    { label: 'About', href: '/about.html' }
+]; %>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= pageTitle %> | <%= brand %> Resources</title>
+    <meta name="description" content="<%= metaDescription %>">
+    <link rel="canonical" href="<%= canonicalUrl %>">
+    <link rel="icon" href="/assets/img/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/paidar.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container flex between center"><a class="brand" href="/"><img src="/assets/img/paidar.svg" alt="<%= brand %> logo" width="64" height="25"></a><button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button><nav id="primary-nav" class="primary-nav" aria-label="Primary"><ul class="nav-list nav-reset"><% nav.forEach(function(item) { %><li><a href="<%= item.href %>"><%= item.label %></a></li><% }); %><li><a class="btn btn-primary" href="/contact.html">Contact</a></li></ul></nav></div></header>
+<main id="main">
+    <section class="hero"<% if (typeof heroImage !== 'undefined' && heroImage) { %> style="--hero-image: url('<%= heroImage %>'); --hero-image-position: <%= (typeof heroPosition !== 'undefined' ? heroPosition : 'center center') %>;"<% } %>>
+        <div class="container">
+            <nav aria-label="Breadcrumb" class="text-muted"><% breadcrumb.forEach(function(item, index) { %><% if (item.href && index < breadcrumb.length - 1) { %><a href="<%= item.href %>"><%= item.label %></a> / <% } else { %><span aria-current="page"><%= item.label %></span><% } %><% }); %></nav>
+            <span class="eyebrow"><%= domain.label %> · <%= target.label %> · <%= stage.label %></span>
+            <h1><%= pageTitle %></h1>
+            <p class="lead"><%= stage.intro %></p>
+            <nav class="resource-nav" aria-label="Resource stages"><a href="./">Overview</a><% relatedStages.forEach(function(item) { %><a href="<%= item.href %>"<% if (item.key === stage.key) { %> aria-current="page"<% } %>><%= item.label %></a><% }); %></nav>
+        </div>
+    </section>
+
+    <section class="section"><div class="container grid-2"><div><span class="eyebrow">Stage objective</span><h2><%= stage.objective %></h2><p>This page is part of <strong><%= asset.name %></strong>, a resource for <%= target.label.toLowerCase() %> working in <%= domain.label.toLowerCase() %>.</p><% sections.forEach(function(section) { %><h3><%= section.heading %></h3><p><%= section.body %></p><% if (section.items && section.items.length) { %><ul class="feature-list"><% section.items.forEach(function(item) { %><li><%= item %></li><% }); %></ul><% } %><% }); %></div><aside class="card accent-edge"><h2>What you will produce</h2><% if (userOutputs && userOutputs.length) { %><ul class="feature-list"><% userOutputs.slice(0, 4).forEach(function(item) { %><li><%= item %></li><% }); %></ul><% } else { %><p>Use the stage guidance to create a reviewable result for your workflow.</p><% } %><p class="text-muted"><strong>Parent asset:</strong><br><%= asset.description %></p><a class="btn btn-outline" href="./">Back to overview</a></aside></div></section>
+
+    <% if (userOutputs && userOutputs.length) { %><section class="section"><div class="container"><span class="eyebrow">Your result</span><h2>What you should have after this stage</h2><ul class="feature-list"><% userOutputs.forEach(function(item) { %><li><%= item %></li><% }); %></ul></div></section><% } %>
+
+    <% if (images && images.length) { %><section class="section"><div class="container"><span class="eyebrow">Offering cover</span><h2><%= asset.name %></h2><figure class="card"><img src="<%= images[0].src %>" alt="<%= images[0].alt %>" fetchpriority="high"><figcaption><%= images[0].alt %></figcaption></figure></div></section><% } %>
+
+    <% if (downloads && downloads.length) { %><section class="section"><div class="container"><span class="eyebrow">Workshop materials</span><h2>Use the participant materials</h2><div class="grid-3"><% downloads.forEach(function(material) { %><article class="card"><h3><%= material.label %></h3><% if (material.description) { %><p><%= material.description %></p><% } %><a class="arrow" href="<%= material.href %>">Download</a></article><% }); %></div></div></section><% } %>
+
+    <section class="section tint theme-data"><div class="container"><span class="eyebrow">Suggested sequence</span><h2>Put the guidance into practice</h2><ol class="step-list"><% steps.forEach(function(step) { %><li><strong><%= step.title %></strong> <%= step.description %></li><% }); %></ol></div></section>
+
+    <% if (completionCriteria && completionCriteria.length) { %><section class="section"><div class="container"><h2>When this stage is complete</h2><ul class="feature-list"><% completionCriteria.forEach(function(item) { %><li><%= item %></li><% }); %></ul><% if (sources && sources.length) { %><p class="text-muted"><strong>Sources:</strong> <%= sources.join('; ') %></p><% } %></div></section><% } %>
+
+    <% if (stage.cta) { %><section class="section tint theme-modern"><div class="container"><h2><%= stage.cta.label %></h2><p><%= stage.cta.description || 'Talk with Paidar Systems about bringing this workshop to your team.' %></p><a class="btn btn-primary" href="<%= stage.cta.href %>"><%= stage.cta.label %></a></div></section><% } %>
+
+    <section class="section"><div class="container"><h2>Continue through the resource</h2><div class="flex wrap"><a class="btn btn-primary" href="../">Overview</a><% relatedStages.forEach(function(item) { %><a class="btn btn-outline" href="<%= item.href %>"><%= item.label %></a><% }); %></div></div></section>
+</main>
+<footer class="site-footer"><div class="footer-grid"><div class="footer-socials" aria-label="Follow us"><a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener"><img src="/assets/img/youtube.svg" alt="YouTube" width="48" height="48"></a> <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="/assets/img/linkedin.svg" alt="LinkedIn" width="48" height="48"></a></div><div class="footer-brand"><img src="/assets/img/paidar.svg" alt="<%= brand %> logo" width="120" height="48"><div class="brand-name"><%= brand %></div><small>&copy; <%= year %> Paidar Systems LLC</small></div><nav aria-label="Footer" class="footer-nav"><ul class="nav-reset"><li><a href="/resources/">Resources</a></li><li><a href="/frameworks/">Frameworks</a></li><li><a href="/contact.html">Contact</a></li></ul></nav></div></footer>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

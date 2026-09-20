@@ -1,0 +1,147 @@
+<!--
+  EJS RESOURCE TEMPLATE: asset overview page
+
+  Required injected variables:
+    pageTitle       String used for the document title and page heading.
+    metaDescription String used for the SEO description.
+    canonicalUrl    Absolute canonical URL for this rendered page.
+    breadcrumb      Array of { label, href } objects. The last item may omit href.
+    domain          { key, label } such as { key: 'business', label: 'Business' }.
+    target          { key, label } such as { key: 'team', label: 'Teams' }.
+    level           { key, label } such as { key: 'learn', label: 'Learn' }.
+    asset           { name, type, description, purpose, prerequisites, outcomes }.
+                    outcomes is an array of strings; the remaining values are strings.
+    stages          Array of { key, label, description, href } objects for learn,
+                    apply, and augment. href points to the rendered sub-resource.
+    relatedResources Array of { title, description, href } objects. Optional; use [].
+
+  Optional injected variables:
+    heroImage       CSS image URL. Leave empty for the default gradient hero.
+    heroPosition    CSS background-position value. Defaults to 'center center'.
+    siteName        Brand name. Defaults to 'Paidar.ai'.
+    currentYear     Copyright year. Defaults to the current year in the generator.
+    primaryNav      Array of { label, href } objects. Defaults to the site nav below.
+-->
+<% const brand = typeof siteName !== 'undefined' ? siteName : 'Paidar.ai'; %>
+<% const year = typeof currentYear !== 'undefined' ? currentYear : new Date().getFullYear(); %>
+<% const nav = (typeof primaryNav !== 'undefined' && primaryNav.length) ? primaryNav : [
+    { label: 'Services', href: '/services.html' },
+    { label: 'Assessments', href: '/assessments.html' },
+    { label: 'Workshops', href: '/workshops/' },
+    { label: 'Books', href: '/books/' },
+    { label: 'About', href: '/about.html' }
+]; %>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= pageTitle %> | <%= brand %></title>
+    <meta name="description" content="<%= metaDescription %>">
+    <link rel="canonical" href="<%= canonicalUrl %>">
+    <link rel="icon" href="/assets/img/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/paidar.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="container flex between center">
+        <a class="brand" href="/"><img src="/assets/img/paidar.svg" alt="<%= brand %> logo" width="64" height="25"></a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+            <ul class="nav-list nav-reset">
+                <% nav.forEach(function(item) { %><li><a href="<%= item.href %>"><%= item.label %></a></li><% }); %>
+                <li><a class="btn btn-primary" href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+    <section class="hero"<% if (typeof heroImage !== 'undefined' && heroImage) { %> style="--hero-image: url('<%= heroImage %>'); --hero-image-position: <%= (typeof heroPosition !== 'undefined' ? heroPosition : 'center center') %>;"<% } %>>
+        <div class="container">
+            <nav aria-label="Breadcrumb" class="text-muted">
+                <% breadcrumb.forEach(function(item, index) { %><% if (item.href && index < breadcrumb.length - 1) { %><a href="<%= item.href %>"><%= item.label %></a> / <% } else { %><span aria-current="page"><%= item.label %></span><% } %><% }); %>
+            </nav>
+            <span class="eyebrow"><%= domain.label %> · <%= target.label %> · <%= level.label %></span>
+            <h1><%= pageTitle %></h1>
+            <p class="lead"><%= asset.description %></p>
+            <nav class="resource-nav" aria-label="Resource stages">
+                <a href="./" aria-current="page">Overview</a>
+                <% stages.forEach(function(stage) { %><a href="<%= stage.href %>"><%= stage.label %></a><% }); %>
+            </nav>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container grid-2">
+            <div>
+                <span class="eyebrow">Asset description</span>
+                <h2><%= asset.name %></h2>
+                <p><%= asset.purpose %></p>
+                <h3>What this resource helps you do</h3>
+                <ul class="feature-list">
+                    <% asset.outcomes.forEach(function(outcome) { %><li><%= outcome %></li><% }); %>
+                </ul>
+            </div>
+            <aside class="card accent-ai">
+                <h2>At a glance</h2>
+                <p><strong>Domain:</strong> <%= domain.label %></p>
+                <p><strong>Audience:</strong> <%= target.label %></p>
+                <p><strong>Stage:</strong> <%= level.label %></p>
+                <p><strong>Asset type:</strong> <%= asset.type %></p>
+                <p><strong>Prerequisites:</strong> <%= asset.prerequisites %></p>
+            </aside>
+        </div>
+    </section>
+
+    <% if (asset.featureImage) { %><section class="section"><div class="container"><figure class="card"><img src="<%= asset.featureImage.src %>" alt="<%= asset.featureImage.alt %>" fetchpriority="high"><figcaption><%= asset.featureImage.alt %></figcaption></figure></div></section><% } %>
+
+    <% if (downloads && downloads.length) { %><section class="section"><div class="container"><span class="eyebrow">Workshop materials</span><h2>Download the participant materials</h2><div class="grid-3"><% downloads.forEach(function(material) { %><article class="card"><h3><%= material.label %></h3><% if (material.description) { %><p><%= material.description %></p><% } %><a class="arrow" href="<%= material.href %>">Download</a></article><% }); %></div></div></section><% } %>
+
+    <% if (asset.userProblem || (asset.useCases && asset.useCases.length) || (asset.examples && asset.examples.length)) { %>
+    <section class="section">
+        <div class="container grid-2">
+            <div>
+                <% if (asset.userProblem) { %><span class="eyebrow">The need</span><h2>Why use this asset?</h2><p><%= asset.userProblem %></p><% } %>
+                <% if (asset.useCases && asset.useCases.length) { %><h3>Good uses for this asset</h3><ul class="feature-list"><% asset.useCases.forEach(function(useCase) { %><li><%= typeof useCase === 'string' ? useCase : useCase.description || useCase.title %></li><% }); %></ul><% } %>
+            </div>
+            <% if (asset.examples && asset.examples.length) { %><aside class="card accent-edge"><h2>Example uses</h2><% asset.examples.forEach(function(example) { %><p><strong><%= example.title || 'Example' %></strong><br><%= example.description || example.scenario || example.result || example %></p><% }); %></aside><% } %>
+        </div>
+    </section>
+    <% } %>
+
+    <% if ((asset.inputs && asset.inputs.length) || (asset.activities && asset.activities.length) || (asset.completionCriteria && asset.completionCriteria.length)) { %>
+    <section class="section tint theme-data">
+        <div class="container grid-2">
+            <div>
+                <span class="eyebrow">How it works</span>
+                <h2>Work through the offering</h2>
+                <% if (asset.inputs && asset.inputs.length) { %><h3>What you bring</h3><ul class="feature-list"><% asset.inputs.forEach(function(item) { %><li><%= item %></li><% }); %></ul><% } %>
+                <% if (asset.outputs && asset.outputs.length) { %><h3>What you leave with</h3><ul class="feature-list"><% asset.outputs.forEach(function(item) { %><li><%= item %></li><% }); %></ul><% } %>
+                <% if (asset.activities && asset.activities.length) { %><h3>Activities</h3><ol class="step-list"><% asset.activities.forEach(function(activity) { %><li><strong><%= activity.name %></strong><% if (activity.description) { %> <%= activity.description %><% } %></li><% }); %></ol><% } %>
+            </div>
+            <% if (asset.completionCriteria && asset.completionCriteria.length) { %><aside class="card accent-edge"><h2>Completion criteria</h2><ul class="feature-list"><% asset.completionCriteria.forEach(function(item) { %><li><%= item %></li><% }); %></ul></aside><% } %>
+        </div>
+    </section>
+    <% } %>
+
+    <% if (asset.images && asset.images.length) { %><section class="section"><div class="container"><span class="eyebrow">Offering materials</span><h2>Preview the materials</h2><div class="grid-3"><% asset.images.forEach(function(image) { %><figure class="card"><img src="<%= image.src %>" alt="<%= image.alt %>" loading="lazy"><figcaption><%= image.alt %></figcaption></figure><% }); %></div></div></section><% } %>
+
+    <section class="section tint theme-modern">
+        <div class="container">
+            <span class="eyebrow">Resource pathway</span>
+            <h2>Move from understanding to execution</h2>
+            <div class="grid-3">
+                <% stages.forEach(function(stage) { %><article class="card"><h3><%= stage.label %></h3><p><%= stage.description %></p><a class="arrow" href="<%= stage.href %>">Open <%= stage.label %></a></article><% }); %>
+            </div>
+        </div>
+    </section>
+
+    <% if (typeof relatedResources !== 'undefined' && relatedResources.length) { %><section class="section"><div class="container"><span class="eyebrow">Keep exploring</span><h2>Related resources</h2><div class="grid-3"><% relatedResources.forEach(function(resource) { %><article class="card"><h3><%= resource.title %></h3><p><%= resource.description %></p><a class="arrow" href="<%= resource.href %>">Open resource</a></article><% }); %></div></div></section><% } %>
+</main>
+
+<footer class="site-footer"><div class="footer-grid"><div class="footer-socials" aria-label="Follow us"><a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener"><img src="/assets/img/youtube.svg" alt="YouTube" width="48" height="48"></a> <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="/assets/img/linkedin.svg" alt="LinkedIn" width="48" height="48"></a></div><div class="footer-brand"><img src="/assets/img/paidar.svg" alt="<%= brand %> logo" width="120" height="48"><div class="brand-name"><%= brand %></div><small>&copy; <%= year %> Paidar Systems LLC</small></div><nav aria-label="Footer" class="footer-nav"><ul class="nav-reset"><li><a href="/resources/">Resources</a></li><li><a href="/frameworks/">Frameworks</a></li><li><a href="/contact.html">Contact</a></li></ul></nav></div></footer>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
