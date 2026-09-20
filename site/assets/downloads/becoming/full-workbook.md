@@ -30,7 +30,7 @@ Balance the four skills:
 
 ## 3. Controls
 
-Control checklist:
+Controls checklist:
 
 - Source files identified
 - Live data status known
