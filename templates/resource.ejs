@@ -95,6 +95,10 @@
         </div>
     </section>
 
+    <% if (asset.featureImage) { %><section class="section"><div class="container"><figure class="card"><img src="<%= asset.featureImage.src %>" alt="<%= asset.featureImage.alt %>" fetchpriority="high"><figcaption><%= asset.featureImage.alt %></figcaption></figure></div></section><% } %>
+
+    <% if (downloads && downloads.length) { %><section class="section"><div class="container"><span class="eyebrow">Workshop materials</span><h2>Download the participant materials</h2><div class="grid-3"><% downloads.forEach(function(material) { %><article class="card"><h3><%= material.label %></h3><% if (material.description) { %><p><%= material.description %></p><% } %><a class="arrow" href="<%= material.href %>">Download</a></article><% }); %></div></div></section><% } %>
+
     <% if (asset.userProblem || (asset.useCases && asset.useCases.length) || (asset.examples && asset.examples.length)) { %>
     <section class="section">
         <div class="container grid-2">

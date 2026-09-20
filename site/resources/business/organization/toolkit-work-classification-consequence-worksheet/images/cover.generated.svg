@@ -34,11 +34,22 @@
   <text x="96" y="617" fill="#A3B6C8" font-family="IBM Plex Sans, Arial, sans-serif" font-size="17" letter-spacing="0">AI-Augmented Operating System</text>
 
   <g transform="translate(96 902)">
-    <g transform="translate(34,34) scale(0.1)">
-      <polygon fill="#FFFFFF" points="0,-340 132.7,161.4 -132.7,161.4"/>
-      <polygon fill="none" stroke="#FFFFFF" stroke-width="40" stroke-linejoin="round" stroke-linecap="round"
-        points="0,-242 209.6,-121 209.6,121 0,242 -209.6,121 -209.6,-121"/>
-    </g>
+    <g transform="scale(0.125)"><title id="title">Paidar white logo</title>
+  <desc id="desc">A segmented white hexagon surrounding a centered white P.</desc>
+  <style>
+    .segment1 { fill: #FFFFFF; }
+    .segment2 { fill: #FFFFFF; }
+    .letter { fill: #FFFFFF; }
+  </style>
+  <polygon class="segment1" points="272,55 433,153 386,180 272,109"/>
+  <polygon class="segment1" points="433,153 433,358 386,331 386,179"/>
+  <polygon class="segment1" points="433,358 272,457 272,402 386,330"/>
+  <polygon class="segment2" points="239,457 78,358 125,330 239,401"/>
+  <polygon class="segment2" points="78,358 78,153 125,179 125,331"/>
+  <polygon class="segment2" points="78,153 239,55 239,109 125,180"/>
+  <g transform="translate(-370, 185)">
+    <path class="letter" d="M572.47,2.56h63.83c31.06,0,51.97,17.29,51.97,44.18,0,30.95-23.75,45.18-52.92,45.18h-23.03v48.37h-39.85V2.56ZM612.32,63.52h16.46c11.41,0,19.52-4.75,19.52-16.24s-8.17-16.37-19.41-16.37h-16.56v32.62Z"/>
+  </g></g>
     <text x="82" y="32" fill="#FFFFFF" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="0">paidar.ai</text>
   </g>
 </g>

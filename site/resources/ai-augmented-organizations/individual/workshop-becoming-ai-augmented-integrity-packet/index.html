@@ -1,0 +1,141 @@
+<!--
+  EJS RESOURCE TEMPLATE: asset overview page
+
+  Required injected variables:
+    pageTitle       String used for the document title and page heading.
+    metaDescription String used for the SEO description.
+    canonicalUrl    Absolute canonical URL for this rendered page.
+    breadcrumb      Array of { label, href } objects. The last item may omit href.
+    domain          { key, label } such as { key: 'business', label: 'Business' }.
+    target          { key, label } such as { key: 'team', label: 'Teams' }.
+    level           { key, label } such as { key: 'learn', label: 'Learn' }.
+    asset           { name, type, description, purpose, prerequisites, outcomes }.
+                    outcomes is an array of strings; the remaining values are strings.
+    stages          Array of { key, label, description, href } objects for learn,
+                    apply, and augment. href points to the rendered sub-resource.
+    relatedResources Array of { title, description, href } objects. Optional; use [].
+
+  Optional injected variables:
+    heroImage       CSS image URL. Leave empty for the default gradient hero.
+    heroPosition    CSS background-position value. Defaults to 'center center'.
+    siteName        Brand name. Defaults to 'Paidar.ai'.
+    currentYear     Copyright year. Defaults to the current year in the generator.
+    primaryNav      Array of { label, href } objects. Defaults to the site nav below.
+-->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Becoming AI-Augmented - The Integrity Packet | Paidar.ai</title>
+    <meta name="description" content="A 45 minute IUC breakout where participants use workflows, prompting strategies, and governance practices to produce AI assisted work that is accurate, transparent, and defensible.">
+    <link rel="canonical" href="https://paidar.ai/resources/ai-augmented-organizations/individual/workshop-becoming-ai-augmented-integrity-packet/">
+    <link rel="icon" href="/assets/img/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/paidar.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="container flex between center">
+        <a class="brand" href="/"><img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" height="25"></a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+            <ul class="nav-list nav-reset">
+                <li><a href="/services.html">Services</a></li><li><a href="/assessments.html">Assessments</a></li><li><a href="/workshops/">Workshops</a></li><li><a href="/books/">Books</a></li><li><a href="/about.html">About</a></li>
+                <li><a class="btn btn-primary" href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+    <section class="hero">
+        <div class="container">
+            <nav aria-label="Breadcrumb" class="text-muted">
+                <a href="/resources/">Resources</a> / <span aria-current="page">Becoming AI-Augmented - The Integrity Packet</span>
+            </nav>
+            <span class="eyebrow">ai-augmented-organizations · individual · Resource</span>
+            <h1>Becoming AI-Augmented - The Integrity Packet</h1>
+            <p class="lead">A 45 minute IUC breakout where participants use workflows, prompting strategies, and governance practices to produce AI assisted work that is accurate, transparent, and defensible.</p>
+            <nav class="resource-nav" aria-label="Resource stages">
+                <a href="./" aria-current="page">Overview</a>
+                <a href="learn.html">Learn</a><a href="apply.html">Apply</a><a href="augment.html">Augment</a>
+            </nav>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container grid-2">
+            <div>
+                <span class="eyebrow">Asset description</span>
+                <h2>Becoming AI-Augmented - The Integrity Packet</h2>
+                <p>This 45-minute workshop teaches a repeatable method for producing AI-assisted work with visible evidence, assumptions, validation, ownership, and risk.</p>
+                <h3>What this resource helps you do</h3>
+                <ul class="feature-list">
+                    <li>draft Integrity Packet</li><li>structured prompt with sources, constraints, review, and stop conditions</li><li>validated AI-assisted output with visible assumptions and evidence</li><li>named owner, approver, unresolved risk, and escalation route</li><li>one workflow or governance action to adopt</li>
+                </ul>
+            </div>
+            <aside class="card accent-ai">
+                <h2>At a glance</h2>
+                <p><strong>Domain:</strong> ai-augmented-organizations</p>
+                <p><strong>Audience:</strong> individual</p>
+                <p><strong>Stage:</strong> Resource</p>
+                <p><strong>Asset type:</strong> workshop</p>
+                <p><strong>Prerequisites:</strong> one purchasing, finance, HR, or administrative workflow, the intended outcome and consequence level, named source material and applicable constraints, a qualified reviewer or peer for the transfer test</p>
+            </aside>
+        </div>
+    </section>
+
+    
+
+    <section class="section"><div class="container"><span class="eyebrow">Workshop materials</span><h2>Download the participant materials</h2><div class="grid-3"><article class="card"><h3>Integrity Packet workshop slide deck</h3><p>The participant-facing slide deck used in the 45-minute workshop.</p><a class="arrow" href="downloads/integrity-packet-workshop-slides.pdf">Download</a></article></div></div></section>
+
+    
+    <section class="section">
+        <div class="container grid-2">
+            <div>
+                <span class="eyebrow">The need</span><h2>Why use this asset?</h2><p>AI can produce a polished answer without making its evidence, assumptions, authority, or remaining risk visible. The Integrity Packet gives a qualified reviewer the record needed to evaluate and safely use the work.</p>
+                <h3>Good uses for this asset</h3><ul class="feature-list"><li>Compare purchasing bids while preserving source citations, evaluation criteria, and approval authority.</li><li>Prepare a finance variance explanation while separating verified figures from assumptions.</li><li>Draft an HR policy or candidate communication while protecting personal data and preserving human review.</li><li>Summarize administrative records or prepare a recommendation with a clear evidence trail.</li></ul>
+            </div>
+            <aside class="card accent-edge"><h2>Example uses</h2><p><strong>Purchasing comparison</strong><br>Use AI to compare bids while retaining source citations, evaluation criteria, assumptions, and approval authority for review.</p><p><strong>Finance variance explanation</strong><br>Separate verified figures from assumptions and record the checks a qualified reviewer must complete before release.</p><p><strong>HR or administrative communication</strong><br>Draft a communication from bounded source material while protecting personal data and preserving human ownership of the final decision.</p></aside>
+        </div>
+    </section>
+    
+
+    
+    <section class="section tint theme-data">
+        <div class="container grid-2">
+            <div>
+                <span class="eyebrow">How it works</span>
+                <h2>Work through the offering</h2>
+                <h3>What you bring</h3><ul class="feature-list"><li>one purchasing, finance, HR, or administrative workflow</li><li>the intended outcome and consequence level</li><li>named source material and applicable constraints</li><li>a qualified reviewer or peer for the transfer test</li></ul>
+                <h3>What you leave with</h3><ul class="feature-list"><li>draft Integrity Packet</li><li>structured prompt with sources, constraints, review, and stop conditions</li><li>validated AI-assisted output with visible assumptions and evidence</li><li>named owner, approver, unresolved risk, and escalation route</li><li>one workflow or governance action to adopt</li></ul>
+                <h3>Activities</h3><ol class="step-list"><li><strong>Define the workflow and consequence</strong> Choose a real or provided administrative workflow, state the intended outcome, and identify the consequence level and authority boundary.</li><li><strong>Draft a bounded prompt</strong> Separate the task, outcome, named sources, constraints, required evidence, human review, and stop condition.</li><li><strong>Complete the Integrity Packet</strong> Record the outcome, visible assumptions, evidence and traceability, validation status, ownership, and risk or escalation.</li><li><strong>Run the transfer test</strong> Have a reviewer assess what was produced, why it should be trusted, what was checked, and what remains unresolved without hidden author context.</li></ol>
+            </div>
+            <aside class="card accent-edge"><h2>Completion criteria</h2><ul class="feature-list"><li>workflow outcome and consequence level recorded</li><li>sources, constraints, assumptions, and AI role made visible</li><li>important claims validated against the source record</li><li>Prepared By, Validated By, and Approved By identified</li><li>unresolved risk, owner, and escalation route recorded</li><li>reviewer can understand and act using the packet without hidden context</li></ul></aside>
+        </div>
+    </section>
+    
+
+    
+
+    <section class="section tint theme-modern">
+        <div class="container">
+            <span class="eyebrow">Resource pathway</span>
+            <h2>Move from understanding to execution</h2>
+            <div class="grid-3">
+                <article class="card"><h3>Learn</h3><p>Understand the six fields that make AI-assisted work transferable and defensible.</p><a class="arrow" href="learn.html">Open Learn</a></article><article class="card"><h3>Apply</h3><p>Build and peer-review an Integrity Packet for one real or provided workflow.</p><a class="arrow" href="apply.html">Open Apply</a></article><article class="card"><h3>Augment</h3><p>Use the Integrity Packet as a repeatable control for AI-augmented work.</p><a class="arrow" href="augment.html">Open Augment</a></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section"><div class="container"><span class="eyebrow">Keep exploring</span><h2>Related resources</h2><div class="grid-3"><article class="card"><h3>Integrity Packet Template</h3><p>Use the template to record the outcome, assumptions, evidence, validation, ownership, and risk for a consequential workflow.</p><a class="arrow" href="/integrity-packet-template/">Open resource</a></article><article class="card"><h3>AAOS Framework</h3><p>Use the framework to place the Integrity Packet in the larger AI-Augmented operating system.</p><a class="arrow" href="/frameworks/aaos/">Open resource</a></article></div></div></section>
+</main>
+
+<footer class="site-footer"><div class="footer-grid"><div class="footer-socials" aria-label="Follow us"><a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener"><img src="/assets/img/youtube.svg" alt="YouTube" width="48" height="48"></a> <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="/assets/img/linkedin.svg" alt="LinkedIn" width="48" height="48"></a></div><div class="footer-brand"><img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="120" height="48"><div class="brand-name">Paidar.ai</div><small>&copy; 2026 Paidar Systems LLC</small></div><nav aria-label="Footer" class="footer-nav"><ul class="nav-reset"><li><a href="/resources/">Resources</a></li><li><a href="/frameworks/">Frameworks</a></li><li><a href="/contact.html">Contact</a></li></ul></nav></div></footer>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
