@@ -66,7 +66,7 @@
             <span class="eyebrow"><%= domain.label %> · <%= target.label %> · <%= level.label %></span>
             <h1><%= pageTitle %></h1>
             <p class="lead"><%= asset.description %></p>
-            <% if (commerce && commerce.purchaseUrl) { %><p><a class="btn btn-primary" href="<%= commerce.purchaseUrl %>">Get this offering</a></p><% } %>
+            <% if (commerce && commerce.purchaseUrl) { %><p><a class="btn btn-primary" href="<%= commerce.purchaseUrl %>">Get this offering</a></p><% } else if (distributionAction && distributionAction.url && distributionAction.type !== 'learn-more') { %><p><a class="btn btn-primary" href="<%= distributionAction.url %>"><%= distributionAction.label || 'Continue' %></a></p><% } %>
             <nav class="resource-nav" aria-label="Resource stages">
                 <a href="./" aria-current="page">Overview</a>
                 <% stages.forEach(function(stage) { %><a href="<%= stage.href %>"><%= stage.label %></a><% }); %>
