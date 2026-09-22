@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 1600 1600" role="img" aria-labelledby="title desc">
-  <title id="title"> Shopify product image</title>
+  <title id="title">Becoming AI-Augmented Book Reader Upgrade Pack — Apply Shopify product image</title>
   <desc id="desc">TOOLKIT product card for individual.</desc>
   <defs>
     <linearGradient id="leftShadow" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -31,9 +31,9 @@
   <g filter="url(#softShadow)">
     <path d="M96 1016h470" stroke="#B866FF" stroke-width="6" stroke-linecap="round" opacity="0.95"/>
     <text x="96" y="166" class="stage-label">CONTROL / TOOLKIT</text>
-    <text class="title-text"><tspan x="96" y="650"></tspan></text>
-    <text class="outcome-text"><tspan x="100" y="808"></tspan></text>
-    <text x="100" y="922" class="meta-text">individual | Digital Download</text>
+    <text class="title-text"><tspan x="96" y="650">Becoming</tspan><tspan x="96" y="752">AI-Augmented Book</tspan><tspan x="96" y="854">Reader</tspan></text>
+    <text class="outcome-text"><tspan x="100" y="1012">Becoming AI-Augmented Book</tspan><tspan x="100" y="1074">Reader</tspan></text>
+    <text x="100" y="1188" class="meta-text">individual | Digital Download</text>
   </g>
   <g color="#FFFFFF">
     <rect x="1280" y="64" width="256" height="88" rx="24" fill="#FFFFFF" fill-opacity="0.03" stroke="#B866FF" stroke-width="2"/>
