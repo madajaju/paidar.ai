@@ -1,0 +1,132 @@
+<!--
+  EJS RESOURCE TEMPLATE: asset overview page
+
+  Required injected variables:
+    pageTitle       String used for the document title and page heading.
+    metaDescription String used for the SEO description.
+    canonicalUrl    Absolute canonical URL for this rendered page.
+    breadcrumb      Array of { label, href } objects. The last item may omit href.
+    domain          { key, label } such as { key: 'business', label: 'Business' }.
+    target          { key, label } such as { key: 'team', label: 'Teams' }.
+    level           { key, label } such as { key: 'learn', label: 'Learn' }.
+    asset           { name, type, description, purpose, prerequisites, outcomes }.
+                    outcomes is an array of strings; the remaining values are strings.
+    stages          Array of { key, label, description, href } objects for learn,
+                    apply, and augment. href points to the rendered sub-resource.
+    relatedResources Array of { title, description, href } objects. Optional; use [].
+
+  Optional injected variables:
+    heroImage       CSS image URL. Leave empty for the default gradient hero.
+    heroPosition    CSS background-position value. Defaults to 'center center'.
+    siteName        Brand name. Defaults to 'Paidar.ai'.
+    currentYear     Copyright year. Defaults to the current year in the generator.
+    primaryNav      Array of { label, href } objects. Defaults to the site nav below.
+-->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Becoming AI-Augmented Book Reader Upgrade Pack | Paidar.ai</title>
+    <meta name="description" content="Becoming AI-Augmented Book Reader Upgrade Pack">
+    <link rel="canonical" href="https://paidar.ai/resources/general/individual/product-becoming-ai-augmented-book-reader-upgrade-pack/">
+    <link rel="icon" href="/assets/img/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/paidar.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="container flex between center">
+        <a class="brand" href="/"><img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" height="25"></a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+            <ul class="nav-list nav-reset">
+                <li><a href="/services.html">Services</a></li><li><a href="/assessments.html">Assessments</a></li><li><a href="/workshops/">Workshops</a></li><li><a href="/books/">Books</a></li><li><a href="/about.html">About</a></li>
+                <li><a class="btn btn-primary" href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+    <section class="hero" style="--hero-image: url('images/cover.generated.svg'); --hero-image-position: center center;">
+        <div class="container">
+            <nav aria-label="Breadcrumb" class="text-muted">
+                <a href="/resources/">Resources</a> / <span aria-current="page">Becoming AI-Augmented Book Reader Upgrade Pack</span>
+            </nav>
+            <span class="eyebrow">general · individual · Resource</span>
+            <h1>Becoming AI-Augmented Book Reader Upgrade Pack</h1>
+            <p class="lead">Becoming AI-Augmented Book Reader Upgrade Pack</p>
+            
+            <nav class="resource-nav" aria-label="Resource stages">
+                <a href="./" aria-current="page">Overview</a>
+                <a href="learn.html">Learn</a><a href="apply.html">Apply</a><a href="augment.html">Augment</a>
+            </nav>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container grid-2">
+            <div>
+                <span class="eyebrow">Asset description</span>
+                <h2>Becoming AI-Augmented Book Reader Upgrade Pack</h2>
+                <p>Provide a complete companion set for applying the book&#39;s individual AI-augmentation practices.</p>
+                <h3>What this resource helps you do</h3>
+                <ul class="feature-list">
+                    <li>companion workbook</li><li>editable templates</li><li>diagnostic tools</li><li>control tools</li><li>execution tools</li><li>measurement and scale tools</li><li>next-step roadmap</li>
+                </ul>
+            </div>
+            <aside class="card accent-ai">
+                <h2>At a glance</h2>
+                <p><strong>Domain:</strong> general</p>
+                <p><strong>Audience:</strong> individual</p>
+                <p><strong>Stage:</strong> Resource</p>
+                <p><strong>Asset type:</strong> product</p>
+                <p><strong>Prerequisites:</strong> book concepts, personal workflow, work products, sources, desired outcome, constraints</p>
+            </aside>
+        </div>
+    </section>
+
+    
+
+    
+
+    
+
+    
+    <section class="section tint theme-data">
+        <div class="container grid-2">
+            <div>
+                <span class="eyebrow">How it works</span>
+                <h2>Work through the offering</h2>
+                <h3>What you bring</h3><ul class="feature-list"><li>book concepts</li><li>personal workflow</li><li>work products</li><li>sources</li><li>desired outcome</li><li>constraints</li></ul>
+                <h3>What you leave with</h3><ul class="feature-list"><li>companion workbook</li><li>editable templates</li><li>diagnostic tools</li><li>control tools</li><li>execution tools</li><li>measurement and scale tools</li><li>next-step roadmap</li></ul>
+                <h3>Activities</h3><ol class="step-list"><li><strong>Select a bounded practice</strong></li><li><strong>Define the intended outcome and workflow</strong></li><li><strong>Apply companion templates and controls</strong></li><li><strong>Test the practice on representative work</strong></li><li><strong>Measure results and record corrections</strong></li><li><strong>Select the next practice or handoff</strong></li></ol>
+            </div>
+            <aside class="card accent-edge"><h2>Completion criteria</h2><ul class="feature-list"><li>workflow selected</li><li>workbook completed</li><li>companion tool used</li><li>evidence recorded</li><li>next step defined</li></ul></aside>
+        </div>
+    </section>
+    
+
+    <section class="section"><div class="container"><span class="eyebrow">Offering materials</span><h2>Preview the materials</h2><div class="grid-3"><figure class="card"><img src="images/cover.generated.svg" alt="Offering cover" loading="lazy"><figcaption>Offering cover</figcaption></figure></div></div></section>
+
+    <section class="section tint theme-modern">
+        <div class="container">
+            <span class="eyebrow">Resource pathway</span>
+            <h2>Move from understanding to execution</h2>
+            <div class="grid-3">
+                <article class="card"><h3>Learn</h3><p>Use the learn guidance for this offering.</p><a class="arrow" href="learn.html">Open Learn</a></article><article class="card"><h3>Apply</h3><p>Use the apply guidance for this offering.</p><a class="arrow" href="apply.html">Open Apply</a></article><article class="card"><h3>Augment</h3><p>Use the augment guidance for this offering.</p><a class="arrow" href="augment.html">Open Augment</a></article>
+            </div>
+        </div>
+    </section>
+
+    
+</main>
+
+<footer class="site-footer"><div class="footer-grid"><div class="footer-socials" aria-label="Follow us"><a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener"><img src="/assets/img/youtube.svg" alt="YouTube" width="48" height="48"></a> <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="/assets/img/linkedin.svg" alt="LinkedIn" width="48" height="48"></a></div><div class="footer-brand"><img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="120" height="48"><div class="brand-name">Paidar.ai</div><small>&copy; 2026 Paidar Systems LLC</small></div><nav aria-label="Footer" class="footer-nav"><ul class="nav-reset"><li><a href="/resources/">Resources</a></li><li><a href="/frameworks/">Frameworks</a></li><li><a href="/contact.html">Contact</a></li></ul></nav></div></footer>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
