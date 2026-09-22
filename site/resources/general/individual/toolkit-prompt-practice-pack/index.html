@@ -1,0 +1,132 @@
+<!--
+  EJS RESOURCE TEMPLATE: asset overview page
+
+  Required injected variables:
+    pageTitle       String used for the document title and page heading.
+    metaDescription String used for the SEO description.
+    canonicalUrl    Absolute canonical URL for this rendered page.
+    breadcrumb      Array of { label, href } objects. The last item may omit href.
+    domain          { key, label } such as { key: 'business', label: 'Business' }.
+    target          { key, label } such as { key: 'team', label: 'Teams' }.
+    level           { key, label } such as { key: 'learn', label: 'Learn' }.
+    asset           { name, type, description, purpose, prerequisites, outcomes }.
+                    outcomes is an array of strings; the remaining values are strings.
+    stages          Array of { key, label, description, href } objects for learn,
+                    apply, and augment. href points to the rendered sub-resource.
+    relatedResources Array of { title, description, href } objects. Optional; use [].
+
+  Optional injected variables:
+    heroImage       CSS image URL. Leave empty for the default gradient hero.
+    heroPosition    CSS background-position value. Defaults to 'center center'.
+    siteName        Brand name. Defaults to 'Paidar.ai'.
+    currentYear     Copyright year. Defaults to the current year in the generator.
+    primaryNav      Array of { label, href } objects. Defaults to the site nav below.
+-->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prompt Practice Pack | Paidar.ai</title>
+    <meta name="description" content="Prompt Practice Pack">
+    <link rel="canonical" href="https://paidar.ai/resources/general/individual/toolkit-prompt-practice-pack/">
+    <link rel="icon" href="/assets/img/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/paidar.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="container flex between center">
+        <a class="brand" href="/"><img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" height="25"></a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+            <ul class="nav-list nav-reset">
+                <li><a href="/services.html">Services</a></li><li><a href="/assessments.html">Assessments</a></li><li><a href="/workshops/">Workshops</a></li><li><a href="/books/">Books</a></li><li><a href="/about.html">About</a></li>
+                <li><a class="btn btn-primary" href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+    <section class="hero" style="--hero-image: url('images/cover.generated.svg'); --hero-image-position: center center;">
+        <div class="container">
+            <nav aria-label="Breadcrumb" class="text-muted">
+                <a href="/resources/">Resources</a> / <span aria-current="page">Prompt Practice Pack</span>
+            </nav>
+            <span class="eyebrow">general · individual · Resource</span>
+            <h1>Prompt Practice Pack</h1>
+            <p class="lead">Prompt Practice Pack</p>
+            
+            <nav class="resource-nav" aria-label="Resource stages">
+                <a href="./" aria-current="page">Overview</a>
+                <a href="learn.html">Learn</a><a href="apply.html">Apply</a><a href="augment.html">Augment</a>
+            </nav>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container grid-2">
+            <div>
+                <span class="eyebrow">Asset description</span>
+                <h2>Prompt Practice Pack</h2>
+                <p>See definition.md; review and refine before release.</p>
+                <h3>What this resource helps you do</h3>
+                <ul class="feature-list">
+                    <li>usable result</li><li>evidence record</li><li>next review decision</li>
+                </ul>
+            </div>
+            <aside class="card accent-ai">
+                <h2>At a glance</h2>
+                <p><strong>Domain:</strong> general</p>
+                <p><strong>Audience:</strong> individual</p>
+                <p><strong>Stage:</strong> Resource</p>
+                <p><strong>Asset type:</strong> toolkit</p>
+                <p><strong>Prerequisites:</strong> source material, operating context, user goals, constraints</p>
+            </aside>
+        </div>
+    </section>
+
+    
+
+    
+
+    
+
+    
+    <section class="section tint theme-data">
+        <div class="container grid-2">
+            <div>
+                <span class="eyebrow">How it works</span>
+                <h2>Work through the offering</h2>
+                <h3>What you bring</h3><ul class="feature-list"><li>source material</li><li>operating context</li><li>user goals</li><li>constraints</li></ul>
+                <h3>What you leave with</h3><ul class="feature-list"><li>usable result</li><li>evidence record</li><li>next review decision</li></ul>
+                <h3>Activities</h3><ol class="step-list"><li><strong>Define outcome and context</strong></li><li><strong>Perform the method</strong></li><li><strong>Validate result</strong></li><li><strong>Record evidence and next step</strong></li></ol>
+            </div>
+            <aside class="card accent-edge"><h2>Completion criteria</h2><ul class="feature-list"><li>outcome defined</li><li>method performed</li><li>result validated</li><li>evidence recorded</li><li>next step identified</li></ul></aside>
+        </div>
+    </section>
+    
+
+    <section class="section"><div class="container"><span class="eyebrow">Offering materials</span><h2>Preview the materials</h2><div class="grid-3"><figure class="card"><img src="images/cover.generated.svg" alt="Offering cover" loading="lazy"><figcaption>Offering cover</figcaption></figure></div></div></section>
+
+    <section class="section tint theme-modern">
+        <div class="container">
+            <span class="eyebrow">Resource pathway</span>
+            <h2>Move from understanding to execution</h2>
+            <div class="grid-3">
+                <article class="card"><h3>Learn</h3><p>Use the learn guidance for this offering.</p><a class="arrow" href="learn.html">Open Learn</a></article><article class="card"><h3>Apply</h3><p>Use the apply guidance for this offering.</p><a class="arrow" href="apply.html">Open Apply</a></article><article class="card"><h3>Augment</h3><p>Use the augment guidance for this offering.</p><a class="arrow" href="augment.html">Open Augment</a></article>
+            </div>
+        </div>
+    </section>
+
+    
+</main>
+
+<footer class="site-footer"><div class="footer-grid"><div class="footer-socials" aria-label="Follow us"><a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener"><img src="/assets/img/youtube.svg" alt="YouTube" width="48" height="48"></a> <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="/assets/img/linkedin.svg" alt="LinkedIn" width="48" height="48"></a></div><div class="footer-brand"><img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="120" height="48"><div class="brand-name">Paidar.ai</div><small>&copy; 2026 Paidar Systems LLC</small></div><nav aria-label="Footer" class="footer-nav"><ul class="nav-reset"><li><a href="/resources/">Resources</a></li><li><a href="/frameworks/">Frameworks</a></li><li><a href="/contact.html">Contact</a></li></ul></nav></div></footer>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
