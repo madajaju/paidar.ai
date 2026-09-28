@@ -141,7 +141,7 @@
                     <p><strong>What you get:</strong> A personal readiness scorecard and recommended training path.</p>
                     <p><strong>Recommended path:</strong> Build individual capability through structured learning, practical application, and enablement.</p>
                     <p style="margin-top: auto; padding-top: var(--space-4);">
-                        <a class="btn btn-primary" href="/survey.html" data-track="cta_start_assessment">Start Individual Assessment</a>
+                        <a class="btn btn-primary" href="/assessment/individual/" data-track="cta_start_assessment">Start Individual Assessment</a>
                     </p>
                 </article>
                 <article class="card accent-ai">
@@ -152,7 +152,7 @@
                     <p><strong>What you get:</strong> Maturity level mapping, risk profile, and immediate 30-day focus priorities.</p>
                     <p><strong>Recommended path:</strong> Strengthen team alignment through a focused workshop, workflow redesign, and shared controls.</p>
                     <p style="margin-top: auto; padding-top: var(--space-4);">
-                        <a class="btn btn-primary" href="/assessment/" data-track="cta_start_assessment">Start Team Assessment</a>
+                        <a class="btn btn-primary" href="/assessment/team/" data-track="cta_start_assessment">Start Team Assessment</a>
                     </p>
                 </article>
                 <article class="card">
@@ -163,7 +163,7 @@
                     <p><strong>What you get:</strong> Executive briefing pack and enterprise readiness roadmap.</p>
                     <p><strong>Recommended path:</strong> Design governance, operating model, architecture, and an implementation roadmap for organizational scale.</p>
                     <p style="margin-top: auto; padding-top: var(--space-4);">
-                        <a class="btn btn-primary" href="#paidar-assessment-inquiry-form" data-track="cta_start_assessment">Start an Assessment</a>
+                        <a class="btn btn-primary" href="/assessment/organization/" data-track="cta_start_assessment">Start Organizational Assessment</a>
                     </p>
                 </article>
             </div>
@@ -198,68 +198,15 @@
 
     <section class="section">
         <div class="container grid-2">
-            <article class="card">
-                <h2>Start an Assessment Inquiry</h2>
-                <p>Share your scope and timeline. We will recommend the best-fit assessment path.</p>
-                <form id="paidar-assessment-inquiry-form" class="stack" aria-label="Assessment inquiry form">
-                    <div class="grid-2">
-                        <p>
-                            <label for="assessment-first-name">First Name</label><br />
-                            <input id="assessment-first-name" name="First_Name" type="text" required />
-                        </p>
-                        <p>
-                            <label for="assessment-last-name">Last Name</label><br />
-                            <input id="assessment-last-name" name="Last_Name" type="text" required />
-                        </p>
-                    </div>
-                    <div class="grid-2">
-                        <p>
-                            <label for="assessment-email">Work Email</label><br />
-                            <input id="assessment-email" name="Email" type="email" required />
-                        </p>
-                        <p>
-                            <label for="assessment-company">Organization / Company</label><br />
-                            <input id="assessment-company" name="Company" type="text" required />
-                        </p>
-                    </div>
-                    <p>
-                        <label for="assessment-type">Assessment Type</label><br />
-                        <select id="assessment-type" name="Assessment_Type" required>
-                            <option value="">Select one</option>
-                            <option value="individual">Individual</option>
-                            <option value="team">Team</option>
-                            <option value="organizational">Organizational / Executive</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="assessment-notes">Context</label><br />
-                        <textarea id="assessment-notes" name="Description" rows="4" placeholder="Goals, team size, timeline, and current AI initiatives."></textarea>
-                    </p>
-
-                    <input type="hidden" name="Lead_Source" value="Assessment Inquiry" />
-                    <input type="hidden" name="Lead_Status" value="New" />
-                    <input type="hidden" name="utm_source" data-utm-field="true" />
-                    <input type="hidden" name="utm_medium" data-utm-field="true" />
-                    <input type="hidden" name="utm_campaign" data-utm-field="true" />
-                    <input type="hidden" name="utm_content" data-utm-field="true" />
-                    <input type="hidden" name="qr" data-utm-field="true" />
-                    <input type="hidden" name="book" data-utm-field="true" />
-                    <p id="form-status" hidden></p>
-                    <p>
-                        <button class="btn btn-primary" type="button" id="submit-inquiry-btn">Request Assessment Path</button>
-                    </p>
-                </form>
+            <article class="card accent-modern">
+                <h2>Choose your assessment path</h2>
+                <p>The assessment hub now owns assessment selection, depth, lens, and intake so each assessment has one clear home.</p>
+                <p><a class="btn btn-primary" href="/assessment/">Open the Assessment Hub</a></p>
             </article>
-
             <article class="card">
-                <h2>Prefer a Live Discussion?</h2>
-                <p>Schedule a strategy session to align on scope, decision timeline, and stakeholder priorities.</p>
-                <p><!-- CRM/API hook: track consultation CTA source=assessments-page --><a class="btn btn-gold" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_strategy_session" data-propagate-utm="true">Book a Strategy Session</a></p>
-                <ul class="feature-list">
-                    <li>Executive and transformation stakeholder alignment</li>
-                    <li>Assessment scope confirmation</li>
-                    <li>Recommended immediate next steps</li>
-                </ul>
+                <h2>Prefer a live discussion?</h2>
+                <p>Strategy sessions remain available for leaders who want to align scope, decision timeline, and stakeholder priorities before choosing a depth.</p>
+                <p><a class="btn btn-gold" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_strategy_session" data-propagate-utm="true">Book a Strategy Session</a></p>
             </article>
         </div>
     </section>

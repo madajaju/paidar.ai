@@ -202,6 +202,8 @@
                     <input type="hidden" name="book" data-utm-field="true" />
                     <input type="hidden" name="source_page" data-utm-field="true" />
                     <input type="hidden" name="entry_stage" data-utm-field="true" />
+                    <input type="hidden" name="Assessment_Level" data-utm-field="true" />
+                    <input type="hidden" name="Assessment_Lens" data-utm-field="true" />
 
                     <p id="form-status" hidden></p>
 
@@ -305,6 +307,8 @@
             book: formData.get("book") || "",
             source_page: formData.get("source_page") || "",
             entry_stage: formData.get("entry_stage") || "",
+            Assessment_Level: formData.get("Assessment_Level") || "",
+            Assessment_Lens: formData.get("Assessment_Lens") || "",
             submitted_at: new Date().toISOString(),
             page: window.location.pathname
         };
@@ -351,8 +355,12 @@
     const contactParams = new URLSearchParams(window.location.search);
     const inquiryParam = contactParams.get("inquiry") || window.paidarTrack?.attribution?.inquiry || "";
     const audienceParam = contactParams.get("audience") || window.paidarTrack?.attribution?.audience || "";
+    const assessmentLevelParam = contactParams.get("assessment_level") || window.paidarTrack?.attribution?.assessment_level || "";
+    const assessmentLensParam = contactParams.get("assessment_lens") || window.paidarTrack?.attribution?.assessment_lens || "";
     if (inquiryParam) document.getElementById("inquiry_type").value = inquiryParam;
     if (audienceParam) document.getElementById("audience").value = audienceParam;
+    if (assessmentLevelParam) document.querySelector("[name='Assessment_Level']").value = assessmentLevelParam;
+    if (assessmentLensParam) document.querySelector("[name='Assessment_Lens']").value = assessmentLensParam;
 </script>
 </body>
 </html>

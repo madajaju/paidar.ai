@@ -2,7 +2,7 @@
   "use strict";
 
   var STORAGE_KEY = "paidarFunnelAttribution";
-  var TRACKED_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "qr", "book", "page", "source_page", "entry_stage", "inquiry", "audience"];
+  var TRACKED_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "qr", "book", "page", "source_page", "entry_stage", "inquiry", "audience", "assessment_level", "assessment_lens"];
 
   function readParams() {
     var params = new URLSearchParams(window.location.search || "");

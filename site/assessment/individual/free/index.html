@@ -1,0 +1,2746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AI Readiness Self-Assessment for Individuals | Paidar.ai</title>
+    <meta name="description" content="Take a 4-pillar AI readiness self-assessment for individuals. Benchmark your current capability, identify gaps, and get a personalized next-step plan." />
+    <link rel="canonical" href="https://paidar.ai/assessment/individual/free/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#123456" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AI Readiness Self-Assessment for Individuals | Paidar.ai" />
+    <meta property="og:description" content="Benchmark your AI skills, subject matter expertise, stability, and scalability in one guided assessment." />
+    <meta property="og:url" content="https://paidar.ai/survey.html" />
+    <meta property="og:image" content="https://paidar.ai/assets/img/hero.jpeg" />
+    <meta property="og:site_name" content="Paidar.ai" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI Readiness Self-Assessment for Individuals | Paidar.ai" />
+    <meta name="twitter:description" content="Benchmark your AI skills, subject matter expertise, stability, and scalability in one guided assessment." />
+    <meta name="twitter:image" content="https://paidar.ai/assets/img/hero.jpeg" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebPage",
+                    "@id": "https://paidar.ai/survey.html#webpage",
+                    "url": "https://paidar.ai/survey.html",
+                    "name": "AI Readiness Self-Assessment for Individuals | Paidar.ai",
+                    "description": "Take a 4-pillar AI readiness self-assessment for individuals. Benchmark your current capability, identify gaps, and get a personalized next-step plan.",
+                    "isPartOf": {
+                        "@id": "https://paidar.ai/#website"
+                    },
+                    "about": {
+                        "@id": "https://paidar.ai/#organization"
+                    },
+                    "primaryImageOfPage": "https://paidar.ai/assets/img/hero.jpeg"
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://paidar.ai/#website",
+                    "url": "https://paidar.ai/",
+                    "name": "Paidar.ai",
+                    "publisher": {
+                        "@id": "https://paidar.ai/#organization"
+                    }
+                },
+                {
+                    "@type": "Organization",
+                    "@id": "https://paidar.ai/#organization",
+                    "name": "Paidar.ai",
+                    "url": "https://paidar.ai/",
+                    "logo": "https://paidar.ai/assets/img/paidar.svg"
+                },
+                {
+                    "@type": "FAQPage",
+                    "@id": "https://paidar.ai/survey.html#faq",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Who is this AI readiness self-assessment for?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "This assessment is for individual professionals, managers, educators, and practitioners who want to benchmark how effectively they combine AI skills, subject matter expertise, judgment, and governance in real work."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How long does the assessment take?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Most people complete the assessment in about 4 to 6 minutes. It includes 21 questions across four readiness pillars."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "What will I get after I finish the assessment?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "You receive a readiness quadrant, an archetype label, and practical next-step recommendations. You can also request a personalized plan tailored to your results."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "What does the assessment measure?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "The assessment measures four dimensions of AI readiness: AI skills, core skills, subject matter expertise, and meta-skills related to scalability, governance, and judgment."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How is my information used?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Your contact details are only used to send your report and follow up with relevant assessment resources. Results are submitted after you review them."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+    <link rel="icon" href="../../../assets/img/favicon.ico" />
+    <link rel="stylesheet" href="../../../assets/css/paidar.css" />
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #111827;
+            --muted: #6b7280;
+            --line: #d1d5db;
+            --green: #166534;
+            --red: #991b1b;
+            --blue: #1e3a8a;
+            --amber: #92400e;
+            --gray: #374151
+        }
+
+        html, body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background: var(--bg);
+            color: var(--text)
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px
+        }
+
+        h1 {
+            font-size: clamp(22px, 3vw, 30px);
+            margin: 0 0 8px 0
+        }
+
+        p {
+            color: var(--muted);
+            margin: 0 0 16px 0
+        }
+
+        .grid {
+            display: grid;
+            gap: 24px
+        }
+
+        @media (min-width: 1024px) {
+            .grid {
+                grid-template-columns:1fr 1fr
+            }
+        }
+
+        .card {
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .04)
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            gap: 16px
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 6px
+        }
+
+        input[type=range] {
+            width: 100%
+        }
+
+        .btn {
+            border: 1px solid #e5e7eb;
+            padding: 8px 12px;
+            border-radius: 12px;
+            background: #fff;
+            cursor: pointer
+        }
+
+        .btn:hover {
+            background: #f9fafb
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 12px
+        }
+
+        .b-green {
+            background: #dcfce7;
+            color: var(--green)
+        }
+
+        .b-red {
+            background: #fee2e2;
+            color: var(--red)
+        }
+
+        .b-blue {
+            background: #dbeafe;
+            color: var(--blue)
+        }
+
+        .b-gray {
+            background: #f3f4f6;
+            color: #374151
+        }
+
+        .b-amber {
+            background: #ffedd5;
+            color: var(--amber)
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        .legend {
+            display: grid;
+            grid-template-columns:repeat(2, minmax(0, 1fr));
+            gap: 12px
+        }
+
+        .legend .card {
+            padding: 12px
+        }
+
+        .legend h3 {
+            margin: 0 0 6px 0;
+            font-size: 14px
+        }
+
+        .legend ul {
+            margin: 0;
+            padding-left: 18px;
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        .center {
+            display: flex;
+            justify-content: center
+        }
+
+        svg {
+            max-width: 520px;
+            width: 100%;
+            height: auto
+        }
+
+        .hint {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        #survey-form {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Toolbar styles */
+        .toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #123456;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .toolbar .characteristic-label {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .toolbar-btn {
+            background-color: white;
+            color: #123456;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .toolbar-btn:hover {
+            background-color: #E5E7EB;
+        }
+
+        /* Dropdown Menus */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-toggle {
+            padding: 10px 15px;
+            background-color: white;
+            color: #123456;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 5;
+        }
+
+        .dropdown-content .dropdown-item {
+            padding: 10px;
+            text-align: left;
+            cursor: pointer;
+            border-top: 1px solid #E5E7EB;
+            background-color: white;
+        }
+
+        .dropdown-content .dropdown-item:hover {
+            background-color: #E5E7EB;
+        }
+
+        /* Center Quadrant Visualization */
+        #quad {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        /* Main container for content */
+        .container {
+            margin-top: 20px;
+            padding: 24px;
+        }
+
+        .survey-title {
+            font-size: 2.5rem;
+            color: #123456;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .skip-link:focus {
+            left: 16px;
+            top: 16px;
+            width: auto;
+            height: auto;
+            padding: 10px 14px;
+            background: #ffffff;
+            color: #123456;
+            border: 2px solid #123456;
+            border-radius: 8px;
+            z-index: 1000;
+        }
+
+        .survey-explanation {
+            font-size: 1.1rem;
+            color: #456789;
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .survey-shell {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px 24px 48px;
+        }
+
+        .survey-hero {
+            margin-bottom: 24px;
+        }
+
+        .survey-hero-copy {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 24px;
+        }
+
+        .survey-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .survey-highlight {
+            background: #f8fafc;
+            border: 1px solid #d1d5db;
+            border-radius: 14px;
+            padding: 16px;
+        }
+
+        .survey-highlight strong,
+        .survey-highlight span {
+            display: block;
+        }
+
+        .survey-highlight strong {
+            color: #123456;
+            margin-bottom: 6px;
+        }
+
+        .survey-supporting-copy {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .survey-detail-copy {
+            margin-top: 20px;
+        }
+
+        .survey-detail-copy p {
+            color: #4b5563;
+            line-height: 1.7;
+        }
+
+        .survey-faq {
+            margin-top: 28px;
+            display: grid;
+            gap: 16px;
+        }
+
+        .survey-faq h2 {
+            margin: 0;
+            color: #123456;
+            text-align: center;
+        }
+
+        .faq-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .faq-item {
+            border: 1px solid #d1d5db;
+            border-radius: 14px;
+            background: #ffffff;
+            padding: 16px 18px;
+        }
+
+        .faq-item h3 {
+            margin: 0 0 8px;
+            color: #111827;
+            font-size: 1.05rem;
+        }
+
+        .faq-item p {
+            margin: 0;
+            color: #4b5563;
+        }
+
+        .progress-card {
+            position: sticky;
+            top: 84px;
+            z-index: 5;
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 16px;
+            padding: 16px;
+            margin: 0 auto 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .progress-topline {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            border-radius: 999px;
+            background: #e5e7eb;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, #123456 0%, #456789 100%);
+            transition: width 0.2s ease;
+        }
+
+        .progress-caption {
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        /* Pillar Card Style */
+        .pillar-card {
+            margin-bottom: 20px;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            background-color: #f9fafb;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .pillar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 15px 20px;
+            cursor: pointer;
+            background-color: #e5e7eb;
+            color: #111827;
+            font-weight: bold;
+            border-bottom: 1px solid #d1d5db;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .pillar-header:hover {
+            background-color: #d1d5db;
+        }
+
+        .pillar-header:focus-visible,
+        .toolbar-btn:focus-visible,
+        .dropdown-item:focus-visible,
+        .btn-submit:focus-visible {
+            outline: 3px solid #123456;
+            outline-offset: 2px;
+        }
+
+        .pillar-header h2 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        .pillar-toggle {
+            font-size: 1.5rem;
+            font-weight: bold;
+            transform-origin: center;
+            transition: transform 0.3s ease;
+        }
+
+        .pillar-card.open .pillar-toggle {
+            transform: rotate(45deg);
+        }
+
+        .pillar-content {
+            padding: 20px;
+            display: none;
+            animation: fadeSlide 0.3s ease-in-out;
+        }
+
+        .pillar-content[hidden] {
+            display: none;
+        }
+
+        /* Fade and Slide Animation */
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(-10%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Question Styling */
+        .question {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .question:last-child {
+            border-bottom: none;
+        }
+
+        .question label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: #374151;
+        }
+
+        .question .subskill-description {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 10px;
+        }
+
+        /* Likert Scale Styling */
+        .likert-scale {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .likert-option {
+            text-align: center;
+            flex: 1;
+        }
+
+        .likert-option input {
+            margin-bottom: 5px;
+        }
+
+        .likert-option label {
+            font-size: 0.9rem;
+            color: #374151;
+        }
+
+        .survey-footer-note {
+            margin-top: 16px;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        @media (max-width: 767px) {
+            .toolbar {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .likert-scale {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .likert-option {
+                text-align: left;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+
+        /* Submit Button Styling */
+        .btn-submit {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #123456;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #456789;
+        }
+        .site-footer {
+            margin-top: 20px;
+            padding: 15px 20px;
+            background-color: #123456; /* Dark Gray Background */
+            color: #ffffff; /* Light Text */
+            text-align: center; /* Center the text horizontally */
+            font-size: 1.0rem;
+            border-top: 5px solid #ffcc44; /* Slight top border for separation */
+            display: flex; /* Enable flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            flex-direction: column; /* Stack content vertically (if needed) */
+        }
+
+        .site-footer a {
+            color: #ffffff; /* Link Color (Blue) */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .site-footer a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="container flex between center">
+        <a class="brand" href="/">
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" height="25" />
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+<ul class="nav-list nav-reset">
+    <li><a href="/services.html" data-track="cta_path_design">How We Help</a></li>
+    <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+    <li><a href="/workshops/" data-track="cta_path_enable">Enablement</a></li>
+    <li><a href="/frameworks/">Frameworks</a></li>
+    <li><a href="/books/" data-track="cta_view_books">Books</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
+</ul>
+        </nav>
+    </div>
+</header>
+<main id="main">
+<div id="survey-container"></div>
+<div id="results-container" class="container" style="display:none">
+
+    <!-- Toolbar -->
+    <div class="toolbar" aria-label="Results actions">
+        <!-- Characteristic Label -->
+        <div id="characteristic-label" class="characteristic-label">AI Change Agent (AI Augmented)</div>
+        <button type="button" class="toolbar-btn" id="btn-take-survey">Retake Survey</button>
+        <!-- Preset Dropdown -->
+        <div class="dropdown">
+            <button class="toolbar-btn dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="preset-menu">Presets</button>
+            <div class="dropdown-content" id="preset-menu" hidden>
+                <button class="dropdown-item" type="button" data-preset="under">Underdeveloped</button>
+                <button class="dropdown-item" type="button" data-preset="fakers">AI Fakers</button>
+                <button class="dropdown-item" type="button" data-preset="unconf">Unconfident</button>
+                <button class="dropdown-item" type="button" data-preset="aug">AI Augmented</button>
+            </div>
+        </div>
+
+        <!-- Download Dropdown -->
+        <div class="dropdown">
+            <button class="toolbar-btn dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="download-menu">Download</button>
+            <div class="dropdown-content" id="download-menu" hidden>
+                <button id="download-png" class="dropdown-item" type="button">Download PNG</button>
+                <button id="download-pdf" class="dropdown-item" type="button">Download Report</button>
+            </div>
+        </div>
+    </div>
+    <!-- Visualization Container -->
+    <div class="grid">
+        <!-- LEFT: Controls -->
+        <div>
+            <h1>AI Readiness Self-Assessment</h1>
+            <div class="controls">
+                <div class="card">
+                    <div class="row"><span>AI Skills (Y)</span><span id="val-ai">50</span></div>
+                    <input id="ai" type="range" min="0" max="100" value="50"/>
+                </div>
+                <div class="card">
+                    <div class="row"><span>SME Skills (X)</span><span id="val-sme">50</span></div>
+                    <input id="sme" type="range" min="0" max="100" value="50"/>
+                </div>
+                <div class="card">
+                    <div class="row"><span>Core (Stability)</span><span id="val-core">50</span></div>
+                    <input id="core" type="range" min="0" max="100" value="50"/>
+                </div>
+                <div class="card">
+                    <div class="row"><span>Meta (Scalability)</span><span id="val-meta">50</span></div>
+                    <input id="meta" type="range" min="0" max="100" value="50"/>
+                </div>
+            </div>
+
+            <div id="feedback" class="card" style="font-size:14px">
+                <b>Personalized Recommendations</b>
+                <div class="muted" style="margin-top:6px">Your two lowest sub-skills with actionable tips will appear
+                    here.
+                </div>
+                <ol id="feedback-list" style="margin-top:10px; padding-left:18px"></ol>
+            </div>
+
+            <div style="margin:16px 0">
+                <label style="font-size:14px; display:flex; align-items:center; gap:8px">
+                    <input type="checkbox" id="advanced"/>
+                    <span><b>Advanced mode (optional):</b> refine your recommendations by scoring detailed <i>sub-skills</i> after you have your core result.</span>
+                </label>
+            </div>
+
+            <div id="subskills" style="display:none; margin-bottom:12px" class="controls">
+                <!-- AI subskills -->
+                <div class="card">
+                    <div class="row"><span>AI - Prompting & Instruction Design</span><span id="val-ai_prompting_and_instruction_design">50</span></div>
+                    <input class="subskill" id="ai_prompting_and_instruction_design" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>AI - Grounding & Data Quality</span><span id="val-ai_grounding_and_data_quality">50</span></div>
+                    <input class="subskill" id="ai_grounding_and_data_quality" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>AI - Output Evaluation & Validation</span><span id="val-ai_output_evaluation_and_validation">50</span></div>
+                    <input class="subskill" id="ai_output_evaluation_and_validation" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>AI - Workflow Integration & Flow Orchestration</span><span id="val-ai_workflow_and_flow_orchestration">50</span></div>
+                    <input class="subskill" id="ai_workflow_and_flow_orchestration" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>AI - Tool Selection & Continuous Improvement</span><span id="val-ai_tool_selection_and_process_improvement">50</span></div>
+                    <input class="subskill" id="ai_tool_selection_and_process_improvement" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>AI - Governance, Traceability & Information Protection</span><span id="val-ai_governance_traceability_and_protection">50</span></div>
+                    <input class="subskill" id="ai_governance_traceability_and_protection" type="range" min="0" max="100" value="50"/>
+                </div>
+
+                <!-- Core subskills -->
+                <div class="card">
+                    <div class="row"><span>Core - Critical Thinking & Evidence Evaluation</span><span id="val-core_critical_thinking_and_evidence">50</span></div>
+                    <input class="subskill" id="core_critical_thinking_and_evidence" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Core - Task Decomposition & Decision Framing</span><span id="val-core_decomposition_and_decision_framing">50</span></div>
+                    <input class="subskill" id="core_decomposition_and_decision_framing" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Core - Synthesis & Integration</span><span id="val-core_synthesis_and_integration">50</span></div>
+                    <input class="subskill" id="core_synthesis_and_integration" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Core - Logic Transparency & Pattern Recognition</span><span id="val-core_logic_transparency_and_pattern_recognition">50</span></div>
+                    <input class="subskill" id="core_logic_transparency_and_pattern_recognition" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Core - Team Enablement & Reuse</span><span id="val-core_team_enablement_and_reuse">50</span></div>
+                    <input class="subskill" id="core_team_enablement_and_reuse" type="range" min="0" max="100" value="50"/>
+                </div>
+
+                <!-- SME subskills -->
+                <div class="card">
+                    <div class="row"><span>SME - Domain Foundation & Professional Methods</span><span id="val-sme_domain_foundation_and_methods">50</span></div>
+                    <input class="subskill" id="sme_domain_foundation_and_methods" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>SME - Local Context & Constraint Injection</span><span id="val-sme_local_context_and_constraints">50</span></div>
+                    <input class="subskill" id="sme_local_context_and_constraints" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>SME - Risk Intuition & Domain Logic Auditing</span><span id="val-sme_risk_and_logic_auditing">50</span></div>
+                    <input class="subskill" id="sme_risk_and_logic_auditing" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>SME - Standards & Quality Benchmarking</span><span id="val-sme_standards_and_quality_benchmarking">50</span></div>
+                    <input class="subskill" id="sme_standards_and_quality_benchmarking" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>SME - Knowledge Currency</span><span id="val-sme_knowledge_currency">50</span></div>
+                    <input class="subskill" id="sme_knowledge_currency" type="range" min="0" max="100" value="50"/>
+                </div>
+
+                <!-- Meta subskills -->
+                <div class="card">
+                    <div class="row"><span>Meta - Learning Agility & Adaptability</span><span id="val-meta_learning_agility_and_adaptability">50</span></div>
+                    <input class="subskill" id="meta_learning_agility_and_adaptability" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Meta - Resilience & Self-Awareness</span><span id="val-meta_resilience_and_self_awareness">50</span></div>
+                    <input class="subskill" id="meta_resilience_and_self_awareness" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Meta - Judgment Calibration & Ambiguity Navigation</span><span id="val-meta_judgment_and_ambiguity_navigation">50</span></div>
+                    <input class="subskill" id="meta_judgment_and_ambiguity_navigation" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Meta - Escalation & Governance Discipline</span><span id="val-meta_escalation_and_governance_discipline">50</span></div>
+                    <input class="subskill" id="meta_escalation_and_governance_discipline" type="range" min="0" max="100" value="50"/>
+                    <div class="row"><span>Meta - Systems Thinking & Accountability</span><span id="val-meta_systems_thinking_and_accountability">50</span></div>
+                    <input class="subskill" id="meta_systems_thinking_and_accountability" type="range" min="0" max="100" value="50"/>
+                </div>
+            </div>
+
+            <div id="lead-capture-container" class="card" style="margin-top: 24px;">
+                <h2>Get Your Personalized AI-Augmented Suggestion Plan</h2>
+                <p>Enter your details below to receive your results and a personalized plan for moving to AI-Augmented.</p>
+                <p style="font-size: 14px; color: #6b7280;">We only use this information to send your report and follow up on relevant assessment resources. Your results are submitted after you review them.</p>
+                <form id="lead-capture-form" style="display: flex; flex-direction: column; gap: 16px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div>
+                            <label for="first_name" style="font-size: 14px; font-weight: 600;">First Name</label>
+                            <input id="first_name" name="First_Name" type="text" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
+                        </div>
+                        <div>
+                            <label for="last_name" style="font-size: 14px; font-weight: 600;">Last Name</label>
+                            <input id="last_name" name="Last_Name" type="text" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email" style="font-size: 14px; font-weight: 600;">Work Email</label>
+                        <input id="email" name="Email" type="email" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
+                    </div>
+                    <div>
+                        <label for="company" style="font-size: 14px; font-weight: 600;">Organization</label>
+                        <input id="company" name="Company" type="text" required style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px;" />
+                    </div>
+                    <input type="hidden" name="Lead_Source" value="Individual Assessment" />
+                    <input type="hidden" name="Assessment_Level" value="Free" />
+                    <input type="hidden" name="Assessment_Lens" id="assessment-lens" value="Business" />
+                    <input type="hidden" name="Lead_Status" value="New" />
+                    <!-- Attribution & Tracking -->
+                    <input type="hidden" name="utm_source" data-utm-field="true" />
+                    <input type="hidden" name="utm_medium" data-utm-field="true" />
+                    <input type="hidden" name="utm_campaign" data-utm-field="true" />
+                    <input type="hidden" name="utm_content" data-utm-field="true" />
+                    <input type="hidden" name="qr" data-utm-field="true" />
+                    <input type="hidden" name="book" data-utm-field="true" />
+
+                    <p id="lead-status" style="font-size: 14px; margin: 0;" hidden></p>
+                    <button class="btn btn-primary" type="button" id="submit-survey-btn" style="width: 100%; padding: 12px; background: #1e3a8a; color: white; border: 0; border-radius: 8px; font-weight: 700; cursor: pointer;">Get My Plan</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- RIGHT: Quadrant + Legend -->
+        <div>
+            <div class="center">
+                <svg id="quad" viewBox="0 0 520 520" role="img" aria-label="AI Readiness Quadrant"></svg>
+            </div>
+            <div class="legend" style="margin-top:16px">
+                <div class="card"><h3>Quadrant (position)</h3>
+                    <ul>
+                        <li>SME (X-axis)</li>
+                        <li>AI Fluency (Y-axis)</li>
+                    </ul>
+                </div>
+                <div class="card"><h3>Petal-Glyph (modifiers)</h3>
+                    <ul>
+                        <li>Vertical petals = Core (Stability)</li>
+                        <li>Horizontal petals = Meta (Scalability)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="margin-top: 24px;">
+        <h3>Your Next Best Move</h3>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 16px;">
+            <div class="card" style="padding: 16px; display: flex; flex-direction: column;"><h4>Low capability</h4><p style="font-size:14px;color:var(--muted);flex-grow:1;">Build individual capability through structured learning and practical enablement.</p><a class="btn" href="/training/" style="display:block;text-align:center;margin-top:12px;background:#1e3a8a;color:white;font-weight:700;">Build Individual Capability</a></div>
+            <div class="card" style="padding: 16px; display: flex; flex-direction: column;"><h4>Weak evaluation or governance</h4><p style="font-size:14px;color:var(--muted);flex-grow:1;">Strengthen evidence, validation, and accountability before using AI in consequential work.</p><a class="btn" href="/frameworks/aaos/" style="display:block;text-align:center;margin-top:12px;background:#1e3a8a;color:white;font-weight:700;">Strengthen AI Controls</a></div>
+            <div class="card" style="padding: 16px; display: flex; flex-direction: column;"><h4>Ready for practical application</h4><p style="font-size:14px;color:var(--muted);flex-grow:1;">Apply your capability to a real workflow with shared standards and accountable execution.</p><a class="btn" href="/workshops/team-ai-enablement/" style="display:block;text-align:center;margin-top:12px;background:#1e3a8a;color:white;font-weight:700;">Apply to a Real Workflow</a></div>
+        </div>
+    </div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-socials" aria-label="Follow us">
+            <a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/youtube.svg" alt="YouTube" width="800" height="800" />
+            </a>
+            <a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/linkedin.svg" alt="LinkedIn" width="800" height="800" />
+            </a>
+            <a href="https://embracingdigital.org" aria-label="Embracing Digital" target="_blank" rel="noopener">
+                <img class="social-icon" src="/assets/img/edt.svg" alt="Embracing Digital" width="750" height="750" />
+            </a>
+        </div>
+
+        <div class="footer-brand">
+            <img src="/assets/img/paidar.svg" alt="Paidar.ai logo" class="footer-logo" width="520" height="200" />
+            <div class="brand-name">Paidar.ai</div>
+            <small>&copy; <span id="y"></span> Paidar Systems LLC</small>
+        </div>
+
+        <nav aria-label="Footer" class="footer-nav">
+            <ul class="nav-reset">
+                <li><a href="/about.html">About</a></li>
+    <li><a href="/services.html" data-track="cta_path_design">How We Help</a></li>
+                <li><a href="/insights.html">Insights</a></li>
+                <li><a href="/contact.html" data-track="cta_contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<script>
+    const surveyContainer = document.getElementById('survey-container');
+    surveyContainer.style.display = 'none'; // Initial state hidden
+    const surveyResults = {};
+
+    const survey = {
+  "version": "1.3",
+  "scale": {
+    "low": [0, 39],
+    "medium": [40, 69],
+    "high": [70, 100]
+  },
+  "pillars": [
+    {
+      "id": "ai",
+      "name": "AI Skills",
+      "subskills": [
+        {
+          "id": "prompting_and_instruction_design",
+          "name": "Prompting & Instruction Design",
+          "question": "How confident are you in designing clear, structured AI instructions that define the role, task, audience, constraints, examples, and output format needed to produce high-quality results on the first attempt?",
+          "scale_labels": {
+            "1": "Not at all",
+            "2": "Slightly",
+            "3": "Moderately",
+            "4": "Confident",
+            "5": "Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Results are inconsistent. Focus on defining clear roles, explicit tasks, examples, constraints, and desired output formats."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good baseline prompting ability. Move toward reusable prompt templates, structured examples, and clearer success criteria."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Advanced practitioner. You design reliable prompt systems with reusable patterns, negative constraints, and clear output schemas."
+            }
+          ]
+        },
+        {
+          "id": "grounding_and_data_quality",
+          "name": "Grounding & Data Quality",
+          "question": "How consistently do you provide AI with accurate, complete, fit-for-purpose source materials and instruct it to rely on those sources when accuracy, context, or evidence matters?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Confident",
+            "5": "Always / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "High hallucination and garbage-in/garbage-out risk. Start grounding AI tasks in specific sources and checking data quality before use."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You use some context and check basic quality. Improve by formalizing source verification, data cleaning, and retrieval-style instructions."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Expert at grounding. You ensure AI outputs are anchored in high-quality, relevant, and verified source material."
+            }
+          ]
+        },
+        {
+          "id": "output_evaluation_and_validation",
+          "name": "Output Evaluation & Validation",
+          "question": "How consistently do you validate AI-generated outputs for accuracy, bias, hallucinations, unsupported claims, logic errors, and alignment with your original intent before relying on them?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Confident",
+            "5": "Always / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "High risk of accepting errors. Implement a trust-but-verify protocol using source checks, bias checks, and logic review."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You check for obvious errors. Formalize this into a repeatable validation checklist for accuracy, bias, logic, and intent alignment."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Excellent rigor. You consistently identify subtle errors and use structured review methods before relying on AI output."
+            }
+          ]
+        },
+        {
+          "id": "workflow_and_flow_orchestration",
+          "name": "Workflow Integration & Flow Orchestration",
+          "question": "How effectively do you embed AI into repeatable professional workflows by connecting tasks into multi-step processes where outputs can feed later steps and verification gates prevent errors from compounding?",
+          "scale_labels": {
+            "1": "Not at all",
+            "2": "Slightly",
+            "3": "Moderately",
+            "4": "Well / Confident",
+            "5": "Extensively / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "AI usage is ad hoc. Identify one repeatable high-value task and design a simple multi-step AI-assisted workflow."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "AI is becoming a regular tool. Focus on connecting tasks, reducing manual handoffs, and adding verification gates between steps."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Seamless integration. You design complex, multi-stage workflows with human checkpoints and strong process control."
+            }
+          ]
+        },
+        {
+          "id": "tool_selection_and_process_improvement",
+          "name": "Tool Selection & Continuous Improvement",
+          "question": "How consistently do you choose the right AI tool, model, prompt, or workflow for the task and improve your approach over time using lessons learned, comparisons, and measured outcomes?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Confident",
+            "5": "Always / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "You may be using the same tool or process for everything. Build a simple selection matrix and review one workflow each month."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You switch tools and improve processes occasionally. Start comparing prompts, tools, and workflows using measurable criteria."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Strategic optimizer. You select tools based on task fit, cost, privacy, performance, and continuously refine your AI systems."
+            }
+          ]
+        },
+        {
+          "id": "governance_traceability_and_protection",
+          "name": "Governance, Traceability & Information Protection",
+          "question": "How consistently do you protect sensitive information while documenting prompts, sources, assumptions, evaluation criteria, and objective measures so your AI-assisted work is secure, traceable, and defensible?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Confident",
+            "5": "Always / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Governance and data protection gaps are likely. Start logging prompts, defining success criteria, and reviewing privacy rules before sharing data."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You show some governance discipline. Formalize your proof-of-work trail and create clear data-sharing boundaries."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Audit-ready. You maintain traceable, secure, and defensible AI workflows while protecting sensitive information."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "name": "Core Skills",
+      "subskills": [
+        {
+          "id": "critical_thinking_and_evidence",
+          "name": "Critical Thinking & Evidence Evaluation",
+          "question": "How confident are you in identifying hidden assumptions, logical flaws, unsupported claims, and weak evidence before accepting a conclusion or recommendation?",
+          "scale_labels": {
+            "1": "Not at all",
+            "2": "Slightly",
+            "3": "Moderately",
+            "4": "Confident",
+            "5": "Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Vulnerable to fluency bias. Practice questioning first responses, demanding evidence, and checking assumptions."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good skepticism. Focus on linking claims to evidence and isolating assumptions behind major conclusions."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "High rigor. You consistently separate plausible language from verified truth and maintain a strong evidence trail."
+            }
+          ]
+        },
+        {
+          "id": "decomposition_and_decision_framing",
+          "name": "Task Decomposition & Decision Framing",
+          "question": "How effectively do you break large or ambiguous goals into small, testable steps while defining success criteria, failure boundaries, and where human judgment is required?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Effective",
+            "5": "Always / Very Effective"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Tasks may be too broad or undefined. Practice breaking work into verifiable steps and defining success before beginning."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You create some structure. Improve by making each step testable and setting clear escalation or failure triggers."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Strong architect. You define goals, boundaries, and task structures that are easy to audit and govern."
+            }
+          ]
+        },
+        {
+          "id": "synthesis_and_integration",
+          "name": "Synthesis & Integration",
+          "question": "How effectively do you combine information from multiple sources, integrate AI-generated material with your own judgment, and turn fragmented inputs into a clear, cohesive recommendation or decision?",
+          "scale_labels": {
+            "1": "Not at all",
+            "2": "Slightly",
+            "3": "Moderately",
+            "4": "Effective",
+            "5": "Very Effective"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Outputs may remain fragmented. Practice actively integrating information and making the final logic your own."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good blending ability. Focus on ensuring the final conclusion reflects your reasoning, not just an AI summary."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Seamless integration. You convert multiple signals into unified, defensible professional actions."
+            }
+          ]
+        },
+        {
+          "id": "logic_transparency_and_pattern_recognition",
+          "name": "Logic Transparency & Pattern Recognition",
+          "question": "How effectively do you make your reasoning explicit, reusable, and understandable by turning repeated logic patterns into decision rules, checklists, templates, or processes that others and AI can follow?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Effective",
+            "5": "Always / Very Effective"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Your logic may remain hidden or task-specific. Practice writing out decision rules and identifying reusable patterns."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good visibility. Move toward reusable templates and explicit reasoning structures that others can apply."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Systems thinker. Your reasoning is transparent, reusable, verifiable, and ready for automation."
+            }
+          ]
+        },
+        {
+          "id": "team_enablement_and_reuse",
+          "name": "Team Enablement & Reuse",
+          "question": "How effectively do you create AI-assisted work products, documentation, prompts, templates, checklists, or reusable formats that colleagues can understand, verify, trust, and apply?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Effective",
+            "5": "Always / Very Effective"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Work may remain siloed. Focus on documenting process, assumptions, and outputs so others can trust and reuse them."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You produce some reusable outputs. Improve by standardizing formats, prompts, and review criteria."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Force multiplier. You make your AI-augmented expertise accessible, repeatable, and valuable across the team."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sme",
+      "name": "SME Skills",
+      "subskills": [
+        {
+          "id": "domain_foundation_and_methods",
+          "name": "Domain Foundation & Professional Methods",
+          "question": "How strong is your grasp of your field-s core concepts, principles, methods, and frameworks, and how consistently do you use them to guide or evaluate AI-assisted work?",
+          "scale_labels": {
+            "1": "Very Weak / Not at all",
+            "2": "Weak / Slightly",
+            "3": "Moderate / Moderately",
+            "4": "Strong / Confident",
+            "5": "Mastery / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Weak expert foundation. Rebuild core concepts and use professional frameworks to prevent generic or incorrect AI output."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Solid foundation. Deepen your understanding of why methods work and front-load those frameworks into AI tasks."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Strong domain architect. You use professional principles and methods to guide AI toward expert-level work."
+            }
+          ]
+        },
+        {
+          "id": "local_context_and_constraints",
+          "name": "Local Context & Constraint Injection",
+          "question": "How effectively do you identify and communicate the local policies, cultural norms, environmental factors, client context, unwritten rules, and professional constraints that AI must respect?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Well",
+            "5": "Always / Extensively"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "You may be relying on generic best practices. Start explicitly stating local constraints and professional boundaries."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good contextual awareness. Improve by defining the expert floor and the local rules AI must not violate."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Constraint master. You use local expertise to turn generic AI output into highly relevant professional work."
+            }
+          ]
+        },
+        {
+          "id": "risk_and_logic_auditing",
+          "name": "Risk Intuition & Domain Logic Auditing",
+          "question": "How confidently do you detect when professional-sounding AI output is locally incorrect or risky, and audit whether its reasoning aligns with domain-specific first principles?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Confident",
+            "5": "Always / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "You may be trusting plausible output too much. Build a failure log and begin checking why the AI chose its professional path."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good instincts. Focus on identifying confidence gaps and forcing AI to expose domain-specific reasoning."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Elite radar. You detect subtle domain errors and audit AI logic against professional first principles."
+            }
+          ]
+        },
+        {
+          "id": "standards_and_quality_benchmarking",
+          "name": "Standards & Quality Benchmarking",
+          "question": "How consistently do you define high-quality work in your field and evaluate AI-assisted outputs against professional standards, rubrics, benchmarks, or elite reference examples?",
+          "scale_labels": {
+            "1": "Never",
+            "2": "Rarely",
+            "3": "Sometimes",
+            "4": "Often",
+            "5": "Always"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Quality may be undefined. Learn your field-s rubrics, benchmarks, and examples of excellent work."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You use general standards. Improve by creating a reference set of elite examples and explicit evaluation criteria."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Elite evaluator. You hold AI-assisted work to senior expert standards using clear benchmarks and rubrics."
+            }
+          ]
+        },
+        {
+          "id": "knowledge_currency",
+          "name": "Knowledge Currency",
+          "question": "How consistently do you keep your domain knowledge current, recognize when AI may be relying on outdated information, and bring recent literature, research, or practices into AI-assisted work?",
+          "scale_labels": {
+            "1": "Never",
+            "2": "Rarely",
+            "3": "Monthly",
+            "4": "Weekly",
+            "5": "Daily"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Knowledge may be static. Set a cadence to review new developments and reduce reliance on potentially outdated AI knowledge."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You update periodically. Formalize your learning process and bring current knowledge into AI-assisted tasks."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Always current. Your up-to-date expertise allows you to correct AI knowledge lag and maintain professional edge."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta-Skills",
+      "subskills": [
+        {
+          "id": "learning_agility_and_adaptability",
+          "name": "Learning Agility & Adaptability",
+          "question": "How quickly and comfortably do you learn, experiment with, and apply unfamiliar software tools, AI models, or workflows before needing them for high-stakes work?",
+          "scale_labels": {
+            "1": "Very Slowly / Not at all",
+            "2": "Slowly / Slightly",
+            "3": "Moderately",
+            "4": "Quickly / Comfortable",
+            "5": "Very Quickly / Very Comfortable"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Adaptation may be slow. Create a safe sandbox to experiment with new tools regularly."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You adapt with effort. Focus on learning transferable tool patterns so you can switch systems more easily."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Rapid adapter. You absorb new technological shifts and integrate them into your professional system quickly."
+            }
+          ]
+        },
+        {
+          "id": "resilience_and_self_awareness",
+          "name": "Resilience & Self-Awareness",
+          "question": "How well do you maintain professional confidence when tools fail, recognize when stress or speed is lowering your standards, and reflect on mistakes before they affect future work?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Well",
+            "5": "Always / Very Well"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "You may become fragile under error or speed. Normalize short reflection cycles and monitor when standards begin to drift."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good recovery and awareness. Focus on detecting fatigue drift before it affects important decisions."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Highly resilient and mindful. You catch bias, fatigue, and process failures before they propagate."
+            }
+          ]
+        },
+        {
+          "id": "judgment_and_ambiguity_navigation",
+          "name": "Judgment Calibration & Ambiguity Navigation",
+          "question": "How well do you make defensible decisions under incomplete or conflicting information by matching your confidence to the available evidence and explicitly stating assumptions or uncertainty?",
+          "scale_labels": {
+            "1": "Not at all",
+            "2": "Slightly",
+            "3": "Moderately",
+            "4": "Well / Confident",
+            "5": "Perfectly / Very Confident"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Risk of overtrust or paralysis. Never let confidence exceed evidence, and practice making defensible assumptions."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "Good balance. Improve by explicitly stating uncertainty, assumptions, and confidence levels."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Precision judgment. You operate well in ambiguity and match confidence to evidence quality."
+            }
+          ]
+        },
+        {
+          "id": "escalation_and_governance_discipline",
+          "name": "Escalation & Governance Discipline",
+          "question": "How effectively do you define and apply stop rules, human-review triggers, and intervention points when AI workflows produce repeated errors, uncertainty, or high-stakes outputs?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Effective",
+            "5": "Always / Very Effective"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "Failure may continue silently. Create clear stop rules and human-review triggers."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You know when to stop in some cases. Improve by defining high-stakes review triggers in advance."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "Rigorous governance. You prevent systemic errors by knowing exactly when to pause, escalate, or override automation."
+            }
+          ]
+        },
+        {
+          "id": "systems_thinking_and_accountability",
+          "name": "Systems Thinking & Accountability",
+          "question": "How consistently do you consider downstream effects of your AI-assisted work on teams, customers, and processes, while taking personal responsibility for the final outcome and its consequences?",
+          "scale_labels": {
+            "1": "Never / Not at all",
+            "2": "Rarely / Slightly",
+            "3": "Sometimes / Moderately",
+            "4": "Often / Willing",
+            "5": "Always / Completely Willing"
+          },
+          "ranges": [
+            {
+              "label": "low",
+              "min": 0,
+              "max": 39,
+              "feedback": "You may be focused only on the immediate task. Start considering downstream effects and remember that you own the final result."
+            },
+            {
+              "label": "medium",
+              "min": 40,
+              "max": 69,
+              "feedback": "You show some systems awareness and accountability. Build a stronger defensibility trail for downstream decisions."
+            },
+            {
+              "label": "high",
+              "min": 70,
+              "max": 100,
+              "feedback": "High-level owner. You understand how AI-assisted decisions propagate through systems and take full responsibility for outcomes."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+    // Fetch survey.json from the server
+    loadSurvey(survey);
+
+    // Attach listeners to update live range slider values
+    surveyContainer.addEventListener('input', (e) => {
+        if (e.target.type === 'range') {
+            const span = document.getElementById(`val-${e.target.id}`);
+            if (span) {
+                span.textContent = e.target.value;
+            }
+        }
+    });
+
+    function loadSurvey(data) {
+        const totalQuestions = data.pillars.reduce((sum, pillar) => sum + pillar.subskills.length, 0);
+        const surveyHtml = data.pillars.map(pillar => {
+            // Generate questions for each subskill dynamically
+            const subskillQuestions = pillar.subskills.map(subskill => `
+            <div class="question">
+                <fieldset style="border:0;padding:0;margin:0;">
+                <legend class="question-label">
+                    <h3>${subskill.name}</h3>
+                    <p class="subskill-description">${subskill.question}</p>
+                </legend>
+                <div class="likert-scale">
+                ${Object.entries(subskill.scale_labels).map(([key, label]) => `
+                    <div class="likert-option">
+                        <input type="radio" title="${pillar.id}" name="${subskill.id}" value="${key}" id="${subskill.id}-${key}">
+                        <label for="${subskill.id}-${key}">${label}</label>
+                    </div>
+                `).join('')}
+                </div>
+                </fieldset>
+            </div>
+        `).join('');
+
+            // Construct survey section with a collapsible card for each pillar
+            return `
+            <div class="pillar-card">
+                <button class="pillar-header" type="button" aria-expanded="false" aria-controls="pillar-${pillar.id}" data-pillar-trigger="${pillar.id}">
+                    <h2 class="pillar-title" >${pillar.name}</h2>
+                    <span class="pillar-toggle">+</span>
+                </button>
+                <div class="pillar-content" id="pillar-${pillar.id}" hidden>
+                    ${subskillQuestions}
+                </div>
+            </div>
+        `;
+        }).join('');
+
+        // Wrap all survey sections with a title and a submit button
+        surveyContainer.innerHTML = `
+        <div class="survey-shell">
+            <section class="survey-hero" aria-labelledby="survey-title">
+                <div class="survey-hero-copy">
+                    <h1 id="survey-title" class="survey-title">AI Readiness Self-Assessment</h1>
+                    <p class="survey-explanation">Benchmark how effectively you combine AI skills, subject matter expertise, operational stability, and scalable judgment in real work.</p>
+                </div>
+                <div class="survey-highlights">
+                    <div class="survey-highlight">
+                        <strong>Time required</strong>
+                        <span>Takes about 4-6 minutes.</span>
+                    </div>
+                    <div class="survey-highlight">
+                        <strong>Assessment scope</strong>
+                        <span>${totalQuestions} questions across 4 readiness pillars.</span>
+                    </div>
+                    <div class="survey-highlight">
+                        <strong>What you get</strong>
+                        <span>Your quadrant, archetype, and practical next-step recommendations.</span>
+                    </div>
+                </div>
+                <div class="survey-supporting-copy">
+                    <div class="card">
+                        <h2>What this assessment covers</h2>
+                        <p>This self-assessment measures how well you apply AI in context, evaluate outputs, maintain professional standards, and operate with defensible judgment under real-world constraints.</p>
+                    </div>
+                    <div class="card">
+                        <h2>How to use the results</h2>
+                        <p>Your results highlight current strengths and the areas most likely to improve reliable execution. Use the recommended need-based next step to decide whether you need capability building, stronger controls, or practical workflow application.</p>
+                    </div>
+                </div>
+                <div class="card survey-detail-copy">
+                    <h2>Why this page matters before you start</h2>
+                    <p>Many AI assessments focus only on enthusiasm or tool familiarity. This self-assessment is designed to go further by helping you benchmark how well you combine AI fluency with professional judgment, domain expertise, and repeatable execution. That means the outcome is not just a score. It is a clearer picture of whether your current AI usage is dependable, defensible, and ready to scale into real workflows.</p>
+                    <p>If you are experimenting with prompts, evaluating new tools, or trying to translate AI interest into practical capability, this page gives you a useful baseline. The four-pillar model highlights whether your biggest opportunity is better prompting, stronger evaluation habits, clearer domain constraints, or more mature governance and systems thinking. Use the result as a decision aid before investing more time in tools, training, or broader implementation.</p>
+                </div>
+                <section class="survey-faq" aria-labelledby="survey-faq-title">
+                    <h2 id="survey-faq-title">Frequently asked questions</h2>
+                    <div class="faq-list">
+                        <article class="faq-item">
+                            <h3>Who is this assessment for?</h3>
+                            <p>It is built for individual professionals, managers, educators, and practitioners who want to understand how effectively they use AI alongside subject matter expertise and professional judgment.</p>
+                        </article>
+                        <article class="faq-item">
+                            <h3>How long does the assessment take?</h3>
+                            <p>Most people finish in about 4-6 minutes. The survey covers ${totalQuestions} questions across four readiness pillars.</p>
+                        </article>
+                        <article class="faq-item">
+                            <h3>What do I get when I finish?</h3>
+                            <p>You receive your quadrant placement, an archetype label, and practical recommendations that point to the next most useful improvement areas.</p>
+                        </article>
+                        <article class="faq-item">
+                            <h3>What does the assessment actually measure?</h3>
+                            <p>It measures AI skills, core reasoning skills, subject matter expertise, and meta-skills related to scalability, governance, and accountable execution.</p>
+                        </article>
+                        <article class="faq-item">
+                            <h3>What happens to my information?</h3>
+                            <p>If you request a personalized plan, your contact details are used to send your report and follow up with relevant resources. Your results are submitted only after you review them.</p>
+                        </article>
+                    </div>
+                </section>
+            </section>
+            <form id="survey-form" aria-describedby="survey-progress-caption">
+                <div class="progress-card" aria-live="polite">
+                    <div class="progress-topline">
+                        <strong id="survey-progress-summary">0 of ${totalQuestions} questions answered</strong>
+                        <span id="survey-progress-percent">0% complete</span>
+                    </div>
+                    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="${totalQuestions}" aria-valuenow="0" aria-labelledby="survey-progress-summary">
+                        <div id="survey-progress-fill" class="progress-bar-fill"></div>
+                    </div>
+                    <p id="survey-progress-caption" class="progress-caption">Start with one pillar at a time. Open a section, answer each question, and your progress will update automatically.</p>
+                </div>
+                ${surveyHtml}
+                <button type="button" id="submit-survey" class="btn-submit">See My Results</button>
+        <p class="survey-footer-note">Need more context first? Visit the <a href="/assessments.html">assessment overview</a> or review the <a href="/frameworks/aaos/">AAOS framework</a>.</p>
+            </form>
+        </div>
+    `;
+
+        // Show survey container
+        surveyContainer.style.display = 'block';
+        bindSurveyInteractions(data);
+        updateSurveyProgress();
+    }
+
+    function bindSurveyInteractions(data) {
+        document.querySelectorAll('[data-pillar-trigger]').forEach((button, index) => {
+            button.addEventListener('click', () => togglePillar(button));
+            if (index === 0) {
+                togglePillar(button, true);
+            }
+        });
+
+        document.getElementById('survey-form')?.addEventListener('change', (e) => {
+            if (e.target.matches('input[type="radio"]')) {
+                updateSurveyProgress(data);
+            }
+        });
+    }
+
+    function updateSurveyProgress(data = survey) {
+        const totalQuestions = data.pillars.reduce((sum, pillar) => sum + pillar.subskills.length, 0);
+        const answered = document.querySelectorAll('#survey-form input[type="radio"]:checked').length;
+        const percent = totalQuestions ? Math.round((answered / totalQuestions) * 100) : 0;
+        const summary = document.getElementById('survey-progress-summary');
+        const percentLabel = document.getElementById('survey-progress-percent');
+        const fill = document.getElementById('survey-progress-fill');
+        const bar = document.querySelector('.progress-bar');
+
+        if (summary) summary.textContent = `${answered} of ${totalQuestions} questions answered`;
+        if (percentLabel) percentLabel.textContent = `${percent}% complete`;
+        if (fill) fill.style.width = `${percent}%`;
+        if (bar) bar.setAttribute('aria-valuenow', String(answered));
+    }
+
+
+    document.body.addEventListener('click', (e) => {
+        if (e.target.id === 'submit-survey') {
+            e.preventDefault();
+
+            // Get survey results
+            document.querySelectorAll('#survey-form input[type="radio"]:checked').forEach(input => {
+                if (!surveyResults.hasOwnProperty(input.title)) {
+                    surveyResults[input.title] = {};
+                }
+                surveyResults[input.title][input.name] = input.value;
+            });
+
+            // Map Likert scale (1 - 5) to range (0 - 100)
+            // Map Likert scores (1 - 5) to 0 - 100 for subskills and normalize pillar scores
+            const pillarScores = {}; // Object to store aggregated pillar scores
+            const scaleToScore = value => ((value - 1) / 4) * 100; // Map Likert scale (1 - 5) to 0 - 100
+
+            // Iterate through pillars and calculate normalized scores
+            for (let pid in surveyResults) {
+                let subskills = surveyResults[pid];
+                // Calculate subskill scores for the current pillar
+                for (let sname in subskills) {
+                    subskills[sname] = scaleToScore(subskills[sname]);
+                }
+                // Calculate normalized pillar score (average of subskill scores)
+                let normalizedScore = 0;
+                let length = 0;
+                for (let i in subskills) {
+                    normalizedScore += subskills[i];
+                    length++;
+                }
+                if (length > 0) normalizedScore /= length;
+
+                // Assign normalized score to pillar
+                pillarScores[pid] = Math.round(normalizedScore); // Round to nearest integer
+            }
+
+
+            // Map survey results to sliders
+            sliders.ai.value = pillarScores.ai;
+            sliders.sme.value = pillarScores.sme;
+            sliders.core.value = pillarScores.core;
+            sliders.meta.value = pillarScores.meta;
+
+            // Re-render visualization
+            render();
+
+            // Transition: hide survey, show results directly
+            surveyContainer.style.display = 'none';
+            document.getElementById('results-container').style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+    });
+
+    /* ======= Data + Rubric ======= */
+    const sliders = {
+        ai: document.getElementById('ai'),
+        sme: document.getElementById('sme'),
+        core: document.getElementById('core'),
+        meta: document.getElementById('meta'),
+    };
+    const vals = {
+        ai: document.getElementById('val-ai'),
+        sme: document.getElementById('val-sme'),
+        core: document.getElementById('val-core'),
+        meta: document.getElementById('val-meta'),
+    };
+
+    const presets = {
+        under: {ai: 20, core: 25, sme: 20, meta: 20},
+        fakers: {ai: 85, core: 45, sme: 25, meta: 40},
+        unconf: {ai: 25, core: 55, sme: 85, meta: 55},
+        aug: {ai: 85, core: 85, sme: 85, meta: 85},
+    };
+
+    const badge = document.getElementById('badge');
+    const tagsOut = document.getElementById('tags');
+
+    function calculateArchetype(v) {
+        // Step 1: Determine Quadrant Based on SME and AI Scores
+        const quadrantX = v.sme >= 50; // True if SME >= 50, meaning "high"
+        const quadrantY = v.ai >= 50; // True if AI >= 50, meaning "high"
+
+        let quadrant;
+        if (quadrantX && quadrantY) quadrant = 'AI Augmented'; // Upper Right
+        else if (!quadrantX && quadrantY) quadrant = 'AI Fakers'; // Upper Left
+        else if (quadrantX && !quadrantY) quadrant = 'Unconfident'; // Lower Right
+        else quadrant = 'Underdeveloped'; // Lower Left
+
+        // Step 2: Determine Stability and Scalability Modifiers
+        const stability = v.core >= 50 ? 'Stable' : v.core < 50 ? 'Restless' : 'Neutral';
+        const scalability = v.meta >= 50 ? 'Scalable' : v.meta < 50 ? 'Local' : 'Neutral';
+
+        // Step 3: Map Quadrant + Modifiers to Archetype
+        const archetypes = {
+            'AI Augmented': {
+                'Stable, Scalable': 'AI Change Agent',
+                'Stable, Local': 'AI Steward',
+                'Restless, Scalable': 'AI Visionary',
+                'Restless, Local': 'AI Specialist',
+            },
+            'AI Fakers': {
+                'Stable, Scalable': 'Polisher',
+                'Stable, Local': 'Operator',
+                'Restless, Scalable': 'Trend Rider',
+                'Restless, Local': 'Pretender',
+            },
+            'Unconfident': {
+                'Stable, Scalable': 'Gatekeeper',
+                'Stable, Local': 'Culture Keeper',
+                'Restless, Scalable': 'Reluctant Innovator',
+                'Restless, Local': 'Analyst',
+            },
+            'Underdeveloped': {
+                'Stable, Scalable': 'Novice',
+                'Stable, Local': 'Learner',
+                'Restless, Scalable': 'Explorer',
+                'Restless, Local': 'Apprentice',
+            },
+        };
+
+        // Use combined keys to retrieve the archetype
+        const modifierKey = `${stability}, ${scalability}`;
+        const archetype = archetypes[quadrant][modifierKey] || 'Undefined Archetype';
+
+        return { quadrant, archetype };
+    }
+
+
+    /* ======= Classification + Tags ======= */
+    function getVals() {
+        return {
+            ai: +sliders.ai.value, sme: +sliders.sme.value, core: +sliders.core.value, meta: +sliders.meta.value
+        };
+    }
+
+    function quadrant(v) {
+        const x = v.sme, y = v.ai;
+        if (x >= 50 && y >= 50) return 'AI Augmented';
+        if (x < 50 && y >= 50) return 'AI Fakers';
+        if (x >= 50 && y < 50) return 'Unconfident';
+        return 'Underdeveloped';
+    }
+
+    function modifiers(v) {
+        const tags = [];
+        if (v.core < 40) tags.push('Restless'); else if (v.core >= 70) tags.push('Stable');
+        if (v.meta < 40) tags.push('Local Impact'); else if (v.meta >= 70) tags.push('Scalable Impact');
+        return tags;
+    }
+
+    // Optional nuanced label tweaks for storytelling
+    function decoratedLabel(base, tags) {
+        // Example: Fakers + Restless + Scalable -> "Dangerous Amplifier"
+        const t = new Set(tags);
+        if (base === 'AI Fakers' && t.has('Restless') && t.has('Scalable Impact')) return 'Dangerous Amplifier';
+        if (base === 'AI Augmented' && t.has('Stable') && t.has('Scalable Impact')) return 'AI Change Agent';
+        if (base === 'Unconfident' && t.has('Stable') && t.has('Local Impact')) return 'Trusted Specialist';
+        if (base === 'Underdeveloped' && t.has('Restless') && t.has('Local Impact')) return 'At Risk Learner';
+        return base; // fallback to the quadrant name
+    }
+
+    function badgeClass(label) {
+        if (label === 'AI Augmented' || label === 'AI Change Agent') return 'b-green';
+        if (label === 'AI Fakers' || label === 'Dangerous Amplifier') return 'b-red';
+        if (label === 'Unconfident' || label === 'Trusted Specialist') return 'b-blue';
+        if (label === 'Underdeveloped' || label === 'At Risk Learner') return 'b-gray';
+        return 'b-amber';
+    }
+
+    /* ======= Feedback ======= */
+
+    function getSubskillValsFromUI() {
+        const v = getVals();
+        const res = {};
+        const isAdvanced = document.getElementById('advanced').checked;
+
+        survey.pillars.forEach(p => {
+            res[p.id] = {};
+            p.subskills.forEach(s => {
+                if (isAdvanced) {
+                    const el = document.getElementById(`${p.id}_${s.id}`);
+                    res[p.id][s.id] = el ? Number(el.value) : v[p.id];
+                } else {
+                    res[p.id][s.id] = v[p.id];
+                }
+            });
+        });
+        return res;
+    }
+
+    function getFeedback() {
+        const sub = getSubskillValsFromUI();
+        // sync labels when advanced
+        if (document.getElementById('advanced').checked) {
+            Object.entries(sub).forEach(([pillar, subs]) => {
+                Object.entries(subs).forEach(([k, val]) => {
+                    const span = document.getElementById(`val-${pillar}_${k}`);
+                    if (span) span.textContent = val;
+                });
+            });
+        }
+        const list = [];
+        Object.entries(sub).forEach(([pillar, subs]) => {
+            let p = null;
+            for(let i in survey.pillars) {
+                if(survey.pillars[i].id === pillar) {
+                    p = survey.pillars[i];
+                }
+            }
+            Object.entries(subs).forEach(([k, val]) => {
+                const s = p?.subskills.find(x => x.id === k);
+                for(let i in s?.ranges) {
+                    if(val >= s.ranges[i].min && val <= s.ranges[i].max) {
+                        list.push({pillar, subskill: k, val, advice: s.ranges[i].feedback});
+                    }
+                }
+            });
+        });
+        list.sort((a, b) => a.val - b.val);
+        return list;
+    }
+    function renderFeedback() {
+        const list = getFeedback();
+        const top = list.slice(0, 2);
+        const pretty = id => id.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        const esc = s => s.replace(/[&<>\"']/g, m => ({
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            "\"": "&quot;",
+            "'": "&#39;"
+        }[m]));
+        document.getElementById('feedback-list').innerHTML =
+            top.map(item => `<li><b>${item.pillar.toUpperCase()}  -  ${pretty(item.subskill)}</b>  -  score ${item.val}. ${esc(item.advice)}</li>`).join('');
+    }
+
+    /* ======= Quadrant Drawing (SVG) with Petal Glyphs ======= */
+    const svg = document.getElementById('quad');
+    const W = 520, H = 520, PAD = 30;
+    const plot = {xmin: 0, xmax: 100, ymin: 0, ymax: 100};
+    const mapX = x => PAD + (x - plot.xmin) / (plot.xmax - plot.xmin) * (W - 2 * PAD);
+    const mapY = y => H - (PAD + (y - plot.ymin) / (plot.ymax - plot.ymin) * (H - 2 * PAD));
+
+    function clearSVG() {
+        while (svg.firstChild) svg.removeChild(svg.firstChild);
+    }
+
+    function add(el, attrs) {
+        const e = document.createElementNS('http://www.w3.org/2000/svg', el);
+        Object.entries(attrs).forEach(([k, v]) => e.setAttribute(k, v));
+        svg.appendChild(e);
+        return e;
+    }
+
+    function drawQuadrant() {
+        clearSVG();
+        // Background quadrants
+        const midX = mapX(50), midY = mapY(50);
+        const colors = {UL: '#fee2e2', UR: '#dcfce7', LL: '#f3f4f6', LR: '#dbeafe'};
+        // rectangles: UL
+        add('rect', {x: PAD, y: 0 + PAD, width: midX - PAD, height: midY - PAD, fill: colors.UL, opacity: .35});
+        // UR
+        add('rect', {x: midX, y: PAD, width: (W - PAD) - midX, height: midY - PAD, fill: colors.UR, opacity: .35});
+        // LL
+        add('rect', {x: PAD, y: midY, width: midX - PAD, height: (H - PAD) - midY, fill: colors.LL, opacity: .35});
+        // LR
+        add('rect', {
+            x: midX,
+            y: midY,
+            width: (W - PAD) - midX,
+            height: (H - PAD) - midY,
+            fill: colors.LR,
+            opacity: .35
+        });
+
+        // Axes + ticks
+        add('line', {x1: PAD, y1: midY, x2: W - PAD, y2: midY, stroke: '#9ca3af', 'stroke-dasharray': '6 6'});
+        add('line', {x1: midX, y1: PAD, x2: midX, y2: H - PAD, stroke: '#9ca3af', 'stroke-dasharray': '6 6'});
+        add('rect', {x: PAD, y: PAD, width: W - 2 * PAD, height: H - 2 * PAD, fill: 'none', stroke: '#111'});
+
+        // Axis labels
+        add('text', {
+            x: W / 2,
+            y: H - 6,
+            'text-anchor': 'middle',
+            'font-size': '20',
+            'font-weight': '700',
+            fill: '#374151'
+        }).textContent = 'Subject Matter Expertise (SME)';
+        add('text', {
+            x: 18,
+            y: H / 2,
+            transform: `rotate(-90 18,${H / 2})`,
+            'text-anchor': 'middle',
+            'font-size': '20',
+            'font-weight': '700',
+            fill: '#374151'
+        }).textContent = 'AI Fluency and Usage';
+
+        // Quadrant names
+        add('text', {
+            x: mapX(75),
+            y: mapY(95),
+            'text-anchor': 'middle',
+            'font-size': '20',
+            'font-weight': '700',
+            fill: '#166534'
+        }).textContent = 'AI Augmented';
+        add('text', {
+            x: mapX(25),
+            y: mapY(95),
+            'text-anchor': 'middle',
+            'font-size': '20',
+            'font-weight': '700',
+            fill: '#991b1b'
+        }).textContent = 'AI Fakers';
+        add('text', {
+            x: mapX(75),
+            y: mapY(5),
+            'text-anchor': 'middle',
+            'font-size': '20',
+            'font-weight': '700',
+            fill: '#1e3a8a'
+        }).textContent = 'Unconfident';
+        add('text', {
+            x: mapX(25),
+            y: mapY(5),
+            'text-anchor': 'middle',
+            'font-size': '20',
+            'font-weight': '700',
+            fill: '#111827'
+        }).textContent = 'Underdeveloped';
+    }
+
+    function drawPetalGlyph(x, y, core, meta) {
+        const cx = mapX(x), cy = mapY(y);
+
+        // Base point remains the same
+        add('circle', {cx, cy, r: 4, fill: '#166534', stroke: '#166534'});
+
+        // Ellipse radii based on Core (vertical axis) and Meta (horizontal axis)
+        const rx = 12 + (meta / 100) * 28; // Horizontal radius
+        const ry = 12 + (core / 100) * 28; // Vertical radius
+
+        // Compute intensity based on the area of the ellipse (Core * Meta)
+        const area = core * meta; // Maximum area = 100 * 100 = 10000
+        const intensity = Math.min(area / 10000, 1); // Scale to 0 - 1
+
+        // Dynamic hue from red (0 - ) to green (120 -  based on intensity)
+        const hue = 0 + (intensity * 120); // 0 (red) ? 120 (green)
+        const saturation = 80; // Fixed vibrant saturation
+        const lightness = 50 - (intensity * 10); // Slightly darker green for higher intensity
+
+        // HSL dynamic color
+        const color = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+
+        // Draw ellipse with dynamic color
+        add('ellipse', {
+            cx,
+            cy,
+            rx,
+            ry,
+            fill: color,
+            opacity: 0.9
+        });
+    }
+
+    function render() {
+        const v = getVals();
+        // UI sync
+        vals.ai.textContent = v.ai;
+        vals.sme.textContent = v.sme;
+        vals.core.textContent = v.core;
+        vals.meta.textContent = v.meta;
+
+        const { quadrant, archetype } = calculateArchetype(v);
+
+        // Update Characteristic Label
+        const badge = document.getElementById('characteristic-label');
+        badge.textContent = `${archetype} (${quadrant})`;
+
+        // Draw
+        drawQuadrant();
+        drawPetalGlyph(v.sme, v.ai, v.core, v.meta);
+
+        // Feedback
+        renderFeedback();
+    }
+
+    /* ======= Events ======= */
+    Object.values(sliders).forEach(inp => inp.addEventListener('input', render));
+    document.querySelectorAll('[data-preset]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const p = presets[btn.getAttribute('data-preset')];
+            Object.keys(p).forEach(k => sliders[k].value = p[k]);
+            render();
+            closeDropdowns();
+        });
+    });
+
+    function closeDropdowns() {
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            const menu = dropdown.querySelector('.dropdown-content');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+            if (menu) menu.hidden = true;
+        });
+    }
+
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const dropdown = toggle.closest('.dropdown');
+            const menu = dropdown?.querySelector('.dropdown-content');
+            const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+            closeDropdowns();
+            toggle.setAttribute('aria-expanded', String(!isOpen));
+            if (menu) menu.hidden = isOpen;
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown')) {
+            closeDropdowns();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeDropdowns();
+        }
+    });
+
+    const leadForm = document.getElementById('lead-capture-form');
+    const submitSurveyBtn = document.getElementById('submit-survey-btn');
+
+    submitSurveyBtn?.addEventListener('click', async (e) => {
+        // Validate form
+        if (!leadForm.checkValidity()) {
+            leadForm.reportValidity();
+            return;
+        }
+
+        const status = document.getElementById('lead-status');
+        const btn = submitSurveyBtn;
+        const CRM_ENDPOINT = "/assessment/individual";
+
+        status.hidden = false;
+        status.textContent = 'Submitting...';
+        btn.disabled = true;
+
+        const formData = new FormData(leadForm);
+        const payload = Object.fromEntries(formData.entries());
+        payload.Description = `[Individual AI Readiness Assessment Results]
+Archetype: ${document.getElementById('characteristic-label').textContent}
+Scores:
+- AI Proficiency: ${sliders.ai.value}/100
+- Domain Expertise (SME): ${sliders.sme.value}/100
+- Core Operational Stability: ${sliders.core.value}/100
+- Meta-Process/Governance: ${sliders.meta.value}/100
+
+Detailed Sub-skills:
+${Object.keys(surveyResults).map(p => `- ${p.toUpperCase()}: ${JSON.stringify(surveyResults[p])}`).join('\n')}`;
+
+        payload.AI_Proficiency = sliders.ai.value;
+        payload.Domain_Expertise = sliders.sme.value;
+        payload.Core_Operational = sliders.core.value;
+        payload.Meta_Governance = sliders.meta.value;
+        payload.Archetype = document.getElementById('characteristic-label').textContent;
+        payload.Results = surveyResults;
+        payload.submitted_at = new Date().toISOString();
+        payload.page = window.location.pathname;
+
+        // Add UTMs explicitly for clarity
+        payload.UTM = {
+            source: formData.get("utm_source") || "",
+            medium: formData.get("utm_medium") || "",
+            campaign: formData.get("utm_campaign") || "",
+            content: formData.get("utm_content") || "",
+            qr: formData.get("qr") || "",
+            book: formData.get("book") || ""
+        };
+
+        try {
+            const response = await fetch(CRM_ENDPOINT, {
+                method: 'POST',
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+            
+            if (response.ok) {
+                // Add success message within the form
+                const successMsg = document.createElement('div');
+                successMsg.style.background = '#d1fae5';
+                successMsg.style.color = '#065f46';
+                successMsg.style.padding = '12px';
+                successMsg.style.borderRadius = '8px';
+                successMsg.style.marginTop = '16px';
+                successMsg.style.fontWeight = '600';
+                successMsg.style.textAlign = 'center';
+                successMsg.id = 'temp-success-msg';
+                successMsg.textContent = '- Suggestion plan requested! We are emailing you a formatted report.';
+                
+                leadForm.appendChild(successMsg);
+                status.hidden = true;
+                
+                // Disable form fields
+                leadForm.querySelectorAll('input, button').forEach(el => el.disabled = true);
+
+                // Remove message after 10 seconds
+                setTimeout(() => {
+                    const el = document.getElementById('temp-success-msg');
+                    if (el) el.remove();
+                }, 10000);
+            } else {
+                throw new Error("Failed to submit results.");
+            }
+        } catch (err) {
+            console.error(err);
+            status.textContent = 'Something went wrong. Please try again.';
+            btn.disabled = false;
+        }
+    });
+
+    function toggleAdvanced() {
+        const box = document.getElementById('subskills');
+        const adv = document.getElementById('advanced').checked;
+        box.style.display = adv ? 'grid' : 'none';
+
+        if (adv) {
+            // Ensure surveyResults is populated
+            if (!surveyResults) {
+                console.error('surveyResults is not available. Please ensure the survey is completed');
+                return;
+            }
+
+            // Map the surveyResults to subskill slider values
+            let map = {};
+            for (let pname in surveyResults) {
+                map[pname] = [];
+                for (let sname in surveyResults[pname]) {
+                    map[pname].push([`${pname}_${sname}`, surveyResults[pname][sname]]);
+                }
+            }
+
+            // Update subskill sliders using the mapped values from surveyResults
+            Object.values(map).flat().forEach(([id, val]) => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.value = val;
+                }
+            });
+        }
+
+        // Re-render to reflect the updated subskill values
+        render();
+    }
+
+    document.getElementById('advanced').addEventListener('change', toggleAdvanced);
+    document.querySelectorAll('.subskill').forEach(el => el.addEventListener('input', render));
+
+    /* ======= Download PNG (SVG to canvas) ======= */
+    document.getElementById('download-png').addEventListener('click', () => {
+        const s = new XMLSerializer().serializeToString(svg);
+        const img = new Image();
+        img.onload = function () {
+            const canvas = document.createElement('canvas');
+            // Get the SVG's dimensions
+            const svgWidth = svg.clientWidth || svg.getBoundingClientRect().width;
+            const svgHeight = svg.clientHeight || svg.getBoundingClientRect().height;
+
+            // Set canvas dimensions to match SVG
+            canvas.width = svgWidth;
+            canvas.height = svgHeight;
+
+            const ctx = canvas.getContext('2d');
+
+            // Fill white background
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw the image at full size
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            const a = document.createElement('a');
+            a.download = 'ai-readiness-quadrant.png';
+            a.href = canvas.toDataURL('image/png');
+            a.click();
+        };
+        img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(s);
+    });
+    /* ======= init ======= */
+    render();
+
+    document.getElementById('btn-take-survey').addEventListener('click', () => {
+        // Reset survey and show survey container again
+        document.getElementById('survey-container').style.display = 'block';
+        document.getElementById('results-container').style.display = 'none';
+    });
+
+    async function convertSvgToPng(svgElement) {
+        return new Promise((resolve, reject) => {
+            const svgData = new XMLSerializer().serializeToString(svgElement);
+            const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+            const url = URL.createObjectURL(svgBlob);
+
+            const image = new Image();
+            image.onload = function () {
+                // Create canvas and draw image
+                const canvas = document.createElement('canvas');
+                canvas.width = image.width * 2; // Adjust size as needed
+                canvas.height = image.height * 2;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+                // Convert to PNG Base64
+                const pngData = canvas.toDataURL('image/png');
+                resolve(pngData);
+
+                // Clean up object URL
+                URL.revokeObjectURL(url);
+            };
+            image.onerror = reject;
+            image.src = url;
+        });
+    }
+
+
+
+    document.getElementById('download-pdf').addEventListener('click', async () => {
+        // STEP 1: Gather survey results and analysis
+        const v = getVals(); // Replace with your function to get values
+        const { quadrant, archetype } = calculateArchetype(v); // Calculate the quadrant and archetype
+        const recommendations = generateRecommendations(v); // Generate feedback for the user
+        const svg = document.getElementById('quad'); // Access the graph/visualization element
+
+        // STEP 2: Convert the SVG Quadrant to Base64
+        const svgRect = svg.getBoundingClientRect();
+        const imageWidth = Math.round(svgRect.width);
+        const imageHeight = Math.round(svgRect.height);
+        const base64Image = await convertSvgToPng(svg);
+
+        // STEP 3: Create the HTML structure for the analysis
+        const htmlContent = `
+       \`<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI Readiness Self-Assessment for Individuals | Paidar.ai</title>
+<meta name="description" content="Interactive AI readiness self-assessment to benchmark individual capability, identify gaps, and recommend the next best step." />
+<link rel="canonical" href="https://paidar.ai/assessment/individual/free/" />
+<meta name="robots" content="index, follow" />
+<style>
+  :root{
+    --ink:#111827; --muted:#6b7280; --line:#d1d5db;
+    --green:#166534; --red:#991b1b; --blue:#1e3a8a; --amber:#92400e; --gray:#374151;
+    --paper:#ffffff; --badge:#16a34a; --badgeText:#fff;
+  }
+  @media print {
+  body {
+    font-size: 10px !important;    /* Reduce font size for printing */
+    line-height: 1.2 !important;    /* Tighter line height */
+  }
+  h1 { font-size: 16px !important; }
+  h2 { font-size: 14px !important; }
+  h3 { font-size: 12px !important; }
+  .kv th, .kv td {
+    font-size: 9px !important;
+    padding: 2px 4px !important;
+  }
+  .pillar-card h4 {
+    font-size: 10px !important;
+  }
+  .pillar-card .score {
+    font-size: 12px !important;
+  }
+  .pillar-card p {
+    font-size: 9px !important;
+  }
+  .btnbar, footer, a[href]:after { display: none !important; } /* Hide buttons and links */
+  .page { padding: 8px !important; }
+}
+  html,body{height:100%}
+  body{margin:0;background:#fff;color:#111827;font:14px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+  .page{max-width:800px;margin:0 auto;padding:32px 24px;background:#ffffff;}
+  header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:8px}
+  h1{font-size:24px;line-height:1.2;margin:0 0 2px 0}
+  h2{font-size:18px;margin:0 0 8px 0}
+  h3{font-size:16px;margin:0 0 6px 0}
+  .sub{color:#6b7280;font-size:12px}
+  .badge{display:inline-block;font-weight:700;color:#ffffff;background:#16a34a;padding:6px 16px;border-radius:999px;font-size:12px}
+  .btnbar{margin:8px 0 24px 0;display:flex;gap:8px}
+  .btn{appearance:none;border:1px solid #d1d5db;background:#fff;color:#111827;padding:8px 12px;border-radius:10px;cursor:pointer;font-weight:600;font-size:12px}
+  .btn:hover{background:#f9fafb}
+  .lead{color:#6b7280;margin:0 0 16px 0}
+  .grid{display:grid;gap:12px;grid-template-columns:1fr 1fr;}
+  @media(min-width:900px){.grid{grid-template-columns:1fr 1fr !important; page-break-inside:avoid}}
+  .card{border:1px solid #d1d5db;border-radius:8px;padding:8px;background:#fff}
+  .figure{display:flex;justify-content:center;align-items:center}
+  svg{width:100%;max-width:520px;height:auto}
+  ul{padding-left:20px;margin:0}
+  ul.kv{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+  ul.kv li{display:flex;justify-content:space-between;align-items:center;border:1px solid #d1d5db;border-radius:10px;padding:8px 10px}
+  ul.kv li .key{font-weight:700}
+  .recommendations{margin-top:16px;padding:15px;background:#ffffff}
+  .page-break{break-before:page}
+  .Archtype{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:4px}
+  .Quadrant{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:4px}
+    .site-footer {
+        margin-top: 20px;
+        padding: 15px 20px;
+        background-color: #123456; /* Dark Gray Background */
+        color: #ffffff; /* Light Text */
+        text-align: center; /* Center the text horizontally */
+        font-size: 1.0rem;
+        border-top: 5px solid #ffcc44; /* Slight top border for separation */
+        display: flex; /* Enable flexbox */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        flex-direction: column; /* Stack content vertically (if needed) */
+    }
+
+    .site-footer a {
+        color: #ffffff; /* Link Color (Blue) */
+        text-decoration: none; /* Remove underline */
+    }
+
+    .site-footer a:hover {
+        text-decoration: underline; /* Underline on hover */
+    }
+    .pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .pillar-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    background: #f9f9f9;
+  }
+  .pillar-card h3 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    color: #333;
+  }
+  .pillar-card .score {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #166534;
+  }
+  .pillar-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  @page{size:Letter;margin:18mm}
+  @media print{.btnbar{display:none} a[href]:after{content:""} .page{padding:0}}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div>
+      <h1>Survey Analysis Report</h1>
+      <div class="sub">Generated: ${new Date()}</div>
+    </div>
+  </header>
+
+  <div class="btnbar">
+    <button type="button" class="btn" onclick="window.print()">Download / Print PDF</button>
+  </div>
+  <div class="grid">
+    <section class="card figure">
+      <img src="${base64Image}" width="${imageWidth}" height="${imageHeight}" alt="Survey quadrant chart" />
+    </section>
+
+    <section class="card">
+      <h2>Survey Results</h2>
+    <div style="text-align:right">
+      <div class="Archetype">Archetype: <span class="badge">${escapeHtml(archetype)}</span></div>
+      <div class="Quadrant">Quadrant: <span class="badge">${escapeHtml(quadrant)}</span></div>
+    </div>
+      <ul class="kv">
+        <li><span class="key">AI Skills (Y)</span><span class="val">${v.ai}</span></li>
+        <li><span class="key">SME Skills (X)</span><span class="val">${v.sme}</span></li>
+        <li><span class="key">Core Stability</span><span class="val">${v.core}</span></li>
+        <li><span class="key">Meta Scalability</span><span class="val">${v.meta}</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="recommendations">
+    <h2>Personalized Recommendations</h2>
+    <div class="pillar-grid">
+    ${recommendations}
+    </div>
+  </section>
+</div>
+<footer class="site-footer">
+    <p>Paidar.ai <br> &copy; 2025 Paidar Systems LLC</p>
+</footer>
+</body>
+</html>`;
+
+
+        // STEP 4: Generate downloadable HTML file
+        const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'survey-analysis.html';
+        link.click();
+
+    });
+
+    function escapeHtml(s){
+        return String(s).replace(/[&<>\"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    }
+
+
+    function generateRecommendations() {
+        // Example logic: Provide recommendations for the two lowest scores
+        const list = getFeedback();
+        const groupedByPillar = list.reduce((acc, item) => {
+            if (!acc[item.pillar]) {
+                acc[item.pillar] = [];
+            }
+            acc[item.pillar].push(item); // Add subskill to respective pillar group
+            return acc;
+        }, {});
+
+        // Generate HTML string for the recommendations
+        const html = Object.entries(groupedByPillar).map(([pillar, subskills]) => {
+            // Create the section for the pillar
+            const pillarHtml = `
+            <section class="pillar-card">
+                <h3>${pillar.toUpperCase()} Skills</h3>
+                <ul class="subskill-list">
+                    ${subskills.map(({ subskill, val, advice }) => `
+                        <li>
+                            <strong>${subskill}:</strong>
+                            <span>Score: ${val}</span>
+                            <p>${advice}</p>
+                        </li>
+                    `).join('')}
+                </ul>
+            </section>
+        `;
+            return pillarHtml;
+        }).join('');
+
+        return html;
+    }
+
+    function togglePillar(element, forceOpen = false) {
+        const allCards = document.querySelectorAll('.pillar-card');
+        const clickedCard = element.closest('.pillar-card');
+
+        // Collapse all cards except the clicked one
+        allCards.forEach(card => {
+            const content = card.querySelector('.pillar-content');
+            const trigger = card.querySelector('.pillar-header');
+            if (card === clickedCard) {
+                const isOpen = forceOpen ? false : card.classList.contains('open');
+                const shouldOpen = forceOpen || !isOpen;
+                content.hidden = !shouldOpen;
+                content.style.display = shouldOpen ? 'block' : 'none';
+                card.classList.toggle('open', shouldOpen);
+                if (trigger) trigger.setAttribute('aria-expanded', String(shouldOpen));
+            } else {
+                content.hidden = true;
+                content.style.display = 'none';
+                card.classList.remove('open');
+                if (trigger) trigger.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+</script>
+<script src="/assets/js/funnel-tracking.js"></script>
+<script>
+    const assessmentLens = new URLSearchParams(window.location.search).get('lens') || 'business';
+    const lensField = document.getElementById('assessment-lens');
+    if (lensField) lensField.value = assessmentLens;
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

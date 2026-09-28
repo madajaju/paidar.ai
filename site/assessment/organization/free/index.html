@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Free Organizational AI Maturity Assessment | Paidar.ai</title>
+    <meta name="description" content="Assess organizational AI maturity across leadership, governance, workforce capability, execution, evidence, and scaling." />
+    <link rel="canonical" href="https://paidar.ai/assessment/organization/free/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#123456" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Free Organizational AI Maturity Assessment | Paidar.ai" />
+    <meta property="og:description" content="Establish a directional organizational baseline for reliable AI adoption." />
+    <meta property="og:url" content="https://paidar.ai/assessment/organization/free/" />
+    <meta property="og:image" content="https://paidar.ai/assets/img/hero.jpeg" />
+    <meta property="og:site_name" content="Paidar.ai" />
+    <link rel="icon" href="/assets/img/favicon.ico" />
+    <link rel="stylesheet" href="/assets/css/paidar.css" />
+    <style>
+        .assessment-stage-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; background: #e8eef6; border: 1px solid #c9d6e7; border-radius: 14px; padding: 1rem; }
+        .assessment-stage-panel { border: 1px solid #9fb5d0; border-radius: 12px; padding: 1rem; background: #f6f9fd; }
+        .assessment-stage-panel h3 { margin: 0 0 .75rem; color: #0f2d4d; }
+        .assessment-question { margin: 0 0 .75rem; border: 0; padding: 0; min-inline-size: 0; }
+        .assessment-question legend { font-weight: 500; margin-bottom: .45rem; color: #172a3d; }
+        .assessment-option { display: inline-flex; align-items: center; gap: 4px; margin: 0; }
+        .result-stage-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: .75rem 0 1rem; }
+        .result-stage-card { border: 1px solid var(--brand-line); border-radius: 10px; padding: .6rem .75rem; background: #fff; }
+        .result-stage-card h3 { margin: 0 0 .25rem; font-size: .95rem; color: var(--brand-blue); }
+        .result-stage-meta { font-size: .9rem; color: var(--brand-muted); }
+        @media (max-width: 960px) { .assessment-stage-grid, .result-stage-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="container flex between center">
+        <a class="brand" href="/"><img src="/assets/img/paidar.svg" alt="Paidar.ai logo" width="64" height="25" /></a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+            <ul class="nav-list nav-reset">
+                <li><a href="/services.html" data-track="cta_book_strategy_session">Services</a></li>
+                <li><a href="/assessments.html" data-track="cta_start_assessment">Assessments</a></li>
+                <li><a href="/workshops/" data-track="cta_explore_workshops">Workshops</a></li>
+                <li><a href="/books/" data-track="cta_view_books">Books</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a class="btn btn-primary" href="/contact.html" data-track="cta_contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+    <section class="hero" style="--hero-image:url('/assets/img/about-hero.jpeg'); --hero-image-position:center center; --hero-bg-color:#0e223b;">
+        <div class="container">
+            <p class="eyebrow">Free organizational assessment</p>
+            <h1>Organizational AI-Augmented Maturity Assessment</h1>
+            <p class="lead">Answer 24 questions across six areas to establish a directional baseline for reliable AI adoption.</p>
+            <p style="max-width: 760px;">Use this assessment for an organization, division, or major business unit. It evaluates the operating conditions around AI: leadership direction, governance, workforce capability, execution, evidence, and change management.</p>
+            <p><a class="btn btn-gold" href="#assessment-form" data-track="assessment_start_hero">Start Assessment</a> <a class="btn btn-outline" href="https://darrenpulsipher.zohobookings.com/#/AIConsult" target="_blank" rel="noopener" data-track="cta_book_session_assessment" data-propagate-utm="true">Book a Session</a></p>
+        </div>
+    </section>
+
+    <section class="section tint theme-data">
+        <div class="container assessment-flow">
+            <article class="card accent-modern">
+                <h2 id="assessment-form">Take the Organizational Assessment</h2>
+                <p>Email is required so we can send your score, recommendations, and organizational next steps. Rate each statement from 1 (strongly disagree) to 5 (strongly agree).</p>
+                <div id="crmWebToEntityForm" class="crmWebToEntityForm">
+                    <form id="organization-assessment-form" class="stack" action="/assessment/inquiry" method="POST" accept-charset="UTF-8">
+                        <input type="hidden" name="Description" id="Description" value="" />
+                        <div class="grid-2">
+                            <p><label for="First_Name">First Name</label><br /><input id="First_Name" name="First Name" type="text" maxlength="40" required /></p>
+                            <p><label for="Last_Name">Last Name</label><br /><input id="Last_Name" name="Last Name" type="text" maxlength="80" required /></p>
+                        </div>
+                        <div class="grid-2">
+                            <p><label for="Email">Work Email</label><br /><input id="Email" name="Email" type="email" maxlength="100" required /></p>
+                            <p><label for="Company">Organization / Company</label><br /><input id="Company" name="Company" type="text" required /></p>
+                        </div>
+                        <p><label for="assessment-lens">Assessment Lens</label><br /><select id="assessment-lens" name="Assessment_Lens"><option value="Business">Business</option><option value="Education">Education</option><option value="Legal">Legal</option><option value="Medical">Medical</option></select></p>
+                        <input type="hidden" name="utm_source" data-utm-field="true" />
+                        <input type="hidden" name="utm_medium" data-utm-field="true" />
+                        <input type="hidden" name="utm_campaign" data-utm-field="true" />
+                        <input type="hidden" name="utm_content" data-utm-field="true" />
+                        <input type="hidden" name="qr" data-utm-field="true" />
+                        <input type="hidden" name="book" data-utm-field="true" />
+                        <input type="hidden" name="Lead_Source" value="Organization Assessment" />
+                        <input type="hidden" name="Assessment_Level" value="Free" />
+                        <input type="hidden" name="Lead_Status" value="New" />
+                        <div id="assessment-questions" class="assessment-stage-grid" aria-live="polite"></div>
+                        <p id="submit-status" hidden></p>
+                        <p><button class="btn btn-primary" type="submit" id="submit-assessment-btn" data-track="assessment_submit">Get My Result</button></p>
+                    </form>
+                </div>
+            </article>
+
+            <article class="card accent-ai" id="assessment-result" hidden>
+                <h2>Your Organizational Maturity Result</h2>
+                <p><strong>Total Score:</strong> <span id="result-score"></span> / <span id="result-max-score"></span></p>
+                <p><strong>Maturity Level:</strong> <span id="result-posture"></span></p>
+                <p><strong>Operating Condition:</strong> <span id="result-condition"></span></p>
+                <p><strong>Immediate Priority:</strong> <span id="result-bottleneck"></span></p>
+                <div id="result-stage-profile" class="result-stage-grid" aria-live="polite"></div>
+                <p id="result-priority-text" style="padding: 1rem; background: #fffbe6; border-left: 4px solid #fadb14; border-radius: 4px;"></p>
+                <p><strong>Recommended Next Step:</strong> <span id="result-next-step"></span></p>
+                <p><a class="btn btn-gold" href="/organizational-adoption/" data-track="cta_organizational_adoption_from_result">Review Organizational Adoption</a> <a class="btn btn-outline" href="/contact.html?inquiry=Implementation" data-track="cta_contact_from_result">Discuss the Next Step</a></p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section"><div class="container"><div class="banner theme-modern"><h2>Move From Baseline to Adoption</h2><p>The free assessment gives you a directional baseline. Use the result to choose the next organizational intervention, from leadership alignment to workflow implementation.</p><p><a class="btn btn-primary" href="/assessment/organization/paid/">Explore the Paid Assessment</a> <a class="btn btn-outline" href="/assessments.html">Choose Another Assessment</a></p></div></div></section>
+</main>
+
+<footer class="site-footer"><div class="footer-grid"><div class="footer-socials" aria-label="Follow us"><a href="https://www.youtube.com/@embracingdigital" aria-label="YouTube" target="_blank" rel="noopener"><img class="social-icon" src="/assets/img/youtube.svg" alt="YouTube" width="800" height="800" /></a><a href="https://www.linkedin.com/company/embracing-digital-transformation" aria-label="LinkedIn" target="_blank" rel="noopener"><img class="social-icon" src="/assets/img/linkedin.svg" alt="LinkedIn" width="800" height="800" /></a><a href="https://embracingdigital.org" aria-label="Embracing Digital" target="_blank" rel="noopener"><img class="social-icon" src="/assets/img/edt.svg" alt="Embracing Digital" width="750" height="750" /></a></div><div class="footer-brand"><img src="/assets/img/paidar.svg" alt="Paidar.ai logo" class="footer-logo" width="520" height="200" /><div class="brand-name">Paidar.ai</div><small>&copy; <span id="y"></span> Paidar Systems LLC</small></div><nav aria-label="Footer" class="footer-nav"><ul class="nav-reset"><li><a href="/about.html">About</a></li><li><a href="/services.html">Services</a></li><li><a href="/insights.html">Insights</a></li><li><a href="/contact.html">Contact</a></li></ul></nav></div></footer>
+
+<script src="/assets/js/funnel-tracking.js"></script>
+<script src="/assets/js/main.js"></script>
+<script>
+    const assessmentData = [
+        { stage: 'Leadership and Direction', questions: [
+            ['l1', 'Leadership can state why the organization is using AI.'],
+            ['l2', 'The organization distinguishes adoption from reliability.'],
+            ['l3', 'AI priorities are tied to operating outcomes, not novelty.'],
+            ['l4', 'Leaders understand where AI should not be deployed yet.']
+        ] },
+        { stage: 'Governance and Policy', questions: [
+            ['g1', 'The organization has clear policy for risk-based AI use.'],
+            ['g2', 'Ownership and accountability are defined for consequential work.'],
+            ['g3', 'Review requirements increase with consequence.'],
+            ['g4', 'Policy is usable in the workflow, not only stored as documentation.']
+        ] },
+        { stage: 'Workforce Capability', questions: [
+            ['c1', 'The organization knows which roles need stronger AI skill, subject matter expertise, or both.'],
+            ['c2', 'Training is aligned to real workflows instead of generic tool use.'],
+            ['c3', 'Subject matter experts are enabled, not replaced, by AI.'],
+            ['c4', 'Role coverage does not depend on a few heroic individuals.']
+        ] },
+        { stage: 'Workflow and Execution', questions: [
+            ['w1', 'Consequential workflows have a defined Draft, Verify, Approve pattern.'],
+            ['w2', 'Handoffs carry enough context to preserve reliability.'],
+            ['w3', 'AI is embedded in the workflow where it reduces friction safely.'],
+            ['w4', 'Output quality remains stable across normal operating pressure.']
+        ] },
+        { stage: 'Measurement and Evidence', questions: [
+            ['m1', 'The organization measures correction load, not just usage volume.'],
+            ['m2', 'Leaders can see where reliability is strong and where it is weak.'],
+            ['m3', 'High-consequence work is tracked separately from low-consequence work.'],
+            ['m4', 'Metrics are used to guide intervention and scale decisions.']
+        ] },
+        { stage: 'Scaling and Change Management', questions: [
+            ['s1', 'The organization expands only where stability has been demonstrated.'],
+            ['s2', 'Pause or hold decisions are available when quality declines.'],
+            ['s3', 'New teams or functions can be brought into the standard operating model.'],
+            ['s4', 'The organization can improve without depending on constant executive intervention.']
+        ] }
+    ];
+    const maxStageScore = 20;
+    const maxTotalScore = assessmentData.length * maxStageScore;
+    const questionsContainer = document.getElementById('assessment-questions');
+    const form = document.getElementById('organization-assessment-form');
+    const result = document.getElementById('assessment-result');
+    const status = document.getElementById('submit-status');
+    const submitButton = document.getElementById('submit-assessment-btn');
+    const lensField = document.getElementById('assessment-lens');
+    const requestedLens = new URLSearchParams(window.location.search).get('lens');
+    if (requestedLens) {
+        const option = Array.from(lensField.options).find(item => item.value.toLowerCase() === requestedLens.toLowerCase());
+        if (option) lensField.value = option.value;
+    }
+    assessmentData.forEach((stage) => {
+        const panel = document.createElement('div');
+        panel.className = 'assessment-stage-panel';
+        panel.innerHTML = `<h3>${stage.stage}</h3>`;
+        stage.questions.forEach(([id, text]) => {
+            const fieldset = document.createElement('fieldset');
+            fieldset.className = 'assessment-question';
+            fieldset.innerHTML = `<legend>${text}</legend><div class="flex gap-2" style="justify-content:space-between; margin-top:.5rem; font-size:.9rem; color:var(--brand-muted);"><span>Disagree</span><div class="flex gap-2">${[1, 2, 3, 4, 5].map(value => `<label class="assessment-option"><input type="radio" name="${id}" value="${value}" required />${value}</label>`).join('')}</div><span>Agree</span></div><hr />`;
+            panel.appendChild(fieldset);
+        });
+        questionsContainer.appendChild(panel);
+    });
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        if (form.dataset.submitting === 'true') return;
+        const formData = new FormData(form);
+        const scores = {};
+        const answers = {};
+        let total = 0;
+        assessmentData.forEach(stage => {
+            scores[stage.stage] = 0;
+            stage.questions.forEach(([id, text]) => { const value = Number(formData.get(id)); scores[stage.stage] += value; total += value; answers[id] = { question: text, value }; });
+        });
+        const thresholds = { controlled: Math.ceil(maxTotalScore * .45), integrated: Math.ceil(maxTotalScore * .6375), optimized: Math.ceil(maxTotalScore * .825) };
+        let posture = 'Level 1: Reactive';
+        let condition = 'AI use is experimental and fragmented. Quality depends on individuals and may fail silently in consequential work.';
+        if (total >= thresholds.optimized) { posture = 'Level 4: Optimized'; condition = 'The organization has a self-correcting operating model with proactive controls and evidence.'; }
+        else if (total >= thresholds.integrated) { posture = 'Level 3: Integrated'; condition = 'A shared verification loop is becoming standard and quality is holding across operating conditions.'; }
+        else if (total >= thresholds.controlled) { posture = 'Level 2: Controlled'; condition = 'Basic checks and risk awareness exist, but the operating model is not yet consistent at scale.'; }
+        const profiles = Object.entries(scores).map(([name, score]) => ({ name, score, status: score >= 16 ? 'reliable' : score >= 10 ? 'developing' : 'fragile' }));
+        const weakest = profiles.reduce((a, b) => a.score <= b.score ? a : b);
+        document.getElementById('result-score').textContent = total;
+        document.getElementById('result-max-score').textContent = maxTotalScore;
+        document.getElementById('result-posture').textContent = posture;
+        document.getElementById('result-condition').textContent = condition;
+        document.getElementById('result-bottleneck').textContent = weakest.name;
+        document.getElementById('result-stage-profile').innerHTML = profiles.map(item => `<div class="result-stage-card"><h3>${item.name}</h3><div class="result-stage-meta">Score: <strong>${item.score}/${maxStageScore}</strong> | Status: <strong>${item.status.toUpperCase()}</strong></div></div>`).join('');
+        document.getElementById('result-priority-text').innerHTML = `<strong>Priority area:</strong> Strengthen ${weakest.name} before expanding organizational AI scope.`;
+        document.getElementById('result-next-step').textContent = total >= thresholds.optimized ? 'Scale the operating model with evidence.' : `Design an intervention for ${weakest.name}.`;
+        const description = `Organization: ${formData.get('Company')}\n[Organizational Maturity Assessment]\nLens: ${formData.get('Assessment_Lens')}\nMaturity Level: ${posture}\nTotal Score: ${total}/${maxTotalScore}\nOperating Condition: ${condition}\nPriority Area: ${weakest.name}\nSubmitted At: ${new Date().toISOString()}`;
+        document.getElementById('Description').value = description;
+        const payload = {
+            First_Name: formData.get('First Name'), Last_Name: formData.get('Last Name'), Email: formData.get('Email'), Company: formData.get('Company'),
+            Description: description, Lead_Source: formData.get('Lead_Source'), Lead_Status: formData.get('Lead_Status'), Assessment_Level: formData.get('Assessment_Level'), Assessment_Lens: formData.get('Assessment_Lens'),
+            Total_Score: total, Maturity_Level: posture, Overall_Condition: condition, Bottleneck: weakest.name, Scores: scores, Answers: answers,
+            UTM: { source: formData.get('utm_source') || '', medium: formData.get('utm_medium') || '', campaign: formData.get('utm_campaign') || '', content: formData.get('utm_content') || '', qr: formData.get('qr') || '', book: formData.get('book') || '' },
+            submitted_at: new Date().toISOString(), page: window.location.pathname
+        };
+        submitButton.disabled = true; status.hidden = false; status.textContent = 'Saving your results...'; form.dataset.submitting = 'true';
+        try {
+            const response = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+            if (!response.ok) throw new Error('Assessment submission failed');
+            form.hidden = true; result.hidden = false; result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } catch (error) {
+            console.error(error); status.textContent = 'There was an error saving your results. Please try again.'; submitButton.disabled = false; form.dataset.submitting = 'false';
+        }
+    });
+</script>
+</body>
+</html>

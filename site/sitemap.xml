@@ -40,7 +40,15 @@
   <url><loc>https://paidar.ai/software.html</loc></url>
   <url><loc>https://paidar.ai/solutions.html</loc></url>
   <url><loc>https://paidar.ai/resources/</loc></url>
-  <url><loc>https://paidar.ai/survey.html</loc></url>
+  <url><loc>https://paidar.ai/assessment/individual/</loc></url>
+  <url><loc>https://paidar.ai/assessment/individual/free/</loc></url>
+  <url><loc>https://paidar.ai/assessment/individual/paid/</loc></url>
+  <url><loc>https://paidar.ai/assessment/team/</loc></url>
+  <url><loc>https://paidar.ai/assessment/team/free/</loc></url>
+  <url><loc>https://paidar.ai/assessment/team/paid/</loc></url>
+  <url><loc>https://paidar.ai/assessment/organization/</loc></url>
+  <url><loc>https://paidar.ai/assessment/organization/free/</loc></url>
+  <url><loc>https://paidar.ai/assessment/organization/paid/</loc></url>
   <url><loc>https://paidar.ai/workshops/</loc></url>
   <url><loc>https://paidar.ai/workshops/executive-ai-organization/</loc></url>
   <url><loc>https://paidar.ai/workshops/team-ai-enablement/</loc></url>
