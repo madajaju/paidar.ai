@@ -164,10 +164,22 @@
                             <option value="">Select an engagement path</option>
                             <option value="Assessment">Assessment</option>
                             <option value="Workshop / Training">Workshop / Training</option>
+                            <option value="Bulk Book Purchase">Bulk Book Purchase</option>
+                            <option value="Executive Briefing">Executive Briefing</option>
+                            <option value="Organizational Adoption">Organizational Adoption</option>
                             <option value="Advisory">Advisory</option>
                             <option value="Implementation">Implementation</option>
                             <option value="Keynote / Executive Session">Keynote / Executive Session</option>
                             <option value="Partnership / Other">Partnership / Other</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="audience">Who is this for?</label><br />
+                        <select id="audience" name="Audience_Type" required>
+                            <option value="">Select a scope</option>
+                            <option value="Individual">Individual</option>
+                            <option value="Team">Team</option>
+                            <option value="Organization">Organization</option>
                         </select>
                     </p>
                     <p>
@@ -188,6 +200,8 @@
                     <input type="hidden" name="utm_content" data-utm-field="true" />
                     <input type="hidden" name="qr" data-utm-field="true" />
                     <input type="hidden" name="book" data-utm-field="true" />
+                    <input type="hidden" name="source_page" data-utm-field="true" />
+                    <input type="hidden" name="entry_stage" data-utm-field="true" />
 
                     <p id="form-status" hidden></p>
 
@@ -278,6 +292,7 @@
             Email: String(formData.get("Email") || "").trim(),
             Company: String(formData.get("Company") || "").trim(),
             Inquiry_Type: String(formData.get("Inquiry_Type") || "").trim(),
+            Audience_Type: String(formData.get("Audience_Type") || "").trim(),
             Description: String(formData.get("Description") || "").trim(),
             website: String(formData.get("website") || "").trim(),
             Lead_Source: "Contact Form",
@@ -288,6 +303,8 @@
             utm_content: formData.get("utm_content") || "",
             qr: formData.get("qr") || "",
             book: formData.get("book") || "",
+            source_page: formData.get("source_page") || "",
+            entry_stage: formData.get("entry_stage") || "",
             submitted_at: new Date().toISOString(),
             page: window.location.pathname
         };
@@ -308,6 +325,17 @@
             if (response.ok) {
                 formStatus.textContent = "Thank you! We've received your inquiry and will be in touch shortly.";
                 formStatus.className = "text-success";
+                if (window.paidarTrack) {
+                    window.paidarTrack.push("lead_created", {
+                        inquiry_type: payload.Inquiry_Type,
+                        audience_type: payload.Audience_Type,
+                        book: payload.book,
+                        source_page: payload.source_page,
+                        entry_stage: payload.entry_stage,
+                        utm_source: payload.utm_source,
+                        utm_campaign: payload.utm_campaign
+                    });
+                }
                 contactForm.reset();
             } else {
                 throw new Error("Failed to submit inquiry.");
@@ -319,6 +347,12 @@
             submitBtn.disabled = false;
         }
     });
+
+    const contactParams = new URLSearchParams(window.location.search);
+    const inquiryParam = contactParams.get("inquiry") || window.paidarTrack?.attribution?.inquiry || "";
+    const audienceParam = contactParams.get("audience") || window.paidarTrack?.attribution?.audience || "";
+    if (inquiryParam) document.getElementById("inquiry_type").value = inquiryParam;
+    if (audienceParam) document.getElementById("audience").value = audienceParam;
 </script>
 </body>
 </html>

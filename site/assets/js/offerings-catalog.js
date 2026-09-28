@@ -28,6 +28,19 @@
       relatedOfferings: ['team-enablement-workshop', 'readiness-assessment']
     },
     {
+      id: 'book-keynote-workshop',
+      title: 'Book + Keynote or Workshop',
+      summary: 'Pair the AI-Augmented books with leadership alignment or a facilitated team session that produces a practical next action.',
+      domain: ['business', 'education', 'legal', 'medical'],
+      framework: ['ai-augmented'],
+      engagement: ['apply', 'augment'],
+      offeringType: 'workshop',
+      audience: ['executives', 'teams', 'organizations'],
+      href: '/offerings/book-workshop/',
+      cta: 'Explore the Package',
+      relatedOfferings: ['executive-workshop', 'team-enablement-workshop']
+    },
+    {
       id: 'readiness-assessment',
       title: 'AI Readiness Assessments',
       summary: 'Baseline readiness, capability, workflow friction, and governance needs so leaders can choose a useful next step.',

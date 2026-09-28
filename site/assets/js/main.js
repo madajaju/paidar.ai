@@ -1,6 +1,70 @@
 document.getElementById('y')?.setAttribute('textContent', new Date().getFullYear());
 if (document.getElementById('y')) document.getElementById('y').textContent = new Date().getFullYear();
 
+/**
+ * Route downloadable assets through the Paidar Shop so free and paid assets
+ * receive the same customer capture and CRM synchronization as book orders.
+ * Keep product slugs here aligned with the products in shop.paidar.ai.
+ */
+const PAIDAR_SHOP = 'https://shop.paidar.ai/products/';
+const SHOP_DOWNLOAD_PRODUCTS = {
+  integrity: 'ai-augmented-toolkit-integrity-packet-learn',
+  workbook: 'paidar-workbook-becoming-ai-augmented-workbook-learn',
+  companion: 'paidar-product-becoming-ai-augmented-companion-hub-free-learn',
+  workflow: 'paidar-toolkit-ai-workflow-builder-kit-learn',
+  toolkit: 'paidar-toolkit-ai-execution-starter-toolkit-learn',
+  operatingSystem: 'paidar-product-individual-ai-operating-system-bundle-learn'
+};
+
+function shopProductForDownload(pathname) {
+  const path = pathname.toLowerCase();
+  if (path.includes('integrity-packet')) return SHOP_DOWNLOAD_PRODUCTS.integrity;
+  if (path.includes('full-workbook')) return SHOP_DOWNLOAD_PRODUCTS.workbook;
+  if (path.includes('workflow-loop') || path.includes('workflow-amplification') || path.includes('orchestration-map')) return SHOP_DOWNLOAD_PRODUCTS.workflow;
+  if (path.includes('/toolkit/') || path.includes('all-templates') || path.includes('updated-templates')) return SHOP_DOWNLOAD_PRODUCTS.toolkit;
+  if (path.includes('dashboard-template') || path.includes('organizational-adoption-one-page')) return SHOP_DOWNLOAD_PRODUCTS.operatingSystem;
+  if (path.includes('/assets/downloads/becoming/') || path.includes('/educators/toolkit/')) return SHOP_DOWNLOAD_PRODUCTS.companion;
+  return null;
+}
+
+function routeDownloadsThroughShop() {
+  document.querySelectorAll('a[href]').forEach((link) => {
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+    let url;
+    try { url = new URL(href, window.location.href); } catch (error) { return; }
+    const product = shopProductForDownload(url.pathname);
+    if (!product) return;
+
+    const shopUrl = new URL(PAIDAR_SHOP + product);
+    const currentParams = new URLSearchParams(window.location.search);
+    let storedAttribution = {};
+    try { storedAttribution = JSON.parse(localStorage.getItem('paidarFunnelAttribution') || '{}'); } catch (error) { /* Ignore storage errors. */ }
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'qr', 'book', 'source_page', 'entry_stage', 'inquiry', 'audience'].forEach((key) => {
+      const value = currentParams.get(key) || storedAttribution[key];
+      if (value) shopUrl.searchParams.set(key, value);
+    });
+    shopUrl.searchParams.set('asset', url.pathname.split('/').pop() || 'download');
+    link.setAttribute('href', shopUrl.toString());
+    link.removeAttribute('download');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener');
+    link.setAttribute('data-shop-download', 'true');
+  });
+}
+
+routeDownloadsThroughShop();
+
+// The offerings catalog renders cards after main.js loads, so route links
+// created by that catalog immediately before the browser follows them.
+document.addEventListener('click', (event) => {
+  const link = event.target.closest?.('a[href]');
+  if (!link || link.dataset.shopDownload) return;
+  let url;
+  try { url = new URL(link.getAttribute('href'), window.location.href); } catch (error) { return; }
+  if (shopProductForDownload(url.pathname)) routeDownloadsThroughShop();
+}, true);
+
 // Keep legacy homepage copy aligned with the Phase 1 Learn → Apply → Augment model.
 document.querySelectorAll('h2').forEach((heading) => {
   if (heading.textContent.includes('Assess') && heading.textContent.includes('Design') && heading.textContent.includes('Implement')) {
@@ -271,14 +335,14 @@ class CTABlock extends HTMLElement {
         subtitle: "Order the books to build your foundation, then assess your organization's readiness.",
         primary: { text: "Explore All Books", href: "/books/" },
         secondary: { text: "Take an Assessment", href: "/assessments.html" },
-        tertiary: { text: "Book a Workshop", href: "/workshops/" }
+        tertiary: { text: "Bring AI-Augmented to Your Organization", href: "/organizational-adoption/?source_page=book&entry_stage=adopt" }
       },
       book_detail: {
         title: "Put the Ideas Into Practice",
         subtitle: "The books provide the framework. Now, apply it to your organization.",
         primary: { text: "Understand Where You Are", href: "/assessments.html?source_page=book&entry_stage=assess" },
         secondary: { text: "Enable Your Team", href: "/workshops/?source_page=book&entry_stage=enable" },
-        tertiary: { text: "Put the Plan Into Action", href: "/aaos-implementation/?source_page=book&entry_stage=implement" }
+        tertiary: { text: "Bring It to Your Organization", href: "/organizational-adoption/?source_page=book&entry_stage=adopt" }
       },
       workshop: {
         title: "Bridge the Gap Between Strategy and Execution",
