@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">The Right Model. The Right Place. The Right Cost.</title>
+  <desc id="desc">A workload decision moves across device, edge, data center, and cloud toward a measurable outcome.</desc>
+  <rect width="1200" height="675" fill="#101828"/>
+  <circle cx="940" cy="140" r="260" fill="#172554"/>
+  <circle cx="1080" cy="560" r="250" fill="#164e63"/>
+  <text x="80" y="112" fill="#67e8f9" font-family="Arial, sans-serif" font-size="22" letter-spacing="4">AI ARCHITECTURE WORKSHOP</text>
+  <text x="80" y="205" fill="#ffffff" font-family="Arial, sans-serif" font-size="58" font-weight="700">The Right Model.</text>
+  <text x="80" y="275" fill="#ffffff" font-family="Arial, sans-serif" font-size="58" font-weight="700">The Right Place.</text>
+  <text x="80" y="345" fill="#ffffff" font-family="Arial, sans-serif" font-size="58" font-weight="700">The Right Cost.</text>
+  <text x="80" y="405" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="25">Choose architecture from the workload and its outcome.</text>
+  <line x1="100" y1="535" x2="1080" y2="535" stroke="#67e8f9" stroke-width="4"/>
+  <g fill="#fbbf24" stroke="#101828" stroke-width="8">
+    <circle cx="150" cy="535" r="24"/><circle cx="390" cy="535" r="24"/>
+    <circle cx="630" cy="535" r="24"/><circle cx="870" cy="535" r="24"/>
+    <circle cx="1080" cy="535" r="24"/>
+  </g>
+  <g fill="#e2e8f0" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">
+    <text x="150" y="590">DEVICE</text><text x="390" y="590">EDGE</text>
+    <text x="630" y="590">DATA CENTER</text><text x="870" y="590">CLOUD</text>
+    <text x="1080" y="590">OUTCOME</text>
+  </g>
+</svg>
+
