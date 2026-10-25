@@ -6,6 +6,6 @@
     "dev": "wrangler pages dev site --compatibility-date=2024-04-01"
   },
   "devDependencies": {
-    "wrangler": "^4.83.0"
+    "wrangler": "^4.103.0"
   }
 }
