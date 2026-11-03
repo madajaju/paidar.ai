@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 1600 1600" role="img" aria-labelledby="title desc">
+  <title id="title">AI-Augmented Organization Intensive — learn</title>
+  <desc id="desc">A two-day engagement combining executive alignment with tactical application to produce prioritized use cases, AI-Augmented workflows, governance requirements, pilot candidates, measures, and a 30/60/90-day action plan.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2617"/><stop offset="1" stop-color="#715f24"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="18" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="368" height="318" patternUnits="userSpaceOnUse">
+      <path d="M92 5 184 58v106l-92 53L0 164V58z" fill="none" stroke="#7cc7ee" stroke-opacity=".07" stroke-width="4"/>
+      <path d="M276 5 368 58v106l-92 53-92-53V58z" fill="none" stroke="#7cc7ee" stroke-opacity=".07" stroke-width="4"/>
+      <path d="M184 164 276 217v106l-92 53-92-53V217z" fill="none" stroke="#7cc7ee" stroke-opacity=".07" stroke-width="4"/>
+      <path d="M368 164 460 217v106l-92 53-92-53V217z" fill="none" stroke="#7cc7ee" stroke-opacity=".07" stroke-width="4"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1600" fill="url(#background)"/>
+  <rect width="1600" height="1600" fill="url(#grid)"/>
+  <text x="1288" y="138" text-anchor="middle" fill="#D4AF37" font-family="IBM Plex Sans,Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="6">LEARN</text>
+  <g fill="#160d20" fill-opacity=".82" stroke="#D4AF37" stroke-width="5" filter="url(#glow)">
+    <path d="M1288 164 1380 217v106l-92 53-92-53V217Z"/>
+  </g>
+  <g fill="none" stroke="#F3D6FF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M1236 248q26-18 52 0v48q-26-18-52 0zM1288 248q26-18 52 0v48q-26-18-52 0zM1288 248v48"/></g>
+  <!-- Offering type marker: publication/book in the upper half. -->
+  <g transform="translate(552 429)" filter="url(#glow)">
+    <path d="M0-265 230-132.5v265L0 265-230 132.5V-132.5Z" fill="#160d20" fill-opacity=".8" stroke="#E6B638" stroke-width="7"/>
+    <g fill="none" stroke="#FFF0B0" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" transform="scale(1.5) translate(0,-40)">
+      <circle cx="0" cy="-43" r="18"/>
+      <path d="M-32 12q6-26 32-26t32 26"/>
+    </g>
+    <g fill="none" stroke="#FFF0B0" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" transform="scale(1.5) translate(0,110)">
+      <circle cx="0" cy="-43" r="18"/>
+      <path d="M-32 12q6-26 32-26t32 26"/>
+    </g>
+    <g fill="none" stroke="#FFF0B0" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" transform="scale(1.5) translate(-60,80)">
+      <circle cx="0" cy="-43" r="18"/>
+      <path d="M-32 12q6-26 32-26t32 26"/>
+    </g>
+    <g fill="none" stroke="#FFF0B0" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" transform="scale(1.5) translate(60,80)">
+      <circle cx="0" cy="-43" r="18"/>
+      <path d="M-32 12q6-26 32-26t32 26"/>
+    </g>
+  </g>
+  <text x="112" y="900" text-anchor="start" fill="#FFFFFF" font-family="IBM Plex Sans,Arial,sans-serif" font-size="102" font-weight="700"><tspan x="112" dy="0">AI Augmented</tspan><tspan x="112" dy="112">Organization Intensive</tspan><tspan x="112" dy="112">Workbook</tspan></text>
+  <text x="116" y="1300" text-anchor="start" fill="#D9E8F5" font-family="IBM Plex Sans,Arial,sans-serif" font-size="48" font-weight="400"><tspan x="116" dy="0">A two day engagement combining executive alignment with</tspan><tspan x="116" dy="55">tactical application to produce prioritized use cases, AI</tspan></text>
+  <rect x="112" y="1390" width="1376" height="5" fill="#D4AF37"/>
+  <text x="112" y="1480" fill="#FFFFFF" font-family="IBM Plex Sans,Arial,sans-serif" font-size="34" font-weight="600" letter-spacing="4">PAIDAR.AI</text>
+  <text x="1488" y="1480" text-anchor="end" fill="#D9E8F5" font-family="IBM Plex Sans,Arial,sans-serif" font-size="28">PAIDAR SYSTEMS</text>
+</svg>
