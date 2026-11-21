@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 1600 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Integrity Packet — apply</title>
+  <desc id="desc">A six-part transfer artifact for making AI-assisted work understandable, reviewable, and safe to use: Outcome, Visible Assumptions, Evidence and Traceability, Validation, Ownership, and Risk.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2617"/><stop offset="1" stop-color="#715f24"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="18" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="368" height="318" patternUnits="userSpaceOnUse">
+      <path d="M92 5 184 58v106l-92 53L0 164V58z" fill="none" stroke="#7cc7ee" stroke-opacity=".07" stroke-width="4"/>
+      <path d="M276 5 368 58v106l-92 53-92-53V58z" fill="none" stroke="#7cc7ee" stroke-opacity=".07" stroke-width="4"/>
+      <path d="M184 164 276 217v106l-92 53-92-53V217z" fill="none" stroke="#7cc7ee" stroke-opacity=".07" stroke-width="4"/>
+      <path d="M368 164 460 217v106l-92 53-92-53V217z" fill="none" stroke="#7cc7ee" stroke-opacity=".07" stroke-width="4"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1600" fill="url(#background)"/>
+  <rect width="1600" height="1600" fill="url(#grid)"/>
+  <text x="1288" y="138" text-anchor="middle" fill="#D4AF37" font-family="IBM Plex Sans,Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="6">APPLY</text>
+  <g fill="#160d20" fill-opacity=".82" stroke="#D4AF37" stroke-width="5" filter="url(#glow)">
+    <path d="M1288 164 1380 217v106l-92 53-92-53V217Z"/>
+  </g>
+  <g fill="none" stroke="#F3D6FF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><circle cx="1288" cy="270" r="34"/><circle cx="1288" cy="270" r="13"/><path d="M1288 217v18m0 70v18m-53-53h18m70 0h18"/></g>
+  <!-- Offering type marker: parallel Lucide wrench and hammer icons. -->
+  <g transform="translate(552 429)" filter="url(#glow)">
+    <path d="M0-265 230-132.5v265L0 265-230 132.5V-132.5Z" fill="#160d20" fill-opacity=".8" stroke="#E6B638" stroke-width="7"/>
+    <g fill="none" stroke="#FFF0B0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="rotate(45) translate(-10,10)">
+      <g transform="rotate(-90) translate(-30 -60) scale(10)">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/>
+      </g>
+      <g transform="rotate(-90) translate(-130 -200) scale(10)">
+        <path d="m15 12-12 12a1 1 0 0 1-3.001-3L12 9"/>
+        <path d="m18 15 4-4"/>
+        <path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/>
+      </g>
+    </g>
+  </g>
+  <text x="112" y="900" text-anchor="start" fill="#FFFFFF" font-family="IBM Plex Sans,Arial,sans-serif" font-size="102" font-weight="700"><tspan x="112" dy="0">Integrity Packet</tspan></text>
+  <text x="116" y="1228" text-anchor="start" fill="#D9E8F5" font-family="IBM Plex Sans,Arial,sans-serif" font-size="48" font-weight="400"><tspan x="116" dy="0">A six part transfer artifact for making AI assisted work</tspan><tspan x="116" dy="55">understandable, reviewable, and safe to use: Outcome,</tspan></text>
+  <rect x="112" y="1390" width="1376" height="5" fill="#D4AF37"/>
+  <text x="112" y="1480" fill="#FFFFFF" font-family="IBM Plex Sans,Arial,sans-serif" font-size="34" font-weight="600" letter-spacing="4">PAIDAR.AI</text>
+  <text x="1488" y="1480" text-anchor="end" fill="#D9E8F5" font-family="IBM Plex Sans,Arial,sans-serif" font-size="28">PAIDAR SYSTEMS</text>
+</svg>
